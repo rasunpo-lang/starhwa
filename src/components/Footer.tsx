@@ -49,6 +49,11 @@ export default function Footer() {
                   Search
                 </Link>
               </li>
+              <li>
+                <Link href="/help" className="hover:text-plum">
+                  Help the Encyclopedia <span aria-hidden="true">✦</span>
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

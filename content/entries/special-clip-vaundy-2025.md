@@ -10,6 +10,8 @@ tags:
 sources:
   - label: "ATEEZ Official YouTube — [Special Clip] Seonghwa 'Vaundy - 踊り子 (odoriko)'"
     url: "https://www.youtube.com/watch?v=LO4QAOQFRmw"
+  - label: "Dispatch — \"하트는 못 참지\"…성화, 금발의 왕자 (\"Can't Resist a Heart\"…Seonghwa, Blonde Prince, departing for Japan)"
+    url: "https://www.dispatch.co.kr/2316001"
 related:
 ---
 

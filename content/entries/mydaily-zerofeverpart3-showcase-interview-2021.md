@@ -11,6 +11,10 @@ tags:
 sources:
   - label: "MyDaily — '\"팬들과 함께\"…에이티즈, '킹덤' 후 성장→관능美 '데자뷰' [종합]' (reporter Kang Da-yun)"
     url: "https://mydaily.co.kr/page/view/2021091315544704868"
+  - label: "Dispatch — \"[현장포토] '이 눈빛, 빠져든다'...성화, 분위기 남신\" (\"Falling Into This Gaze\"...Seonghwa, Atmospheric God, online showcase)"
+    url: "https://www.dispatch.co.kr/2164028"
+  - label: "ATEEZ Official X — [#성화] Will you join us?"
+    url: "https://x.com/ATEEZofficial/status/1437441648686821385"
 related:
 ---
 

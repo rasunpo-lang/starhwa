@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PlannedEntry } from "@/lib/layout";
-import { formatEntryDate, primaryLink } from "./entryLink";
+import { entryHref, externalLinkProps, formatEntryDate, singleSourceUrl } from "./entryLink";
 import Glint from "@/components/Glint";
 
 export default function FeatureEntry({
@@ -13,10 +13,7 @@ export default function FeatureEntry({
 }) {
   const { entry, thumbnailUrl, thumbnailType } = item;
   const isProduct = thumbnailType === "product";
-  const { href, external } = primaryLink(entry);
-  const linkProps = external
-    ? { target: "_blank", rel: "noopener noreferrer" as const }
-    : {};
+  const sourceUrl = singleSourceUrl(entry);
 
   const meta = (
     <div className={`relative flex flex-col justify-center p-6 sm:p-10 ${reverse ? "lg:pr-4" : "lg:pl-4"}`}>
@@ -36,21 +33,17 @@ export default function FeatureEntry({
         {entry.summary}
       </p>
       <div className="mt-8 flex items-center gap-5">
-        <a
-          href={href}
-          {...linkProps}
-          className="btn btn-primary"
-        >
-          {external ? "Visit Original ↗" : "Read Entry →"}
-          {external && <span className="sr-only"> (opens in a new tab)</span>}
-        </a>
-        {external && (
-          <Link
-            href={`/archive/${entry.slug}`}
+        <Link href={entryHref(entry)} className="btn btn-primary">
+          Read Entry →
+        </Link>
+        {sourceUrl && (
+          <a
+            href={sourceUrl}
+            {...externalLinkProps}
             className="eyebrow text-charcoal/75 underline decoration-line underline-offset-4 hover:text-plum"
           >
-            Full entry →
-          </Link>
+            View source ↗<span className="sr-only"> (opens original source in a new tab)</span>
+          </a>
         )}
         <span className="meta text-charcoal/75">{entry.id}</span>
       </div>

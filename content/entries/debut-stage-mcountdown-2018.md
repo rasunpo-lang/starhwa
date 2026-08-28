@@ -10,6 +10,8 @@ tags:
 sources:
   - label: "Mnet K-POP Official YouTube — M Countdown EP.593"
     url: "https://www.youtube.com/watch?v=KAXWhITwJp8"
+  - label: "ATEEZ Official X — [#성화] 오늘 첫방했어요~~😆"
+    url: "https://x.com/ATEEZofficial/status/1055422511347773443"
 related:
   - debut-treasure-ep1-all-to-zero
   - debut-ep1-title-track-mvs

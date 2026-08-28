@@ -2,7 +2,7 @@
 title: "MARS ASMR #2 — Tea Time with Prince Seonghwa"
 date: "2020-06-19"
 category: "Official Content"
-verification: "unverified"
+verification: "verified"
 tags:
   - "individual"
   - "asmr"
@@ -10,10 +10,12 @@ tags:
 sources:
   - label: "ATEEZ Official YouTube — MARS ASMR #2 – 성화 왕자님과의 티타임"
     url: "https://www.youtube.com/watch?v=4FUueD6sOLg"
+  - label: "ATEEZ Official X — [#성화] 말티즈와 함께한 MARS ASMR"
+    url: "https://x.com/ATEEZofficial/status/1274167087615733761"
 related:
   - mars-asmr-1-2020
   - mars-asmr-4-2022
   - mars-asmr-3-2020
 ---
 
-An episode of ATEEZ's official "MARS ASMR" series, built entirely around Seonghwa (named for his nickname "Mars"), themed "Tea Time with Prince Seonghwa." Title confirmed by direct fetch; the June 19, 2020 date is drawn from secondary reporting, so this entry is marked unverified.
+An episode of ATEEZ's official "MARS ASMR" series, built entirely around Seonghwa (named for his nickname "Mars"), themed "Tea Time with Prince Seonghwa." Title confirmed by direct fetch; the June 19, 2020 release date is corroborated by ATEEZ's own official X account promoting the episode that same day.

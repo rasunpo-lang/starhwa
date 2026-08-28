@@ -10,6 +10,8 @@ tags:
 sources:
   - label: "Apple Music — THE WORLD EP.1 : MOVEMENT"
     url: "https://music.apple.com/us/album/the-world-ep-1-movement/1634355029"
+  - label: "Dispatch — \"[Scene Photo] 'Intoxicated by the Atmosphere'...Seonghwa, the Eldest's Chic\""
+    url: "https://www.dispatch.co.kr/2210926"
 related:
   - zero-fever-part-1
   - the-world-ep-fin-will

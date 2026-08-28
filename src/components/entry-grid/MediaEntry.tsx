@@ -1,23 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PlannedEntry } from "@/lib/layout";
-import { formatEntryDate, primaryLink } from "./entryLink";
+import { entryHref, externalLinkProps, formatEntryDate, singleSourceUrl } from "./entryLink";
 import Glint from "@/components/Glint";
 
 export default function MediaEntry({ item }: { item: PlannedEntry }) {
   const { entry, thumbnailUrl, thumbnailType } = item;
-  const { href, external } = primaryLink(entry);
+  const sourceUrl = singleSourceUrl(entry);
   const isProduct = thumbnailType === "product";
 
   return (
     <article className="glint-hover group relative flex h-full flex-col">
-      <a
-        href={href}
-        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-        className="absolute inset-0 z-0"
-        aria-label={`${entry.title} — ${entry.category}, ${formatEntryDate(entry.date)}${
-          external ? " (opens original source in a new tab)" : ""
-        }`}
+      <Link
+        href={entryHref(entry)}
+        className="absolute inset-0 z-[1]"
+        aria-label={`${entry.title} — ${entry.category}, ${formatEntryDate(entry.date)}`}
       />
       <div
         className={`relative aspect-video w-full overflow-hidden ${
@@ -52,15 +49,16 @@ export default function MediaEntry({ item }: { item: PlannedEntry }) {
         </p>
         <div className="mt-4 flex items-center justify-between gap-2 border-t border-line pt-3">
           <span className="meta pointer-events-none text-charcoal/75">
-            {external ? "View source ↗" : `${entry.sources.length} sources →`}
+            {sourceUrl ? "1 source" : `${entry.sources.length} sources`} →
           </span>
-          {external && (
-            <Link
-              href={`/archive/${entry.slug}`}
+          {sourceUrl && (
+            <a
+              href={sourceUrl}
+              {...externalLinkProps}
               className="meta relative z-10 text-charcoal/75 underline decoration-line underline-offset-4 hover:text-plum"
             >
-              Read entry
-            </Link>
+              View source ↗<span className="sr-only"> (opens original source in a new tab)</span>
+            </a>
           )}
         </div>
       </div>

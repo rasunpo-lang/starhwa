@@ -13,6 +13,8 @@ sources:
     url: "https://x.com/DICON_ATEEZ/status/1761979654288859171"
   - label: "YouTube — [DICON] Be Artistic (SEONGHWA)"
     url: "https://www.youtube.com/watch?v=_vRhHX1MCeY"
+  - label: "Dispatch — \"[현장포토] '비주얼이 영화다'…성화, 심쿵 아이컨택\" (\"His Visuals Are Cinematic\"…Seonghwa, Heart-Fluttering Eye Contact, DICON Vol.18 unboxing live)"
+    url: "https://www.dispatch.co.kr/2284295"
 related:
 ---
 

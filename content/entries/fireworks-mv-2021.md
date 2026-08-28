@@ -10,6 +10,8 @@ tags:
 sources:
   - label: "ATEEZ Official YouTube — 'Fireworks (I'm The One)' Official MV"
     url: "https://www.youtube.com/watch?v=xtcVwuauVV0"
+  - label: "ATEEZ Official X — [#성화] 에이티니~ 불놀이야 많이 기대해주세요"
+    url: "https://x.com/ATEEZofficial/status/1364923760860569601"
 related:
   - fireworks-comeback-stage-mcountdown-2021
 ---

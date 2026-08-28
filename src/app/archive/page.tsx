@@ -30,9 +30,9 @@ export default function ArchivePage() {
       <p className="eyebrow text-plum">The Database</p>
       <h1 className="mt-3 font-display text-5xl sm:text-6xl">Archive</h1>
       <p className="mt-5 max-w-xl text-sm leading-relaxed text-charcoal/85">
-        Filter the full catalogue by category, era, or year. Each entry links
-        directly to its original official source rather than reproducing the
-        content.
+        Filter the full catalogue by category, era, or year. Each entry opens
+        its own page here, with direct links out to the original source(s)
+        rather than reproducing the content.
       </p>
 
       <div className="mt-12">

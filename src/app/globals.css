@@ -171,6 +171,7 @@
   height: 13px;
   color: var(--plum);
   opacity: 0;
+  pointer-events: none;
   filter: drop-shadow(0 0 3px color-mix(in srgb, var(--plum) 55%, transparent));
 }
 

@@ -73,6 +73,13 @@ export default function RootLayout({
 
   return (
     <html lang="en" className={`${fraunces.variable} ${archivo.variable} ${plexMono.variable}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript";c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"971463b36c9fabaeb462f895d8cf79aa"})});`,
+          }}
+        />
+      </head>
       <body className="flex min-h-screen flex-col bg-ivory text-ink font-sans">
         <a
           href="#main-content"

@@ -5,7 +5,7 @@ export const eras: Era[] = [
     id: "treasure",
     name: "TREASURE Era",
     years: "2018 – 2019",
-    startDate: "2018-10-01",
+    startDate: "2018-01-01",
     endDate: "2019-12-31",
     summary:
       "The debut chapter. Seonghwa steps forward as a founding member of ATEEZ, establishing his stage presence and vocal identity across the group's earliest title tracks, showcases, and early international promotions.",

@@ -10,6 +10,8 @@ tags:
 sources:
   - label: "Mnet K-POP Official YouTube — M Countdown EP.676"
     url: "https://www.youtube.com/watch?v=8Aevlq0coco"
+  - label: "ATEEZ Official X — [#성화] 에이티니와 함께 행복한 start~"
+    url: "https://x.com/ATEEZofficial/status/1288825573330972672"
 related:
   - inception-mv-2020
   - seonghwa-fancam-inception-mcountdown-2020

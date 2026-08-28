@@ -9,6 +9,8 @@ tags:
 sources:
   - label: "İstanbul Festivali Official Instagram — '14 Ağustos İstanbul Festivali - Ateez Konseri'"
     url: "https://www.instagram.com/istfestivali/p/DcFvCS8CM9W/"
+  - label: "Dispatch — \"[현장포토] '여심을 저격해'...성화, 눈빛 플러팅 (ISTfestival)\" (\"Sniping Girls' Hearts\"...Seonghwa, Flirting Eyes)"
+    url: "https://www.dispatch.co.kr/2346456"
   - label: "İstanbul Festivali Official Instagram — 'Bir konserden çok daha fazlasıydı...'"
     url: "https://www.instagram.com/istfestivali/reel/DcDtHS3u3EF/"
   - label: "İstanbul Festivali Official Instagram — 'Tarihe geçecek o konser, yıllarca konuşulacak o an!'"

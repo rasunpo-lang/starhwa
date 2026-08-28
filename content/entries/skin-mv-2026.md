@@ -11,6 +11,8 @@ tags:
 sources:
   - label: "ATEEZ Official YouTube — 성화 'Skin' | ATEEZ Present"
     url: "https://www.youtube.com/watch?v=XP7zqLMu-mM"
+  - label: "Dispatch — \"[Hⓓ포토] '남자의 섹시' ㅣ '에이티즈' 성화\" (\"A Man's Sexy\", MV shoot)"
+    url: "https://www.dispatch.co.kr/2327589"
 related:
   - seonghwa-solo-skin-2025
 ---

@@ -9,6 +9,8 @@ tags:
 sources:
   - label: "ATEEZ Official X (@ATEEZofficial) — [TODAY ATEEZ] 2026 K-World Dream Awards Photo Diary"
     url: "https://x.com/ATEEZofficial/status/2092971967184019473"
+  - label: "Dispatch — \"[On-site Photos] 'My Heart Is Seonghwa'…Seonghwa, Flawless V-line\""
+    url: "https://www.dispatch.co.kr/2347027"
 related:
 ---
 

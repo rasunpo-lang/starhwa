@@ -9,6 +9,8 @@ tags:
 sources:
   - label: "ATEEZ Official Platform (KQ) — Official Schedule: Mnet 'MCOUNTDOWN IN FRANCE'"
     url: "https://ateez.kqent.com/schedule"
+  - label: "Dispatch — \"[현장포토] '비주얼이 명품'…성화, 공항 런웨이\" (\"Visuals Like a Luxury Item\"…Seonghwa, Airport Runway, departing for Paris)"
+    url: "https://www.dispatch.co.kr/2267415"
 related:
 ---
 

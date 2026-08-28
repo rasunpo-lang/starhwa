@@ -10,6 +10,8 @@ tags:
 sources:
   - label: "ATEEZ Official YouTube — 'WORK' Official MV"
     url: "https://www.youtube.com/watch?v=VGnOpZhsPk4"
+  - label: "Dispatch — \"[현장포토] '이 남자의, 섹시'…성화, 범접불가 분위기\" (\"This Man's Sexy\"…Seonghwa, Untouchable Aura, MV shoot)"
+    url: "https://www.dispatch.co.kr/2293337"
 related:
   - golden-hour-part-1
 ---

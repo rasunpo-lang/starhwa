@@ -14,6 +14,14 @@ sources:
     url: "https://www.instagram.com/dip_magazine/reel/DZ-WPLFqt5_/"
   - label: "ATEEZ Official YouTube — SEONGHWA in SONGZIO 27 SPRING / SUMMER COLLECTION 'IMPAVIDE'"
     url: "https://www.youtube.com/watch?v=ATbng_j25f8"
+  - label: "Dispatch — \"[현장포토] '심장이 두근두건'…성화, 심쿵 아이컨택\" (\"Heart Racing\"…Seonghwa, Heart-Fluttering Eye Contact, SONGZIO photo event, Sinsa-dong)"
+    url: "https://www.dispatch.co.kr/2343720"
+  - label: "Dispatch — \"[현장포토] '만화 찢고 나왔어'…성화, 금발 판타지\" (\"Stepped Out of a Comic\"…Seonghwa, Blonde Fantasy, SONGZIO photo event, Sinsa-dong)"
+    url: "https://www.dispatch.co.kr/2343722"
+  - label: "Dispatch — \"[현장포토] '콕 찍어 멋짐'…성화, 로맨틱 비주얼\" (\"Handpicked Handsome\"…Seonghwa, Romantic Visuals, SONGZIO photo event, Sinsa-dong)"
+    url: "https://www.dispatch.co.kr/2343721"
+  - label: "Dispatch — \"[현장포토] '아드레날린 터지네'…성화, 폭주하는 잘생김\" (\"Adrenaline Bursting\"…Seonghwa, Rampaging Handsome, departing for the SONGZIO Paris show)"
+    url: "https://www.dispatch.co.kr/2344358"
 related:
   - songzio-ambassador-2025
 ---

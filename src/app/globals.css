@@ -1,0 +1,261 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #f5f1e6;
+  --ivory-dim: #eae2cd;
+  --ink: #15130f;
+  --charcoal: #3a352c;
+  --plum: #5c1f30;
+  --plum-deep: #431722;
+  --plum-tint: #8a4356;
+  --line: #cabe9f;
+  --line-soft: #ddd3b6;
+}
+
+@theme inline {
+  --color-ivory: var(--ivory);
+  --color-ivory-dim: var(--ivory-dim);
+  --color-ink: var(--ink);
+  --color-charcoal: var(--charcoal);
+  --color-plum: var(--plum);
+  --color-plum-deep: var(--plum-deep);
+  --color-plum-tint: var(--plum-tint);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-archivo);
+  --font-mono: var(--font-plex-mono);
+}
+
+/* Base/reset styles live in Tailwind's "base" layer so utility classes
+   (e.g. border-plum, outline-none) — which live in the "utilities" layer —
+   can always override them. Leaving these unlayered would make them win
+   the cascade unconditionally, regardless of utility specificity. */
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+
+  html {
+    background: var(--ivory);
+  }
+
+  body {
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--plum);
+    color: var(--ivory);
+  }
+
+  a {
+    text-underline-offset: 3px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--plum);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.text-hairline {
+  letter-spacing: 0.14em;
+}
+
+/* Eyebrow / meta label typography — used for section labels, catalog
+   metadata, and captions throughout the archive. Centralized here so
+   every label scales and tracks identically. */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+/* Buttons — combine .btn with a variant (.btn-primary / .btn-secondary /
+   .btn-filled) and optionally .btn-sm. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid transparent;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+.btn-sm {
+  padding: 0.5rem 0.75rem;
+}
+
+.btn-primary {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+.btn-primary:hover {
+  background-color: var(--ink);
+  color: var(--ivory);
+}
+
+.btn-secondary {
+  border-color: var(--line);
+  color: color-mix(in srgb, var(--charcoal) 70%, transparent);
+}
+.btn-secondary:hover {
+  border-color: var(--plum);
+  color: var(--plum);
+}
+
+.btn-filled {
+  border-color: var(--ink);
+  background-color: var(--ink);
+  color: var(--ivory);
+}
+
+/* 별빛팡팡 (byeolbit pangpang) — "starlight popping/sprinkling." The
+   site's one recurring bit of unexpected motion: tiny glints of the
+   brand mark's own corner-star (see Glint.tsx), surfaced briefly at
+   moments of interaction or arrival, never as ambient decoration.
+   Two triggers only:
+     .glint-hover  — pops on :hover/:focus-within, restarts every time
+                     the hover state (re)applies (see selector below).
+     .glint-burst  — plays once, unconditionally, on mount (entry
+                     hero/"On This Day" moments) — no scroll or repeat.
+   Both share the same keyframe and the same reduced-motion opt-out. */
+@keyframes glint-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.25) rotate(-12deg);
+  }
+  35% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.7) rotate(6deg);
+  }
+}
+
+.glint {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  color: var(--plum);
+  opacity: 0;
+  filter: drop-shadow(0 0 3px color-mix(in srgb, var(--plum) 55%, transparent));
+}
+
+.glint-hover:hover .glint,
+.glint-hover:focus-within .glint {
+  animation: glint-pop 750ms ease-out;
+}
+
+.glint-burst {
+  animation: glint-pop 900ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glint {
+    display: none;
+  }
+}
+
+/* 떵별 sighting (prototype) — a rare mascot appearance, not a permanent
+   fixture. One combined keyframe drives the whole beat (peek in → settle
+   → linger with a faint idle bob → float up and fade) so the sequence
+   reads as one gesture rather than stitched-together effects. The three
+   accompanying .glint-burst sparkles (positioned via the ddeongbyeol-
+   glint-* classes below) reuse the site's one existing sparkle language
+   instead of inventing a second one. See DdeongbyeolSighting.tsx. */
+.ddeongbyeol-sighting {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 60;
+  width: 72px;
+  height: 72px;
+  pointer-events: none;
+}
+
+.ddeongbyeol-sighting-figure {
+  position: absolute;
+  inset: 0;
+  filter: drop-shadow(0 3px 6px rgba(21, 19, 15, 0.18));
+  animation: ddeongbyeol-sighting 4000ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.ddeongbyeol-glint-a {
+  top: -8px;
+  right: -6px;
+}
+.ddeongbyeol-glint-b {
+  top: 14px;
+  left: -12px;
+}
+.ddeongbyeol-glint-c {
+  bottom: 4px;
+  right: -16px;
+}
+
+@keyframes ddeongbyeol-sighting {
+  0% {
+    opacity: 0;
+    transform: translateY(36px) scale(0.7);
+  }
+  14% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.05);
+  }
+  20% {
+    transform: translateY(0) scale(1);
+  }
+  45% {
+    transform: translateY(-3px) scale(1);
+  }
+  70% {
+    transform: translateY(0) scale(1);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.75);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ddeongbyeol-sighting {
+    display: none;
+  }
+}

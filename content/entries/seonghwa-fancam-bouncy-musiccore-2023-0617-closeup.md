@@ -1,0 +1,19 @@
+---
+title: "Seonghwa Individual Close-up Cam — 'BOUNCY' (Show! Music Core, 6/17)"
+date: "2023-06-17"
+category: "Performances"
+verification: "verified"
+tags:
+  - "fancam"
+  - "close-up cam"
+  - "individual content"
+  - "the world era"
+sources:
+  - label: "MBC Official — [#최애직캠] ATEEZ SEONGHWA - BOUNCY Close-up Cam │Show! MusicCore │MBC230617방송"
+    url: "https://www.youtube.com/watch?v=oEGf6-1QpNo"
+related:
+  - seonghwa-fancam-bouncy-musiccore-2023
+  - seonghwa-fancam-bouncy-musiccore-2023-0624-closeup
+---
+
+An official individual "Close-up Cam" of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on MBC's Show! Music Core, self-dated MBC230617 — a companion close-up format alongside the already-archived regular fancam from the same broadcast.

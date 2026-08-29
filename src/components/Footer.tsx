@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { navItems } from "./navData";
 import Mark from "./Mark";
+import AtmosphereNote from "./AtmosphereNote";
 
 export default function Footer() {
   return (
@@ -68,7 +69,8 @@ export default function Footer() {
             entries, descriptions, and database organization are original
             work by this archive&apos;s maintainers.
           </p>
-          <p className="meta mt-4 text-charcoal/75">
+          <AtmosphereNote />
+          <p className="meta mt-2 text-charcoal/75">
             © {new Date().getFullYear()} The Starhwa Encyclopedia — Fan
             Archive Project
           </p>

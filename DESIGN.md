@@ -147,7 +147,12 @@ interaction, never decorates.
 
 - All transitions are capped at **150–300ms**, `ease`/`ease-out` only
   (`transition: color 150ms ease, background-color 150ms ease,
-  border-color 150ms ease` in `.btn`, `globals.css`).
+  border-color 150ms ease` in `.btn`, `globals.css`). Three explicit,
+  documented exceptions exist — 별빛팡팡 (§6.1, 700–900ms), the 떵별이
+  sighting prototype (§6.1, 4000ms), and the Moonlit Archive's day/night
+  transition (§9, 8s/3.5s) — because each is a rare or slow-by-design
+  beat, not ordinary UI feedback. Don't add a fourth without the same
+  reasoning.
 - The only motion beyond color/border transitions is a subtle
   `scale-[1.03]` on thumbnail hover (`MediaEntry.tsx`) and a 1-character
   arrow nudge on card hover (`group-hover:translate-x-1`, `EntryCard.tsx`).
@@ -259,3 +264,66 @@ These two SEO items are the only open gaps against this spec as of the
 date this document was written. Closing them (adding `sitemap.ts`,
 `robots.ts`, and OG metadata to `generateMetadata` calls) is recommended
 but out of scope for this document.
+
+## 9. The Moonlit Archive (day/night atmosphere)
+
+The site's atmosphere shifts continuously with the visitor's local time —
+not a manual dark-mode toggle, and not a hard switch at a fixed hour.
+`src/lib/atmosphere.ts` computes a 0–1 "night amount" from a
+piecewise-linear curve over the time of day (full day 07:00–17:00, full
+night 19:30–05:00, gradual ramps between); `Atmosphere.tsx` (mounted once
+in `layout.tsx`) writes that value to `--night`/`--night-text` on `<html>`
+every 30s, and a registered `@property` + `transition: --night 8s ease,
+--night-text 3.5s ease` (`globals.css`) does the actual smooth easing
+between ticks — no JS animation loop.
+
+**This is why the 7 core color tokens are no longer flat hex values.**
+`--ivory`, `--ivory-dim`, `--line`, `--line-soft`, `--ink`, `--charcoal`,
+and `--plum` are each a `color-mix()` between a `-day` and `-night` hex,
+blended by `--night` (backgrounds) or the steeper `--night-text`
+(foreground/text — see the code comment above `:root` in `globals.css`
+for why text needed its own, faster-swapping curve: a shared curve made
+body text pass through a near-unreadable contrast midpoint for a real
+stretch of the transition). Every existing component already consumes
+these token names via Tailwind utilities (`bg-ivory`, `text-charcoal/70`,
+`border-line`, etc.) — none of them were or should be edited for this;
+the blend is the whole mechanism. `--plum-deep`/`--plum-tint` stay static,
+untouched, exactly as reserved in §3.
+
+**Known trade-off, by design, not a bug:** `--plum` and `--charcoal` dip
+to roughly 2.1–2.5:1 contrast for ~10–12 minutes twice a day, mid-ramp —
+`--ink` (primary body text) never drops below ~3.9:1. Further lightening
+`--plum`/`--charcoal`'s night hex was tested and plateaus without
+abandoning "stays in the plum family, not washed-out pink." Accepted as
+bounded and secondary-text-only rather than solved with per-token custom
+easing curves.
+
+The decorative sky layer itself (a soft moon, ~18 twinkling stars, a rare
+sparkle reusing 별빛팡팡/`Glint.tsx` — no second sparkle shape — and a rarer
+shooting star) lives in `Atmosphere.tsx`/`.atmosphere-*` classes,
+`fixed inset-0 -z-10 pointer-events-none aria-hidden`, behind all real
+content. It requires `body { isolation: isolate; }` — without it, a
+negative-z-index fixed child paints behind body's own background and
+disappears entirely, not just behind content. Stars fade in *after* the
+moon (a delayed opacity curve, not the same one), matching "a moon
+appears, and the first tiny stars begin to emerge" as two staggered
+beats. Twinkle/shooting-star animations stop under
+`prefers-reduced-motion: reduce` (mirroring the `.glint`/
+`.ddeongbyeol-sighting` `display: none` pattern in §6.1 — the global
+near-zero-duration rule alone isn't enough for `infinite` animations);
+the moon and stars themselves stay visible, just static.
+
+`AtmosphereNote.tsx` (rendered once, in `Footer.tsx`) is the feature's one
+piece of microcopy — a single quiet `.meta`-styled line picked from 7
+time-of-day buckets, recomputed every few minutes, never on every clock
+tick. Its tone ("The moon has found the archive. 🌙") is a deliberate,
+scoped departure from §1's documented "factual, restrained, no marketing
+tone" voice — same Easter-egg spirit as 별빛팡팡, not a precedent for
+loosening that voice elsewhere.
+
+This is scenery, not a character: `DdeongbyeolSighting.tsx` (§6.1's 떵별이
+sighting) is untouched by this feature and remains the site's only
+creature. The sky layer's moon/stars/sparkle are kept as separate pieces
+specifically so a future wandering creature could eventually be added to
+the night atmosphere without restructuring it — nothing here implements
+that creature.

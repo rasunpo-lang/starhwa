@@ -1,15 +1,75 @@
 @import "tailwindcss";
 
+@property --night {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --night-text {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
 :root {
-  --ivory: #f5f1e6;
-  --ivory-dim: #eae2cd;
-  --ink: #15130f;
-  --charcoal: #3a352c;
-  --plum: #5c1f30;
+  /* ✦ The Moonlit Archive — day/night pairs for the 7 tokens below that
+     shift with local time. Set by Atmosphere.tsx (src/lib/atmosphere.ts
+     computes the values) via --night/--night-text on <html>; the
+     pre-paint script in layout.tsx sets an initial value before first
+     paint so there's no "day flash" on a night-time page load. Backgrounds
+     use --night (smooth, full-width curve); ink/charcoal/plum use the
+     steeper --night-text curve instead — a flat shared curve made body
+     text pass through an unreadable near-1:1-contrast midpoint for a real
+     stretch of the sunset/dawn transition, since foreground and
+     background were blending toward each other in lockstep. See
+     DESIGN.md's Moonlit Archive section for the full rationale. */
+  --ivory-day: #f5f1e6;      --ivory-night: #181120;
+  --ivory-dim-day: #eae2cd;  --ivory-dim-night: #241a2c;
+  --ink-day: #15130f;        --ink-night: #f3e9ea;
+  --charcoal-day: #3a352c;   --charcoal-night: #e3d5dd;
+  --plum-day: #5c1f30;       --plum-night: #e0a9c4;
+  --line-day: #cabe9f;       --line-night: #3a2c3a;
+  --line-soft-day: #ddd3b6;  --line-soft-night: #2a2030;
+
+  /* Fixed (non-blended) colors for the decorative sky layer itself. */
+  --moon-color: #f6ecf0;
+  --moon-shadow-color: #35283d;
+  --star-color: #f3e9ea;
+
+  /* Real lunar phase (src/lib/atmosphere.ts getMoonPhase), set by
+     Atmosphere.tsx alongside --night/--night-text. 0 = fully unlit
+     (new moon), 1 = fully lit (full moon); --moon-dir is -1 (waxing,
+     lit side grows from the right) or 1 (waning, from the left). */
+  --moon-illum: 0.5;
+  --moon-dir: -1;
+
+  --night: 0;
+  --night-text: 0;
+
+  --ivory: color-mix(in srgb, var(--ivory-day), var(--ivory-night) calc(var(--night) * 100%));
+  --ivory-dim: color-mix(in srgb, var(--ivory-dim-day), var(--ivory-dim-night) calc(var(--night) * 100%));
+  --line: color-mix(in srgb, var(--line-day), var(--line-night) calc(var(--night) * 100%));
+  --line-soft: color-mix(in srgb, var(--line-soft-day), var(--line-soft-night) calc(var(--night) * 100%));
+  --ink: color-mix(in srgb, var(--ink-day), var(--ink-night) calc(var(--night-text) * 100%));
+  --charcoal: color-mix(in srgb, var(--charcoal-day), var(--charcoal-night) calc(var(--night-text) * 100%));
+  --plum: color-mix(in srgb, var(--plum-day), var(--plum-night) calc(var(--night-text) * 100%));
+
+  /* Reserved, untouched by the day/night blend — see DESIGN.md §3. */
   --plum-deep: #431722;
   --plum-tint: #8a4356;
-  --line: #cabe9f;
-  --line-soft: #ddd3b6;
+}
+
+/* Transition is armed only after Atmosphere.tsx's mount effect adds this
+   class — not unconditionally on html. If it were unconditional, the very
+   first value the pre-paint script sets (before first paint) would itself
+   be treated as "a change from --night's registered initial-value: 0" and
+   visibly animate on every fresh page load, defeating the whole point of
+   setting the correct value before paint. Arming it post-mount means the
+   first frame just renders at the right value instantly, and only real,
+   later changes (the periodic re-checks) ease smoothly. */
+html.atmosphere-ready {
+  transition: --night 8s ease, --night-text 3.5s ease;
 }
 
 @theme inline {
@@ -46,6 +106,12 @@
     color: var(--ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    /* Makes body its own stacking-context root so the Moonlit Archive's
+       fixed, z-index:-10 sky layer paints behind in-flow content but
+       still above body's own background — without this, a negative
+       z-index child renders behind body's background paint entirely and
+       disappears. See Atmosphere.tsx / globals.css .atmosphere. */
+    isolation: isolate;
   }
 
   ::selection {
@@ -257,6 +323,130 @@
 
 @media (prefers-reduced-motion: reduce) {
   .ddeongbyeol-sighting {
+    display: none;
+  }
+}
+
+/* ✦ The Moonlit Archive — the decorative sky layer (moon, stars, rare
+   sparkle/shooting star). Purely atmospheric: fixed, aria-hidden,
+   pointer-events-none, z-index:-10 so it sits behind all real content
+   (see body's `isolation: isolate` above). DdeongbyeolSighting is still
+   the only "creature" on the site — this stays inert scenery, deliberately
+   structured (separate moon/stars/sparkle layers) so a future wandering
+   creature could eventually live here without a rewrite. See
+   Atmosphere.tsx and src/lib/atmosphere.ts. */
+.atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.atmosphere-moon {
+  position: absolute;
+  /* Fixed pixel floor, not a raw viewport percentage: the header is
+     sticky (z-40, ~95%-opaque, backdrop-blur) and its own height varies
+     by breakpoint (~110px mobile, taller once the desktop nav row
+     appears) — a small top:% collapsed into that band on short/narrow
+     viewports and rendered the moon completely invisible behind it,
+     which is exactly the bug a visual check caught. clamp() keeps it
+     clear of the header at any realistic viewport height while still
+     reading as "upper sky." */
+  top: clamp(180px, 18vh, 240px);
+  right: 8%;
+  width: clamp(40px, 6vw, 68px);
+  height: clamp(40px, 6vw, 68px);
+  border-radius: 9999px;
+  overflow: hidden;
+  opacity: var(--night);
+  /* Glow scales gently with illumination — dimmer near new moon, fuller
+     at full moon — rather than a fixed glow that ignores the phase. */
+  filter: drop-shadow(
+    0 0 calc(8px + var(--moon-illum, 0.5) * 16px)
+    color-mix(in srgb, var(--moon-color) calc(35% + var(--moon-illum, 0.5) * 40%), transparent)
+  );
+}
+
+/* Real lunar phase, via two overlapping same-size discs rather than an
+   elliptical terminator path — geometrically simpler (no SVG arc math)
+   and visually equivalent for a decorative render. The lit disc never
+   moves; the shadow disc slides across it by a fraction of its own
+   width equal to --moon-illum (0% = fully covering the lit disc = new
+   moon; 100% = fully clear of it = full moon; 50% exactly bisects it =
+   quarter moon, since both discs share one radius). .atmosphere-moon's
+   overflow:hidden + border-radius clips both to the moon's silhouette. */
+.atmosphere-moon-lit {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: var(--moon-color);
+}
+
+.atmosphere-moon-shadow {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: var(--moon-shadow-color);
+  transform: translateX(calc(var(--moon-dir, -1) * var(--moon-illum, 0.5) * 100%));
+  transition: transform 3s ease;
+}
+
+/* Stars fade in after the moon, not in lockstep with it — "a moon
+   appears, and the first tiny stars begin to emerge" reads as two
+   staggered beats, not one. */
+.atmosphere-stars {
+  position: absolute;
+  inset: 0;
+  opacity: clamp(0, calc((var(--night) - 0.3) / 0.7), 1);
+}
+
+.atmosphere-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  border-radius: 9999px;
+  background: var(--star-color);
+  animation: atmosphere-twinkle 6s ease-in-out infinite alternate;
+}
+
+@keyframes atmosphere-twinkle {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.85;
+  }
+}
+
+.atmosphere-shooting-star {
+  position: absolute;
+  width: 90px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--star-color));
+  animation: atmosphere-shoot 1100ms ease-out both;
+}
+
+@keyframes atmosphere-shoot {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-140px, 90px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atmosphere-star {
+    animation: none;
+    opacity: 0.6;
+  }
+  .atmosphere-shooting-star {
     display: none;
   }
 }

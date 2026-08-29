@@ -12,6 +12,12 @@
   initial-value: 0;
 }
 
+@property --golden {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
 :root {
   /* ✦ The Moonlit Archive — day/night pairs for the 7 tokens below that
      shift with local time. Set by Atmosphere.tsx (src/lib/atmosphere.ts
@@ -32,6 +38,17 @@
   --line-day: #cabe9f;       --line-night: #3a2c3a;
   --line-soft-day: #ddd3b6;  --line-soft-night: #2a2030;
 
+  /* 🌅 Golden Hour — a warm nudge on top of the day/night blend above,
+     not a third full palette. Backgrounds/borders only: deliberately no
+     ink/charcoal/plum-golden variants, so text and the pink/plum accent
+     are entirely untouched by this feature (see --golden below and
+     DESIGN.md). Peaks partway through the existing sunset/dawn ramp —
+     src/lib/atmosphere.ts getGoldenAmount, real sunrise/sunset-based. */
+  --ivory-golden: #f2e2c4;
+  --ivory-dim-golden: #ecd9b8;
+  --line-golden: #d8bd8c;
+  --line-soft-golden: #e2c9a0;
+
   /* Fixed (non-blended) colors for the decorative sky layer itself. */
   --moon-color: #f6ecf0;
   --moon-shadow-color: #35283d;
@@ -46,11 +63,30 @@
 
   --night: 0;
   --night-text: 0;
+  --golden: 0;
 
-  --ivory: color-mix(in srgb, var(--ivory-day), var(--ivory-night) calc(var(--night) * 100%));
-  --ivory-dim: color-mix(in srgb, var(--ivory-dim-day), var(--ivory-dim-night) calc(var(--night) * 100%));
-  --line: color-mix(in srgb, var(--line-day), var(--line-night) calc(var(--night) * 100%));
-  --line-soft: color-mix(in srgb, var(--line-soft-day), var(--line-soft-night) calc(var(--night) * 100%));
+  /* Background/border tokens: day↔night blend first, then Golden Hour
+     tints the result. --golden is 0 at both full day and full night (see
+     getGoldenAmount), so those two endpoints are provably unchanged by
+     this — it can only ever affect the transition window. */
+  --ivory: color-mix(in srgb,
+    color-mix(in srgb, var(--ivory-day), var(--ivory-night) calc(var(--night) * 100%)),
+    var(--ivory-golden) calc(var(--golden) * 100%)
+  );
+  --ivory-dim: color-mix(in srgb,
+    color-mix(in srgb, var(--ivory-dim-day), var(--ivory-dim-night) calc(var(--night) * 100%)),
+    var(--ivory-dim-golden) calc(var(--golden) * 100%)
+  );
+  --line: color-mix(in srgb,
+    color-mix(in srgb, var(--line-day), var(--line-night) calc(var(--night) * 100%)),
+    var(--line-golden) calc(var(--golden) * 100%)
+  );
+  --line-soft: color-mix(in srgb,
+    color-mix(in srgb, var(--line-soft-day), var(--line-soft-night) calc(var(--night) * 100%)),
+    var(--line-soft-golden) calc(var(--golden) * 100%)
+  );
+
+  /* Text/accent: untouched by Golden Hour — day/night blend only. */
   --ink: color-mix(in srgb, var(--ink-day), var(--ink-night) calc(var(--night-text) * 100%));
   --charcoal: color-mix(in srgb, var(--charcoal-day), var(--charcoal-night) calc(var(--night-text) * 100%));
   --plum: color-mix(in srgb, var(--plum-day), var(--plum-night) calc(var(--night-text) * 100%));
@@ -69,7 +105,7 @@
    first frame just renders at the right value instantly, and only real,
    later changes (the periodic re-checks) ease smoothly. */
 html.atmosphere-ready {
-  transition: --night 8s ease, --night-text 3.5s ease;
+  transition: --night 8s ease, --night-text 3.5s ease, --golden 6s ease;
 }
 
 @theme inline {

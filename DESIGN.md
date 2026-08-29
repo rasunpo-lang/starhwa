@@ -270,12 +270,14 @@ but out of scope for this document.
 The site's atmosphere shifts continuously with the visitor's local time —
 not a manual dark-mode toggle, and not a hard switch at a fixed hour.
 `src/lib/atmosphere.ts` computes a 0–1 "night amount" from a
-piecewise-linear curve over the time of day (full day 07:00–17:00, full
-night 19:30–05:00, gradual ramps between); `Atmosphere.tsx` (mounted once
-in `layout.tsx`) writes that value to `--night`/`--night-text` on `<html>`
-every 30s, and a registered `@property` + `transition: --night 8s ease,
---night-text 3.5s ease` (`globals.css`) does the actual smooth easing
-between ticks — no JS animation loop.
+piecewise-linear curve centered on the visitor's real local sunset and
+sunrise (see 🌅 Golden Hour below for how those are calculated) rather
+than a fixed clock hour — gradual ramps either side, ~2.5h at dusk and
+~2h at dawn; `Atmosphere.tsx` (mounted once in `layout.tsx`) writes that
+value to `--night`/`--night-text` on `<html>` every 30s, and a registered
+`@property` + `transition: --night 8s ease, --night-text 3.5s ease`
+(`globals.css`) does the actual smooth easing between ticks — no JS
+animation loop.
 
 **This is why the 7 core color tokens are no longer flat hex values.**
 `--ivory`, `--ivory-dim`, `--line`, `--line-soft`, `--ink`, `--charcoal`,
@@ -327,3 +329,40 @@ creature. The sky layer's moon/stars/sparkle are kept as separate pieces
 specifically so a future wandering creature could eventually be added to
 the night atmosphere without restructuring it — nothing here implements
 that creature.
+
+**🌅 Golden Hour — a third state, Day → Golden Hour → Moonlit Night.**
+Night's timing (above) and Golden Hour both derive from the same real
+sunrise/sunset calculation — `getSunTimes()` in `atmosphere.ts`, the
+standard solar-declination/hour-angle formula — rather than a fixed
+clock hour, so the sequence stays coherent across seasons instead of a
+fixed "5pm" drifting out of sync with an actual sunset that moves by
+hours over the year.
+
+The one input that formula needs beyond the date — latitude — has no
+external service and no permission prompt behind it:
+`Intl.DateTimeFormat().resolvedOptions().timeZone` gives an IANA zone
+name, mapped to an approximate representative latitude via a small
+lookup table (`TIMEZONE_LATITUDES`, ~35 common zones, ~35°N default
+otherwise). That's the one approximation in the calculation — expect
+real local sunrise/sunset to land within roughly ±30–45 minutes of the
+computed value, appropriate for a decorative atmosphere rather than a
+solar calculator (the same precision philosophy as the lunar-phase math
+below).
+
+`getGoldenAmount()` is a bump, not a ramp — 0 well before and after,
+peaking shortly before sunset and shortly after sunrise — driving a
+`--golden` custom property nested *on top of* the existing day/night
+blend: `--ivory`, `--ivory-dim`, `--line`, and `--line-soft` each gain a
+warm `-golden` variant blended in by `--golden`, layered over their
+day/night `color-mix()` result rather than replacing it. Deliberately no
+`--ink-golden`/`--charcoal-golden`/`--plum-golden` — text and the
+plum/pink accent stay driven only by `--night-text`, completely
+untouched by Golden Hour, and neither are the moon, stars, or the
+lunar-phase math. Because `--golden` is 0 at both endpoints, full day
+and full night are provably identical to before this feature existed —
+verified directly (forcing `--night`/`--golden` and reading computed
+styles): day resolves to exactly `#f5f1e6`, night to exactly `#181120`,
+matching the pre-Golden-Hour hex values with zero drift.
+
+Verified clean with this feature in place: `tsc --noEmit`, `eslint`, and
+`npm run build` all pass.

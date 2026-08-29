@@ -14,28 +14,156 @@ function hourOfDay(date: Date): number {
   return date.getHours() + date.getMinutes() / 60;
 }
 
-/** (hour, night amount) anchor points, piecewise-linear between them. */
-const NIGHT_CURVE: [hour: number, amount: number][] = [
-  [0, 1],
-  [5, 1],
-  [7, 0],
-  [17, 0],
-  [19.5, 1],
-  [24, 1],
-];
+/**
+ * Approximate representative latitude per IANA timezone, for the sunrise/
+ * sunset calculation below. This is the one deliberate approximation in
+ * that calculation — true precision would need the visitor's real GPS
+ * coordinates (a permission-prompting Geolocation API call, or an
+ * external geolocation service), neither of which fits a quiet decorative
+ * feature. A timezone name is available with zero permission prompt and
+ * zero network request via Intl, and gets us close enough. Not exhaustive
+ * — common zones only, with a sensible default for anything else.
+ */
+const TIMEZONE_LATITUDES: Record<string, number> = {
+  "America/Los_Angeles": 34,
+  "America/Denver": 39.7,
+  "America/Chicago": 41.9,
+  "America/New_York": 40.7,
+  "America/Toronto": 43.7,
+  "America/Vancouver": 49.3,
+  "America/Mexico_City": 19.4,
+  "America/Sao_Paulo": -23.5,
+  "America/Argentina/Buenos_Aires": -34.6,
+  "Europe/London": 51.5,
+  "Europe/Dublin": 53.3,
+  "Europe/Paris": 48.9,
+  "Europe/Berlin": 52.5,
+  "Europe/Madrid": 40.4,
+  "Europe/Rome": 41.9,
+  "Europe/Amsterdam": 52.4,
+  "Europe/Moscow": 55.8,
+  "Europe/Istanbul": 41.0,
+  "Asia/Seoul": 37.6,
+  "Asia/Tokyo": 35.7,
+  "Asia/Shanghai": 31.2,
+  "Asia/Hong_Kong": 22.3,
+  "Asia/Taipei": 25.0,
+  "Asia/Singapore": 1.35,
+  "Asia/Manila": 14.6,
+  "Asia/Bangkok": 13.8,
+  "Asia/Jakarta": -6.2,
+  "Asia/Kolkata": 28.6,
+  "Asia/Dubai": 25.3,
+  "Australia/Sydney": -33.9,
+  "Australia/Melbourne": -37.8,
+  "Australia/Perth": -31.9,
+  "Pacific/Auckland": -36.8,
+  "Africa/Cairo": 30.0,
+  "Africa/Johannesburg": -26.2,
+  "Africa/Lagos": 6.5,
+};
 
-/** 0 (full day) → 1 (full night), continuous. Drives background tokens. */
+/** Fallback for any timezone not in the table above. */
+const DEFAULT_LATITUDE = 35;
+
+function getApproxLatitude(): number {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (tz && tz in TIMEZONE_LATITUDES) return TIMEZONE_LATITUDES[tz];
+  } catch {
+    // Intl unavailable for some reason — fall through to the default.
+  }
+  return DEFAULT_LATITUDE;
+}
+
+function dayOfYear(date: Date): number {
+  const start = new Date(date.getFullYear(), 0, 0);
+  return Math.floor((date.getTime() - start.getTime()) / 86_400_000);
+}
+
+export interface SunTimes {
+  /** Decimal local-clock hours (e.g. 6.5 = 6:30am). */
+  sunrise: number;
+  sunset: number;
+}
+
+/**
+ * Real sunrise/sunset for the given date — the standard solar-
+ * declination/hour-angle formula, not a lookup table or an external
+ * service. The only approximation is the latitude input (see
+ * TIMEZONE_LATITUDES above); the astronomy itself, and the equation-of-
+ * time/exact-longitude corrections it skips, put this within roughly
+ * ±30–45 minutes of true local sunrise/sunset — appropriate for a
+ * decorative atmosphere, not a solar calculator (the same precision
+ * philosophy as getMoonPhase below).
+ */
+export function getSunTimes(date: Date): SunTimes {
+  const latRad = (getApproxLatitude() * Math.PI) / 180;
+  const n = dayOfYear(date);
+  const declRad = ((23.44 * Math.PI) / 180) * Math.sin(((2 * Math.PI) / 365) * (n - 81));
+  const cosH = Math.min(1, Math.max(-1, -Math.tan(latRad) * Math.tan(declRad)));
+  const hourAngleHours = (Math.acos(cosH) * 180) / Math.PI / 15;
+  return {
+    sunrise: 12 - hourAngleHours,
+    sunset: 12 + hourAngleHours,
+  };
+}
+
+/**
+ * 0 (full day) → 1 (full night), continuous. Drives background tokens.
+ * Ramps around the real sunrise/sunset above rather than fixed clock
+ * hours, so Golden Hour (getGoldenAmount below) — which shares the same
+ * sun times — lines up with it at any time of year instead of drifting
+ * out of sync by season.
+ */
 export function getNightAmount(date: Date): number {
+  const { sunrise, sunset } = getSunTimes(date);
   const h = hourOfDay(date);
-  for (let i = 0; i < NIGHT_CURVE.length - 1; i++) {
-    const [h0, a0] = NIGHT_CURVE[i];
-    const [h1, a1] = NIGHT_CURVE[i + 1];
+
+  // Same ramp widths as the original fixed-hour curve (2.5h dusk, 2h
+  // dawn) — only the center moved from a fixed guess to the real event.
+  const dawnStart = Math.max(0.01, sunrise - 0.75);
+  const dawnEnd = Math.min(23.99, sunrise + 1.25);
+  const duskStart = Math.max(dawnEnd + 0.01, sunset - 1.5);
+  const duskEnd = Math.min(23.99, sunset + 1.0);
+
+  const curve: [number, number][] = [
+    [0, 1],
+    [dawnStart, 1],
+    [dawnEnd, 0],
+    [duskStart, 0],
+    [duskEnd, 1],
+    [24, 1],
+  ];
+
+  for (let i = 0; i < curve.length - 1; i++) {
+    const [h0, a0] = curve[i];
+    const [h1, a1] = curve[i + 1];
     if (h >= h0 && h <= h1) {
       const t = h1 === h0 ? 0 : (h - h0) / (h1 - h0);
       return a0 + (a1 - a0) * t;
     }
   }
   return 1;
+}
+
+function triangleBump(h: number, center: number, halfWidthHours: number): number {
+  return Math.max(0, 1 - Math.abs(h - center) / halfWidthHours);
+}
+
+/**
+ * 0 → 1 → 0, a gentle bump (not a monotonic ramp like getNightAmount)
+ * peaking shortly before sunset and shortly after sunrise — the warm
+ * "golden hour" window, fully 0 well before it and well after it settles
+ * into ordinary day or night. Deliberately independent of --night (see
+ * globals.css): it only ever nudges the background tokens, never text.
+ */
+export function getGoldenAmount(date: Date): number {
+  const { sunrise, sunset } = getSunTimes(date);
+  const h = hourOfDay(date);
+  const evening = triangleBump(h, sunset - 0.4, 1.0);
+  const morning = triangleBump(h, sunrise + 0.3, 1.0);
+  return Math.max(evening, morning);
 }
 
 /**

@@ -4,17 +4,19 @@ import { useEffect, useRef, useState } from "react";
 import Glint from "./Glint";
 import {
   ATMOSPHERE_CONFIG as CFG,
+  getGoldenAmount,
   getMoonPhase,
   getNightAmount,
   getNightTextAmount,
 } from "@/lib/atmosphere";
 
 /**
- * ✦ The Moonlit Archive — the visual half of the day/night atmosphere.
- * The actual color shift happens in globals.css (color-mix() blends
- * driven by the --night/--night-text custom properties this component
- * sets on <html>); this component is only responsible for keeping those
- * two values current, plus rendering the purely decorative sky layer
+ * ✦ The Moonlit Archive — the visual half of the day/night atmosphere,
+ * now with a third state (🌅 Golden Hour) between them. The actual color
+ * shift happens in globals.css (color-mix() blends driven by the
+ * --night/--night-text/--golden custom properties this component sets
+ * on <html>); this component is only responsible for keeping those
+ * values current, plus rendering the purely decorative sky layer
  * (moon, stars, rare sparkle/shooting star) on top of it. The moon's
  * shape itself tracks the real lunar phase (getMoonPhase in
  * src/lib/atmosphere.ts) via --moon-illum/--moon-dir, rendered in CSS as
@@ -70,10 +72,12 @@ export default function Atmosphere() {
       const now = new Date();
       const night = getNightAmount(now);
       const nightText = getNightTextAmount(night);
+      const golden = getGoldenAmount(now);
       const moon = getMoonPhase(now);
       const style = document.documentElement.style;
       style.setProperty("--night", String(night));
       style.setProperty("--night-text", String(nightText));
+      style.setProperty("--golden", String(golden));
       style.setProperty("--moon-illum", String(moon.illumination));
       style.setProperty("--moon-dir", moon.waxing ? "-1" : "1");
       return night;

@@ -55,8 +55,7 @@ export default function ChronologyPage() {
           <p className="mt-5 max-w-xl text-sm leading-relaxed text-charcoal/85">
             Every catalogued entry, arranged in order from Park Seonghwa&apos;s
             debut with ATEEZ on October 24, 2018, to the present — organized
-            by era and year. Sample entries shown; the full database is
-            continuously expanded.
+            by era and year.
           </p>
           <nav aria-label="Jump to era" className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
             {eras.map((era) => (

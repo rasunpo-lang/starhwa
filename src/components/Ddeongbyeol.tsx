@@ -100,7 +100,6 @@ export default function Ddeongbyeol({ className = "" }: { className?: string }) 
         strokeWidth="1.7"
         strokeLinejoin="round"
       />
-      <ellipse cx="32" cy="50.5" rx="5.2" ry="4.5" fill={WHITE} />
 
       {/* limbs — short graphic nubs, not anatomical: arms extend
           outward from the wide upper sides of the tapered body, legs
@@ -122,6 +121,14 @@ export default function Ddeongbyeol({ className = "" }: { className?: string }) 
       <path d="M40.8 55 L40.8 64 Q40.8 66 38.8 66 L35.2 66 Q33.2 66 33.2 64 L33.2 55" stroke={PINK_LINE} strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
       <ellipse cx="27" cy="64" rx="2.3" ry="1.8" fill={WHITE} />
       <ellipse cx="37" cy="64" rx="2.3" ry="1.8" fill={WHITE} />
+
+      {/* belly — painted after the legs (not right after the body
+          fill) specifically so it renders fully intact: the legs'
+          fill-only tops (y 53–55) tuck invisibly under the body/belly
+          per the limb comment above, but that only reads correctly if
+          the belly is the topmost shape in that overlap — drawing it
+          earlier let the leg fill cut into its bottom corners. */}
+      <ellipse cx="32" cy="50.5" rx="5.2" ry="4.5" fill={WHITE} />
 
       {/* head — a rounded dome at top flaring to two soft round cheek
           bulges lower down, each separated from a flat (not bulging)
@@ -160,7 +167,7 @@ export default function Ddeongbyeol({ className = "" }: { className?: string }) 
           />
           <ellipse cx="0.5" cy="-2.3" rx="1.3" ry="1" transform="rotate(20 0.5 -2.3)" fill={WHITE} />
           <ellipse cx="-0.5" cy="-0.9" rx="1.1" ry="0.85" transform="rotate(20 -0.5 -0.9)" fill={WHITE} />
-          <path d="M0 -2.8 Q-2 -1 -5 -0.8" stroke={BROWN} strokeWidth="1.1" strokeLinecap="round" fill="none" />
+          <path d="M0 -2.8 Q-2 -3 -5 -3.5" stroke={BROWN} strokeWidth="1.1" strokeLinecap="round" fill="none" />
           <ellipse cx="0" cy="2.6" rx="1.8" ry="0.85" fill={PINK_DEEP} />
           <circle cx="-0.6" cy="0.5" r="0.35" fill={WHITE} />
         </g>
@@ -171,7 +178,7 @@ export default function Ddeongbyeol({ className = "" }: { className?: string }) 
           />
           <ellipse cx="0.5" cy="-2.3" rx="1.3" ry="1" transform="rotate(20 0.5 -2.3)" fill={WHITE} />
           <ellipse cx="-0.5" cy="-0.9" rx="1.1" ry="0.85" transform="rotate(20 -0.5 -0.9)" fill={WHITE} />
-          <path d="M0 -2.8 Q2 -1 5 -0.8" stroke={BROWN} strokeWidth="1.1" strokeLinecap="round" fill="none" />
+          <path d="M0 -2.8 Q2 -3 5 -3.5" stroke={BROWN} strokeWidth="1.1" strokeLinecap="round" fill="none" />
           <ellipse cx="0" cy="2.6" rx="1.8" ry="0.85" fill={PINK_DEEP} />
           <circle cx="0.6" cy="0.5" r="0.35" fill={WHITE} />
         </g>

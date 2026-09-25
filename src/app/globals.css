@@ -18,6 +18,97 @@
   initial-value: 0;
 }
 
+/* Where within the Golden Hour window the visitor currently is (0 at its
+   first instant, 1 at its last) — distinct from --golden's intensity
+   bump. Drives the sky gradient's own color-mix() stops (see
+   .atmosphere-goldensky) so its colors shift continuously as real
+   sunset/sunrise time passes, not just fade in/out. See getGoldenProgress
+   in src/lib/atmosphere.ts. */
+@property --golden-progress {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+/* Real solar elevation (degrees above/below the horizon — see
+   getSolarPosition in src/lib/atmosphere.ts) and horizontal sweep
+   fraction, driving .atmosphere-sun's actual position relative to the
+   horizon instead of a fixed on-screen spot. Initial values are "sun
+   below the horizon, centered" — a safe default for the instant before
+   any script has set the real value. */
+@property --sun-elevation {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: -90;
+}
+
+@property --sun-x {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0.5;
+}
+
+/* Registered as a typed number (not left as a bare unregistered custom
+   property) despite being purely derived from --night, with no JS ever
+   assigning it directly: an unregistered custom property is substituted
+   as a raw token stream, and nesting its own calc() inside another
+   color-mix()'s percentage argument (see .atmosphere-sky) did not
+   reliably resolve in testing. Registering it costs nothing extra — it
+   still needs no entry in html.atmosphere-ready's transition list, since
+   it has no discrete JS-assigned value to ease between; it simply
+   recomputes as a typed number every time --night's own (already
+   registered, already transitioning) value changes. */
+@property --sky-transition {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+/* Atmospheric-depth layer (see .atmosphere-sky's background) — how much
+   the horizon "lifts" in warmth/luminosity relative to the zenith.
+   Registered for the same reason --sky-transition is, immediately
+   above: it's nested inside another layer's rgba() alpha channel, and
+   an unregistered custom property's calc() does not reliably resolve
+   there. */
+@property --sky-horizon-lift {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+/* The same depth layer's zenith side — small and mostly state-
+   independent, deepening slightly only at Night ("dark upper sky"),
+   since the zenith itself is meant to stay comparatively stable the
+   rest of the time (see "zenith stays put" elsewhere in this file). */
+@property --sky-zenith-recede {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0.04;
+}
+
+/* Celestial dimensionality (DESIGN.md §12) — how much the sun's own disc
+   should redden toward its atmosphere-scattered horizon color, reusing
+   --sun-elevation (already computed by getSolarPosition) rather than new
+   astronomy. 1 at/near the horizon, fading to 0 by ~28° up. Nested inside
+   a color-mix() percentage argument below (.atmosphere-sun), so it needs
+   the same @property registration --sky-transition does, for the same
+   resolution reason. */
+@property --sun-horizon-mix {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+/* The sun's own gentle "breathing" — a gentle luminosity/scale pulse (see
+   .atmosphere-sun) standing in for solar convection rather than a static
+   disc. Registered so it can be animated smoothly and reset to exactly 1
+   (no pulse) under reduced motion via the initial-value alone. */
+@property --sun-pulse {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 1;
+}
+
 :root {
   /* ✦ The Moonlit Archive — day/night pairs for the 7 tokens below that
      shift with local time. Set by Atmosphere.tsx (src/lib/atmosphere.ts
@@ -54,6 +145,54 @@
   --moon-shadow-color: #35283d;
   --star-color: #f3e9ea;
 
+  /* Celestial dimensionality (DESIGN.md §12) — more fixed, non-blended
+     hexes for volumetric shading: a crater tone and a cool rim-light for
+     the moon's surface, a warm core/mid/edge ramp and a golden horizon
+     tone for the sun, and warm/cool star tints so the field reads as
+     stars at different distances rather than one dot repeated 18 times.
+
+     Pearlescent-white pass (color/light only, again — no size, position,
+     movement, or opacity formula touched): the previous ramp's
+     --sun-edge (#f5c488, a genuine honey-gold) and --sun-horizon-tone
+     (#e4995f, a genuine coral-orange) were saturated enough that the
+     disc's own outer 50% — the part of the gradient doing most of the
+     visible "circle" reading, since the inner core is small and mostly
+     overexposed-white already — read as a distinct orange ring rather
+     than a white light source with warmth at its margin. Every stop
+     below is lifted toward the same warm-white/ivory family --sun-core
+     already anchors: --sun-mid barely warms past white, --sun-edge is a
+     pale ivory rather than a gold, and --sun-horizon-tone — still the
+     warmest stop, still reserved for the low-elevation/Golden-Hour edge
+     via --sun-horizon-mix below — is a soft honey rather than a coral.
+     The point isn't "less warm," it's "warm the way overexposed white
+     light is warm," not "warm the way a painted orange disc is warm." */
+  --moon-crater: #cbb3c4;
+  --moon-rim-light: #eaf2ff;
+  --sun-core: #fffdf8;
+  --sun-mid: #fff3e0;
+  --sun-edge: #ffe7ca;
+  --sun-horizon-tone: #f0c294;
+  --star-warm: #fff3e4;
+  --star-cool: #e8eeff;
+
+  /* See the --sun-horizon-mix @property above for what this drives. */
+  --sun-horizon-mix: clamp(0, calc(1 - (var(--sun-elevation) + 2) / 30), 1);
+
+  /* Warmth for the *ambient* near-sun sky glow (the "DAYTIME DEPTH" layer
+     on .atmosphere-sky, below) — deliberately driven by --golden, not
+     --sun-horizon-mix. --sun-horizon-mix stays clamped at 1 for any
+     elevation below about -2° (it has no reason to know the difference
+     between "just past sunset" and "the middle of the night", since the
+     disc it was built for is already hidden by its own opacity curve by
+     then) — reusing it here would leave this sky-embedded layer's warm
+     tint sitting at full strength all night, reading as a lingering
+     orange remnant with no sun to justify it. --golden is already 0
+     through the night for the correct reason (it's a bump centered on
+     the real sunrise/sunset window), so gating this tint by it instead
+     means the near-sun sky warms during Golden Hour and returns to
+     plain day color the rest of the time, night included, automatically. */
+  --sun-ambient-tint: color-mix(in srgb, var(--sun-mid), var(--sun-horizon-tone) calc(var(--golden) * 55%));
+
   /* Real lunar phase (src/lib/atmosphere.ts getMoonPhase), set by
      Atmosphere.tsx alongside --night/--night-text. 0 = fully unlit
      (new moon), 1 = fully lit (full moon); --moon-dir is -1 (waxing,
@@ -64,6 +203,90 @@
   --night: 0;
   --night-text: 0;
   --golden: 0;
+  --golden-progress: 0;
+
+  /* Where the sky sits within the dawn/dusk "blue hour," derived purely
+     from --night with no new astronomy or JS: 0 at full day/night, 1
+     exactly at night=0.5 — the midpoint of whichever real dawn or dusk
+     ramp getNightAmount is currently in the middle of. Since --night is
+     already a registered @property with its own transition, this needs
+     no transition entry of its own (though it IS registered via
+     @property above, unlike this comment once claimed — see that
+     block's own comment for why) — it re-resolves every frame as
+     --night eases. Deliberately symmetric: dawn and dusk share the same
+     indigo/violet character (both are genuinely "blue hour" skies); the
+     approaching-day-vs-approaching-night distinction is already carried
+     by which direction --night itself is moving. See .atmosphere-sky
+     below for where this is actually used. */
+  --sky-transition: calc(1 - abs(var(--night) * 2 - 1));
+
+  /* Atmospheric-depth intensities — see .atmosphere-sky's background
+     for where these are used, and the @property blocks above for why
+     both are registered. Horizon lift is near 0 at Night (kept deep
+     and clear, not hazy), a small constant baseline at Day, and
+     strongest at Golden Hour, scaled down at Twilight/Dawn; zenith
+     recede is a small near-constant that only deepens slightly at
+     Night ("dark upper sky"). Neither touches any --sky-N-* palette
+     stop — this is a depth cue layered over the existing gradient, not
+     a repalette.
+
+     The Day baseline (the third max() term) was raised from 0.14 to
+     0.22 in the celestial-integration pass: this term is what the
+     --sun-x-biased radial glow below (.atmosphere-sky's second
+     background layer) scales off of, and at 0.14 it rendered at only
+     ~0.056 alpha at Day — near-imperceptible, so the sky read as a
+     flat vertical wash with no sense of where the light was actually
+     coming from for the ~90% of the day that isn't Golden Hour or
+     Twilight. 0.22 is still a strict minority contribution (the
+     radial layer stays at its own 0.4× fraction, untouched) and,
+     because max() picks the largest term, this change is provably
+     isolated to Day: at Golden Hour --golden already dominates, at
+     Twilight --sky-transition * 0.85 already dominates, and at Night
+     (1 - --night) is exactly 0 regardless of this coefficient — none
+     of those three terms move. */
+  --sky-horizon-lift: max(var(--golden), var(--sky-transition) * 0.85, calc((1 - var(--night)) * 0.22));
+  --sky-zenith-recede: calc(var(--night) * 0.18 + 0.04);
+
+  /* A neutral (hueless) legibility scrim for .header-golden-glass and
+     .footer-sky-glass — see both for why. Tracks --night-text (the same
+     curve --ink/--charcoal/--plum already use) rather than --night, so
+     it stays in step with the text color it's meant to back up: near-
+     white when text is at its day-dark ink, near-black when text is at
+     its night-light ink. Used as a <color>, not nested inside another
+     value's percentage argument, so — unlike --sky-transition/
+     --sky-horizon-lift/--sky-zenith-recede — it needs no @property
+     registration. */
+  --surface-scrim: color-mix(in srgb, black, white calc((1 - var(--night-text)) * 100%));
+
+  /* ── Depth system: content-plane elevation + surface light ──
+     Everything below derives from tokens the atmosphere system already
+     computes (--ink, --night-text, --golden, --sun-x, --sky-94-final) —
+     no new timer, no independent color system. Shadows and highlights
+     therefore warm/cool/darken/brighten in lockstep with the same
+     day → golden hour → twilight → night curve as everything else,
+     for free. See DESIGN.md §9 for what each of those source tokens is. */
+
+  /* Contact-shadow tints — both derived from --ink, so a "cast shadow"
+     is literally a translucent smear of the page's own ink color, the
+     same way real contact shadows are a darkened version of what's
+     under the object, not an arbitrary gray. */
+  --elevation-ambient: color-mix(in srgb, var(--ink), transparent 92%);
+  --elevation-cast: color-mix(in srgb, var(--ink), transparent 80%);
+  /* The cast shadow's warm variant, used only at low --golden-weighted
+     strength — a photograph's shadow picking up a little of the warm
+     light bouncing around it during Golden Hour ("reflected ambient
+     light"), rather than staying a neutral gray at every hour. */
+  --elevation-cast-warm: color-mix(in srgb, var(--elevation-cast), #e8b878 55%);
+
+  /* The surface-light color a photograph's edge would catch: near-white
+     and warm by day, leaning toward the sky's own current zenith tone
+     (--sky-94-final — already computed by the sky gradient, reused here
+     rather than a second astronomy) as night deepens, so an edge
+     highlight at night reads as cool moonlight, not daylight left on by
+     mistake. --golden nudges it warmer still, same direction Golden
+     Hour already warms everything else. */
+  --surface-light: color-mix(in srgb, #fff6e8, var(--sky-94-final) calc(var(--night-text) * 55%));
+  --surface-light-warm: color-mix(in srgb, var(--surface-light), #ffcf8f calc(var(--golden) * 55%));
 
   /* Background/border tokens: day↔night blend first, then Golden Hour
      tints the result. --golden is 0 at both full day and full night (see
@@ -94,6 +317,240 @@
   /* Reserved, untouched by the day/night blend — see DESIGN.md §3. */
   --plum-deep: #431722;
   --plum-tint: #8a4356;
+
+  /* The 14-stop sky's raw hexes and computed stages (all originally
+     scoped to .atmosphere-sky itself) live here instead, in :root, so
+     they're inherited everywhere in the document, not just inside
+     .atmosphere-sky's own subtree — .header-golden-glass, .footer-sky-
+     glass, and .atmosphere-moon all reference --sky-0-final/
+     --sky-100-final/--sky-94-final directly, and none of those
+     elements are DOM descendants of .atmosphere-sky (they're siblings
+     under the same .atmosphere container, or entirely outside it), so
+     a custom property declared on .atmosphere-sky alone would never
+     inherit down to them — it would simply be empty there, silently
+     invalidating any declaration that referenced it. Moving the
+     values here (not changing any of them) is the fix: same 14 stops,
+     same formulas, just declared where every consumer can actually
+     see them. .atmosphere-sky's own background below is unaffected —
+     these still inherit down to it from :root exactly as before. */
+  --sky-0-day: #f5f0e4;
+  --sky-0-night: #211a2e;
+  --sky-0-transition: #d18fae;
+  --sky-0-early: #e6d8bd;
+  --sky-0-late: #f7d7a1;
+  --sky-8-day: #f1eee2;
+  --sky-8-night: #1e1829;
+  --sky-8-transition: #c288a8;
+  --sky-8-early: #dccdb9;
+  --sky-8-late: #f0c199;
+  --sky-16-day: #ecebe0;
+  --sky-16-night: #1b1526;
+  --sky-16-transition: #b382a3;
+  --sky-16-early: #cabfb9;
+  --sky-16-late: #e5aa9b;
+  --sky-24-day: #e6e8e0;
+  --sky-24-night: #191322;
+  --sky-24-transition: #a47c9d;
+  --sky-24-early: #b7b0ba;
+  --sky-24-late: #d8949c;
+  --sky-32-day: #dfe5e2;
+  --sky-32-night: #17111e;
+  --sky-32-transition: #9c709c;
+  --sky-32-early: #9fa0b8;
+  --sky-32-late: #c8809b;
+  --sky-40-day: #d8e2e4;
+  --sky-40-night: #150f1b;
+  --sky-40-transition: #8a6a97;
+  --sky-40-early: #8790b0;
+  --sky-40-late: #b57197;
+  --sky-48-day: #d1dfe6;
+  --sky-48-night: #130e19;
+  --sky-48-transition: #796693;
+  --sky-48-early: #7482a5;
+  --sky-48-late: #9e6690;
+  --sky-56-day: #cadce8;
+  --sky-56-night: #110c17;
+  --sky-56-transition: #6a6390;
+  --sky-56-early: #647697;
+  --sky-56-late: #855c85;
+  /* --sky-64-day through --sky-100-day (DESIGN.md §16) are deepened from
+     their original, near-flat pale-blue values — progressively more so
+     toward the zenith — so a clear Day sky reads as genuinely richer
+     overhead rather than a uniform pastel wash all the way up; --sky-0
+     through --sky-56-day are untouched, keeping the horizon exactly as
+     pale/light as before. Every other hex set (-night/-transition/
+     -early/-late) is unchanged. */
+  --sky-64-day: #b9d5ea;
+  --sky-64-night: #0f0b15;
+  --sky-64-transition: #5d6089;
+  --sky-64-early: #576c89;
+  --sky-64-late: #705376;
+  --sky-72-day: #abd0ea;
+  --sky-72-night: #0d0a13;
+  --sky-72-transition: #565f80;
+  --sky-72-early: #4c6079;
+  --sky-72-late: #5c4d66;
+  --sky-80-day: #9dc9ea;
+  --sky-80-night: #0c0911;
+  --sky-80-transition: #5a6a7d;
+  --sky-80-early: #40536a;
+  --sky-80-late: #494757;
+  --sky-88-day: #8fc2eb;
+  --sky-88-night: #0a080f;
+  --sky-88-transition: #58697d;
+  --sky-88-early: #35485c;
+  --sky-88-late: #3a414c;
+  --sky-94-day: #83bcec;
+  --sky-94-night: #09070d;
+  --sky-94-transition: #57687d;
+  --sky-94-early: #2c3e51;
+  --sky-94-late: #2f3a44;
+  --sky-100-day: #78b6ec;
+  --sky-100-night: #08070c;
+  --sky-100-transition: #57697d;
+  --sky-100-early: #223448;
+  --sky-100-late: #26313c;
+
+  --sky-0-base: color-mix(in srgb, var(--sky-0-day), var(--sky-0-night) calc(var(--night) * 100%));
+  --sky-0-transitioned: color-mix(in srgb, var(--sky-0-base), var(--sky-0-transition) calc(var(--sky-transition) * 100%));
+  --sky-0-goldenmix: color-mix(in srgb, var(--sky-0-early), var(--sky-0-late) calc(var(--golden-progress) * 100%));
+  --sky-0-final: color-mix(in srgb, var(--sky-0-transitioned), var(--sky-0-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-8-base: color-mix(in srgb, var(--sky-8-day), var(--sky-8-night) calc(var(--night) * 100%));
+  --sky-8-transitioned: color-mix(in srgb, var(--sky-8-base), var(--sky-8-transition) calc(var(--sky-transition) * 100%));
+  --sky-8-goldenmix: color-mix(in srgb, var(--sky-8-early), var(--sky-8-late) calc(var(--golden-progress) * 100%));
+  --sky-8-final: color-mix(in srgb, var(--sky-8-transitioned), var(--sky-8-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-16-base: color-mix(in srgb, var(--sky-16-day), var(--sky-16-night) calc(var(--night) * 100%));
+  --sky-16-transitioned: color-mix(in srgb, var(--sky-16-base), var(--sky-16-transition) calc(var(--sky-transition) * 100%));
+  --sky-16-goldenmix: color-mix(in srgb, var(--sky-16-early), var(--sky-16-late) calc(var(--golden-progress) * 100%));
+  --sky-16-final: color-mix(in srgb, var(--sky-16-transitioned), var(--sky-16-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-24-base: color-mix(in srgb, var(--sky-24-day), var(--sky-24-night) calc(var(--night) * 100%));
+  --sky-24-transitioned: color-mix(in srgb, var(--sky-24-base), var(--sky-24-transition) calc(var(--sky-transition) * 100%));
+  --sky-24-goldenmix: color-mix(in srgb, var(--sky-24-early), var(--sky-24-late) calc(var(--golden-progress) * 100%));
+  --sky-24-final: color-mix(in srgb, var(--sky-24-transitioned), var(--sky-24-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-32-base: color-mix(in srgb, var(--sky-32-day), var(--sky-32-night) calc(var(--night) * 100%));
+  --sky-32-transitioned: color-mix(in srgb, var(--sky-32-base), var(--sky-32-transition) calc(var(--sky-transition) * 100%));
+  --sky-32-goldenmix: color-mix(in srgb, var(--sky-32-early), var(--sky-32-late) calc(var(--golden-progress) * 100%));
+  --sky-32-final: color-mix(in srgb, var(--sky-32-transitioned), var(--sky-32-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-40-base: color-mix(in srgb, var(--sky-40-day), var(--sky-40-night) calc(var(--night) * 100%));
+  --sky-40-transitioned: color-mix(in srgb, var(--sky-40-base), var(--sky-40-transition) calc(var(--sky-transition) * 100%));
+  --sky-40-goldenmix: color-mix(in srgb, var(--sky-40-early), var(--sky-40-late) calc(var(--golden-progress) * 100%));
+  --sky-40-final: color-mix(in srgb, var(--sky-40-transitioned), var(--sky-40-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-48-base: color-mix(in srgb, var(--sky-48-day), var(--sky-48-night) calc(var(--night) * 100%));
+  --sky-48-transitioned: color-mix(in srgb, var(--sky-48-base), var(--sky-48-transition) calc(var(--sky-transition) * 100%));
+  --sky-48-goldenmix: color-mix(in srgb, var(--sky-48-early), var(--sky-48-late) calc(var(--golden-progress) * 100%));
+  --sky-48-final: color-mix(in srgb, var(--sky-48-transitioned), var(--sky-48-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-56-base: color-mix(in srgb, var(--sky-56-day), var(--sky-56-night) calc(var(--night) * 100%));
+  --sky-56-transitioned: color-mix(in srgb, var(--sky-56-base), var(--sky-56-transition) calc(var(--sky-transition) * 100%));
+  --sky-56-goldenmix: color-mix(in srgb, var(--sky-56-early), var(--sky-56-late) calc(var(--golden-progress) * 100%));
+  --sky-56-final: color-mix(in srgb, var(--sky-56-transitioned), var(--sky-56-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-64-base: color-mix(in srgb, var(--sky-64-day), var(--sky-64-night) calc(var(--night) * 100%));
+  --sky-64-transitioned: color-mix(in srgb, var(--sky-64-base), var(--sky-64-transition) calc(var(--sky-transition) * 100%));
+  --sky-64-goldenmix: color-mix(in srgb, var(--sky-64-early), var(--sky-64-late) calc(var(--golden-progress) * 100%));
+  --sky-64-final: color-mix(in srgb, var(--sky-64-transitioned), var(--sky-64-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-72-base: color-mix(in srgb, var(--sky-72-day), var(--sky-72-night) calc(var(--night) * 100%));
+  --sky-72-transitioned: color-mix(in srgb, var(--sky-72-base), var(--sky-72-transition) calc(var(--sky-transition) * 100%));
+  --sky-72-goldenmix: color-mix(in srgb, var(--sky-72-early), var(--sky-72-late) calc(var(--golden-progress) * 100%));
+  --sky-72-final: color-mix(in srgb, var(--sky-72-transitioned), var(--sky-72-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-80-base: color-mix(in srgb, var(--sky-80-day), var(--sky-80-night) calc(var(--night) * 100%));
+  --sky-80-transitioned: color-mix(in srgb, var(--sky-80-base), var(--sky-80-transition) calc(var(--sky-transition) * 100%));
+  --sky-80-goldenmix: color-mix(in srgb, var(--sky-80-early), var(--sky-80-late) calc(var(--golden-progress) * 100%));
+  --sky-80-final: color-mix(in srgb, var(--sky-80-transitioned), var(--sky-80-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-88-base: color-mix(in srgb, var(--sky-88-day), var(--sky-88-night) calc(var(--night) * 100%));
+  --sky-88-transitioned: color-mix(in srgb, var(--sky-88-base), var(--sky-88-transition) calc(var(--sky-transition) * 100%));
+  --sky-88-goldenmix: color-mix(in srgb, var(--sky-88-early), var(--sky-88-late) calc(var(--golden-progress) * 100%));
+  --sky-88-final: color-mix(in srgb, var(--sky-88-transitioned), var(--sky-88-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-94-base: color-mix(in srgb, var(--sky-94-day), var(--sky-94-night) calc(var(--night) * 100%));
+  --sky-94-transitioned: color-mix(in srgb, var(--sky-94-base), var(--sky-94-transition) calc(var(--sky-transition) * 100%));
+  --sky-94-goldenmix: color-mix(in srgb, var(--sky-94-early), var(--sky-94-late) calc(var(--golden-progress) * 100%));
+  --sky-94-final: color-mix(in srgb, var(--sky-94-transitioned), var(--sky-94-goldenmix) calc(var(--golden) * 100%));
+
+  --sky-100-base: color-mix(in srgb, var(--sky-100-day), var(--sky-100-night) calc(var(--night) * 100%));
+  --sky-100-transitioned: color-mix(in srgb, var(--sky-100-base), var(--sky-100-transition) calc(var(--sky-transition) * 100%));
+  --sky-100-goldenmix: color-mix(in srgb, var(--sky-100-early), var(--sky-100-late) calc(var(--golden-progress) * 100%));
+  --sky-100-final: color-mix(in srgb, var(--sky-100-transitioned), var(--sky-100-goldenmix) calc(var(--golden) * 100%));
+
+  /* ✦ Cloud layers (DESIGN.md §14, refined for a more cinematic/editorial
+     read) — a cloud is simply a paler version of the light around it, not
+     its own independent color: --cloud-body lightens the sky's own live
+     mid-height stop (--sky-64-final, already time-of-day-correct — pale
+     blue by Day, deep indigo/violet by Night, rose-peach at Sunrise/Golden
+     Hour) rather than introducing a second day/night/golden palette.
+     --cloud-body's own white-mix is no longer a flat 42% — it eases from
+     22% at full Night up to 42% by Day (calc((1 - --night) * 20% + 22%)),
+     so Night cloud silhouettes stay closer to the sky's own saturated
+     indigo/violet (a distinct blue-violet haze, not a generic pale gray)
+     while Day still reads airy and pale exactly as before; nothing about
+     the 42% ceiling changed for any state at --night: 0. --cloud-highlight
+     lightens that further and warms it toward a soft champagne/gold
+     specifically by --golden (not --sky-transition, which stays cool) —
+     concentrating "the sun catching the upper edge" at Golden Hour/Sunrise
+     rather than tinting clouds orange at every hour; its own golden-mix
+     strength was nudged up (65% → 72%) so a restrained warm catch-light is
+     legible on the mid/near tiers without tipping into an orange cast.
+     Split into three single-level stages (never one inline nested
+     color-mix()) for the same minifier-safety reason documented on
+     .atmosphere-moon's --moon-glow-tint. */
+  --cloud-body: color-mix(in srgb, var(--sky-64-final), white calc((1 - var(--night)) * 20% + 22%));
+  --cloud-highlight-base: color-mix(in srgb, var(--cloud-body), white 34%);
+  --cloud-highlight: color-mix(in srgb, var(--cloud-highlight-base), #ffd7a0 calc(var(--golden) * 72%));
+
+  /* DAYTIME DEPTH (DESIGN.md §16) — cloud depth, not just cloud presence.
+     Two independent cues, both derived from tokens the sky already
+     computes, so far/mid/near read as genuinely different distances
+     rather than the same puff at three sizes:
+
+     1. Atmospheric perspective — a distant cloud is seen through more
+        intervening air than a near one, so it visually leans toward that
+        air's own color (already --sky-0-final, the live horizon stop —
+        pale by Day, warm at Sunrise, indigo at Night — no new palette).
+        --cloud-aerial-far blends more of it in than --cloud-aerial-mid;
+        the near tier is left as plain --cloud-body — closest, least
+        atmosphere in front of it. This isn't Day-gated: at Sunrise this
+        makes distant clouds pick up more of the horizon's own warmth
+        than near ones (correct — that's genuinely how a sunrise sky
+        looks), and at Night, slightly more indigo — the same mechanism
+        improves all three states because it reads real air, not a Day-
+        only trick.
+     2. Light/shadow modeling — --cloud-shadow-mix is how strongly a
+        blob's own body should darken toward its outer/lower edge (used
+        below as an extra mid-gradient stop, not a new gradient layer):
+        near 0 at Sunrise/Night, where --golden's own warm highlight
+        already carries the sense of a lit surface, and strongest at
+        Day, where flat, even, sourceless light was the actual complaint
+        — a cloud that was simply "a paler sky" with no shadow side at
+        all. Formula, not a flat Day/Night switch, so it eases the same
+        way every other phase-aware value in this file does. */
+  --cloud-shadow-mix: calc((1 - var(--night)) * (1 - var(--golden)) * 100%);
+  --cloud-shadow: color-mix(in srgb, var(--cloud-body), var(--sky-32-final) calc(var(--cloud-shadow-mix) * 0.4));
+  --cloud-aerial-far: color-mix(in srgb, var(--cloud-body), var(--sky-0-final) 42%);
+  --cloud-aerial-mid: color-mix(in srgb, var(--cloud-body), var(--sky-0-final) 22%);
+  --cloud-shadow-far: color-mix(in srgb, var(--cloud-aerial-far), var(--sky-32-final) calc(var(--cloud-shadow-mix) * 0.4));
+  --cloud-shadow-mid: color-mix(in srgb, var(--cloud-aerial-mid), var(--sky-32-final) calc(var(--cloud-shadow-mix) * 0.4));
+
+  /* How present the cloud layers are overall, shared by all three tiers
+     below (each applies its own further multiplier on top): a steady
+     baseline so clouds are part of Live/Sunrise/Night alike, not a
+     Sunrise-only effect, with a small Golden Hour lift (clouds catch more
+     visible light there) and a modest Night reduction (dimmer, so they
+     read as moonlit haze rather than competing with the star field) —
+     never fully zero at any hour. Night's own reduction eased slightly
+     (0.22 → 0.16) in the second refinement pass — the first pass's night
+     clouds were reading as almost gone rather than the faint moonlit
+     silhouette they're meant to be; still dimmer than Day/Golden Hour,
+     just no longer nearly invisible. */
+  --cloud-visibility: calc(0.55 + var(--golden) * 0.25 - var(--night) * 0.16);
 }
 
 /* Transition is armed only after Atmosphere.tsx's mount effect adds this
@@ -105,7 +562,13 @@
    first frame just renders at the right value instantly, and only real,
    later changes (the periodic re-checks) ease smoothly. */
 html.atmosphere-ready {
-  transition: --night 8s ease, --night-text 3.5s ease, --golden 6s ease;
+  transition:
+    --night 8s ease,
+    --night-text 3.5s ease,
+    --golden 6s ease,
+    --golden-progress 6s ease,
+    --sun-elevation 8s ease,
+    --sun-x 8s ease;
 }
 
 @theme inline {
@@ -239,6 +702,48 @@ html.atmosphere-ready {
   color: var(--ivory);
 }
 
+/* ── Content-plane depth: a photograph as a physical object ──
+   Two classes, additive: `.photo-plane` (contact shadow — applied to
+   every curated/thumbnail photo container site-wide, cheap enough for
+   scale) and `.photo-plane-lit` (adds a directional edge highlight on
+   top — reserved for the handful of hero-weight photo moments, since
+   its `mix-blend-mode` layer costs more to composite than a plain
+   shadow and isn't worth paying for on every card in a 1000+-entry
+   archive grid). Both are pure CSS, driven entirely by the tokens
+   above (--elevation-*, --surface-light-*) — no JS, no new timer. */
+.photo-plane {
+  box-shadow:
+    0 1px 2px var(--elevation-ambient),
+    0 16px 30px -18px var(--elevation-cast),
+    0 22px 40px -22px color-mix(in srgb, var(--elevation-cast), var(--elevation-cast-warm) calc(var(--golden) * 100%));
+}
+
+/* The edge highlight: a soft-light wash concentrated in one corner,
+   angled by --sun-x (the same east→west sweep the real sun/haze glow
+   already use — see .atmosphere-sky/.atmosphere-sun) so the light
+   appears to come from the same direction as the rest of the scene,
+   never a fixed/arbitrary angle. Blended with soft-light at a low,
+   golden-hour-boosted opacity so it reads as light grazing the photo's
+   own surface, not a filter recoloring it. */
+.photo-plane-lit {
+  position: relative;
+}
+
+.photo-plane-lit::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  opacity: calc(0.14 + var(--golden) * 0.08);
+  background: linear-gradient(
+    calc(115deg - (var(--sun-x, 0.5) - 0.5) * 50deg),
+    var(--surface-light-warm) 0%,
+    transparent 30%
+  );
+}
+
 /* 별빛팡팡 (byeolbit pangpang) — "starlight popping/sprinkling." The
    site's one recurring bit of unexpected motion: tiny glints of the
    brand mark's own corner-star (see Glint.tsx), surfaced briefly at
@@ -274,7 +779,15 @@ html.atmosphere-ready {
   color: var(--plum);
   opacity: 0;
   pointer-events: none;
-  filter: drop-shadow(0 0 3px color-mix(in srgb, var(--plum) 55%, transparent));
+  /* Two stacked drop-shadows, not one: a tight, bright core (using the
+     same environment-driven --surface-light the photo edge-highlights
+     use, so this catches "light" the same color as everything else in
+     the scene) plus the original soft plum bloom. This is the site's
+     one faceted/specular accent — material differentiation from the
+     matte soft-light wash on photographs, not a second glow language. */
+  filter:
+    drop-shadow(0 0 1px var(--surface-light))
+    drop-shadow(0 0 3px color-mix(in srgb, var(--plum) 55%, transparent));
 }
 
 .glint-hover:hover .glint,
@@ -312,7 +825,11 @@ html.atmosphere-ready {
 .ddeongbyeol-sighting-figure {
   position: absolute;
   inset: 0;
-  filter: drop-shadow(0 3px 6px rgba(21, 19, 15, 0.18));
+  /* Slightly deeper/crisper than .photo-plane's contact shadow — he's
+     genuinely the foreground (fixed to the viewport, z-index above the
+     header), so his shadow should read as nearer than anything on the
+     content plane below him, by contrast rather than by a new effect. */
+  filter: drop-shadow(0 5px 12px rgba(21, 19, 15, 0.24));
   animation: ddeongbyeol-sighting 4000ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
@@ -363,6 +880,558 @@ html.atmosphere-ready {
   }
 }
 
+/* BIRTH OF A STAR — Seonghwa's birthday (April 3, KST). A small, hand-
+   placed cluster of real stars around the existing BORN_STAR_POSITION
+   awakens, sparkles at a clearly visible peak, then settles back into the
+   sky — not one isolated point of light growing brighter. Every star in
+   the cluster (see BirthdaySighting.tsx's BIRTHDAY_STAR_CLUSTER) is the
+   exact same element the real night sky already uses — .atmosphere-star
+   plus its --far/--near/--hero modifier (DESIGN.md §12) — wrapped in one
+   small positioning/reveal span apiece, so "different sizes, different
+   brightness levels, soft atmospheric glow around the brightest ones, and
+   delicate natural twinkling" all come from the star field's own existing
+   tiering and its own atmosphere-twinkle animation, not a new visual
+   language invented for this one day. The wrapper only ever animates
+   opacity (emerge → hold → fade); because it's a separate ancestor
+   element, its opacity multiplies with the inner star's own already-
+   twinkling opacity for free — no keyframe here needs to fake a twinkle.
+   The one star placed exactly at BORN_STAR_POSITION uses --hero, the same
+   tier the persistent, all-day star in Atmosphere.tsx already renders
+   underneath it — so as this cluster fades out at the end, that one point
+   hands off invisibly to the real star already there; every other cluster
+   star fades away completely, which is the "stars gently settle into the
+   sky" beat — one true star remains, exactly as it would on any other
+   day. Ddeongbyeol gives one small reaction, the message reveals once the
+   cluster's peak has visibly landed, everything fades together. No dust,
+   no explosion, no orb, no firework — real stars, briefly more of them,
+   briefly brighter. Deliberately NOT gated by --night/--golden: a
+   one-time event, visible regardless of time of day, unlike the ordinary
+   star field. See src/lib/birthday.ts for the date/session logic this
+   pairs with, and BirthdaySighting.tsx for the timing constants every ms
+   value below is named after. */
+.birthday-sighting {
+  position: fixed;
+  inset: 0;
+  z-index: 65;
+  pointer-events: none;
+}
+
+/* One cluster star's positioning + reveal envelope. The inner
+   .atmosphere-star(--tier) child supplies every visual quality (size,
+   halo, tint, twinkle) — this wrapper only places it (top/left set
+   inline per star in BirthdaySighting.tsx, offsets from
+   BORN_STAR_POSITION) and fades it in and out as a whole. */
+.birthday-star {
+  position: absolute;
+  width: 0;
+  height: 0;
+  animation-name: birthday-star-reveal;
+  animation-duration: 10400ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+/* A 0×0 wrapper anchor (top/left set inline per star in
+   BirthdaySighting.tsx) with the real star self-centered on that exact
+   point — the same geometry .atmosphere-star's own hero-tier diffraction
+   cross (::before/::after, positioned relative to the star element
+   itself) already depends on, so nesting it one level deeper here changes
+   nothing about how that cross centers. Parallax's scroll-linked
+   transform is intentionally dropped here — a one-time ~10s overlay
+   doesn't need it — in favor of the centering transform. */
+.birthday-star .atmosphere-star {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes birthday-star-reveal {
+  0% {
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.55;
+  }
+  /* PEAK — every cluster star reaches full visibility here (each star's
+     own --star-ceiling/halo/brightness above still applies on top of
+     this), so with the staggered per-star animation-delay set inline,
+     the cluster reads as awakening one after another into one shared,
+     clearly visible sparkling moment, not several stars blinking on in
+     unison. */
+  30% {
+    opacity: 1;
+  }
+  82% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Ddeongbyeol, the tiny witness — starts and ends near her usual bottom-
+   left habitat (per DdeongbyeolSighting.tsx), but for this one scene she
+   doesn't stay pinned there: a small, hand-placed wander path (top/left,
+   the same coordinate system BORN_STAR_POSITION/STAR_POSITIONS already
+   use — not a new technique) carries her through a loose loop in the
+   lower-left of the frame, never into the headline's own space (roughly
+   top 15–45%) and never all the way up to the star cluster itself — she
+   stays small and secondary, only ever drifting *toward* that glow, not
+   into it. Every leg has its own animation-timing-function (set per
+   keyframe stop below, a plain CSS feature — the function named on a
+   stop governs the segment leading into it), alternating ease-out
+   (settling into a pause) and ease-in (leaving one) so the path reads as
+   organic drifting-then-resting, never a constant-speed slide and never
+   a bounce. A gentle rotate travels with her (banking a couple of
+   degrees into each turn, on this outer element) independent of
+   .birthday-witness__mascot's own small tilt/glow reaction below (a
+   separate element, so the two compose rather than fight over the same
+   transform) — no wave, no spin, nothing past a couple of degrees
+   either way. Her longest pause (34–50%) lands right as the star
+   cluster below reaches its own held peak (birthday-star-reveal's
+   30–82% hold, above): she drifts up to look, lingers through the start
+   of that hold, then wanders off to another small spot while the
+   cluster is still glowing, and heads home right as it begins to fade —
+   coordinated with the sparkle without needing to touch its own timing.
+   Her own SVG palette (Ddeongbyeol.tsx) is untouched throughout — this
+   is motion and an external light glow cast on her, not a repaint. */
+.birthday-witness {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  z-index: 1;
+  opacity: 0;
+  animation: birthday-witness-wander 10400ms ease-in-out both;
+}
+
+.birthday-witness__mascot {
+  width: 100%;
+  height: 100%;
+  /* 10400ms must match WITNESS_DURATION_MS in BirthdaySighting.tsx —
+     hardcoded here rather than inline since Ddeongbyeol.tsx takes no
+     style prop (see that usage's own comment). */
+  animation: birthday-witness-glow 10400ms ease-out both;
+}
+
+@keyframes birthday-witness-wander {
+  0% {
+    opacity: 0;
+    top: 87%;
+    left: 12%;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+  /* Arrives, settles at her habitat corner. */
+  6% {
+    opacity: 1;
+    top: 85%;
+    left: 14%;
+    transform: rotate(-1deg);
+    animation-timing-function: ease-in-out;
+  }
+  /* First small drift — up and to the right, slowing into a pause. */
+  18% {
+    top: 74%;
+    left: 21%;
+    transform: rotate(2deg);
+    animation-timing-function: ease-out;
+  }
+  /* Pause: a tiny tilt, then off again. */
+  24% {
+    top: 73%;
+    left: 22%;
+    transform: rotate(1deg);
+    animation-timing-function: ease-in;
+  }
+  /* Climbing toward the star cluster's glow — her furthest reach,
+     timed to arrive right as birthday-star-reveal's hold begins. */
+  34% {
+    top: 56%;
+    left: 30%;
+    transform: rotate(3deg);
+    animation-timing-function: ease-out;
+  }
+  /* Longest pause — lingering near the sparkle while it holds. */
+  40% {
+    top: 52%;
+    left: 29%;
+    transform: rotate(-2deg);
+    animation-timing-function: ease-in-out;
+  }
+  50% {
+    top: 51%;
+    left: 28%;
+    transform: rotate(-1deg);
+    animation-timing-function: ease-in;
+  }
+  /* Wanders off to a different small spot, cluster still glowing. */
+  64% {
+    top: 66%;
+    left: 18%;
+    transform: rotate(2deg);
+    animation-timing-function: ease-out;
+  }
+  72% {
+    top: 65%;
+    left: 17%;
+    transform: rotate(1deg);
+    animation-timing-function: ease-in-out;
+  }
+  /* Heading home as the cluster begins to fade. */
+  86% {
+    top: 82%;
+    left: 13%;
+    transform: rotate(-1deg);
+    animation-timing-function: ease-in-out;
+  }
+  94% {
+    opacity: 1;
+    top: 86%;
+    left: 13%;
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 0;
+    top: 87%;
+    left: 13%;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes birthday-witness-glow {
+  /* Retimed to react to the star cluster's own peak (30% of the shared
+     10400ms duration — see birthday-star-reveal above), not the old
+     single spark's 23%. */
+  0%,
+  25% {
+    filter: drop-shadow(0 3px 8px rgba(21, 19, 15, 0.18)) drop-shadow(0 0 0 rgba(255, 201, 140, 0));
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-3deg);
+  }
+  35% {
+    filter: drop-shadow(0 3px 8px rgba(21, 19, 15, 0.18)) drop-shadow(0 0 11px rgba(255, 201, 140, 0.42));
+    transform: rotate(1deg);
+  }
+  43% {
+    filter: drop-shadow(0 3px 8px rgba(21, 19, 15, 0.18)) drop-shadow(0 0 4px rgba(255, 201, 140, 0.16));
+  }
+  /* The petals arrive during her longest pause (birthday-witness-wander,
+     34–50%): a very small turn toward the first one, a held beat, then a
+     small settle back — understated, no bounce, no spin. */
+  44% {
+    transform: rotate(4deg);
+  }
+  49% {
+    transform: rotate(4deg);
+  }
+  55% {
+    transform: rotate(-2deg);
+  }
+  62% {
+    transform: rotate(0deg);
+  }
+  100% {
+    filter: drop-shadow(0 3px 8px rgba(21, 19, 15, 0.18)) drop-shadow(0 0 0 rgba(255, 201, 140, 0));
+    transform: rotate(0deg);
+  }
+}
+
+.birthday-message {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: min(88vw, 26rem);
+  text-align: center;
+  animation-name: birthday-message-reveal;
+  animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+  animation-fill-mode: both;
+  /* animation-duration/-delay are set inline in BirthdaySighting.tsx
+     (MESSAGE_DELAY_MS/MESSAGE_TOTAL_MS) — computed there, not duplicated
+     here, so the two can never silently drift apart. Reveals only once
+     the bloom/response/reaction beats above have already landed — "at
+     the emotional peak," not before it. */
+}
+
+/* "BIRTH OF A STAR" — this is the one moment on the whole site allowed to
+   be a real headline rather than a label, so it moves off .eyebrow's mono
+   treatment onto the site's own display face (Fraunces, var(--font-
+   display)) instead — the exact serif-headline/mono-metadata pairing
+   DESIGN.md §1 already establishes ("Headlines pair a serif display face
+   with monospace metadata... signals 'curated record'"), applied to this
+   pairing (title above, "APRIL 3" as its mono date-stamp below,
+   deliberately untouched) rather than invented from scratch.
+
+   High-contrast, slightly elongated letterforms: opsz pushed to
+   Fraunces' own maximum (144) — its highest optical size is where the
+   typeface's hairline/dramatic-stroke contrast is strongest by design —
+   paired with a lighter 380 weight and a small `scaleY` nudge (1.045,
+   transform-origin pinned to the baseline). WONK/SOFT stay 0 (classic,
+   crisp letterforms, no quirky alternates, no rounding).
+
+   DIMENSIONALITY — a flat gradient reads as "colored text," so this
+   builds the same layered-volumetric technique DESIGN.md §12 already
+   uses for the sun and moon (multiple stacked radial/linear gradients
+   standing in for an off-center light source, a surface, and its own
+   shadow side) and applies it to type instead of a celestial disc — no
+   new visual language, the same one already established for "give a
+   flat CSS shape physical presence":
+     1. A directional base surface (the widest, bottom-most gradient
+        layer below) — one fixed 115deg band from a lit upper-left
+        corner through the surface's own mid-tone to a shadowed
+        lower-right, built only from --plum/--plum-tint/--plum-deep
+        (still provably "plum is the only accent," DESIGN.md §3). This
+        layer never moves — a real polished surface has a stable grain
+        under ambient light; movement belongs to the light crossing it,
+        not the material itself.
+     2. A narrow moving highlight band (birthday-title-light-sweep,
+        below) — a second, separate gradient layer, angled differently
+        (70deg vs. the base's 115deg) and far narrower, that's the only
+        thing actually swept via background-position. Two independently
+        angled layers, only one of them moving, is what makes this read
+        as *light crossing a fixed surface* rather than "a gradient
+        sliding" (the earlier, flatter version of this effect) — a
+        material with changing light on it, not a color transition.
+     3. Three tiny, sparse, sharp-edged radial-gradient points (the
+        top three layers) standing in for "the existing star light
+        catching the lettering's edges" per the brief — built from
+        --star-warm/--moon-rim-light, the exact tokens the real star
+        field and moon already use (DESIGN.md §12), not a new sparkle
+        shape and not an icon placed on top of the text. Deliberately
+        few, small (≤2.2px), and biased toward the same upper-left
+        light direction as the base surface and the sweep, so the
+        brightest points read as directional and sparse, the way real
+        specular highlights on metal are, not a scatter of glitter.
+   All of this is one `background-image` stack on one element, clipped
+   to the glyphs via `background-clip: text` — never a separate visual
+   layer, never an icon overlay.
+
+   RELIEF — a razor-thin (sub-pixel offset, near-zero blur) light/dark
+   text-shadow pair, not a glow and not the soft blurred halo a "drop
+   shadow" implies: one faint cool highlight on the upper-left edge of
+   each glyph, one faint dark-plum shadow on the lower-right edge. This
+   is the classic engraved-metal-type technique (paired opposite-offset
+   edge shadows), kept deliberately tiny so it reads as relief on the
+   letterform itself rather than a bevel/emboss filter or a lifted-off-
+   the-page drop shadow. The old 22px ambient glow this replaced was
+   exactly the "neon glow" this pass was asked to remove.
+
+   A plain `color: var(--plum)` (no shadow) ships first as the
+   unconditional fallback for any browser without background-clip: text
+   support, so the text is never invisible; everything above only
+   applies inside the @supports guard below.
+
+   Timing is untouched: the sweep is hardcoded to the same 3200ms delay /
+   7000ms duration as before (MESSAGE_DELAY_MS/MESSAGE_TOTAL_MS in
+   BirthdaySighting.tsx) — one slow pass across the already-visible
+   window, not a new animation, not a loop. */
+.birthday-message__eyebrow {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 380;
+  font-variation-settings: "opsz" 144, "WONK" 0, "SOFT" 0;
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 2.6vw + 1rem, 2.75rem);
+  line-height: 1.08;
+  letter-spacing: 0.025em;
+  transform: scaleY(1.045);
+  transform-origin: center bottom;
+
+  /* Fallback fill — used as-is by any browser that skips the
+     @supports block below. */
+  color: var(--plum);
+}
+
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+  .birthday-message__eyebrow {
+    color: transparent;
+    background-repeat: no-repeat;
+    background-image:
+      radial-gradient(circle 2px at 13% 22%, var(--star-warm) 0%, transparent 100%),
+      radial-gradient(circle 1.5px at 43% 14%, var(--moon-rim-light) 0%, transparent 100%),
+      radial-gradient(circle 1.8px at 70% 30%, var(--star-warm) 0%, transparent 100%),
+      linear-gradient(
+        70deg,
+        transparent 0%,
+        transparent 44%,
+        color-mix(in srgb, var(--moon-rim-light) 60%, var(--plum-tint) 40%) 50%,
+        transparent 57%,
+        transparent 100%
+      ),
+      linear-gradient(
+        115deg,
+        color-mix(in srgb, var(--plum) 76%, var(--plum-deep) 24%) 0%,
+        color-mix(in srgb, var(--plum-tint) 55%, white 42%) 15%,
+        color-mix(in srgb, var(--plum) 68%, white 10%) 28%,
+        color-mix(in srgb, var(--plum) 84%, black 6%) 48%,
+        color-mix(in srgb, var(--plum-deep) 78%, black 6%) 66%,
+        color-mix(in srgb, var(--plum) 70%, var(--plum-deep) 38%) 84%,
+        color-mix(in srgb, var(--plum) 80%, black 16%) 100%
+      );
+    background-size: auto, auto, auto, 260% 100%, 100% 100%;
+    background-position: 0 0, 0 0, 0 0, 130% 50%, 0 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    /* Razor-thin relief, not a glow — see the doc comment above. */
+    text-shadow:
+      -0.6px -0.6px 0.3px color-mix(in srgb, var(--moon-rim-light) 60%, transparent),
+      0.6px 0.7px 0.4px color-mix(in srgb, var(--plum-deep) 55%, transparent);
+
+    animation-name: birthday-title-light-sweep;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    /* Hardcoded to match MESSAGE_DELAY_MS/MESSAGE_TOTAL_MS in
+       BirthdaySighting.tsx — see the comment above this rule. */
+    animation-delay: 3200ms;
+    animation-duration: 7000ms;
+  }
+}
+
+/* Only the narrow highlight band (5th background-position value) moves —
+   the directional base surface and the three star-light points stay
+   fixed throughout, which is what makes this a light passing over a
+   stable surface rather than a gradient sliding. */
+@keyframes birthday-title-light-sweep {
+  0% {
+    background-position: 0 0, 0 0, 0 0, 130% 50%, 0 0;
+  }
+  100% {
+    background-position: 0 0, 0 0, 0 0, -30% 50%, 0 0;
+  }
+}
+
+.birthday-message__date {
+  margin-top: 0.6rem;
+  opacity: 0.75;
+}
+
+/* "For all the days that brought you here." — a quiet aside below the
+   title, deliberately smaller and softer than both lines above it,
+   given a restrained small-caps + generous-tracking treatment (real
+   small caps via font-variant-caps, not text-transform: uppercase — the
+   sentence's own leading capital stays a true capital, everything after
+   it renders as small caps) so it reads as a refined editorial caption
+   rather than a birthday-card aside. "APRIL 3" (.birthday-message__date,
+   above) deliberately keeps its existing .meta mono treatment — the
+   serif/mono contrast DESIGN.md §1 already establishes stays intentional
+   here too, not touched by this pass. */
+.birthday-message__supporting {
+  margin-top: 0.85rem;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: var(--charcoal);
+  opacity: 0.7;
+}
+
+.birthday-message__glint {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+}
+
+@keyframes birthday-message-reveal {
+  0% {
+    opacity: 0;
+    letter-spacing: 0.02em;
+    transform: translateX(-50%) translateY(8px) scale(0.97);
+  }
+  18% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+  82% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-6px) scale(0.98);
+  }
+}
+
+
+/* Cherry-blossom petals — sparse seasonal accents (see
+   BIRTHDAY_PETALS / BIRTHDAY_CATCH_PETALS in BirthdaySighting.tsx). Each
+   petal is a 0-anchored fixed element moved entirely by CSS custom
+   properties set inline per petal: start (--x0/--y0), a mid-point where
+   the sway happens (--xm/--ym), end (--x1/--y1) and a total spin. Low
+   opacity ceiling so they read as atmosphere, never as confetti. The
+   whole .birthday-sighting is already hidden under prefers-reduced-motion. */
+.birthday-petal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 2px rgba(233, 164, 184, 0.35));
+  animation-name: birthday-petal-drift;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes birthday-petal-drift {
+  0% {
+    opacity: 0;
+    transform: translate(var(--x0), var(--y0)) rotate(0deg);
+  }
+  12% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(var(--xm), var(--ym)) rotate(calc(var(--spin) * 0.5));
+  }
+  88% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x1), var(--y1)) rotate(var(--spin));
+  }
+}
+
+/* The two petals that belong to Ddeongbyeol: positioned inside her own
+   box (px, relative to it), so they travel with her. They drift in,
+   rest on her briefly (--xr/--yr), then lift off again. */
+.birthday-petal--catch {
+  position: absolute;
+  animation-name: birthday-petal-catch;
+}
+
+@keyframes birthday-petal-catch {
+  0% {
+    opacity: 0;
+    transform: translate(var(--x0), var(--y0)) rotate(0deg);
+  }
+  20% {
+    opacity: 0.85;
+  }
+  45% {
+    opacity: 0.9;
+    transform: translate(var(--xr), var(--yr)) rotate(35deg);
+  }
+  65% {
+    opacity: 0.9;
+    transform: translate(var(--xr), var(--yr)) rotate(42deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x1), var(--y1)) rotate(140deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .birthday-sighting {
+    display: none;
+  }
+}
+
 /* ✦ The Moonlit Archive — the decorative sky layer (moon, stars, rare
    sparkle/shooting star). Purely atmospheric: fixed, aria-hidden,
    pointer-events-none, z-index:-10 so it sits behind all real content
@@ -377,6 +1446,644 @@ html.atmosphere-ready {
   z-index: -10;
   overflow: hidden;
   pointer-events: none;
+}
+
+/* ✦ ASTRAL SKY — the sky is now permanently visible, not just during
+   Golden Hour. Previously this layer's opacity was literally
+   `var(--golden)`, so for the ~90% of the day that isn't Golden Hour
+   there was no sky at all, just flat --ivory/--ink token colors behind
+   the content — that flatness, not any single missing feature, is why
+   day and night didn't read as one continuous living sky. Every stop
+   below now resolves through the same 2-level color-mix() chain the
+   --ivory token above already uses (day/night blended by --night, then
+   an overlay on top), extended to 3 levels:
+
+     1. --sky-N-day / --sky-N-night, blended by --night (already the
+        correct, real-sun-time-anchored day↔night curve — see
+        getNightAmount in atmosphere.ts). This alone makes plain day and
+        plain night each a genuine vertical gradient (pale luminous blue
+        at zenith fading toward a warm-neutral horizon by day; deep
+        near-black indigo at zenith softening slightly toward the
+        horizon by night) instead of the previous "nothing."
+     2. --sky-N-transition, blended in on top by --sky-transition (see
+        :root above) — the dawn/dusk-specific indigo/violet character.
+        Blending day and night hexes directly would produce a muddy gray
+        exactly at the moment we most need color (the sky's own 50/50
+        day+night blend is a flat greige — see the DESIGN.md note on
+        this); --sky-transition instead layers in a genuinely saturated
+        rose-violet-to-blue hue at the horizon, fading to something very
+        close to that 50/50 blend by the zenith stops (so the very top
+        of the sky barely moves — same "zenith stays put" trick Golden
+        Hour's own early/late stops already use, achieved the same way:
+        the 32–72% middle stops in particular are tuned to read as a
+        genuine plum-violet-indigo progression (deliberately echoing
+        --plum-night's own rose-plum family, the site's one existing
+        accent color) rather than a desaturated lavender-gray ramp —
+        a straight-line hue interpolation there reads as a generic
+        "AI purple gradient"; this instead nudges each stop toward an
+        intentional, named hue the way a colorist would grade a real
+        dusk photograph. The 0–24% and 80–100% stops are untouched
+        from their original tuning, since they already sit correctly
+        close to their own day/night blend and moving them risks the
+        exact zenith-flicker this technique exists to avoid.
+        through hex *choice*, not a numeric weight term).
+     3. --sky-N-early/--sky-N-late (unchanged from before), blended by
+        --golden-progress into --sky-N-goldenmix, then layered on top by
+        --golden itself exactly as before — Golden Hour's own appearance
+        is untouched, only what it now sits on top of has changed.
+
+   Each stage is its own custom property (--sky-N-base →
+   --sky-N-transitioned → --sky-N-goldenmix → --sky-N-final) rather than
+   one nested expression inline in the gradient, so any single stage can
+   be inspected directly in DevTools. --sky-transition needs no
+   @property registration and no entry in html.atmosphere-ready's
+   transition list — it's a derived calc() of the already-registered,
+   already-transitioning --night, so it re-resolves every frame for
+   free. Deliberately many close hex stops throughout, same reasoning as
+   before: interpolating directly between distant hues bands or muddies,
+   so each stop nudges only slightly. Every hex, at every stage, stays
+   low-saturation — no neon, no postcard color — the transitions
+   themselves carry the beauty, not effects layered on top of them. */
+.atmosphere-sky {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  background:
+    /* Background depth pass (DESIGN.md §13) — a very soft vignette, the
+       "deep background, enormous distance" cue: corners recede a touch
+       darker than the center, drawing the eye inward rather than reading
+       as a flat rectangle. Placed first (topmost) so its translucency
+       darkens the opaque 14-stop gradient below it, not the reverse — a
+       layer placed *after* that gradient in this list would be fully
+       hidden behind it. Reuses --night directly (already a registered
+       @property, no new one needed here): almost imperceptible by day
+       (~0.03 peak alpha), a little more present at night (~0.19) — never
+       strong enough to read as an "effect" on its own. */
+    radial-gradient(
+      ellipse 140% 100% at 50% 40%,
+      transparent 55%,
+      rgba(6, 4, 10, calc(var(--night) * 0.16 + 0.03)) 100%
+    ),
+    /* ATMOSPHERIC DEPTH — layered over the 14-stop sky below, not a
+       change to any of its stops. Two restrained cues create a felt
+       sense of volume rather than a flat wash:
+       (1) a vertical zenith-recede/horizon-lift wash: the zenith
+           recedes slightly (quiet, distant, mostly constant — see
+           --sky-zenith-recede) while the horizon gains warmth/density
+           (--sky-horizon-lift, which differs sharply by phase: ~0 at
+           Night so it stays deep and clear rather than foggy, a small
+           baseline at Day, strongest at Golden Hour). The wide 38–62%
+           transparent band in the middle is deliberate — it leaves
+           mid-sky untouched by either cue, so "mid-sky" reads as the
+           calm in-between distance rather than a third graphic band.
+       (2) a soft horizontal bias in that same horizon glow toward the
+           sun's actual position (--sun-x), so light reads as entering
+           from a direction rather than uniformly along the whole
+           horizon — kept to a fraction (0.4×) of --sky-horizon-lift's
+           own intensity so it never reads as a second glowing blob,
+           just a quiet asymmetry in the existing glow.
+       Both stay well under the haze layer's own alpha range; if either
+       is ever visible *as an effect* rather than as "the sky has
+       depth," it's tuned too strong. */
+    linear-gradient(
+      to top,
+      rgba(255, 244, 225, var(--sky-horizon-lift)) 0%,
+      transparent 38%,
+      transparent 62%,
+      rgba(18, 14, 22, var(--sky-zenith-recede)) 100%
+    ),
+    radial-gradient(
+      ellipse 90% 40% at calc(8% + var(--sun-x) * 84%) 102%,
+      rgba(255, 240, 210, calc(var(--sky-horizon-lift) * 0.4)) 0%,
+      transparent 75%
+    ),
+    /* DAYTIME DEPTH (DESIGN.md §16, refined) — a soft, wide glow around the
+       sun's actual position, not the thin horizon-hugging bias above: the
+       sun reads as something warming the air around it, not an isolated
+       disc pasted on an indifferent sky. Reuses --sun-x/--sun-elevation
+       (the same coordinates .atmosphere-sun itself is positioned by — see
+       that rule for the bottom→top conversion this mirrors), --sun-mid,
+       and --sun-edge (no new colors). Present through Day and Golden Hour
+       alike — real sunlight scatters through the air at both — fading
+       only as --night rises. Two stops rather than one straight falloff:
+       a slightly warmer inner reach (--sun-mid) gives way to a cooler,
+       fainter outer one (--sun-edge) before dissolving to nothing — real
+       atmospheric scattering thins and cools with distance from the light
+       source rather than fading uniformly, so this reads as air the sun
+       is genuinely embedded in, not one flat halo sprite. Kept genuinely
+       soft — still an atmosphere, never a second sun or a lens flare —
+       but strengthened in the second refinement pass (peak alpha ~0.12 →
+       ~0.24, reach widened 58%/38% → 66%/44%): the first pass's halo was
+       correct in shape but too faint to actually read as "the sun is
+       lighting up the air around it" against a bright sky; doubling the
+       core alpha and widening the reach a little is what makes that
+       legible without turning the ellipse into a visible ring or flare —
+       it's still a gradient fading to nothing by 70%, not a hard-edged
+       glow.
+       Third refinement (color/light only, same ellipse/position/opacity-
+       curve shape as above): two fixes. First, brightness — the inner
+       stop now reads --sun-ambient-tint (--sun-mid warmed toward
+       --sun-horizon-tone by --golden, see that token's own comment)
+       instead of flat --sun-mid, and its peak alpha is raised (24%→30%
+       at Day), so the sky right around the sun genuinely brightens and
+       warms further through Golden Hour rather than holding one fixed
+       daytime tint year-round. Second, a real bug: the old `+ var(--night)
+       * 12%`/`* 6%` floors meant this glow could never fully leave —  at
+       full Night it still sat at a fixed 12%/6% opacity of a warm color
+       hovering at the sun's own (below-horizon) position, reading as a
+       lingering orange remnant with no visible sun to cause it. Both
+       stops' night term is widened so it reaches exactly 100% transparent
+       (0 opacity) at --night: 1, closing that gap without changing the
+       Day-side math at all (--night: 0 leaves both stops identical to
+       before). */
+    radial-gradient(
+      ellipse 66% 44% at calc(8% + var(--sun-x) * 84%) calc(100% - (var(--sun-elevation) / 70) * 82%),
+      color-mix(in srgb, var(--sun-ambient-tint), transparent calc(70% + var(--night) * 30%)) 0%,
+      color-mix(in srgb, var(--sun-edge), transparent calc(88% + var(--night) * 12%)) 42%,
+      transparent 70%
+    ),
+    /* A soft haze rising off the horizon — present only near Golden Hour
+       or the dawn/dusk peak (gated by max(--golden, --sky-transition *
+       0.6), mixed toward transparent), genuinely absent the rest of the
+       time rather than relying on a parent opacity that no longer gates
+       this layer's existence. */
+    linear-gradient(
+      to top,
+      color-mix(in srgb,
+        color-mix(in srgb, rgba(226, 222, 214, 0.14), rgba(241, 221, 184, 0.34) calc(var(--golden-progress) * 100%)),
+        transparent calc((1 - max(var(--golden), var(--sky-transition) * 0.6)) * 100%)
+      ) 0%,
+      transparent 20%
+    ),
+    /* DAYTIME DEPTH (DESIGN.md §16) — a second, day-only haze. The layer
+       above is deliberately golden/twilight-only (a warm dusk/dawn
+       effect); Day itself had no equivalent, so a clear midday sky read
+       as flat all the way to the horizon, with nothing standing in for
+       real atmospheric perspective — distant air paling and cooling
+       whatever's seen through it. Cool and pale rather than warm (a
+       genuine daylight veil, not a second golden-hour effect), and gated
+       to fade out as soon as Golden Hour or Night take over, so the two
+       haze layers are never both meaningfully active at once. */
+    linear-gradient(
+      to top,
+      rgba(228, 236, 240, calc((1 - var(--night)) * (1 - var(--golden)) * 0.16)) 0%,
+      transparent 30%
+    ),
+    /* The sky itself, horizon (bottom) to zenith (top) — always live. */
+    linear-gradient(
+      to top,
+      var(--sky-0-final) 0%,
+      var(--sky-8-final) 8%,
+      var(--sky-16-final) 16%,
+      var(--sky-24-final) 24%,
+      var(--sky-32-final) 32%,
+      var(--sky-40-final) 40%,
+      var(--sky-48-final) 48%,
+      var(--sky-56-final) 56%,
+      var(--sky-64-final) 64%,
+      var(--sky-72-final) 72%,
+      var(--sky-80-final) 80%,
+      var(--sky-88-final) 88%,
+      var(--sky-94-final) 94%,
+      var(--sky-100-final) 100%
+    );
+}
+
+/* The sun — positioned by its actual elevation/horizontal-sweep
+   (--sun-elevation in degrees, --sun-x 0→1 east-to-west; getSolarPosition
+   in src/lib/atmosphere.ts), not a fixed spot on the page. `bottom` places
+   its un-shifted edge at a height proportional to elevation (70° is
+   treated as the practical top of the sky for this decorative purpose);
+   `translate(-50%, 50%)` then re-centers the disc on that point instead
+   of anchoring its edge there — the trig is only meant to be "the sun's
+   center is this high," not "the sun's bottom edge is." At elevation 0
+   (exactly the horizon) that puts the disc's center exactly on
+   .atmosphere's own bottom edge, so — because .atmosphere clips overflow
+   — precisely the top half renders, and as elevation keeps falling the
+   disc slides further past that edge and is clipped away entirely: a
+   real sunset (full circle → partial circle → gone), produced by
+   geometry and clipping, not a second cutout asset. horizontalProgress
+   sweeps it left-to-right across the day. Visible across the *whole* day
+   this way, fading out only near its own horizon crossing (the opacity
+   curve below) — Golden Hour's sky color is a separate, independent
+   layer that happens to warm up while the sun is already low; it isn't
+   what makes the sun appear, move, or disappear. That opacity curve and
+   the moon's own steep --golden-based suppression (below) leave, at
+   most, a brief low-opacity overlap right at dawn/dusk — never both
+   fully visible together. */
+/* Photographic core (revised again — the §12 "volumetric core" pass above
+   is superseded by this one; kept for history, not current behavior).
+   The off-axis `circle at 40% 38%` gradient plus a flat same-color
+   plateau from 66%→86% before transparent was exactly what read as a
+   rendered sphere: a distinct lit side, a distinct shadow side, and a
+   hard, clean rim band right at the silhouette — a CG lighting model,
+   not a photograph. A real sun in a photo has no visible "far side in
+   shadow" (it's a light source, not a lit object) and no rim band —
+   just a blown-out core dissolving continuously into the sky. Three
+   changes fix this without touching position/size/elevation-opacity/
+   --sun-pulse timing, any of which stay exactly as before:
+   1. The off-axis offset is pulled back toward center (40%/38% →
+      46%/42%) — enough asymmetry to avoid a dead-flat sprite, nowhere
+      near enough to read as a modeled sphere's terminator.
+   2. A small near-white stop before --sun-core (0%→14%) gives a gently
+      overexposed hot center — real solar photography blows out at the
+      core — where before the brightest stop was already --sun-core
+      itself, a defined "material" color rather than blown highlight.
+   3. The flat 66%/86% plateau is gone; --sun-mid now falls continuously
+      through the edge tone straight to transparent (42% → 78% → 100%)
+      — one dissolve, no rim.
+   Granulation (the 3 small off-center blobs) stays structurally the
+   same but softened — wider, more transparent falloffs — so it still
+   reads as faint texture, not fixed procedural blobs. The whole disc
+   also now carries a small blur() ahead of the existing brightness/
+   drop-shadow filter chain, softening its own geometric edge (a
+   mathematically perfect circle silhouette is itself a CG tell); the
+   three drop-shadows widened and dimmed slightly in step, trading a
+   tight punchy glow ring for a softer atmospheric scattering falloff —
+   comparable total visual weight, different quality of light. */
+.atmosphere-sun {
+  position: absolute;
+  bottom: calc((var(--sun-elevation) / 70) * 82%);
+  left: calc(8% + var(--sun-x) * 84%);
+  transform: translate(-50%, 50%) scale(var(--sun-pulse));
+  width: clamp(28px, 3.6vw, 42px);
+  height: clamp(28px, 3.6vw, 42px);
+  border-radius: 9999px;
+  opacity: clamp(0, calc((var(--sun-elevation) + 8) / 6), 1);
+  animation: atmosphere-sun-breathe 9s ease-in-out infinite;
+  /* Fifth pass — the previous pass's 0%→18% same-color plateau (a
+     deliberate "overexposure clips flat" idea) was wrong in practice:
+     inside a small, otherwise-continuous radial gradient, ANY run of
+     identical color between two stops reads as a filled shape with an
+     edge — a flat disc — the instant the gradient starts changing again
+     right after it. A photograph's overexposed region only reads as
+     "blown out" because it sits inside a much larger continuous scene;
+     isolated on its own inside a 28–42px element, flat = shape. The fix
+     is to never repeat a stop's color/position pair — every stop below
+     is a distinct value, so the interpolation is continuous from center
+     to edge with no plateau anywhere, and no hard transition point for
+     the eye to read as a boundary. Still no white (brightest stop is a
+     --sun-core/--sun-mid blend, pale golden-yellow), still no
+     granulation, still dead-center/symmetric. blur() and the three halo
+     drop-shadows below are unchanged from the previous pass. */
+  /* Pearlescent-white pass (color/light only — stops keep the same six-
+     point structure and percentages as before, so shape/silhouette is
+     unchanged; only how far into --sun-edge/--sun-horizon-tone each mix
+     leans has changed). The 52%/74% stops previously leaned 68%/72% into
+     --sun-edge/--sun-horizon-tone — combined with how saturated those two
+     tokens used to be, that's what made the disc's outer half read as a
+     solid orange ring. Two changes working together: the tokens
+     themselves are now a much paler warm-white family (see the :root
+     comment above), and these mix weights are pulled back to 40%/45% so
+     the disc stays predominantly --sun-core/--sun-mid white-ivory even at
+     its own edge, with only a soft, natural warmth — never a second
+     hue — easing it toward transparent. */
+  background: radial-gradient(
+    circle at 50% 50%,
+    color-mix(in srgb, var(--sun-core), var(--sun-mid) 38%) 0%,
+    color-mix(in srgb, var(--sun-core), var(--sun-mid) 68%) 14%,
+    var(--sun-mid) 32%,
+    color-mix(in srgb, var(--sun-mid), var(--sun-edge) 40%) 52%,
+    color-mix(in srgb, var(--sun-edge), var(--sun-horizon-tone) calc(var(--sun-horizon-mix) * 45%)) 74%,
+    transparent 100%
+  );
+  /* Halo pass (color/light only): even at the previous pass's lower 40%
+     mix ceiling, the richer --sun-horizon-tone this replaces was warm
+     enough at Golden Hour for the outer drop-shadow to read as a second,
+     separately colored ring rather than one glow close in hue to the
+     disc. Capped lower still (25%) now that the token itself is far
+     paler too, so the halo only ever warms slightly as the sun nears the
+     horizon rather than shifting hue — soft and diffuse, never a
+     distinct orange edge. Precomputed as its own custom property rather
+     than written inline — a color-mix() nested *inside* another
+     color-mix() (this tint, itself built from a mix, blended a second
+     time toward transparent for the drop-shadow's alpha) is silently
+     flattened by the build's CSS minifier, the exact bug documented on
+     --moon-glow-tint above; precomputing it keeps each color-mix() call
+     one level deep, which is safe. */
+  --sun-halo-tint: color-mix(in srgb, var(--sun-mid), var(--sun-horizon-tone) calc(var(--sun-horizon-mix) * 25%));
+  filter:
+    blur(1.3px)
+    brightness(var(--sun-pulse))
+    drop-shadow(0 0 8px color-mix(in srgb, var(--sun-core), transparent 35%))
+    drop-shadow(0 0 20px color-mix(in srgb, var(--sun-mid), transparent 66%))
+    drop-shadow(0 0 40px color-mix(in srgb, var(--sun-halo-tint), transparent 80%));
+}
+
+@keyframes atmosphere-sun-breathe {
+  0%,
+  100% {
+    --sun-pulse: 1;
+  }
+  50% {
+    --sun-pulse: 1.035;
+  }
+}
+
+/* The sticky header sits above the sky layer in the normal stacking order
+   (z-index 40 vs. the sky's -10). Lowering this to a translucent --ivory
+   tint (an earlier fix) still left a visible seam — --ivory is a real
+   but *independent* day/night/golden blend, computed on its own, and its
+   hue doesn't actually match the sky gradient's own color at any given
+   moment; even at low opacity a mismatched hue reads as "a panel," not
+   "glass." The fix is to stop tinting toward --ivory at all and tint
+   toward --sky-100-final instead — the sky gradient's own zenith stop,
+   which is exactly what's rendered at the header's own fixed position
+   (top: 0, where the "to top" gradient's 100% stop lands). Same source,
+   not a matching color: there is no hue to seam against, only this
+   layer's own blur/opacity, which reads as glass thickness, not a
+   different surface. Left at a flat, fairly low opacity year-round
+   (no golden/transition-based formula) since matching the hue removed
+   the reason that formula existed — this is now a constant pane of
+   glass, not a panel easing toward transparency near golden hour.
+
+   One gap this leaves: --sky-100-final can land on a fairly dark blue
+   at Golden Hour (the golden overlay's own zenith hex, --sky-100-early/
+   -late, are both dark blues — a real, correct "Golden Hour has a
+   deep-blue upper sky" behavior, not a bug) at exactly the point in the
+   day where --ink/--charcoal are still their full day-dark color (text
+   color is deliberately untouched by --golden — see "The Moonlit
+   Archive" above) — dark text on a suddenly-dark header. A second, very
+   low-alpha background-image layers in --surface-scrim (see :root) to
+   cover exactly this: it's neutral (no hue of its own, so it can't
+   reintroduce the seam this rule exists to remove) and tracks
+   --night-text, so it leans light precisely when text is still
+   day-dark, and fades out once text has actually gone night-light and
+   no longer needs the help. */
+.header-golden-glass {
+  /* Sky-lit tint (Sunrise / Golden Hour / Sunset only): the zenith stop
+     alone reads as a fixed navy-slate slab against the warming sky, so
+     the glass borrows a restrained share (max 100%) of the lower-mid sky stop (--sky-24)
+     as those stages arrive. --header-sky-light is 0 at full Day and
+     full Night (both terms are 0 there), so those two treatments are
+     exactly unchanged. Same opacity, blur, border and layout. */
+  --header-sky-light: max(var(--golden), calc(var(--sky-transition) * 0.85));
+  --header-violet: #5a3fa3;
+  /* Colour preservation: the fill and scrim above are low-chroma layers
+     over the sky, so the header only ever carries a muted copy of it.
+     Saturating the *backdrop* (through the same backdrop-filter the
+     .backdrop-blur utility already builds, so blur is untouched) lets the
+     sky's own colour stay rich behind the glass. 1 (no-op) at Day/Night,
+     since --header-sky-light is 0 there. */
+  --tw-backdrop-saturate: saturate(calc(1 + var(--header-sky-light) * 0.7));
+  background-color: color-mix(
+    in srgb,
+    color-mix(in srgb, var(--sky-100-final), var(--sky-56-final) calc(var(--header-sky-light) * 100%)),
+    transparent calc(62% + var(--header-sky-light) * (1 - var(--night-text)) * 24%)
+  );
+  /* EXPERIMENT — the sky's own light continuing through the glass. The
+     same --sun-ambient-tint the sky's sun glow uses, placed at the sun's
+     real horizontal position (--sun-x) and rising from the header's lower
+     edge, gated by --header-sky-light (0 at Day/Night = fully transparent)
+     and breathed by the sun's existing --sun-pulse keyframe (same 9s, no
+     new timing). Listed first so the 16% scrim sits beneath it, not over
+     it. To remove: delete the radial-gradient layer and the animation. */
+  background-image:
+    radial-gradient(
+      ellipse 60% 260% at calc(8% + var(--sun-x) * 84%) 118%,
+      color-mix(in srgb, var(--sun-ambient-tint), transparent calc(100% - var(--header-sky-light) * 30% * var(--sun-pulse))) 0%,
+      transparent 72%
+    ),
+    /* EXPERIMENT — upper atmosphere borrowing the richer sky below: the
+       existing --sky-40-final (already the live, Golden-Hour-aware sky
+       colour, no new token) diffused up through the glass, full width,
+       fading to nothing at the top edge. Same day-ink gate as the fill and
+       scrim, so Sunset/Day/Night are untouched. Remove by deleting this
+       layer. */
+    linear-gradient(
+      to top,
+      color-mix(in srgb, var(--sky-40-final), transparent calc(100% - var(--header-sky-light) * (1 - var(--night-text)) * 30%)) 0%,
+      transparent 100%
+    ),
+    /* EXPERIMENT — Golden Hour reflected starlight. --header-violet is the
+       one new token (scoped to this rule): a deep violet used only as a
+       broad, very faint reflection *within* the glass, never as its fill.
+       Gate = header-sky-light * (1 - night-text) * sun-x: --sun-x is the
+       sun's real east→west progress (≈0 at Sunrise, ≈0.93 at Golden Hour,
+       and night-text removes Sunset/Night), so it is effectively 0 outside
+       Golden Hour. Remove by deleting this layer and the token. */
+    radial-gradient(
+      ellipse 90% 170% at 50% 30%,
+      color-mix(in srgb, var(--header-violet), transparent calc(100% - var(--header-sky-light) * (1 - var(--night-text)) * var(--sun-x) * 34%)) 0%,
+      transparent 78%
+    ),
+    linear-gradient(
+      color-mix(in srgb, var(--surface-scrim) calc(16% - var(--header-sky-light) * (1 - var(--night-text)) * 9%), transparent),
+      color-mix(in srgb, var(--surface-scrim) calc(16% - var(--header-sky-light) * (1 - var(--night-text)) * 9%), transparent)
+    );
+  animation: atmosphere-sun-breathe 9s ease-in-out infinite;
+  /* EXPERIMENT — atmospheric edge: the header's own border-line/40 hairline
+     (same colour and oklab mix Tailwind builds, so Day/Night are identical)
+     fades toward transparent under the same day-ink gate as the fill and
+     scrim, so at Sunrise/Golden Hour the boundary stops reading as a panel
+     edge. 40% → ~9% at full gate; unchanged at Sunset/Day/Night. */
+  border-bottom-color: color-mix(
+    in oklab,
+    var(--line) calc(40% * (1 - var(--header-sky-light) * (1 - var(--night-text)) * 0.78)),
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-golden-glass {
+    animation: none;
+  }
+}
+
+/* Handwritten brand mark: a graphite header cut by day and dusk, rising to
+   bright silver only as the live sky reaches Night. The larger placement
+   keeps the lighter jewelry-like cut. */
+.mark--header {
+  filter: brightness(calc(0.48 + clamp(0, (var(--night-text) - 0.72) * 3.5, 1) * 0.88))
+    contrast(1.16);
+  transition: filter 300ms ease;
+}
+
+.mark--large {
+  filter: brightness(1.08) contrast(1.04);
+}
+
+/* Same technique as .header-golden-glass, just anchored to the sky's
+   other end: the footer normally sits near the bottom of the viewport
+   (whether that's because the page is long and you've scrolled to its
+   end, or short enough that flex-1 main pins the footer to the viewport
+   bottom directly), which is where the "to top" gradient's low stops
+   render — --sky-0-final is the closest single value to reference (an
+   exact match isn't available, since unlike the header the footer isn't
+   pinned to one fixed viewport position, but it's close enough that,
+   blurred, there's no perceptible seam in practice). Replaces an
+   earlier bg-ivory/55 utility in Footer.tsx for the same reason
+   documented above: --ivory doesn't share the sky's own hue, so even a
+   translucent tint of it still read as a separate panel. */
+.footer-sky-glass {
+  background-color: color-mix(in srgb, var(--sky-0-final) 38%, transparent);
+  background-image: linear-gradient(
+    color-mix(in srgb, var(--surface-scrim) 16%, transparent),
+    color-mix(in srgb, var(--surface-scrim) 16%, transparent)
+  );
+}
+
+/* ✦ Search box — the one small piece of real UI chrome (not sky/celestial
+   scenery) this file tints toward the live atmosphere. Reuses
+   --sky-64-final, the sky's own mid-height stop — the same value the
+   cloud layers already read (see the big cloud-layer comment above) —
+   rather than a third palette, so the field's fill and hairline move
+   through the same indigo → blue-violet → rose/peach → blue-sky → gold →
+   coral progression as the rest of the sky at every hour, with no new
+   astronomy. The zenith stop header-golden-glass/footer-sky-glass use
+   was deliberately not reused here: it "barely moves" by design (see
+   those two rules' own comments), which reads as intended for a large
+   fixed chrome panel but would under-represent the very swings the
+   search box is meant to visibly carry; the mid stop moves enough to
+   read as alive without becoming a bright swatch.
+
+   DAYTIME DEPTH follow-up (DESIGN.md §16 → §17) — a real bug the §16
+   pass surfaced: the original blend below was `color-mix(--ivory,
+   --sky-64-final 30%)` — *mostly ivory*, lightly tinted by the sky.
+   That reads as "a neutral panel with a hint of blue" at any strength of
+   sky color, and became visibly wrong once §16 deepened the Day sky:
+   measured directly (`getComputedStyle`), the field computed to a
+   near-neutral `rgb(227,233,231)` while the actual Day sky sat at a
+   genuinely rich `#78b6ec`–`#b9d5ea` — the field wasn't reading as "the
+   sky, lightened," it was reading as "ivory, barely blue." The fix
+   inverts the weighting: --search-glass-tint *lightens the sky's own
+   color* (color-mix with white — the same technique --cloud-body
+   already uses in §14 to turn the sky's live color into a paler decorative
+   tone) rather than diluting it through a mostly-neutral base, so blue
+   is the majority component, tinted lighter — not ivory, tinted blue.
+   --ivory is still blended in afterward, at a real but minority 22%, so
+   the site's own editorial warmth stays present without taking over
+   again.
+
+   The lightening amount itself is time-aware
+   (--search-glass-lighten/-border-lighten, both `(1 - --night) * N%`):
+   near 0 at Night, so the field stays close to --sky-64-final's own
+   already-dark indigo there — unlightened, not washed to a pale gray —
+   and at its full amount by Day, where the sky is naturally pale and the
+   field needs the most lift for legibility. This is why the fix doesn't
+   also need to touch Sunrise/Golden Hour/Night's own formulas: Golden
+   Hour's warmth already lives inside --sky-64-final itself (its blend
+   chain already includes the golden overlay stage), so it flows through
+   for free, and Night's near-zero lighten term keeps its already-correct
+   deep-indigo character intact — verified directly afterward alongside
+   Day, not assumed.
+
+   Mixed mostly with --ivory/--line by weight so the field stays clearly
+   legible and clearly bordered — tinted with the atmosphere, not
+   repainted by it — the same restraint principle as every other
+   sky-reactive surface in this file. The Golden Hour glow is a genuine
+   box-shadow (not just borders — the Depth System's own --elevation-*
+   tokens already established atmosphere-derived shadows have a place
+   here), scaled by --golden itself so it's present only near Sunrise/
+   Golden Hour and essentially invisible the rest of the day, never a
+   permanent shadow on ordinary UI chrome.
+
+   Wrapped in @layer base rather than left unlayered like
+   .header-golden-glass/.footer-sky-glass above: those two never fight a
+   Tailwind utility for the same property, but this one does —
+   HeaderSearch.tsx keeps its existing focus-within:border-plum utility
+   (plum stays the one accent for focus, per DESIGN.md §3) layered under
+   Tailwind's own `utilities` layer. An unlayered rule here would beat
+   that utility unconditionally on focus regardless of selector
+   specificity, since cascade-layer position outranks specificity;
+   @layer base sits behind `utilities` in Tailwind's own layer order, so
+   the focus state still wins exactly as it did before this rule existed.
+
+   FOLLOW-UP — still visibly a pale card next to the sky, measured not
+   assumed: getComputedStyle on the live field returned rgb(223, 234,
+   241) at 94% opacity (only 6% genuinely transparent) against a Day sky
+   whose own header glass (.header-golden-glass, the correct nearby
+   comparison — same --sky-100-final source) renders a saturated
+   rgb(120, 182, 236) at 38% opacity. The §17 fix above corrected the
+   *hue* (sky-majority instead of ivory-majority) but left the
+   *lightening and opacity* both far stronger than what actually made
+   the header/footer glass read as "part of the sky" rather than "a
+   panel": --search-glass-lighten's Day ceiling (46%) and the --ivory
+   blend-in (22%) together diluted the color back toward near-white
+   faster than the hue fix alone could compensate, and 6% transparency is
+   barely translucent at all. Both eased down to what the header/footer
+   glass already proved works — a much smaller lighten ceiling (46% →
+   16%) so the tint stays recognizably the sky's own blue instead of
+   washing pale, a smaller ivory blend-in (22% → 10%, enough to keep the
+   site's own warmth present in a minority role, not gone), and real
+   transparency (6% → 42%, still short of the header/footer's own 62%
+   transparent — the search field is small chrome sitting directly over
+   varying content, including the mobile drawer's flat --ivory backdrop
+   where it has no live sky behind it at all, so it keeps more of its own
+   body than a full-bleed panel needs to). Border eased the same way (20%
+   → 14% lighten ceiling). Nothing else here changed: same tokens, same
+   radius/padding/border width, same focus-within:border-plum precedence,
+   same Golden Hour box-shadow formula. Verified directly afterward
+   (getComputedStyle again, Day/Sunrise/Night) rather than assumed. */
+@layer base {
+  .search-sky-glass {
+    --search-glass-lighten: calc((1 - var(--night)) * 22%);
+    --search-glass-border-lighten: calc((1 - var(--night)) * 14%);
+    --search-glass-tint: color-mix(in srgb, var(--sky-64-final), white var(--search-glass-lighten));
+    --search-glass-border-tint: color-mix(in srgb, var(--sky-64-final), white var(--search-glass-border-lighten));
+    --search-glass-fill: color-mix(in srgb, var(--search-glass-tint), var(--ivory) 10%);
+    background-color: color-mix(in srgb, var(--search-glass-fill), transparent 42%);
+    border-color: color-mix(in srgb, var(--search-glass-border-tint), var(--line) 30%);
+    box-shadow: 0 0 16px color-mix(in srgb, var(--sun-mid), transparent calc((1 - var(--golden) * 0.82) * 100%));
+  }
+}
+
+/* AtmosphereNote (Footer.tsx) — the sky's one line of time-aware
+   microcopy (src/lib/atmosphere.ts, getSkyMessagePhase/SKY_MESSAGES).
+   The outgoing message is kept mounted long enough to fade out while the
+   incoming one fades in over it — a real crossfade, not a text swap —
+   without the footer's own layout ever depending on which message is
+   showing: the incoming layer stays in normal flow (it's what gives the
+   wrapping <p> its actual size), the outgoing one is absolutely
+   positioned over it and affects nothing around it. 2200ms, hardcoded
+   here to match CROSSFADE_MS in AtmosphereNote.tsx (same reasoning as
+   .birthday-witness__mascot's own hardcoded duration elsewhere in this
+   file) — slow and rare by design, alongside DESIGN.md §6's other few
+   named exceptions to the site's ordinary 150–300ms transitions, not
+   ordinary UI feedback. No reduced-motion override is needed beyond the
+   global near-zero-duration rule already in this file: these are
+   single-shot animations, not infinite ones, so that rule alone resolves
+   them to an (almost) instant swap, the same way every other one-shot
+   fade in this file already behaves without its own explicit reset. */
+.atmosphere-note__layer--entering {
+  animation: atmosphere-note-enter 2200ms ease both;
+}
+
+.atmosphere-note__layer--leaving {
+  position: absolute;
+  inset: 0;
+  animation: atmosphere-note-leave 2200ms ease both;
+}
+
+@keyframes atmosphere-note-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes atmosphere-note-leave {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* The message's trailing ✦ — deliberately not the same plum static motif
+   YearDivider.tsx's own ✦ uses (DESIGN.md §6.1): that one is a catalog
+   highlight marker, plum being the site's one UI accent. This ✦ sits
+   inside the sky's own microcopy, so it's toned with --star-warm — the
+   same token the real night sky's near/hero stars already use — with a
+   quiet, static (never pulsing) glow, so it reads as a small piece of
+   starlight the sentence trails off into rather than a decorative emoji
+   or a UI marker borrowed from elsewhere. */
+.atmosphere-note__star {
+  color: var(--star-warm);
+  text-shadow: 0 0 6px color-mix(in srgb, var(--star-warm) 55%, transparent);
 }
 
 .atmosphere-moon {
@@ -395,13 +2102,85 @@ html.atmosphere-ready {
   height: clamp(40px, 6vw, 68px);
   border-radius: 9999px;
   overflow: hidden;
-  opacity: var(--night);
-  /* Glow scales gently with illumination — dimmer near new moon, fuller
-     at full moon — rather than a fixed glow that ignores the phase. */
-  filter: drop-shadow(
-    0 0 calc(8px + var(--moon-illum, 0.5) * 16px)
-    color-mix(in srgb, var(--moon-color) calc(35% + var(--moon-illum, 0.5) * 40%), transparent)
-  );
+  /* Celestial dimensionality (DESIGN.md §12) — a very small, capped
+     scroll-linked drift, same --scroll-y the midground layer already
+     uses (rAF-throttled, never attached under reduced motion), at its
+     own distinct multiplier so the moon reads as sitting at its own
+     depth rather than moving in lockstep with the midground haze. */
+  transform: translate3d(0, clamp(-10px, calc(var(--scroll-y, 0px) * -0.012), 0px), 0);
+  /* Mutually exclusive with the Golden Hour sun (.atmosphere-sun). A
+     plain (1 - --golden) multiplier only reaches true 0 at the single
+     instant --golden hits its exact peak (1) — getGoldenAmount() is a
+     slow bump, so for nearly all of the ~2-hour Golden Hour window
+     --golden sits well under 1, which left the moon merely *dimmed*, not
+     absent, for almost the entire window (the real bug: both the moon
+     and the sun were visible together for most of Golden Hour, not just
+     confirmed-then-missed at its exact peak). max(0, 1 - --golden * 10)
+     instead snaps to 0 by the time --golden crosses roughly 0.1 — a few
+     minutes into the ramp — so the moon reads as fully absent for
+     virtually the entire Golden Hour window, not just its peak, while
+     still easing (not hard-cutting) right at the very edges where
+     --golden is near 0. Ordinary night (--golden already 0) is
+     unaffected either way. */
+  opacity: calc(var(--night) * max(0, 1 - var(--golden) * 10));
+  /* Celestial integration: the moon reads as sitting *in* the sky rather
+     than pasted on top of it, via two phase-aware cues layered on top of
+     the existing illumination-scaled glow — both driven by
+     --sky-transition (0 at full day/night, peaking exactly at the
+     dawn/dusk midpoint; see :root), so this needs no new signal:
+     - A small blur on the disc itself, near-zero at Night (crispest —
+       see the brief this answers) and growing gently through
+       Twilight/Dawn (more atmospheric diffusion), rather than a single
+       fixed sharpness at every phase.
+     - The glow's own color leans toward --sky-94-final (a near-zenith
+       sky stop, close to where the moon actually sits) by the same
+       --sky-transition amount, so the glow it casts picks up a little
+       of the *actual current sky's* tint instead of always being a
+       fixed pink-white — "interacts with the surrounding sky" rather
+       than a flat CSS sticker glow. At Night this fully resolves back
+       to pure --moon-color (crisp and undiluted); it only tints during
+       the transition window. Glow radius grows a little through that
+       same window for the same "more diffuse near dawn/dusk" reason,
+       still capped well short of anything read as bloom. */
+  /* Precomputed as its own custom property, not inlined directly into
+     drop-shadow()'s color argument: a color-mix() nested *inside another
+     color-mix()* there silently got flattened away by the build's CSS
+     minifier (down to plain --moon-color, no tint, no error) — a build-
+     tool limitation with that specific double-nesting, not a browser
+     one. One level of color-mix() directly in drop-shadow() is exactly
+     what the pre-existing, already-shipped glow below already did
+     safely; keeping that shape and doing the sky-tint blend here instead
+     avoids the double-nesting entirely. */
+  --moon-glow-tint: color-mix(in srgb, var(--moon-color), var(--sky-94-final) calc(var(--sky-transition) * 40%));
+  /* Phase-aware light direction (DESIGN.md §12, revised): a plain
+     drop-shadow() on this element reads the *alpha* of the composited
+     lit+shadow discs beneath it, which is a uniformly opaque circle
+     regardless of phase — so a centered glow necessarily looked the same
+     on the dark limb as the lit one, the core problem with the first
+     pass. An *offset* drop-shadow fixes this without any new geometry:
+     the shadow copy is pushed toward the lit side (using the same
+     --moon-dir the phase math already tracks), so it extends visibly
+     past the disc's edge on that side and sits mostly hidden underneath
+     the disc on the opposite side — a directional glow from one
+     collapsed value, not a second lighting system. Offset magnitude also
+     scales with --moon-illum (0 at new moon, largest at full), so a
+     sliver crescent gets barely any directional push, not the same
+     glow a full moon would. */
+  --moon-light-x: calc(var(--moon-dir, -1) * -1 * (1px + var(--moon-illum, 0.5) * 3px));
+  filter:
+    blur(calc(0.15px + var(--sky-transition) * 0.55px))
+    drop-shadow(
+      var(--moon-light-x) 0 calc(7px + var(--moon-illum, 0.5) * 11px + var(--sky-transition) * 12px)
+      color-mix(in srgb, var(--moon-glow-tint) calc(26% + var(--moon-illum, 0.5) * 28%), transparent)
+    )
+    /* Atmospheric rim light — a second, tighter and cooler drop-shadow,
+       pushed further toward the lit side than the ambient glow above
+       (1.5x its offset) so it reads as light grazing the illuminated
+       limb specifically, not a second uniform ring. */
+    drop-shadow(
+      calc(var(--moon-light-x) * 1.5) 0 calc(1.5px + var(--moon-illum, 0.5) * 1.5px)
+      color-mix(in srgb, var(--moon-rim-light) calc(35% + var(--moon-illum, 0.5) * 40%), transparent)
+    );
 }
 
 /* Real lunar phase, via two overlapping same-size discs rather than an
@@ -412,11 +2191,72 @@ html.atmosphere-ready {
    moon; 100% = fully clear of it = full moon; 50% exactly bisects it =
    quarter moon, since both discs share one radius). .atmosphere-moon's
    overflow:hidden + border-radius clips both to the moon's silhouette. */
+/* Celestial dimensionality (DESIGN.md §12): the flat single-color disc
+   became four small, fixed, hand-placed crater blobs (same "hand-placed,
+   not random" reasoning as STAR_POSITIONS — deterministic across server/
+   client, no reshuffling on reload) layered on top of a spherical-shading
+   gradient — an off-center highlight standing in for the sun as the
+   moon's one real light source, softening toward --moon-shadow-color at
+   the disc's own far edge. This is still exactly the "lit" half of the
+   two-disc phase mechanism below: .atmosphere-moon-shadow slides over
+   whatever is painted here unchanged, so phase accuracy is untouched.
+   background-size is deliberately larger than the box (130%) purely so
+   background-position has room to move — at 100% the position percentage
+   formula collapses to a no-op — which is what lets the slow drift
+   keyframe below read as the surface creeping very slightly, rather than
+   a full rotation (that would need real lunar-rotation math this pass
+   doesn't add). */
+/* Moon compositing fix. The lit disc's shading is a set of radial
+   gradients that paint the whole square box (the outer gradient stop is a
+   grayish mix of --moon-color and --moon-shadow-color), and the shadow
+   disc is a full square-boxed disc that slides mostly *outside* the moon
+   for a full moon. Both relied only on border-radius + overflow:hidden
+   (on .atmosphere-moon, which also carries the glow filter) to become a
+   circle. Where that rounded clip isn't honored on the composited/
+   filtered layers, the boxes show through as gray square corners around
+   the moon. clip-path on this filter-free wrapper is applied to its
+   children reliably everywhere, so the disc is a hard circle regardless;
+   the parent keeps its own overflow/radius and its glow filter, which
+   still reads the (now guaranteed-circular) result. Same size, position,
+   shading, phase mechanism and terminator softness as before. */
+.atmosphere-moon-disc {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  overflow: hidden;
+  clip-path: circle(50% at 50% 50%);
+}
+
 .atmosphere-moon-lit {
   position: absolute;
   inset: 0;
   border-radius: 9999px;
-  background: var(--moon-color);
+  /* The highlight was fixed at one corner regardless of phase — at some
+     phases it could land under the area the shadow disc slides over and
+     get clipped away, and it never matched the direction light actually
+     "comes from" per --moon-dir. Coupling its x-position to --moon-dir
+     (same sign convention as --moon-light-x above: waxing lights the
+     right side, waning the left) keeps the brightest point of the sphere
+     on the same side the phase math already says is lit. */
+  --moon-highlight-x: calc(50% - var(--moon-dir, -1) * 20%);
+  background:
+    radial-gradient(circle at 30% 64%, color-mix(in srgb, var(--moon-crater), transparent 40%) 0%, transparent 38%),
+    radial-gradient(circle at 62% 40%, color-mix(in srgb, var(--moon-crater), transparent 50%) 0%, transparent 32%),
+    radial-gradient(circle at 70% 68%, color-mix(in srgb, var(--moon-crater), transparent 58%) 0%, transparent 24%),
+    radial-gradient(circle at 42% 24%, color-mix(in srgb, var(--moon-crater), transparent 62%) 0%, transparent 20%),
+    radial-gradient(circle at var(--moon-highlight-x) 30%, #fffdfa 0%, var(--moon-color) 55%, color-mix(in srgb, var(--moon-color), var(--moon-shadow-color) 32%) 100%);
+  background-size: 130% 130%;
+  animation: atmosphere-moon-drift 44s ease-in-out infinite;
+}
+
+@keyframes atmosphere-moon-drift {
+  0%,
+  100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 6% 4%;
+  }
 }
 
 .atmosphere-moon-shadow {
@@ -426,24 +2266,142 @@ html.atmosphere-ready {
   background: var(--moon-shadow-color);
   transform: translateX(calc(var(--moon-dir, -1) * var(--moon-illum, 0.5) * 100%));
   transition: transform 3s ease;
+  /* A small, fixed blur softens just this disc's own edge — the
+     terminator where it overlaps the lit disc — into a gradual falloff
+     rather than a knife-sharp cut, reading as light curving across a
+     sphere. Parent .atmosphere-moon's overflow:hidden + border-radius
+     clips a rounded child's rendering to that same rounded shape (not
+     just its bounding box), so this blur is clipped away at the moon's
+     own outer silhouette (still crisp) and only visibly softens the
+     internal lit/shadow boundary. Deliberately small per "avoid
+     excessive blur" — this is a falloff cue, not a defocus effect. */
+  filter: blur(1.2px);
 }
 
 /* Stars fade in after the moon, not in lockstep with it — "a moon
    appears, and the first tiny stars begin to emerge" reads as two
-   staggered beats, not one. */
+   staggered beats, not one. Same steep suppression as the moon (see the
+   comment on .atmosphere-moon's opacity above for why a plain
+   (1 - --golden) factor wasn't enough): a sunset sky shouldn't show
+   stars either, for the whole Golden Hour window, not just its exact
+   peak. In practice --golden is already back near 0 well before --night
+   crosses the 0.3 threshold below (see getGoldenAmount/getNightAmount in
+   atmosphere.ts), so this mostly matters as an explicit guarantee. */
 .atmosphere-stars {
   position: absolute;
   inset: 0;
-  opacity: clamp(0, calc((var(--night) - 0.3) / 0.7), 1);
+  opacity: calc(clamp(0, calc((var(--night) - 0.3) / 0.7), 1) * max(0, 1 - var(--golden) * 10));
 }
 
+/* Celestial dimensionality (DESIGN.md §12): a star is now a tiny luminous
+   object — a bright core fading through its own tint into a soft glow
+   (radial-gradient background) plus a matching box-shadow halo — rather
+   than a flat dot with only a blur filter standing in for softness. Depth
+   (far/near/hero, set as a className by Atmosphere.tsx rather than
+   inferred from array position via :nth-child as before — array order
+   and visual depth were only ever coincidentally the same thing) drives
+   every other visible difference through the custom properties below:
+   size, halo radius, blur, luminance ceiling, tint, and twinkle duration,
+   so the field doesn't pulse in lockstep. Two tiers, not four: an
+   earlier far/mid/near/hero split spent most of its differentiation
+   budget on far vs. mid, which came out too close to register — mid was
+   folded into far so each remaining step (far → near → hero) is a wide,
+   perceptible jump in size/halo/brightness instead of a technically-
+   different-but-visually-identical one. atmosphere-twinkle itself is
+   unchanged — no new keyframe for the base twinkle. */
 .atmosphere-star {
   position: absolute;
-  width: 2px;
-  height: 2px;
+  width: var(--star-size, 2px);
+  height: var(--star-size, 2px);
   border-radius: 9999px;
-  background: var(--star-color);
-  animation: atmosphere-twinkle 6s ease-in-out infinite alternate;
+  background: radial-gradient(circle, #fff 0%, var(--star-tint, var(--star-color)) 55%, transparent 100%);
+  box-shadow: 0 0 var(--star-halo, 1.5px) color-mix(in srgb, var(--star-tint, var(--star-color)) 60%, transparent);
+  animation: atmosphere-twinkle var(--star-duration, 7s) ease-in-out infinite alternate;
+  filter: blur(var(--star-blur, 0.55px)) opacity(var(--star-ceiling, 55%));
+  /* Depth via motion, not just appearance: the same rAF-throttled
+     --scroll-y the midground layer already sets, at a per-tier fraction
+     of its multiplier — distant stars barely move, nearer stars move a
+     little more, exactly like real parallax. Never attached at all under
+     reduced motion (see Atmosphere.tsx), so --scroll-y simply never
+     updates there and this resolves to no motion for free. */
+  transform: translate3d(0, calc(var(--scroll-y, 0px) * var(--star-parallax, -0.002)), 0);
+}
+
+/* far (20 of 30 stars) — kept dim and small on purpose ("do not make the
+   background stars excessively bright"): this tier is the calm, mostly-
+   still backdrop the other two tiers stand out against. */
+.atmosphere-star--far {
+  --star-size: 2px;
+  --star-halo: 1.5px;
+  --star-blur: 0.55px;
+  --star-ceiling: 55%;
+  --star-tint: var(--star-cool);
+  --star-duration: 7s;
+  --star-parallax: -0.002;
+}
+
+/* near (6 of 30) — a wide jump from far in every dimension at once
+   (size, halo, blur, ceiling), not just one of them, so the difference
+   reads immediately rather than needing side-by-side comparison. */
+.atmosphere-star--near {
+  --star-size: 3.5px;
+  --star-halo: 6px;
+  --star-blur: 0.15px;
+  --star-ceiling: 92%;
+  --star-tint: var(--star-warm);
+  --star-duration: 5s;
+  --star-parallax: -0.008;
+}
+
+.atmosphere-star--hero {
+  --star-size: 4px;
+  --star-halo: 9px;
+  --star-blur: 0.08px;
+  --star-ceiling: 100%;
+  --star-tint: #ffffff;
+  --star-duration: 4.5s;
+  --star-parallax: -0.008;
+  filter: blur(var(--star-blur)) opacity(var(--star-ceiling)) brightness(1.15);
+}
+
+/* Occasional lens-like sparkle (DESIGN.md §12, strengthened): a 4-point
+   diffraction cross through the hero star's own center. The first pass's
+   1px hairline was too subtle to survive at normal viewing size — it
+   read as noise against the star's own halo. Each spike is now a crisp
+   gradient core (thicker, with a solid-white midsection instead of a
+   single-point peak) *plus* a soft box-shadow glow around that same
+   shape — one element doing double duty as "a sharp line with a blurred
+   duplicate behind it," rather than needing a third/fourth pseudo-
+   element (only ::before/::after are available). Reuses atmosphere-
+   twinkle at the hero's own --star-duration (still no new keyframe) so
+   the spikes brighten and dim exactly in sync with the star. Only the 4
+   hero-tier stars in the ordinary sky get this — "a few," not the whole
+   field — so it stays rare rather than turning the sky into a starburst
+   wall. */
+.atmosphere-star--hero::before,
+.atmosphere-star--hero::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  animation: atmosphere-twinkle var(--star-duration) ease-in-out infinite alternate;
+}
+
+.atmosphere-star--hero::before {
+  width: 24px;
+  height: 1.4px;
+  background: linear-gradient(90deg, transparent, #fff 44%, #fff 56%, transparent);
+  box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.55);
+  transform: translate(-50%, -50%);
+}
+
+.atmosphere-star--hero::after {
+  width: 1.4px;
+  height: 24px;
+  background: linear-gradient(180deg, transparent, #fff 44%, #fff 56%, transparent);
+  box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.55);
+  transform: translate(-50%, -50%);
 }
 
 @keyframes atmosphere-twinkle {
@@ -477,12 +2435,527 @@ html.atmosphere-ready {
   }
 }
 
+/* Background depth pass (DESIGN.md §13) — the distant cosmic layer: two
+   very large, very soft-edged, very low-alpha tonal patches, not a
+   nebula image and not a new color language — each is the site's own
+   existing plum/shadow tokens (--plum-day, --moon-shadow-color) mixed to
+   96% transparent, so at most 4% of the color shows. The wide 70%+
+   transparent falloff on each gradient is deliberate: a harder edge
+   would read as "a blob," this reads as a formless tonal drift instead.
+   Opacity reuses the exact formula .atmosphere-stars already uses
+   (night, steeply zeroed through Golden Hour) rather than inventing a
+   new one — this layer keeps the same day/Golden-Hour/night behavior as
+   the stars it sits behind. No parallax: at this alpha, motion would add
+   nothing perceptible — it's meant to be the *most* stationary thing in
+   the scene besides the sky itself. */
+.atmosphere-cosmic {
+  position: absolute;
+  inset: 0;
+  opacity: calc(var(--night) * max(0, 1 - var(--golden) * 10));
+  background:
+    radial-gradient(ellipse 60% 42% at 22% 28%, color-mix(in srgb, var(--plum-day), transparent 94%) 0%, transparent 72%),
+    radial-gradient(ellipse 55% 38% at 76% 58%, color-mix(in srgb, var(--moon-shadow-color), transparent 94%) 0%, transparent 74%);
+}
+
+/* Background depth pass (DESIGN.md §13) — mid-depth atmosphere: soft
+   translucent gradient washes (no particles — that's the foreground
+   layer below) at their own parallax rate, deliberately between the far
+   star tier's -0.002 and the near/hero tiers' -0.008, so this reads as
+   its own plane rather than moving in lockstep with either. Always
+   present (not night-gated like .atmosphere-cosmic above) — at ~4%
+   tint strength it stays imperceptible by day regardless. */
+.atmosphere-mid-depth {
+  position: absolute;
+  inset: 0;
+  transform: translate3d(0, clamp(-14px, calc(var(--scroll-y, 0px) * -0.005), 0px), 0);
+  background:
+    radial-gradient(ellipse 65% 40% at 35% 25%, color-mix(in srgb, var(--star-color), transparent 96%) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 35% at 70% 60%, color-mix(in srgb, var(--plum-night), transparent 96%) 0%, transparent 72%);
+}
+
+/* ── Foreground atmospheric layer (mid-background / environment) ──
+   Sits between the far sky (which is `position: fixed` and therefore
+   never moves relative to scroll — correctly reading as "very far
+   away") and real content (which scrolls at 1x). A handful of soft,
+   larger, blurred dots — the same primitive as .atmosphere-star, just
+   bigger/softer/dimmer so they read as haze rather than a second star
+   field — drift a few px against scroll, capped by clamp() so the
+   effect stays "extremely subtle" no matter how long the page is. This
+   is deliberately the *fastest*-parallaxing layer in the whole scene
+   (DESIGN.md §13) — the closest thing to the viewer, exactly why it was
+   already tuned to move more than the stars behind it, before this pass
+   added the two farther planes above. --scroll-y is set by
+   Atmosphere.tsx's existing rAF-throttled scroll listener (the site's
+   one scroll-driven value); it's never attached at all under
+   prefers-reduced-motion, and the rule below is a defense-in-depth
+   static fallback for that case. No new keyframe. */
+.atmosphere-midground {
+  position: absolute;
+  inset: 0;
+  transform: translate3d(0, clamp(-28px, calc(var(--scroll-y, 0px) * -0.035), 0px), 0);
+}
+
+.atmosphere-midground-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 9999px;
+  background: var(--star-color);
+  opacity: 0.24;
+  filter: blur(1.3px);
+}
+
+/* ── Cloud layers (DESIGN.md §14) ──
+   Three depth tiers — far/mid/near — sitting in front of the sun/moon/
+   stars (real tropospheric clouds are far closer than any celestial body,
+   so this is the physically correct stacking, not just a visual choice)
+   but behind .atmosphere-midground's own closer haze. Same "hand-placed,
+   not random" determinism as STAR_POSITIONS: irregular, spread-apart
+   ellipse sizes/positions so nothing reads as a repeating pattern.
+
+   Each blob is a pair of radial-gradients sharing one footprint: a
+   --cloud-highlight ellipse (listed first = painted on top) offset
+   slightly toward the *top* of the blob's own bounds, over a larger body
+   ellipse beneath it — light reading as coming from above, the same
+   off-center-gradient technique already used for the sun's and moon's
+   own volumetric shading (DESIGN.md §12), not a flat illustrated puff.
+   Every stop keeps a wide transparent falloff (matching
+   .atmosphere-cosmic/.atmosphere-mid-depth's own restraint) and generous
+   gaps between blobs — this reads as atmosphere with real openings the
+   sky shows through, never a solid overcast sheet blocking the Sunrise
+   gradient or the sun/moon behind it.
+
+   DAYTIME DEPTH (DESIGN.md §16) — the body ellipse is no longer one flat
+   tone: far/mid tiers substitute --cloud-aerial-far/-mid for --cloud-body
+   (atmospheric perspective — a distant blob leans toward the horizon's
+   own live color, the same way real distant clouds pick up the color of
+   the air between them and the viewer; near stays plain --cloud-body,
+   closest, least atmosphere in front of it), and every body gradient
+   gained one extra mid-stop — --cloud-shadow(-far/-mid), a darkened
+   variant of that same tier's own tone — sitting past the highlight's
+   own reach so the blob's lower/outer body reads as its shadowed side,
+   not just "the highlight, fading to nothing." Both cues are strongest
+   at Day (the light/shadow one especially — see --cloud-shadow-mix)
+   without being Day-exclusive tricks: they're built from the sky's own
+   already-live tokens, so they ease correctly through every phase.
+
+   Positioned in the lower-to-mid sky only (roughly 55%–100% of the fixed
+   .atmosphere box, top→bottom), leaving the star field and moon's own
+   upper-sky territory clear. Depth reads through five things at once,
+   each tier stepping up together: size (far smallest → near largest),
+   opacity (--cloud-visibility's own multiplier, far faintest → near most
+   present), color (aerial perspective, far leaning most toward the
+   horizon's own tone), parallax rate (extending the existing far-star
+   -0.002 → mid-depth -0.005 → near/hero-star -0.008 → midground -0.035
+   ladder from DESIGN.md §13 with three more rungs in between, since
+   clouds sit closer than any star but farther than the midground haze),
+   and drift speed/direction (a slow background-position animation per
+   layer,
+   nearer layers drifting faster — real parallax-like motion, not a
+   shared timer). Kept to a background-size just over 100% (108–124%)
+   purely so background-position has room to move at all, the same
+   technique already used for .atmosphere-moon-lit's own surface drift.
+
+   Each blob's ellipse is sized in vw for *both* axes (never %), so its
+   flattened, cloud-like aspect ratio stays constant regardless of the
+   viewport's own width:height proportions — a %/% ellipse would size
+   itself against the fixed .atmosphere box's actual width and height
+   independently, so the exact same shape reads as a flat cloud band on a
+   wide viewport but a round blob on a narrow/tall one. Position (`at
+   X% Y%`) stays percentage-based, since placement should track the
+   viewport's own proportions the way everything else in this file does.
+
+   REFINEMENT PASS (cinematic/editorial sky) — four changes, all within
+   this same architecture, no fourth tier and no new markup:
+   1. Each tier now carries its own `filter: blur()` — the one thing
+      missing before. Gradient transparent-falloff alone reads as "a
+      soft-edged shape"; stacking a real blur on top is what turns that
+      into "atmospheric haze," graduated by distance (far most blurred,
+      near least, since it's closest and should stay comparatively
+      crisp). Mid/near also gain a very low-alpha, --golden-scaled
+      drop-shadow in the same filter — a restrained warm catch-light at
+      Golden Hour, not a glow effect on its own.
+   2. Per-tier opacity multipliers were rebalanced: far is now more
+      subtle (0.46 → 0.30), mid is now the tier that reads as most
+      present (0.68 → 0.72), and near — previously the *most* visible,
+      backwards for a layer that should feel occasional — is now the
+      most restrained of the three (0.88 → 0.50) alongside smaller,
+      more widely-spaced blobs, so it reads as something briefly
+      drifting through rather than foreground decoration.
+   3. Every ellipse got flatter (a higher width:height ratio) and each
+      tier's three blobs sit at deliberately uneven offsets/sizes
+      (never evenly-thirded) — thin high-altitude veils, not a
+      repeating puff-puff-puff pattern.
+   4. Transparent-falloff stops start a touch earlier on every gradient
+      (edges dissolve sooner), compounding with the new blur for a
+      genuinely gauzy edge instead of a soft-but-still-defined one. */
+.atmosphere-clouds-far {
+  position: absolute;
+  inset: 0;
+  opacity: calc(var(--cloud-visibility) * 0.30);
+  filter: blur(3px);
+  background-size: 108% 108%;
+  background-position: 0% 0%;
+  animation: atmosphere-cloud-drift-far 150s ease-in-out infinite alternate;
+  background-image:
+    radial-gradient(ellipse 19vw 2.2vw at 9% 58%, color-mix(in srgb, var(--cloud-highlight), transparent 32%) 0%, transparent 64%),
+    radial-gradient(ellipse 30vw 3.4vw at 9% 60%, color-mix(in srgb, var(--cloud-aerial-far), transparent 40%) 0%, color-mix(in srgb, var(--cloud-shadow-far), transparent 40%) 52%, transparent 68%),
+    radial-gradient(ellipse 15vw 1.8vw at 47% 69%, color-mix(in srgb, var(--cloud-highlight), transparent 42%) 0%, transparent 62%),
+    radial-gradient(ellipse 23vw 2.8vw at 47% 71%, color-mix(in srgb, var(--cloud-aerial-far), transparent 50%) 0%, color-mix(in srgb, var(--cloud-shadow-far), transparent 50%) 52%, transparent 68%),
+    radial-gradient(ellipse 13vw 1.6vw at 89% 53%, color-mix(in srgb, var(--cloud-highlight), transparent 38%) 0%, transparent 62%),
+    radial-gradient(ellipse 21vw 2.4vw at 89% 55%, color-mix(in srgb, var(--cloud-aerial-far), transparent 46%) 0%, color-mix(in srgb, var(--cloud-shadow-far), transparent 46%) 52%, transparent 68%);
+  transform: translate3d(0, clamp(-18px, calc(var(--scroll-y, 0px) * -0.010), 0px), 0);
+}
+
+/* SECOND REFINEMENT PASS — the first pass (blur + rebalanced opacity) was
+   correct in kind but too faint in degree; mid is where the visible
+   "atmospheric depth" should actually register, so it alone gets a real
+   boost here (far stays as the first pass left it — still deliberately
+   the quiet layer; near gets only its golden edge-light strengthened,
+   same as mid, since "restrained" was about presence, not warmth). Three
+   changes: (1) opacity multiplier raised further (0.72 → 0.94, ~+30%),
+   (2) blur eased back a touch (1.75px → 1.2px) so the elongated band
+   shape itself reads more clearly rather than dissolving into pure haze,
+   (3) each highlight ellipse's own transparent-cutoff now *tightens* as
+   --golden rises (e.g. `transparent calc(26% - var(--golden) * 18%)`) —
+   not just a warmer hue as before, but a genuinely brighter, more opaque
+   edge at Golden Hour, which is what makes lit cloud edges visible
+   rather than merely tinted. Body ellipses and parallax/drift are
+   otherwise unchanged from the first pass. */
+.atmosphere-clouds-mid {
+  position: absolute;
+  inset: 0;
+  opacity: calc(var(--cloud-visibility) * 0.94);
+  filter: blur(1.2px) drop-shadow(0 0 16px rgba(255, 201, 140, calc(var(--golden) * 0.3)));
+  background-size: 116% 116%;
+  background-position: 0% 0%;
+  animation: atmosphere-cloud-drift-mid 110s ease-in-out infinite alternate;
+  background-image:
+    radial-gradient(ellipse 25vw 3.2vw at 6% 44%, color-mix(in srgb, var(--cloud-highlight), transparent calc(26% - var(--golden) * 18%)) 0%, transparent 60%),
+    radial-gradient(ellipse 39vw 5vw at 6% 47%, color-mix(in srgb, var(--cloud-aerial-mid), transparent 34%) 0%, color-mix(in srgb, var(--cloud-shadow-mid), transparent 34%) 54%, transparent 72%),
+    radial-gradient(ellipse 19vw 2.6vw at 43% 39%, color-mix(in srgb, var(--cloud-highlight), transparent calc(36% - var(--golden) * 18%)) 0%, transparent 58%),
+    radial-gradient(ellipse 30vw 4vw at 43% 42%, color-mix(in srgb, var(--cloud-aerial-mid), transparent 44%) 0%, color-mix(in srgb, var(--cloud-shadow-mid), transparent 44%) 54%, transparent 70%),
+    radial-gradient(ellipse 23vw 3vw at 83% 50%, color-mix(in srgb, var(--cloud-highlight), transparent calc(30% - var(--golden) * 18%)) 0%, transparent 60%),
+    radial-gradient(ellipse 36vw 4.6vw at 83% 53%, color-mix(in srgb, var(--cloud-aerial-mid), transparent 38%) 0%, color-mix(in srgb, var(--cloud-shadow-mid), transparent 38%) 54%, transparent 72%);
+  transform: translate3d(0, clamp(-22px, calc(var(--scroll-y, 0px) * -0.017), 0px), 0);
+}
+
+.atmosphere-clouds-near {
+  position: absolute;
+  inset: 0;
+  opacity: calc(var(--cloud-visibility) * 0.50);
+  filter: blur(1px) drop-shadow(0 0 16px rgba(255, 201, 140, calc(var(--golden) * 0.26)));
+  background-size: 124% 124%;
+  background-position: 0% 0%;
+  animation: atmosphere-cloud-drift-near 80s ease-in-out infinite alternate;
+  background-image:
+    radial-gradient(ellipse 26vw 4vw at 18% 82%, color-mix(in srgb, var(--cloud-highlight), transparent calc(22% - var(--golden) * 14%)) 0%, transparent 58%),
+    radial-gradient(ellipse 41vw 6.4vw at 18% 86%, color-mix(in srgb, var(--cloud-body), transparent 30%) 0%, color-mix(in srgb, var(--cloud-shadow), transparent 30%) 56%, transparent 74%),
+    radial-gradient(ellipse 20vw 3.2vw at 71% 93%, color-mix(in srgb, var(--cloud-highlight), transparent calc(28% - var(--golden) * 14%)) 0%, transparent 58%),
+    radial-gradient(ellipse 33vw 5.2vw at 71% 97%, color-mix(in srgb, var(--cloud-body), transparent 36%) 0%, color-mix(in srgb, var(--cloud-shadow), transparent 36%) 56%, transparent 74%);
+  transform: translate3d(0, clamp(-26px, calc(var(--scroll-y, 0px) * -0.024), 0px), 0);
+}
+
+@keyframes atmosphere-cloud-drift-far {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 3% 2%; }
+}
+
+@keyframes atmosphere-cloud-drift-mid {
+  0% { background-position: 0% 0%; }
+  100% { background-position: -4% 2%; }
+}
+
+@keyframes atmosphere-cloud-drift-near {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 5% -3%; }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .atmosphere-midground {
+    transform: none !important;
+  }
+  .atmosphere-mid-depth {
+    transform: none !important;
+  }
   .atmosphere-star {
     animation: none;
     opacity: 0.6;
+    transform: none;
+  }
+  .atmosphere-star--hero::before,
+  .atmosphere-star--hero::after {
+    animation: none;
   }
   .atmosphere-shooting-star {
     display: none;
+  }
+  /* Celestial dimensionality (DESIGN.md §12): the sun's breathing pulse
+     and the moon's surface drift are the only two new animations this
+     pass adds — both disabled here, same as every other motion on the
+     page. The static shading, craters, and glow layers they sit on top
+     of are ordinary background/filter declarations, not animations, so
+     they're untouched and the sun/moon still read as volumetric, just
+     still. */
+  .atmosphere-sun {
+    animation: none;
+    transform: translate(-50%, 50%);
+  }
+  .atmosphere-moon {
+    transform: none;
+  }
+  .atmosphere-moon-lit {
+    animation: none;
+  }
+  /* Cloud layers (DESIGN.md §14): the per-tier drift animations are the
+     only motion these add — disabled here like every other animation on
+     the page. The static gradient shading itself is an ordinary
+     background declaration, not an animation, so the clouds stay fully
+     visible and volumetric, just still; scroll parallax needs no reset
+     here since --scroll-y is never attached under reduced motion in the
+     first place (see Atmosphere.tsx). */
+  .atmosphere-clouds-far,
+  .atmosphere-clouds-mid,
+  .atmosphere-clouds-near {
+    animation: none;
+    background-position: 0% 0%;
+    transform: none !important;
+  }
+}
+
+/* ── Moonlit Archive preview toggle (DESIGN.md §9), development-only ──
+   A small, fixed "Live / Sunrise / Day / Golden Hour / Sunset / Night"
+   control for judging every named sky state on demand — see
+   AtmospherePreviewToggle.tsx / atmospherePreview.ts. Deliberately built
+   from the site's existing chrome vocabulary (border-line, backdrop-blur,
+   .meta type, plum-on-active) rather than a new visual language — it's
+   still the archive, just a viewing aid bolted onto it. Sits above the
+   sky layer (z-40, matching the header) but never full-bleed like the
+   header/footer glass, so it doesn't need their sky-hue-matched tint
+   (DESIGN.md §9's "closing the beige framing" reasoning) — a small
+   floating pill has no edge-to-edge seam to hide. Never rendered in
+   production (layout.tsx gates it out entirely) — this styling only
+   ever ships to a dev server, but lives in the same stylesheet as
+   everything else rather than a separate dev-only file. */
+.atmosphere-preview-toggle {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  max-width: calc(100vw - 2rem);
+  border: 1px solid var(--line);
+  background-color: color-mix(in srgb, var(--ivory) 88%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.5rem 0.75rem;
+}
+
+.atmosphere-preview-toggle-options {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
+  gap: 0.125rem;
+}
+
+.atmosphere-preview-toggle-btn {
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  padding: 0.125rem 0.375rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: color-mix(in srgb, var(--charcoal) 70%, transparent);
+  cursor: pointer;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.atmosphere-preview-toggle-btn:hover {
+  color: var(--plum);
+}
+
+.atmosphere-preview-toggle-btn[data-active="true"] {
+  color: var(--plum);
+  border-bottom-color: var(--plum);
+}
+
+@media (max-width: 640px) {
+  /* Below the reading breakpoint there's no room for a labeled row next
+     to page content in the same corner as anything else fixed there —
+     the toggle is the only fixed control in this corner, so this is
+     purely a size/legibility adjustment, not a collision fix. */
+  .atmosphere-preview-toggle {
+    right: 0.625rem;
+    bottom: 0.625rem;
+    gap: 0.5rem;
+    padding: 0.375rem 0.625rem;
+  }
+}
+
+/* The locked 星化 mark (Mark.tsx): two cuts — a graphite-silver one for
+   light headers and a bright-silver one for dark headers — crossfaded
+   with the sky. The artwork is never touched; this is presentation only.
+
+   --mark-dark (0 = light cut, 1 = dark cut) follows --night-text (the
+   same registered, transitioning signal that swaps text from ink to
+   ivory), so Sunset and Night use the bright cut exactly as before and
+   every lit stage (Sunrise, Day, Golden Hour) uses the polished chrome
+   cut. */
+.brand-mark {
+  /* Follows --night-text only (Sunset/Night unchanged: it is 1 there). The
+     old Golden Hour bump is gone — at Sunrise/Golden Hour the pale cut
+     read as gray-on-slate; the polished chrome cut is used instead and
+     given a daylight-catching finish below. */
+  --mark-dark: var(--night-text);
+  /* 0 at full Day, 1 through Sunrise/Golden Hour — same signal the header
+     glass uses to pick up the sky (.header-golden-glass). Inherited from
+     the header; falls back to 0 outside it (footer, drawer). */
+  --mark-lit: var(--header-sky-light, 0);
+  /* Bright rim = white warmed by the sky's own ambient light (0 at Day/Night). */
+  --mark-rim: color-mix(in srgb, white, var(--sun-ambient-tint) calc(var(--mark-lit) * 55%));
+}
+
+.brand-mark__light {
+  opacity: calc(1 - var(--mark-dark));
+  /* Day keeps its graphite-chrome contrast; as the sky warms (--mark-lit)
+     the cores lift into mid-tone steel while highlights stay bright, and
+     two hairline drop-shadows act as reflections: a bright rim where
+     light catches the polished edge, and a deep under-edge that keeps
+     the fine strokes separated from the glass. Not a glow — 0.5–0.8px. */
+  filter: contrast(calc(1 + 0.6 * (1 - var(--mark-dark)) + 0.1 * var(--mark-lit)))
+    brightness(calc(1 - 0.22 * (1 - var(--mark-dark)) + 0.28 * var(--mark-lit)))
+    saturate(calc(1 + 0.6 * (1 - var(--mark-dark)) + 0.3 * var(--mark-lit)))
+    drop-shadow(0 0 0.6px color-mix(in srgb, var(--mark-rim), transparent calc(100% - 80% * max(var(--mark-lit), (1 - var(--mark-dark)) * 0.85))))
+    drop-shadow(0 0.8px 0.5px rgba(14, 18, 34, calc(0.45 * max(var(--mark-lit), (1 - var(--mark-dark)) * 0.7))));
+}
+
+.brand-mark__dark {
+  opacity: var(--mark-dark);
+}
+
+/* ── Mark glint experiment (reversible — see Mark.tsx) ──
+   Tiny soft points of light pinned to existing stroke crossings/tips.
+   Each glint has its own long cycle (23–41s, all different) and is
+   invisible for ~93% of it, then eases up and down over ~2s — so they
+   drift in and out of phase and never repeat a visible pattern. One
+   gentle swell per cycle: no flicker, no repeated pulses. The artwork
+   itself never moves. */
+.brand-mark__glints {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.brand-mark__glint {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff 0%, rgba(255, 255, 255, 0.8) 18%, rgba(255, 255, 255, 0) 65%);
+  opacity: 0;
+  animation: mark-glint 30s ease-in-out infinite;
+  --glint-peak: 0.55;
+}
+
+.brand-mark__glint--strong {
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  --glint-peak: 0.85;
+}
+
+/* A hairline 4-point cross, only on the two stronger glints. */
+.brand-mark__glint--strong::before,
+.brand-mark__glint--strong::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.9), transparent);
+}
+
+.brand-mark__glint--strong::before {
+  width: 16px;
+  height: 1px;
+  margin: -0.5px 0 0 -8px;
+}
+
+.brand-mark__glint--strong::after {
+  width: 1px;
+  height: 16px;
+  margin: -8px 0 0 -0.5px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.9), transparent);
+}
+
+@keyframes mark-glint {
+  0%,
+  93% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  96.5% {
+    opacity: var(--glint-peak);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-mark__glints {
+    display: none;
+  }
+}
+
+/* /official cards (official/page.tsx) — an opaque fill built from the live
+   sky, so the squares belong to the same atmosphere as the page behind
+   them instead of sitting on flat --ivory (which doesn't share the sky's
+   hue). Same technique as .search-sky-glass: the sky's own mid stop
+   (--sky-64-final, already Sunrise/Golden-Hour/Sunset/Night-aware),
+   lightened toward white only while text is still day-dark ink
+   (1 - --night-text, the signal that flips text), so dark text keeps its
+   contrast on the mid-tone Sunrise/Golden Hour sky and the deep Sunset/
+   Night sky is left unlightened under light text. A small --ivory share
+   keeps the site's own warmth; once text has flipped light, up to 45% of
+   the deep --ivory-night hex is mixed in so light text keeps its contrast
+   on the Sunset purple. Opaque on purpose: the grid's gap-px
+   hairlines are the container's bg-line showing between cards (and in the
+   grid's empty last cell, which stays beige on purpose). In @layer base,
+   like .search-sky-glass. */
+@layer base {
+  .official-sky-card {
+    --official-lighten: calc((1 - var(--night-text)) * 48%);
+    --official-tint: color-mix(in srgb, var(--sky-64-final), white var(--official-lighten));
+    --official-fill: color-mix(in srgb, var(--official-tint), var(--ivory) 10%);
+    --official-fill-final: color-mix(in srgb, var(--official-fill), var(--ivory-night) calc(var(--night-text) * 45%));
+    background-color: var(--official-fill-final);
+    /* Contrast: over the mid-tone Sunrise/Golden Hour sky the card's small
+       charcoal text fell below AA. Inside the card only, charcoal deepens
+       toward --ink-day by the amount those two stages are active — 0 at Day
+       (identical), Sunset and Night (--night-text is 1), so those are
+       untouched. */
+    --official-dark: calc(max(var(--golden), var(--sky-transition) * 0.85) * (1 - var(--night-text)));
+    --official-charcoal: color-mix(in srgb, var(--charcoal-day), var(--charcoal-night) calc(var(--night-text) * 100%));
+    --charcoal: color-mix(in srgb, var(--official-charcoal), var(--ink-day) calc(var(--official-dark) * 100%));
+    transition: background-color 300ms ease;
+  }
+
+  /* Hover = the surface catching light differently, not a new colour: the
+     fill eases 9% toward white while text is dark (a faint lift) and 9%
+     toward black once text is light (a faint deepening), so text contrast
+     only ever improves. Crossfades with --night-text like everything else. */
+  .official-sky-card {
+    --official-hover-target: color-mix(in srgb, white, black calc(var(--night-text) * 100%));
+  }
+
+  .official-sky-card:hover {
+    background-color: color-mix(in srgb, var(--official-fill-final), var(--official-hover-target) 9%);
   }
 }

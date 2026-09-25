@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { navItems } from "./navData";
-import Mark from "./Mark";
+import BrandLockup from "./BrandLockup";
 import Glint from "./Glint";
 import HeaderSearch from "./HeaderSearch";
 import { SearchIndexEntry } from "@/lib/searchIndex";
@@ -67,20 +67,12 @@ export default function Header({ searchIndex }: { searchIndex: SearchIndexEntry[
 
   return (
     <>
-      <header className="sticky top-0 z-40 border-b border-line bg-ivory/95 backdrop-blur">
+      <header className="header-golden-glass sticky top-0 z-40 border-b border-line/40 backdrop-blur">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-4 px-5 py-4 sm:px-8">
-          <Link href="/" className="glint-hover group relative flex items-center gap-3">
+          <Link href="/" className="glint-hover group relative flex items-center">
             <Glint className="left-6 top-0" />
             <Glint className="left-1 top-5" style={{ animationDelay: "130ms" }} />
-            <Mark className="h-9 w-9 text-[15px] tracking-tight" />
-            <span className="flex flex-col leading-none">
-              <span className="font-display text-xl tracking-tight sm:text-2xl">
-                The Starhwa Encyclopedia
-              </span>
-              <span className="meta mt-1 text-charcoal/70">
-                A Living Portrait of Seonghwa, 2018—
-              </span>
-            </span>
+            <BrandLockup size="header" />
           </Link>
 
           <div className="hidden items-center gap-5 lg:flex">
@@ -92,7 +84,7 @@ export default function Header({ searchIndex }: { searchIndex: SearchIndexEntry[
             <button
               type="button"
               onClick={() => setMobileSearchOpen((v) => !v)}
-              className="text-charcoal/70 transition-colors hover:text-plum"
+              className="-mx-2 -my-4 px-2 py-4 text-charcoal/70 transition-colors hover:text-plum"
               aria-label={mobileSearchOpen ? "Close search" : "Open search"}
               aria-expanded={mobileSearchOpen}
             >
@@ -105,7 +97,7 @@ export default function Header({ searchIndex }: { searchIndex: SearchIndexEntry[
               ref={menuButtonRef}
               type="button"
               onClick={() => setOpen(true)}
-              className="flex flex-col items-end gap-1.5"
+              className="-mx-2 -my-4 flex flex-col items-end gap-1.5 px-2 py-4"
               aria-label="Open menu"
               aria-haspopup="dialog"
               aria-expanded={open}
@@ -157,16 +149,13 @@ export default function Header({ searchIndex }: { searchIndex: SearchIndexEntry[
           className="fixed inset-0 z-50 flex flex-col bg-ivory lg:hidden"
         >
           <div className="flex items-center justify-between px-5 py-4">
-            <span className="flex items-center gap-3">
-              <Mark className="h-8 w-8 text-sm" />
-              <span className="font-display text-xl">The Starhwa Encyclopedia</span>
-            </span>
+            <BrandLockup size="header" />
             <button
               ref={closeButtonRef}
               type="button"
               onClick={() => setOpen(false)}
               aria-label="Close menu"
-              className="meta"
+              className="meta -mx-3 -my-4 px-3 py-4"
             >
               Close ✕
             </button>

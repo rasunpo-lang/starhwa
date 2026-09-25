@@ -1,4 +1,4 @@
-import { Entry, ImageType } from "./types";
+import { Entry, EntryImage, ImageType } from "./types";
 import { findEmbeddableVideo } from "./video";
 
 export type EntryVariant = "feature" | "media" | "standard" | "compact";
@@ -16,16 +16,33 @@ export type PlanRow =
   | { kind: "compact-group"; items: PlannedEntry[] };
 
 /**
- * The entry's editorially curated image if one is set (see
- * content/README.md "Image selection" — never attached mechanically),
- * otherwise a YouTube thumbnail derived automatically from an embeddable
- * video source. hqdefault is used because it's a reliable size present
- * for essentially every upload, unlike maxresdefault, which 404s for
- * older or low-view videos. A curated image always takes priority over
- * the auto-derived video-frame thumbnail for this still-image slot.
+ * The one gate every public image display in the app must go through —
+ * a card thumbnail, an entry-page hero, an OG/Twitter meta image, or a
+ * homepage feature. An entry's curated `image` is only ever surfaced
+ * when its source has explicitly confirmed external sharing is allowed
+ * (`sharePermission === "permitted"`); "unknown" (the default for any
+ * image that doesn't set this) and "prohibited" both return null here.
+ * See content/README.md "Image sourcing & permission" — call this
+ * instead of reading `entry.image` directly anywhere the result will be
+ * rendered, linked, or embedded in metadata.
  */
-function imageFor(entry: Entry): { url: string; type: ImageType } | null {
-  if (entry.image) return { url: entry.image.url, type: entry.image.type };
+export function publicImage(entry: Entry): EntryImage | null {
+  return entry.image && entry.image.sharePermission === "permitted" ? entry.image : null;
+}
+
+/**
+ * The entry's editorially curated image if one is set and safe to show
+ * (see publicImage() above; content/README.md "Image selection" — never
+ * attached mechanically), otherwise a YouTube thumbnail derived
+ * automatically from an embeddable video source. hqdefault is used
+ * because it's a reliable size present for essentially every upload,
+ * unlike maxresdefault, which 404s for older or low-view videos. A
+ * curated image always takes priority over the auto-derived video-frame
+ * thumbnail for this still-image slot.
+ */
+export function imageFor(entry: Entry): { url: string; type: ImageType } | null {
+  const curated = publicImage(entry);
+  if (curated) return { url: curated.url, type: curated.type };
   const video = findEmbeddableVideo(entry.sources);
   return video
     ? { url: `https://i.ytimg.com/vi/${video.videoId}/hqdefault.jpg`, type: "photo" }

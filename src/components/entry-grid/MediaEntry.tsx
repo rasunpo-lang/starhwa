@@ -17,7 +17,7 @@ export default function MediaEntry({ item }: { item: PlannedEntry }) {
         aria-label={`${entry.title} — ${entry.category}, ${formatEntryDate(entry.date)}`}
       />
       <div
-        className={`relative aspect-video w-full overflow-hidden ${
+        className={`relative aspect-video w-full overflow-hidden photo-plane ${
           isProduct ? "bg-ivory-dim" : "bg-ink"
         }`}
       >

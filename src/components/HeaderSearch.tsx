@@ -75,7 +75,7 @@ export default function HeaderSearch({
 
   return (
     <div ref={containerRef} className={`relative ${className}`}>
-      <div className="flex items-center gap-2 border border-line bg-ivory px-3 py-2 transition-colors focus-within:border-plum">
+      <div className="search-sky-glass flex items-center gap-2 border px-3 py-2 backdrop-blur-sm transition-colors focus-within:border-plum">
         <svg
           aria-hidden="true"
           viewBox="0 0 16 16"
@@ -130,7 +130,7 @@ export default function HeaderSearch({
           id={listboxId}
           role="listbox"
           aria-label="Search results"
-          className="absolute left-0 right-0 top-full z-50 mt-1 max-h-[70vh] overflow-y-auto border border-line bg-ivory shadow-[0_8px_24px_rgba(21,19,15,0.12)]"
+          className="search-sky-glass absolute left-0 right-0 top-full z-50 mt-1 max-h-[70vh] overflow-y-auto border backdrop-blur-sm shadow-[0_8px_24px_rgba(21,19,15,0.12)]"
         >
           {results.length === 0 ? (
             <p className="p-4 text-sm text-charcoal/75">

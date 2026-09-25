@@ -1,18 +1,15 @@
 import Link from "next/link";
 import { navItems } from "./navData";
-import Mark from "./Mark";
+import BrandLockup from "./BrandLockup";
 import AtmosphereNote from "./AtmosphereNote";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line bg-ivory">
+    <footer className="footer-sky-glass border-t border-line/40 backdrop-blur-md">
       <div className="mx-auto max-w-[1400px] px-5 py-14 sm:px-8">
         <div className="grid gap-10 sm:grid-cols-[1.3fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-3">
-              <Mark className="h-9 w-9 text-[15px]" />
-              <p className="font-display text-2xl">The Starhwa Encyclopedia</p>
-            </div>
+            <BrandLockup size="footer" />
             <p className="mt-3 max-w-sm text-sm text-charcoal/80">
               A living archive of Park Seonghwa of ATEEZ, documenting his
               journey from 2018 to the present.

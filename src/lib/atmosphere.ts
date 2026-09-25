@@ -81,6 +81,23 @@ function dayOfYear(date: Date): number {
   return Math.floor((date.getTime() - start.getTime()) / 86_400_000);
 }
 
+/**
+ * Whether the visitor's local timezone is currently observing Daylight
+ * Saving Time. Standard technique: DST is whichever of the year's two
+ * offset extremes (Jan 1, Jul 1) is *smaller* — clocks move forward, so
+ * getTimezoneOffset() (minutes to add to local time to reach UTC) drops
+ * — compared against today's actual offset. Works for any DST-observing
+ * timezone in either hemisphere without needing our own rule table,
+ * because it reads the offset the runtime's Intl/Date implementation has
+ * already resolved for the visitor's real timezone.
+ */
+function isDaylightSaving(date: Date): boolean {
+  const jan = new Date(date.getFullYear(), 0, 1).getTimezoneOffset();
+  const jul = new Date(date.getFullYear(), 6, 1).getTimezoneOffset();
+  const standardOffset = Math.max(jan, jul);
+  return date.getTimezoneOffset() < standardOffset;
+}
+
 export interface SunTimes {
   /** Decimal local-clock hours (e.g. 6.5 = 6:30am). */
   sunrise: number;
@@ -90,12 +107,22 @@ export interface SunTimes {
 /**
  * Real sunrise/sunset for the given date — the standard solar-
  * declination/hour-angle formula, not a lookup table or an external
- * service. The only approximation is the latitude input (see
- * TIMEZONE_LATITUDES above); the astronomy itself, and the equation-of-
- * time/exact-longitude corrections it skips, put this within roughly
- * ±30–45 minutes of true local sunrise/sunset — appropriate for a
- * decorative atmosphere, not a solar calculator (the same precision
- * philosophy as getMoonPhase below).
+ * service. The core astronomy assumes solar noon falls at local clock
+ * hour 12, which is only true under Standard Time — during Daylight
+ * Saving Time, clocks move forward but the sun doesn't, so solar noon
+ * actually falls around clock hour 13. Without correcting for that,
+ * this returned sunrise/sunset roughly an hour early for the ~8 months a
+ * year most DST-observing regions spend in DST (confirmed against real
+ * Vancouver sunset: the uncorrected formula landed over an hour early on
+ * 2026-09-02) — not a minor imprecision, a systematic one-directional
+ * error on top of the approximation below. isDaylightSaving() adds that
+ * hour back whenever it's in effect, using the visitor's own resolved
+ * timezone rules rather than a hardcoded DST calendar. What's left after
+ * that — the latitude input (see TIMEZONE_LATITUDES above), and the
+ * equation-of-time/exact-longitude corrections the astronomy itself
+ * skips — puts this within roughly ±30–45 minutes of true local sunrise/
+ * sunset — appropriate for a decorative atmosphere, not a solar
+ * calculator (the same precision philosophy as getMoonPhase below).
  */
 export function getSunTimes(date: Date): SunTimes {
   const latRad = (getApproxLatitude() * Math.PI) / 180;
@@ -103,10 +130,54 @@ export function getSunTimes(date: Date): SunTimes {
   const declRad = ((23.44 * Math.PI) / 180) * Math.sin(((2 * Math.PI) / 365) * (n - 81));
   const cosH = Math.min(1, Math.max(-1, -Math.tan(latRad) * Math.tan(declRad)));
   const hourAngleHours = (Math.acos(cosH) * 180) / Math.PI / 15;
+  const solarNoon = isDaylightSaving(date) ? 13 : 12;
   return {
-    sunrise: 12 - hourAngleHours,
-    sunset: 12 + hourAngleHours,
+    sunrise: solarNoon - hourAngleHours,
+    sunset: solarNoon + hourAngleHours,
   };
+}
+
+export interface SolarPosition {
+  /** Degrees above (+) or below (−) the horizon — 0 exactly at the
+   * horizon, negative before sunrise/after sunset. */
+  elevation: number;
+  /** 0 (sunrise, east) → 1 (sunset, west) — a simplified east-to-west
+   * sweep fraction across the day's actual sunrise/sunset span, not a
+   * true compass azimuth (the same decorative-precision philosophy as
+   * the rest of this module; see getSunTimes). Meaningless outside
+   * daylight hours, but harmless there since elevation is negative and
+   * the sun is hidden regardless. */
+  horizontalProgress: number;
+}
+
+/**
+ * Where the sun actually is in the sky right now, not just whether
+ * Golden Hour is active — reuses the exact same latitude/declination/
+ * solar-noon inputs as getSunTimes below (including its DST correction)
+ * rather than a second approximation. Elevation comes from the standard
+ * solar-elevation formula (asin of the same terms getSunTimes derives
+ * its hour angle from); horizontalProgress reuses getSunTimes directly.
+ * Consumed by the sky layer to place the sun relative to the horizon by
+ * real solar position — see .atmosphere-sun in globals.css — instead of
+ * a fixed on-screen position.
+ */
+export function getSolarPosition(date: Date): SolarPosition {
+  const latRad = (getApproxLatitude() * Math.PI) / 180;
+  const n = dayOfYear(date);
+  const declRad = ((23.44 * Math.PI) / 180) * Math.sin(((2 * Math.PI) / 365) * (n - 81));
+  const solarNoon = isDaylightSaving(date) ? 13 : 12;
+  const h = hourOfDay(date);
+  const hourAngleRad = ((h - solarNoon) * 15 * Math.PI) / 180;
+  const elevationRad = Math.asin(
+    Math.sin(latRad) * Math.sin(declRad) + Math.cos(latRad) * Math.cos(declRad) * Math.cos(hourAngleRad)
+  );
+  const elevation = (elevationRad * 180) / Math.PI;
+
+  const { sunrise, sunset } = getSunTimes(date);
+  const span = sunset - sunrise;
+  const horizontalProgress = span > 0 ? Math.min(1, Math.max(0, (h - sunrise) / span)) : 0.5;
+
+  return { elevation, horizontalProgress };
 }
 
 /**
@@ -166,6 +237,41 @@ export function getGoldenAmount(date: Date): number {
   return Math.max(evening, morning);
 }
 
+/** Shared with getGoldenAmount above — kept as one source of truth so the
+ * sky's color progression and its intensity bump always agree on exactly
+ * where Golden Hour starts, peaks, and ends. Exported so
+ * atmospherePreview.ts's "Sunrise" preview can land exactly on this same
+ * peak instead of re-guessing it. */
+export const GOLDEN_EVENING_CENTER_OFFSET = -0.4;
+export const GOLDEN_MORNING_CENTER_OFFSET = 0.3;
+const GOLDEN_HALF_WIDTH_HOURS = 1.0;
+
+/**
+ * 0 → 1, monotonic, across the *same* window getGoldenAmount bumps over
+ * (same center, same half-width — see the shared constants above) — not
+ * the intensity of Golden Hour, but *where in it* the visitor currently
+ * is: 0 at the window's first instant, 1 at its last. Atmosphere.tsx
+ * writes this to --golden-progress, and the sky gradient's own color
+ * stops (globals.css, .atmosphere-sky) color-mix() between an
+ * "early" and "late" hex per stop using this value, so the sky's actual
+ * colors shift continuously as real sunset/sunrise time passes — not
+ * just one fixed gradient fading in and out via opacity (that's still
+ * --golden's job). Picks whichever of the evening/morning windows is
+ * currently active by comparing their amounts, exactly like
+ * getGoldenAmount's Math.max does.
+ */
+export function getGoldenProgress(date: Date): number {
+  const { sunrise, sunset } = getSunTimes(date);
+  const h = hourOfDay(date);
+  const eveningCenter = sunset + GOLDEN_EVENING_CENTER_OFFSET;
+  const morningCenter = sunrise + GOLDEN_MORNING_CENTER_OFFSET;
+  const evening = triangleBump(h, eveningCenter, GOLDEN_HALF_WIDTH_HOURS);
+  const morning = triangleBump(h, morningCenter, GOLDEN_HALF_WIDTH_HOURS);
+  const center = evening >= morning ? eveningCenter : morningCenter;
+  const progress = (h - (center - GOLDEN_HALF_WIDTH_HOURS)) / (2 * GOLDEN_HALF_WIDTH_HOURS);
+  return Math.min(1, Math.max(0, progress));
+}
+
 /**
  * Steepened version of nightAmount for foreground/text tokens — swaps them
  * through the low-contrast midpoint quickly instead of blending in lockstep
@@ -176,43 +282,71 @@ export function getNightTextAmount(nightAmount: number): number {
   return Math.min(1, Math.max(0, (nightAmount - 0.48) / 0.14));
 }
 
-export type AtmospherePhase =
-  | "very-late"
-  | "dawn"
-  | "morning"
-  | "day"
-  | "sunset"
-  | "evening"
-  | "late-night";
+/**
+ * Five real sky states, not a fixed-clock-hour mood board — every
+ * boundary below is read directly off getGoldenAmount/getSolarPosition/
+ * getNightAmount (all above), the exact same values that already drive
+ * the sky's own gradient, the sun disc, and the moon's opacity. No new
+ * astronomy is added here; this is a categorical *view* over signals
+ * that already exist, the same relationship getTimePhase (this file's
+ * previous, fixed-hour-bucketed version of "what mood is it") used to
+ * have — this replaces that system rather than running alongside it,
+ * so there's exactly one notion of "what time-of-day state is it" in
+ * the codebase.
+ */
+export type SkyMessagePhase = "sunrise" | "day" | "golden-hour" | "sunset" | "night";
 
-/** (hour, phase) — last boundary at or before the current hour wins. */
-const PHASE_BOUNDARIES: [hour: number, phase: AtmospherePhase][] = [
-  [0, "very-late"],
-  [5, "dawn"],
-  [6.5, "morning"],
-  [10, "day"],
-  [17, "sunset"],
-  [19, "evening"],
-  [22, "late-night"],
-];
-
-export function getTimePhase(date: Date): AtmospherePhase {
-  const h = hourOfDay(date);
-  let phase: AtmospherePhase = "very-late";
-  for (const [boundary, p] of PHASE_BOUNDARIES) {
-    if (h >= boundary) phase = p;
+/**
+ * golden > 0 means the visitor is inside *one* of getGoldenAmount's two
+ * triangle windows (morning, centered near sunrise, or evening, centered
+ * near sunset) — it doesn't say which. horizontalProgress (from
+ * getSolarPosition, already 0 at sunrise and 1 at sunset, crossing 0.5
+ * at solar noon) is reused here purely to tell those two windows apart:
+ * before solar noon is unambiguously the morning window, after is the
+ * evening one. The two windows' own hour spans (see the shared
+ * GOLDEN_*_CENTER_OFFSET constants and GOLDEN_HALF_WIDTH_HOURS above)
+ * never reach far enough past solar noon in either direction to make
+ * this ambiguous.
+ *
+ * The single morning window is reported as one state, "sunrise" — the
+ * brief only asked for one morning-side message. The evening window
+ * splits into two: "golden-hour" while the sun's real elevation is still
+ * above the horizon (the light is warm, but the sun is still up), and
+ * "sunset" once elevation crosses to 0 or below (the sun itself is gone;
+ * the sky is what's left glowing) — reusing getSolarPosition's own
+ * elevation, the same value that already fades .atmosphere-sun's opacity
+ * near the horizon, rather than inventing a second sunset calculation.
+ *
+ * Outside both windows, it's a plain night>=0.5 vs. <0.5 split. The two
+ * windows' own hour spans (golden ±1h around their centers) and the
+ * night ramp's dawn/dusk spans (±0.75h/1.25h and 1.5h/1h — see
+ * getNightAmount) end within minutes of each other at both ends of the
+ * day, so there's no dead zone where neither a golden window nor a
+ * clear day/night reading applies.
+ */
+export function getSkyMessagePhase(date: Date): SkyMessagePhase {
+  const golden = getGoldenAmount(date);
+  if (golden > 0) {
+    const { elevation, horizontalProgress } = getSolarPosition(date);
+    if (horizontalProgress < 0.5) return "sunrise";
+    return elevation > 0 ? "golden-hour" : "sunset";
   }
-  return phase;
+  return getNightAmount(date) >= 0.5 ? "night" : "day";
 }
 
-export const PHASE_MESSAGES: Record<AtmospherePhase, string> = {
-  "very-late": "Psst... the archive is still awake.",
-  dawn: "The stars are going home. 🌅",
-  morning: "The shelves are waking up. ☀️",
-  day: "Come in, there's always room among the stars. ✦",
-  sunset: "The day is folding itself away... 🌅",
-  evening: "The moon has found the archive. 🌙",
-  "late-night": "Still wandering? So are we. ✦",
+/**
+ * Exact copy per the brief — quiet, one line, no punctuation flourish
+ * beyond what's given. The trailing "✦" is kept out of the string itself
+ * (AtmosphereNote.tsx renders it as its own styled span) so the glyph can
+ * carry a distinct, atmosphere-toned treatment without the message text
+ * needing to know about markup.
+ */
+export const SKY_MESSAGES: Record<SkyMessagePhase, string> = {
+  sunrise: "Morning leaves a little light at the edge of the world.",
+  day: "Somewhere above us, the sky keeps changing.",
+  "golden-hour": "For a moment, the light forgets to leave.",
+  sunset: "Even after the light fades, a little of it stays.",
+  night: "Come in, there's always room among the stars.",
 };
 
 export type MoonPhaseName =

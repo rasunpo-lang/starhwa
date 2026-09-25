@@ -3,26 +3,29 @@
 import { useMemo, useState } from "react";
 import EntryGrid from "@/components/entry-grid/EntryGrid";
 import { Entry } from "@/lib/types";
+import { buildSearchIndex, searchEntries } from "@/lib/searchIndex";
 
 export default function SearchClient({ entries }: { entries: Entry[] }) {
   const [query, setQuery] = useState("");
 
+  const index = useMemo(() => buildSearchIndex(entries), [entries]);
+  const entryBySlug = useMemo(
+    () => new Map(entries.map((e) => [e.slug, e])),
+    [entries]
+  );
+
+  // Same weighted, title/tag-prioritized ranking HeaderSearch.tsx already
+  // uses — a title hit on every query token (e.g. an exact brand-name
+  // search) outranks an entry that only mentions the term in passing
+  // within its summary. No cap here (unlike the header dropdown): this
+  // page shows every match, just correctly ordered by relevance.
   const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
+    const q = query.trim();
     if (!q) return [];
-    return entries.filter((e) => {
-      const haystack = [
-        e.id,
-        e.title,
-        e.summary,
-        e.category,
-        ...e.tags,
-      ]
-        .join(" ")
-        .toLowerCase();
-      return haystack.includes(q);
-    });
-  }, [entries, query]);
+    return searchEntries(index, q, index.length)
+      .map((r) => entryBySlug.get(r.slug))
+      .filter((e): e is Entry => Boolean(e));
+  }, [index, entryBySlug, query]);
 
   return (
     <div>

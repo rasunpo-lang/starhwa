@@ -41,9 +41,32 @@ export interface Era {
 export interface Source {
   label: string;
   url: string;
+  /**
+   * Set ONLY on a Tours-category concert entry's source, and ONLY once
+   * actually verified — marks this as the one official source that
+   * satisfies the Tours page's sourcing rule: an @ateezofficial /
+   * @ateezofficialjp X post that is either #TODAY_ATEEZ-tagged or a
+   * confirmed venue-specific photo for that exact date, OR an official
+   * ATEEZ YouTube video/short about that specific show. Never inferred
+   * from the label or url — for a YouTube source this flag is the ONLY
+   * signal (no handle-in-URL check is possible there, unlike X). See
+   * content/README.md "Tour/concert entry sourcing" and
+   * qualifyingSourceUrl() in src/lib/tours.ts.
+   */
+  qualifiesForTourSource?: true;
 }
 
 export type ImageType = "photo" | "product";
+
+/**
+ * Whether the image's source has explicitly confirmed external sharing
+ * is allowed. "unknown" is the default for any image that doesn't set
+ * this explicitly, and is treated identically to "prohibited" by
+ * publicImage() below — permission is only ever recorded when it's been
+ * actually confirmed, never assumed from an image merely being public or
+ * official-looking. See content/README.md "Image sourcing & permission."
+ */
+export type ImageSharePermission = "permitted" | "prohibited" | "unknown";
 
 /**
  * An editorially curated visual anchor for an entry. Never auto-attached —
@@ -55,6 +78,23 @@ export interface EntryImage {
   url: string;
   credit: string;
   type: ImageType;
+  /**
+   * The specific outlet/platform/board the image actually came from —
+   * e.g. "ATEEZ Official Platform — FOR_ATINY", "ATEEZ Official Platform
+   * — ATINY ZONE", "ANITEEZ Official X", "ELLE Korea". Distinct from
+   * `credit` (the attribution string shown to readers): different boards
+   * of the same platform can carry different sharing permissions, so the
+   * board/source itself needs to be traceable independently of the
+   * display credit.
+   */
+  sourcePlatform?: string;
+  /** Link to the original post/page the image was published on, when one
+   * exists — not always available for print-only or archival material. */
+  sourceUrl?: string;
+  /** See ImageSharePermission above. Required (Zod defaults it to
+   * "unknown" when omitted from frontmatter — see schema.ts) so every
+   * EntryImage in the app has an explicit, never-inferred value here. */
+  sharePermission: ImageSharePermission;
 }
 
 export type Verification = "verified" | "unverified";
@@ -75,6 +115,17 @@ export interface Entry {
   category: Category;
   title: string;
   summary: string;
+  /**
+   * Optional verbatim long-form content (a full interview, article
+   * translation, etc.) that would otherwise bloat `summary` — which also
+   * doubles as the card blurb, search text, and meta description
+   * everywhere else in the site. Authored via a `<!-- full-text -->`
+   * marker in the entry's Markdown body — see content/README.md
+   * "Long-form content." Rendered collapsed by default on the entry page
+   * (EntryPage in archive/[slug]/page.tsx); never shown on cards or used
+   * for `summary`-derived text (search, meta description).
+   */
+  fullText?: string;
   tags: string[];
   sources: Source[];
   image?: EntryImage;
@@ -165,5 +216,17 @@ export interface Story {
      * explaining (e.g. a stroke resolved via context/grammar rather than
      * independently legible) — not a routine disclaimer. */
     note?: string;
+  };
+  /** A second photo attached to the same platform post as `imageUrl`,
+   * carrying its own distinct handwritten content — used only when one
+   * post genuinely contains two separate images/notes rather than one.
+   * Rendered directly below the primary image/handwritten block. */
+  secondImage?: {
+    imageUrl: string;
+    handwritten?: {
+      transcription: string;
+      translation: string;
+      note?: string;
+    };
   };
 }

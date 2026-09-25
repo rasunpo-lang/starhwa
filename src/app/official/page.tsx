@@ -28,9 +28,8 @@ export default function OfficialPage() {
       <p className="eyebrow text-plum">Direct From The Source</p>
       <h1 className="mt-3 font-display text-5xl sm:text-6xl">Official Links</h1>
       <p className="mt-5 max-w-xl text-sm leading-relaxed text-charcoal/85">
-        This archive exists to document and contextualize — not to replace
-        official channels. Every source below leads directly to content
-        published by Seonghwa, ATEEZ, or KQ Entertainment.
+        The sources below lead directly to official platforms and content
+        from Seonghwa, ATEEZ, and KQ Entertainment.
       </p>
 
       <div className="mt-14 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
@@ -40,22 +39,22 @@ export default function OfficialPage() {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex flex-col justify-between gap-10 bg-ivory p-8 transition-colors hover:bg-ink"
+            className="official-sky-card group flex flex-col justify-between gap-10 p-8 transition-colors"
           >
             <div className="flex items-start justify-between gap-4">
-              <span className="font-display text-2xl group-hover:text-ivory">
+              <span className="font-display text-2xl">
                 {link.platform}
                 <span className="sr-only"> (opens in a new tab)</span>
               </span>
-              <span aria-hidden="true" className="meta shrink-0 text-charcoal/40 group-hover:text-ivory/60">
+              <span aria-hidden="true" className="meta shrink-0 text-charcoal/40">
                 ↗
               </span>
             </div>
             <div>
-              <p className="eyebrow text-plum group-hover:text-plum-tint">
+              <p className="eyebrow text-plum">
                 {link.handle}
               </p>
-              <p className="mt-2 text-sm leading-relaxed text-charcoal/75 group-hover:text-ivory/75">
+              <p className="mt-2 text-sm leading-relaxed text-charcoal/75">
                 {link.note}
               </p>
             </div>

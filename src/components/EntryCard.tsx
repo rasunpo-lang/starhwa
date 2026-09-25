@@ -11,8 +11,7 @@ export default function EntryCard({ entry }: { entry: Entry }) {
       <Glint className="right-4 top-4" />
       <Glint className="right-10 top-12" style={{ animationDelay: "110ms" }} />
       <Link href={entryHref(entry)} className="absolute inset-0 z-[1]" aria-label={entry.title} />
-      <div className="meta flex items-center justify-between gap-2 text-charcoal/75">
-        <span className="truncate">{entry.id}</span>
+      <div className="meta flex items-center justify-end gap-2 text-charcoal/75">
         <span className="shrink-0">{formatEntryDate(entry.date)}</span>
       </div>
       <div className="meta mt-4 text-plum">{entry.category}</div>

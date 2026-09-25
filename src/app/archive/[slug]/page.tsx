@@ -8,6 +8,28 @@ import Glint from "@/components/Glint";
 import { getAllEntriesSorted, getEntryBySlug, getRelatedEntries } from "@/data/entries";
 import { getEra } from "@/data/eras";
 import { findEmbeddableVideo } from "@/lib/video";
+import { publicImage } from "@/lib/layout";
+
+// Shared by the summary and the optional collapsed full-text section below
+// it, so both render paragraph breaks and the "ends with Translation"
+// section-label heuristic identically.
+function renderParagraphs(text: string) {
+  return text.split("\n\n").map((para, i) => {
+    const isSectionLabel = para.length < 80 && para.endsWith("Translation");
+    return isSectionLabel ? (
+      <p key={i} className="eyebrow mt-10 text-plum first:mt-0">
+        {para}
+      </p>
+    ) : (
+      <p
+        key={i}
+        className="mt-4 text-lg leading-relaxed text-charcoal/90 first:mt-0"
+      >
+        {para}
+      </p>
+    );
+  });
+}
 
 function formatDate(date: string) {
   return new Date(date + "T00:00:00").toLocaleDateString("en-US", {
@@ -17,6 +39,10 @@ function formatDate(date: string) {
     year: "numeric",
   });
 }
+
+// Every valid path is pre-rendered by generateStaticParams below; anything
+// else is a real HTTP 404 (not a streamed "not found" UI with a 200 status).
+export const dynamicParams = false;
 
 export async function generateStaticParams() {
   return getAllEntriesSorted().map((e) => ({ slug: e.slug }));
@@ -32,6 +58,7 @@ export async function generateMetadata(
   }
 
   const url = `/archive/${entry.slug}`;
+  const heroImage = publicImage(entry);
   return {
     title: entry.title,
     description: entry.summary,
@@ -46,8 +73,9 @@ export async function generateMetadata(
       tags: entry.tags,
       // A page-level openGraph object replaces (rather than merges with)
       // the root opengraph-image.tsx fallback, so entries without a
-      // curated image need an explicit reference back to it.
-      images: entry.image ? [{ url: entry.image.url }] : ["/opengraph-image"],
+      // curated (and share-permitted — see publicImage()) image need an
+      // explicit reference back to it.
+      images: heroImage ? [{ url: heroImage.url }] : ["/opengraph-image"],
     },
     twitter: {
       card: "summary_large_image",
@@ -69,10 +97,11 @@ export default async function EntryPage({
   const era = getEra(entry.eraId);
   const related = getRelatedEntries(entry);
   const embeddableVideo = findEmbeddableVideo(entry.sources);
+  const heroImage = publicImage(entry);
   // A quiet "you've arrived somewhere notable" beat — only for entries with
-  // a genuine hero visual (video or curated image), so it stays rare
-  // rather than firing on every terse, sourceless-thumbnail entry.
-  const hasHero = Boolean(embeddableVideo || entry.image);
+  // a genuine hero visual (video or curated, share-permitted image), so it
+  // stays rare rather than firing on every terse, sourceless-thumbnail entry.
+  const hasHero = Boolean(embeddableVideo || heroImage);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -89,7 +118,7 @@ export default async function EntryPage({
       name: "The Starhwa Encyclopedia",
       url: "https://starhwa.com",
     },
-    ...(entry.image ? { image: [entry.image.url] } : {}),
+    ...(heroImage ? { image: [heroImage.url] } : {}),
   };
 
   return (
@@ -113,8 +142,7 @@ export default async function EntryPage({
         </Link>
       </nav>
 
-      <div className="eyebrow mt-8 flex flex-wrap items-center justify-between gap-2 text-charcoal/75">
-        <span>{entry.id}</span>
+      <div className="eyebrow mt-8 flex flex-wrap items-center justify-end gap-2 text-charcoal/75">
         <time dateTime={entry.date}>{formatDate(entry.date)}</time>
       </div>
 
@@ -130,7 +158,7 @@ export default async function EntryPage({
         )}
       </div>
 
-      <h1 className="relative mt-3 font-display text-4xl leading-tight sm:text-5xl">
+      <h1 className="relative mt-3 font-display text-4xl leading-tight [overflow-wrap:anywhere] sm:text-5xl">
         {hasHero && (
           <>
             <Glint className="glint-burst -right-2 top-0 sm:right-0" />
@@ -155,45 +183,39 @@ export default async function EntryPage({
           </p>
         </div>
       ) : (
-        entry.image && (
+        heroImage && (
           <div className="mt-8">
             <div
               className={`relative aspect-video overflow-hidden border border-line ${
-                entry.image.type === "product" ? "bg-ivory-dim" : "bg-ink"
+                heroImage.type === "product"
+                  ? "bg-ivory-dim photo-plane"
+                  : "bg-ink photo-plane photo-plane-lit"
               }`}
             >
               <Image
-                src={entry.image.url}
+                src={heroImage.url}
                 alt=""
                 fill
                 sizes="(min-width: 640px) 768px, 100vw"
                 className={`object-contain ${
-                  entry.image.type === "product" ? "p-8" : ""
+                  heroImage.type === "product" ? "p-8" : ""
                 }`}
               />
             </div>
-            <p className="meta mt-2 text-charcoal/75">{entry.image.credit}</p>
+            <p className="meta mt-2 text-charcoal/75">{heroImage.credit}</p>
           </div>
         )
       )}
 
       <div className="mt-10 border-t border-line pt-8">
-        {entry.summary.split("\n\n").map((para, i) => {
-          const isSectionLabel = para.length < 80 && para.endsWith("Translation");
-          return isSectionLabel ? (
-            <p key={i} className="eyebrow mt-10 text-plum first:mt-0">
-              {para}
-            </p>
-          ) : (
-            <p
-              key={i}
-              className="mt-4 text-lg leading-relaxed text-charcoal/90 first:mt-0"
-            >
-              {para}
-            </p>
-          );
-        })}
+        {renderParagraphs(entry.summary)}
       </div>
+
+      {entry.fullText && (
+        <div className="mt-8 border-t border-line pt-8">
+          {renderParagraphs(entry.fullText)}
+        </div>
+      )}
 
       {entry.tags.length > 0 && (
         <div className="mt-8 flex flex-wrap gap-2">
@@ -219,7 +241,7 @@ export default async function EntryPage({
                 rel="noopener noreferrer"
                 className="group flex items-center justify-between gap-4 border border-line px-5 py-4 transition-colors hover:border-plum"
               >
-                <span className="font-display text-lg">
+                <span className="min-w-0 font-display text-lg [overflow-wrap:anywhere]">
                   {source.label}
                   <span className="sr-only"> (opens in a new tab)</span>
                 </span>
@@ -231,9 +253,8 @@ export default async function EntryPage({
           ))}
         </ul>
         <p className="mt-4 text-xs leading-relaxed text-charcoal/75">
-          This archive links to original official sources rather than
-          rehosting media. All photography, video, and audio remain the
-          property of their respective rights holders.
+          Photography, video, and audio remain the property of their
+          respective rights holders.
         </p>
       </div>
 

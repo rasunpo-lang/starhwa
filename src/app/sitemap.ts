@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: SITE_URL, changeFrequency: "daily", priority: 1 },
     { url: `${SITE_URL}/chronology`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${SITE_URL}/archive`, changeFrequency: "daily", priority: 0.8 },
+    { url: `${SITE_URL}/tours`, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${SITE_URL}/stories`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/official`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE_URL}/about`, changeFrequency: "yearly", priority: 0.4 },
     { url: `${SITE_URL}/search`, changeFrequency: "monthly", priority: 0.3 },

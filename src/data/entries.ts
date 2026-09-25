@@ -35,6 +35,18 @@ function eraIdForDate(date: string): string {
 
 type DraftEntry = Omit<Entry, "id">;
 
+// Collapses stray internal whitespace per paragraph while preserving
+// paragraph breaks (a blank line) — used for both `summary` and the
+// optional long-form `fullText` so they're normalized identically.
+function normalizeBody(raw: string | undefined): string {
+  return (raw ?? "")
+    .trim()
+    .split(/\n\s*\n/)
+    .map((para) => para.replace(/\s+/g, " ").trim())
+    .filter(Boolean)
+    .join("\n\n");
+}
+
 function loadEntryFile(filename: string): DraftEntry {
   const slug = filename.replace(/\.md$/, "");
   const filePath = path.join(CONTENT_DIR, filename);
@@ -49,18 +61,23 @@ function loadEntryFile(filename: string): DraftEntry {
   }
 
   const fm = parsed.data;
-  const summary = content
-    .trim()
-    .split(/\n\s*\n/)
-    .map((para) => para.replace(/\s+/g, " ").trim())
-    .filter(Boolean)
-    .join("\n\n");
+
+  // A `<!-- full-text -->` marker on its own line splits the body into the
+  // short, reader-facing summary (before) and optional verbatim long-form
+  // content (after) — see content/README.md "Long-form content." Most
+  // entries have no marker, so `fullTextSource` stays undefined.
+  const [summarySource, fullTextSource] = content.split(
+    /\n\s*<!--\s*full-text\s*-->\s*\n/i
+  );
+
+  const summary = normalizeBody(summarySource);
   if (!summary) {
     throw new Error(
       `content/entries/${filename} has no body text — the Markdown body ` +
         `(below the --- frontmatter) is used as the entry's summary.`
     );
   }
+  const fullText = fullTextSource ? normalizeBody(fullTextSource) : undefined;
 
   return {
     slug,
@@ -70,6 +87,7 @@ function loadEntryFile(filename: string): DraftEntry {
     category: fm.category,
     title: fm.title,
     summary,
+    fullText,
     tags: fm.tags,
     sources: fm.sources,
     image: fm.image,

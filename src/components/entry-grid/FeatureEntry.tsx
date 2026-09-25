@@ -45,7 +45,6 @@ export default function FeatureEntry({
             View source ↗<span className="sr-only"> (opens original source in a new tab)</span>
           </a>
         )}
-        <span className="meta text-charcoal/75">{entry.id}</span>
       </div>
     </div>
   );
@@ -53,7 +52,7 @@ export default function FeatureEntry({
   const image = thumbnailUrl ? (
     <div
       className={`relative aspect-[16/10] w-full overflow-hidden lg:aspect-auto lg:h-full ${
-        isProduct ? "bg-ivory-dim" : "bg-ink"
+        isProduct ? "bg-ivory-dim photo-plane" : "bg-ink photo-plane photo-plane-lit"
       }`}
     >
       <Image

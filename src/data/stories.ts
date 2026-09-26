@@ -1536,6 +1536,18 @@ export const stories: Story[] = [
       note:
         "A few strokes (e.g. \"생일,\" \"인상 깊었던\") were resolved using surrounding grammar and context rather than being independently legible on their own — flagged here for a native-reader check before this is treated as fully settled.",
     },
+    secondImage: {
+      imageUrl:
+        "https://image.static.bstage.in/cdn-cgi/image/metadata=none/ateez/1660517a-2fc9-4780-ac6a-a4cee3bb05b0/85c770c6-5ba3-43da-b4a1-4d339bf8e631/ori.jpeg",
+      handwritten: {
+        transcription:
+          "생일 축하해.\n세상 무엇과도 바꿀 수 없는 소중한 존재야 넌.\n오늘만큼은 세상에서 가장 행복한 사람이었으면 좋겠다.\n언젠간 서른 꽃피는 날이 올 거야.\n난 굳게 믿어. 꼭 그런 모습을 보고 싶어.\n\n부모님께 항상 감사드려.\n너는 세상에서 가장 감동적인 생일 선물을 받았잖아.\n\n네가 태어났을 때 모든 사람이 웃고\n네가 생을 마감했을 때\n모든 사람이 울어주는 인생을 살길 바라.\n태어나줘서 진심으로 고마워.\n다음 생에도 만나자. 사랑해.\n\n2025.3.27\n星化",
+        translation:
+          "Happy birthday.\nYou're a presence I wouldn't trade for anything in the world.\nJust for today, I hope you get to be the happiest person in the world.\nSomeday your thirties — your blooming day — will come.\nI firmly believe it. I really want to see you like that.\n\nI'm always grateful to my parents.\nYou've been given the most moving birthday gift the world has to offer.\n\nI hope you live a life where everyone smiles when you're born,\nand when your life comes to an end,\neveryone cries for you.\nThank you, truly, for being born.\nLet's meet again in the next life too. I love you.\n\n2025.3.27\nSeonghwa (星化)",
+        note:
+          "A second photo attached to the same post as the main letter above, dated 2025.3.27 inside the note itself (three days before the post's own 2025-04-03 date) and signed with his name in Hanja, 星化, rather than Hangul. Addressed to \"you\" (너) throughout rather than to ATINY by name — likely tied to the same letter's own closing P.S. (\"To everyone dear who has had a birthday, is having a birthday, or will have a birthday\"), making it a birthday note for anyone celebrating one.",
+      },
+    },
   },
   {
     id: "67fb94f0cd90e149a924f622",

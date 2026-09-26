@@ -40,7 +40,13 @@ export const officialLinks: OfficialLink[] = [
   {
     platform: "Official Website",
     handle: "KQ Entertainment",
-    url: "https://ipnation.com",
+    url: "https://ateez.kqent.com/",
     note: "Label site with official news, discography, and tour information.",
+  },
+  {
+    platform: "ATEEZ Japan Official",
+    handle: "ATEEZ JAPAN",
+    url: "https://ateez-official.jp/",
+    note: "Official Japan site with news, discography, and tour information.",
   },
 ];

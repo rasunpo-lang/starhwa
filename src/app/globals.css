@@ -1157,6 +1157,23 @@ html.atmosphere-ready {
      the emotional peak," not before it. */
 }
 
+/* Vertical placement only (horizontal centring is untouched): the default
+   20% lands the message on the H1 on phones and on the header's second
+   nav row on desktop. Below 640px it sits just beneath the header edge, above
+   the eyebrow, headline, paragraph and CTA; from 1024px it
+   starts under the two-row header. 640-1023px is unchanged. */
+@media (max-width: 639px) {
+  .birthday-message {
+    top: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .birthday-message {
+    top: max(20%, 11rem);
+  }
+}
+
 /* "BIRTH OF A STAR" — this is the one moment on the whole site allowed to
    be a real headline rather than a label, so it moves off .eyebrow's mono
    treatment onto the site's own display face (Fraunces, var(--font-

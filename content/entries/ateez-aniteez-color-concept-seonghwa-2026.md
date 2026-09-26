@@ -14,6 +14,9 @@ image:
   url: "https://pbs.twimg.com/media/HGq7RSJbQAA82n7?format=jpg&name=large"
   credit: "KQ Entertainment & SOUNDWAVE — ANITEEZ Official X (@ANITEEZinX)"
   type: "photo"
+  sourcePlatform: "ANITEEZ Official X (@ANITEEZinX)"
+  sourceUrl: "https://x.com/ANITEEZinX/status/2047654910544789848"
+  sharePermission: "permitted"
 related:
   - ateez-aniteez-color-behind-2026
 ---

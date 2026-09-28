@@ -144,7 +144,7 @@ export default function Home() {
                 <h2 className="mt-2 font-display text-xl leading-snug">
                   {onThisDay.title}
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-charcoal/80">
+                <p className="mt-3 line-clamp-4 text-sm leading-relaxed text-charcoal/80">
                   {onThisDay.summary}
                 </p>
                 <Link

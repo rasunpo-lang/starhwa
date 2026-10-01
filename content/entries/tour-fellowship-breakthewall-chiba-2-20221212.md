@@ -8,9 +8,10 @@ tags:
   - "concert"
   - "the world era"
 sources:
-  - label: "ATEEZ Official (X) — Post: ATEEZ WORLD TOUR [THE FELLOWSHIP : BREAK THE WALL] Poster (Korea 10/29-10/30, USA 11/7-11/28, Canada 12/2, Japan 12/11-12/12)"
-    url: "https://x.com/ATEEZofficial/status/1548865140644163585"
+  - label: "ATEEZ Official Japan X — [📷] ATEEZ WORLD TOUR [THE FELLOWSHIP : BREAK THE WALL] IN CHIBA DAY2 #TheFellowship #Break_The_Wall"
+    url: "https://x.com/ATEEZofficialjp/status/1602309821981937665"
+    qualifiesForTourSource: true
 related:
 ---
 
-ATEEZ performed in Chiba as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour, per the official ATEEZ platform's schedule.
+ATEEZ performed in Chiba as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour.

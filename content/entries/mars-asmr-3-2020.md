@@ -16,4 +16,8 @@ related:
   - mars-asmr-4-2022
 ---
 
-An episode of ATEEZ's official "MARS ASMR" series, built entirely around Seonghwa (named for his nickname "Mars"), themed "A Day in the Life of Office Worker Seonghwa." Title confirmed by direct fetch; the December 22, 2020 date is drawn from secondary reporting, so this entry is marked unverified.
+"MARS ASMR" #3: "A Day in the Life of Office Worker Seonghwa."
+
+<!-- full-text -->
+
+An episode of ATEEZ's official "MARS ASMR" series, built entirely around Seonghwa (named for his nickname "Mars"), themed "A Day in the Life of Office Worker Seonghwa."

@@ -8,9 +8,9 @@ tags:
   - "concert"
   - "the world era"
 sources:
-  - label: "ATEEZ Official (X) — Post: WORLD TOUR [THE FELLOWSHIP : BREAK THE WALL] ANCHOR IN SEOUL Poster (4/28-4/29, Jamsil Indoor Stadium)"
-    url: "https://x.com/ATEEZofficial/status/1636683834363355136"
+  - label: "ATEEZ Official (X) — Post: [📷] TODAY ATEEZ [THE FELLOWSHIP : BREAK THE WALL] ANCHOR IN SEOUL DAY 1 #TODAY_ATEEZ"
+    url: "https://x.com/ATEEZofficial/status/1651943423296040960"
 related:
 ---
 
-ATEEZ performed in Seoul (ANCHOR) as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour, per the official ATEEZ platform's schedule.
+ATEEZ performed in Seoul (ANCHOR) as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour.

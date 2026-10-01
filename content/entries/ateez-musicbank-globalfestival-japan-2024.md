@@ -7,9 +7,9 @@ tags:
   - "special broadcast"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: KBS '2024 MUSIC BANK GLOBAL FESTIVAL in JAPAN'"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "KBS Kpop Official YouTube — '[FULL] 에이티즈 (ATEEZ) 2024 뮤직뱅크 글로벌 페스티벌 in Japan 완전판 | KBS 241219'"
+    url: "https://www.youtube.com/watch?v=Q0bKBSJxMts"
 related:
 ---
 
-ATEEZ's appearance on "KBS Music Bank Global Festival — Japan (2024)," per the official ATEEZ platform's schedule.
+ATEEZ's appearance on "KBS Music Bank Global Festival — Japan (2024)."

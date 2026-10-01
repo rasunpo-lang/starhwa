@@ -14,4 +14,4 @@ related:
   - wonderland-mv-2019
 ---
 
-An official individual concept teaser of Seonghwa for ATEEZ's debut EP, "TREASURE EP.1: All To Zero," released October 13, 2018, ahead of the album's October 24 release. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual concept teaser of Seonghwa for ATEEZ's debut EP, "TREASURE EP.1: All To Zero," released October 13, 2018, ahead of the album's October 24 release.

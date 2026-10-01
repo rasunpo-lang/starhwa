@@ -18,11 +18,13 @@ sources:
 related:
 ---
 
+MyDaily's ATEEZ group Q&A for "ZERO : FEVER Part.3," their comeback after "Kingdom."
+
+<!-- full-text -->
+
 The online showcase press Q&A for ATEEZ's seventh mini album "ZERO : FEVER Part.3," ATEEZ's first comeback after competing on Mnet's "Kingdom: Legendary War," held September 13, 2021 and reported by MyDaily. Seonghwa explains the meaning behind double title track "Eternal Sunshine" — "찰나와 같은 청춘에 대한 영원한 소망을 이야기한다" ("it speaks of an eternal wish for a youth that passes in an instant") — and describes what sets this final chapter of the "FEVER" series apart: "기본 세계관 스토리텔링을 이어가고 있는 점에서는 변함이 없다... 이번 앨범 같은 경우 불행했던 과거, 불안한 미래 때문에 미처 깨닫지 못했던 소중한 일상, 주변의 동료나 가족, 소중한 행복을 풀어낸 앨범이다" ("The core worldview storytelling continues unchanged... but this album unpacks the precious everyday moments, friends and family, and small happinesses we failed to notice because we were caught up in an unhappy past and an anxious future"). Asked about the driving force behind ATEEZ's packed 2021, he credits ATINY: "지쳤을 때 에이티니의 애정이 담긴 메시지를 보면 저희도 모르게 힘이 난다" ("When I'm exhausted, seeing ATINY's loving messages gives me strength without my even realizing it").
 
 Seonghwa's Words — English Translation
-
-This article recaps a showcase press Q&A in narrative form, with each member's response grouped by topic rather than printed as a formal transcript; the topics below are drawn from that framing.
 
 On the meaning of double title track "Eternal Sunshine": "It speaks of an eternal wish for a youth that passes in an instant."
 

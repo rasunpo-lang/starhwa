@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-halazia-inkigayo-2023-0115
 ---
 
-An official individual facecam of Seonghwa performing "HALAZIA" on SBS's Inkigayo, self-dated 230108 — the companion facecam to the same-day fancam already in the archive.
+An official individual facecam of Seonghwa performing "HALAZIA" on SBS's Inkigayo, self-dated 230108 — the facecam from the same performance as the fancam already in the archive.

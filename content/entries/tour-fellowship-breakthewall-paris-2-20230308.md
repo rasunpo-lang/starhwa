@@ -8,9 +8,9 @@ tags:
   - "concert"
   - "the world era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: ATEEZ(에이티즈) WORLD TOUR [THE FELLOWSHIP : BREAK THE WALL] IN PARIS"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "ATEEZ Official (X) — Post: [📷] TODAY ATEEZ / THE FELLOWSHIP : BREAK THE WALL IN PARIS DAY 2 #TODAY_ATEEZ"
+    url: "https://x.com/ATEEZofficial/status/1633691973537378304"
 related:
 ---
 
-ATEEZ performed in Paris as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour, per the official ATEEZ platform's schedule.
+ATEEZ performed in Paris as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour.

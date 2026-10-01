@@ -17,4 +17,8 @@ related:
   - matz-mv-2024
 ---
 
+Behind-the-scenes making film for the "MATZ" unit MV (Hongjoong, Seonghwa).
+
+<!-- full-text -->
+
 Behind-the-scenes making film for the "MATZ" unit MV, featuring Hongjoong and Seonghwa, uploaded to ATEEZ's official YouTube channel two days after the MV's release. The January 5, 2024 date is now confirmed directly by the matching self-dated post on ATEEZ's official KQ platform.

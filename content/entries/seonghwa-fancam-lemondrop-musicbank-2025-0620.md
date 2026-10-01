@@ -15,4 +15,8 @@ related:
   - seonghwa-fancam-lemondrop-inkigayo-2025
 ---
 
+Seonghwa's fancam for "Lemon Drop" (Music Bank, Jun 20).
+
+<!-- full-text -->
+
 An official individual fancam of Seonghwa performing "Lemon Drop" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series, self-dated 250620 — a second, separate Music Bank broadcast one week after the June 13 fancam.

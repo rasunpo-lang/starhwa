@@ -7,9 +7,9 @@ tags:
   - "award show"
   - "the world era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: 2023 THE FACT MUSIC AWARDS"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "THE FACT MUSIC AWARDS Official YouTube — '[2023 더팩트 뮤직 어워즈] ATEEZ (에이티즈) 'BOUNCY' @TMA'"
+    url: "https://www.youtube.com/watch?v=ofkU634nByo"
 related:
 ---
 
-ATEEZ's participation at the "2023 The Fact Music Awards," per the official ATEEZ platform's schedule.
+ATEEZ's participation at the "2023 The Fact Music Awards."

@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-answer-inkigayo-2020-0119
 ---
 
-An official individual fancam of Seonghwa performing "Answer" on SBS's Inkigayo, self-dated 2020.1.12 — the fancam companion to the already-archived facecam from the same broadcast.
+An official individual fancam of Seonghwa performing "Answer" on SBS's Inkigayo, self-dated 2020.1.12 — the fancam from the same performance as the facecam already in the archive.

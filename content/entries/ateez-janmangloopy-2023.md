@@ -20,4 +20,8 @@ sources:
 related:
 ---
 
+ATEEZ's livestreamed "K-Hot Chili Live" segment on "Jjanman Loopy" (잔망루피).
+
+<!-- full-text -->
+
 ATEEZ appeared on "Jjanman Loopy" (잔망루피) for a livestreamed "K-Hot Chili Live" segment, broadcast directly on the ZANMANG LOOPY channel on June 16, 2023 — the same channel then cut the stream into several short-form highlight clips over the following weeks, including one built around Seonghwa and Yeosang specifically (June 23) and a later "Radio Broadcast Highlights" edit centered on Seonghwa (July 28).

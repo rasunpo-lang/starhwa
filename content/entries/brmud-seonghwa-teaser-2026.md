@@ -15,5 +15,9 @@ related:
   - brmud-seonghwa-cleanz-2025
 ---
 
-A second, individually Seonghwa-tagged teaser posted directly on BRMUD's own official YouTube channel on February 19, 2026, marked "26.02.23 COMING SOON" — indicating a new BRMUD campaign wave beyond the original July/August 2025 CLEANZ launch. No further official confirmation of what the February 23, 2026 release specifically was could be verified, so this entry is marked unverified.
+A second Seonghwa-tagged teaser for BRMUD's next campaign wave.
+
+<!-- full-text -->
+
+A second, individually Seonghwa-tagged teaser posted directly on BRMUD's own official YouTube channel on February 19, 2026, marked "26.02.23 COMING SOON" — indicating a new BRMUD campaign wave beyond the original July/August 2025 CLEANZ launch.
 

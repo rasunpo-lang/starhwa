@@ -18,4 +18,8 @@ related:
   - mars-asmr-4-2022
 ---
 
-The first episode of ATEEZ's official "MARS ASMR" series, built entirely around Seonghwa (named for his nickname "Mars"), his first ASMR appearance, themed "Finding the Sounds of the Waiting Room." Title confirmed by direct fetch; the May 22, 2020 release date is corroborated by ATEEZ's own official X account promoting the episode that same day.
+The first episode of ATEEZ's "MARS ASMR" series, Seonghwa's first ASMR appearance.
+
+<!-- full-text -->
+
+The first episode of ATEEZ's official "MARS ASMR" series, built entirely around Seonghwa (named for his nickname "Mars"), his first ASMR appearance, themed "Finding the Sounds of the Waiting Room."

@@ -15,4 +15,4 @@ related:
   - seonghwa-facecam-dancethanxx-gayodaejeon-2020
 ---
 
-An official individual fancam of Seonghwa performing a cover of Rain's "깡 (GANG)" at the 2020 SBS Gayo Daejeon year-end awards show. Exact date corroborated only by the event name rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing a cover of Rain's "깡 (GANG)" at the 2020 SBS Gayo Daejeon year-end awards show.

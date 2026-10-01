@@ -14,4 +14,8 @@ related:
   - seonghwa-conceptphoto-goldenhour1-2-2024
 ---
 
+Seonghwa's first individual concept photo for "GOLDEN HOUR: Part.1."
+
+<!-- full-text -->
+
 Seonghwa's first individual concept photo for "GOLDEN HOUR: Part.1," posted on ATEEZ's official KQ platform ahead of the album's May 31, 2024 release. Confirmed as Seonghwa-specific by cross-checking against other members' tagged feeds on the same platform.

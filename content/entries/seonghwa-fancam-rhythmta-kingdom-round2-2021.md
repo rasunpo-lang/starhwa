@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-answer-kingdom-round3-2021
 ---
 
-An official individual fancam of Seonghwa performing ATEEZ's cover of iKON's "Rhythm Ta," retitled "The Awakening of Summer," in Round 2 of Mnet's Kingdom: Legendary War, aired April 29, 2021 (EP.5). Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing ATEEZ's cover of iKON's "Rhythm Ta," retitled "The Awakening of Summer," in Round 2 of Mnet's Kingdom: Legendary War, aired April 29, 2021 (EP.5).

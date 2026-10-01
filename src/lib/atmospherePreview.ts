@@ -112,6 +112,85 @@ export function subscribeAtmospherePreviewMode(listener: () => void): () => void
   return () => listeners.delete(listener);
 }
 
+/**
+ * ✦ RAIN PREVIEW — a second, independent dev-only override, deliberately
+ * kept separate from AtmospherePreviewMode above rather than folded into
+ * it: rain is not a time-of-day state (it doesn't replace Sunrise/Day/
+ * Golden Hour/Sunset/Night, it composes with whichever of those is
+ * currently showing), so it gets its own storage key, its own tiny
+ * pub/sub, and its own snapshot function — mirroring the mode override's
+ * shape exactly rather than inventing a different one. Nothing here
+ * touches getPreviewDate or any astronomy in atmosphere.ts; it only ever
+ * feeds --rain (see globals.css), a signal those files don't read.
+ */
+export type RainPreviewLevel = "off" | "light" | "moderate";
+
+export const RAIN_PREVIEW_LEVELS: RainPreviewLevel[] = ["off", "light", "moderate"];
+
+const RAIN_STORAGE_KEY = "starhwa-atmosphere-rain-preview";
+
+/** off → 0 (no --rain layer visible at all, the only state production
+ * ever sees today), light/moderate → the two dev-preview intensities
+ * .atmosphere-rain-far/-near's opacity formulas scale by (globals.css). */
+const RAIN_AMOUNTS: Record<RainPreviewLevel, number> = {
+  off: 0,
+  light: 0.5,
+  moderate: 1,
+};
+
+let rainLevel: RainPreviewLevel = "off";
+let rainHydrated = false;
+const rainListeners = new Set<() => void>();
+
+function isValidRainLevel(value: string | null): value is RainPreviewLevel {
+  return value !== null && (RAIN_PREVIEW_LEVELS as string[]).includes(value);
+}
+
+function hydrateRain() {
+  if (rainHydrated || typeof window === "undefined") return;
+  rainHydrated = true;
+  try {
+    const stored = window.localStorage.getItem(RAIN_STORAGE_KEY);
+    if (isValidRainLevel(stored)) rainLevel = stored;
+  } catch {
+    // localStorage unavailable (private mode, disabled storage) — stay "off".
+  }
+}
+
+export function getRainPreviewLevel(): RainPreviewLevel {
+  hydrateRain();
+  return rainLevel;
+}
+
+/** Server/first-paint snapshot — always "off", matching production's only
+ * value (no rain layer) until a real weather source exists. */
+export function getRainPreviewServerSnapshot(): RainPreviewLevel {
+  return "off";
+}
+
+export function setRainPreviewLevel(next: RainPreviewLevel) {
+  hydrateRain();
+  if (rainLevel === next) return;
+  rainLevel = next;
+  try {
+    window.localStorage.setItem(RAIN_STORAGE_KEY, next);
+  } catch {
+    // Preview choice just won't survive a reload — non-fatal.
+  }
+  rainListeners.forEach((listener) => listener());
+}
+
+export function subscribeRainPreviewLevel(listener: () => void): () => void {
+  rainListeners.add(listener);
+  return () => rainListeners.delete(listener);
+}
+
+/** The numeric --rain value for the current preview level — see
+ * RAIN_AMOUNTS above. */
+export function getRainAmount(level: RainPreviewLevel): number {
+  return RAIN_AMOUNTS[level];
+}
+
 function setLocalHour(date: Date, decimalHour: number) {
   const wrapped = ((decimalHour % 24) + 24) % 24;
   const h = Math.floor(wrapped);

@@ -15,4 +15,8 @@ sources:
 related:
 ---
 
-A solo cover of Vaundy's "踊り子 (odoriko)" performed by Seonghwa, part of ATEEZ's official "Special Clip" series. Title confirmed by direct fetch; the January 9, 2025 date is drawn from secondary reporting, so this entry is marked unverified.
+Seonghwa's solo "Special Clip" cover of Vaundy's "踊り子 (odoriko)."
+
+<!-- full-text -->
+
+A solo cover of Vaundy's "踊り子 (odoriko)" performed by Seonghwa, part of ATEEZ's official "Special Clip" series.

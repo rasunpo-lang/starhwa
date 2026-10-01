@@ -14,6 +14,10 @@ sources:
 related:
 ---
 
+ATEEZ's 7th-anniversary group interview for Billboard Korea's "Billboard Artist" series, built around "filling" and "emptying."
+
+<!-- full-text -->
+
 A substantial group interview for Billboard Korea's "Billboard Artist" series, marking ATEEZ's seven years since debut, structured around the concept of "채움" (fullness/filling) and "비움" (emptying). All eight members answer in turn across several questions. Seonghwa's answers include: passion as what "fills" ATEEZ ("열정이 있어 무대를 더 잘하고 싶다는 생각과 욕심이 생기고, 자연스럽게 무대에 더 많은 것들을 채워 넣게 된다"); wanting to empty out his attachment to perfection, describing how an imperfect day or a small mistake used to weigh on him, and now he tries to be satisfied if he gave his best in the process; naming himself — his own sense of pride when he's worked hard — as what fills him back up; and describing his private recharge time as taking walks or spending time alone, finding small everyday happiness.
 
 Seonghwa's Words — English Translation

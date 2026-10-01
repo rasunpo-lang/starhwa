@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-ATEEZ performed in Jakarta as part of the "IN YOUR FANTASY" world tour, per an official ATEEZ platform notice.
+ATEEZ performed in Jakarta as part of the "IN YOUR FANTASY" world tour.

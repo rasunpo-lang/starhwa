@@ -7,9 +7,9 @@ tags:
   - "special broadcast"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: MBC '2024 MBC 가요대제전 WANNABE'"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "MBCkpop Official YouTube — '[2024 MBC 가요대제전] ATEEZ -The Last Supper + Ice On My Teeth, MBC 250130 방송'"
+    url: "https://www.youtube.com/watch?v=ST9ib_nbizU"
 related:
 ---
 
-ATEEZ's appearance on "2024 MBC Gayo Daejejeon WANNABE," per the official ATEEZ platform's schedule.
+ATEEZ's appearance on "2024 MBC Gayo Daejejeon WANNABE."

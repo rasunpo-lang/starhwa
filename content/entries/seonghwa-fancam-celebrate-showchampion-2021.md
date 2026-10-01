@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-fireworks-showchampion-2021
 ---
 
-An official individual fancam of Seonghwa performing "Celebrate" on Show Champion, EP.386, aired March 10, 2021. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing "Celebrate" on Show Champion, EP.386, aired March 10, 2021.

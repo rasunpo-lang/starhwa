@@ -2,7 +2,7 @@
 title: "Isabel Marant — Spring-Summer 2025 Campaign (Seonghwa)"
 date: "2025-02-03"
 category: "Fashion"
-verification: "unverified"
+verification: "verified"
 tags:
   - "fashion"
   - "campaign"
@@ -10,8 +10,20 @@ tags:
 sources:
   - label: "Isabel Marant Official — Campaign, Isabel Marant Spring-Summer 2025 (Journal)"
     url: "https://intl.isabelmarant.com/en-ar/blogs/journal/isabel-marant-campaign-spring-summer-2025"
+  - label: "Isabel Marant Official Instagram — [📷] \"Isabel Marant is thrilled to announce that K-pop star Seonghwa from ATEEZ...\" (Campaign Announcement)"
+    url: "https://www.instagram.com/isabelmarant/p/DFmwE31N3bE/"
+  - label: "Isabel Marant Official Instagram — [📷] \"A new energy for spring... Marant Homme worn by K-pop sensation\" Seonghwa"
+    url: "https://www.instagram.com/isabelmarant/p/DFsg2vkM2pH/"
+  - label: "Isabel Marant Official Instagram — [📷] \"Bright patterns on a dark silhouette\" — Seonghwa in the embroidered shirt"
+    url: "https://www.instagram.com/isabelmarant/p/DGD5f2xsNhW/"
+  - label: "Isabel Marant Official Instagram — [🎬] \"New Marant Homme looks with a striking vibe\" — Seonghwa"
+    url: "https://www.instagram.com/isabelmarant/reel/DGTLlsMseUI/"
+  - label: "Isabel Marant Official YouTube — 'New Marant Homme looks with a striking vibe' (same clip, cross-posted)"
+    url: "https://www.youtube.com/watch?v=dwgEIKGv09I"
   - label: "ATEEZ Official YouTube — SEONGHWA in ISABEL MARANT Spring-Summer 2025"
     url: "https://www.youtube.com/watch?v=iVwi12TAveY"
+  - label: "Isabel Marant Official YouTube — 'Spring-Summer 2025 Campaign | ISABEL MARANT'"
+    url: "https://www.youtube.com/watch?v=mgMwoLWRDcY"
   - label: "Dispatch — \"[현장포토] '여심이 설렌다'...성화, 하트 시그널\" (\"Girls' Hearts Flutter\"...Seonghwa, Heart Signal, departing for the Isabel Marant Paris shoot)"
     url: "https://www.dispatch.co.kr/2306849"
   - label: "Dispatch — \"[현장포토] '이 남자의 시크'...성화, 분위기 남신\" (\"This Man's Chic\"...Seonghwa, Atmospheric God, departing for the Isabel Marant Paris shoot)"
@@ -27,4 +39,10 @@ sources:
 related:
 ---
 
-Seonghwa starred in Isabel Marant's Spring-Summer 2025 Marant Homme menswear campaign alongside Kate Moss, shot in Paris by Robin Galiegue and styled by Emmanuelle Alt — his first individual fashion campaign, and the first time Isabel Marant has featured a K-pop artist in its men's line. Isabel Marant's own official campaign page (Journal) credits him directly: "the campaign features the iconic supermodel Kate Moss, and K-pop sensation Seonghwa from Ateez," listing him under "Models: Kate Moss, Seonghwa." The brand's own page does not use "ambassador" or "Global Ambassador" wording anywhere — that framing comes only from press coverage, so this entry describes his role as the source itself does: a campaign model, not a formally titled ambassador. The February 3, 2025 launch date is consistently reported across multiple outlets but is not itself dated on Isabel Marant's own page, so this entry remains unverified. ATEEZ's own official YouTube channel posted a video on this same campaign on October 23, 2024 — notably earlier than the February 2025 public launch, suggesting an early preview ahead of Isabel Marant's own rollout. Dispatch's airport coverage of Seonghwa departing for Paris on September 27, 2024 lines up with this timeline as the likely shoot trip itself, ahead of both the YouTube preview and the public launch.
+Seonghwa starred alongside Kate Moss in Isabel Marant's Spring/Summer 2025 Paris campaign.
+
+<!-- full-text -->
+
+Seonghwa appeared alongside supermodel Kate Moss in Isabel Marant's Spring/Summer 2025 advertising campaign, photographed in Paris. The campaign brought together two figures from different generations of fashion and popular culture, pairing Moss's long-established modelling career with Seonghwa's presence as a K-pop artist.
+
+The campaign presented Seonghwa within Isabel Marant's contemporary Parisian fashion world, marking his appearance in the house's Spring/Summer 2025 advertising imagery.

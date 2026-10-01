@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-An official individual vertical ("SERO CAM") fancam of Seonghwa performing "Guerrilla" at KCON 2022 Saudi Arabia. The video's title identifies the event but not the specific date, so this entry uses KCON 2022 Saudi Arabia's known event date and is marked unverified.
+An official individual vertical ("SERO CAM") fancam of Seonghwa performing "Guerrilla" at KCON 2022 Saudi Arabia.

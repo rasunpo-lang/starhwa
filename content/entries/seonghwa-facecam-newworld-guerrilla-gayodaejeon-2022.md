@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-newworld-guerrilla-gayodaejeon-2022
 ---
 
-An official individual facecam of Seonghwa performing a "New World + Guerrilla" medley at the 2022 SBS Gayo Daejeon year-end awards show, self-dated 221224 — the companion facecam to the same day's fancam.
+An official individual facecam of Seonghwa performing a "New World + Guerrilla" medley at the 2022 SBS Gayo Daejeon year-end awards show, self-dated 221224 — the same-day facecam for this performance.

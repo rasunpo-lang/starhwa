@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-ATEEZ performed in Japan (ANCHOR) as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour, per the official ATEEZ platform's schedule.
+ATEEZ performed in Japan (ANCHOR) as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour.

@@ -16,4 +16,4 @@ related:
   - treasure-ep3-one-to-all
 ---
 
-Seonghwa debuts as a member of ATEEZ with the release of the group's first EP. This entry marks the starting point of the archive and the reference date for all subsequent chronology.
+Seonghwa debuts as a member of ATEEZ with the release of the group's first EP.

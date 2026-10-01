@@ -7,9 +7,9 @@ tags:
   - "festival"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: 2026 ASIA TOP ARTIST FESTIVAL"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "Asia Top Artist Festival Official Instagram (@ata_festival_official) — 'FROM ATINY TO ATEEZ' pre-show Q&A reel"
+    url: "https://www.instagram.com/ata_festival_official/reel/DcxOPFgidN8/"
 related:
 ---
 
-ATEEZ's participation in "2026 Asia Top Artist Festival", per the official ATEEZ platform's schedule.
+ATEEZ's participation in "2026 Asia Top Artist Festival".

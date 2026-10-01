@@ -17,4 +17,8 @@ related:
   - happy-seonghwa-day-2022
 ---
 
-A "Draw My Life" video released for Seonghwa's 24th birthday, April 3, 2022 — the same birthday content-release date as his "Pink Sweat$ - At My Worst" Special Clip cover. Title confirmed by direct fetch; the date is drawn from secondary reporting (including allkpop), so this entry is marked unverified.
+"Draw My Life" video for Seonghwa's 24th birthday.
+
+<!-- full-text -->
+
+A "Draw My Life" video released for Seonghwa's 24th birthday, April 3, 2022 — the same birthday content-release date as his "Pink Sweat$ - At My Worst" Special Clip cover.

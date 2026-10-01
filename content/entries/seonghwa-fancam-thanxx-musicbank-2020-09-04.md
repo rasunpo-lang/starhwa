@@ -14,4 +14,8 @@ related:
   - thanxx-mv-2020
 ---
 
+Seonghwa's fancam for "THANXX" (Music Bank, Sep 4).
+
+<!-- full-text -->
+
 An official individual fancam of Seonghwa performing "THANXX" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series — a second, separate Music Bank broadcast of the same title one week after the August 28 fancam.

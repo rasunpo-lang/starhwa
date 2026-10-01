@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-ATEEZ's participation at the "31st Hanteo Music Awards," per the official ATEEZ platform's schedule.
+ATEEZ's participation at the "31st Hanteo Music Awards."

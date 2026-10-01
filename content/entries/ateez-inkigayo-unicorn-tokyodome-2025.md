@@ -7,9 +7,11 @@ tags:
   - "special broadcast"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: 2025 SBS 인기가요 유니콘 in 도쿄돔"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "Spotify Korea Official YouTube — '[Spotify Exclusive] ATEEZ 에이티즈 'WONDERLAND' | SBS INKIGAYO UNICON in TOKYO DOME'"
+    url: "https://www.youtube.com/watch?v=fzexPmBOuw0"
+  - label: "SBSKPOP X INKIGAYO Official YouTube — '[2025 INGALIVE UNI-CON in TOKYO DOME] A special greeting from ATEEZ for #INGALIVE! (Japanese ver.)'"
+    url: "https://www.youtube.com/watch?v=9L3yJk8Yh0A"
 related:
 ---
 
-ATEEZ's appearance on "SBS Inkigayo Unicorn — Tokyo Dome," per the official ATEEZ platform's schedule.
+ATEEZ's appearance on "SBS Inkigayo Unicorn — Tokyo Dome."

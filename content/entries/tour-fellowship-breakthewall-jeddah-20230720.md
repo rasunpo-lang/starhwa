@@ -8,9 +8,9 @@ tags:
   - "concert"
   - "the world era"
 sources:
-  - label: "ATEEZ Official (X) — Post: WORLD TOUR [THE FELLOWSHIP : BREAK THE WALL] IN JEDDAH — New Show Info (7.20, Jeddah Superdome)"
-    url: "https://x.com/ATEEZofficial/status/1666022124123832321"
+  - label: "ATEEZ Official (X) — Post: [📷] TODAY ATEEZ THE FELLOWSHIP : BREAK THE WALL IN JEDDAH #TODAY_ATEEZ"
+    url: "https://x.com/ATEEZofficial/status/1682288302618202112"
 related:
 ---
 
-ATEEZ performed in Jeddah as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour, per the official ATEEZ platform's schedule.
+ATEEZ performed in Jeddah as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour.

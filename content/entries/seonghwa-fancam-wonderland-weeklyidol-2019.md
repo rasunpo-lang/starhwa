@@ -16,4 +16,8 @@ related:
   - seonghwa-weeklyidol-sexy-2019
 ---
 
-An official individual fancam of Seonghwa performing "WONDERLAND," released as unaired ("미방") bonus footage from Weekly Idol EP.429 — the same episode as the already-archived "Cleaning King" and "Sexy Prospect" segments, which aired October 16, 2019. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+Seonghwa's unaired fancam for "WONDERLAND" (Weekly Idol EP.429).
+
+<!-- full-text -->
+
+An official individual fancam of Seonghwa performing "WONDERLAND," released as unaired ("미방") bonus footage from Weekly Idol EP.429 — the same episode as the already-archived "Cleaning King" and "Sexy Prospect" segments, which aired October 16, 2019.

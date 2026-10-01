@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-celebrate-showchampion-2021
 ---
 
-An official individual fancam of Seonghwa performing "Fireworks (I'm The One)" on Show Champion, EP.387. The exact broadcast date could not be independently confirmed beyond its proximity to EP.386 (March 10, 2021), so this entry is marked unverified.
+An official individual fancam of Seonghwa performing "Fireworks (I'm The One)" on Show Champion, EP.387.

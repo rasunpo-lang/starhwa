@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-crazyform-musicbank-2023
 ---
 
-An official individual facecam of Seonghwa performing "Crazy Form" on KBS's Music Bank, self-dated 231201 — the companion facecam to the same day's fancam.
+An official individual facecam of Seonghwa performing "Crazy Form" on KBS's Music Bank, self-dated 231201 — the facecam from the same performance.

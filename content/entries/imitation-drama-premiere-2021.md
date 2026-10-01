@@ -15,4 +15,8 @@ related:
   - imitation-drama-finale-statement-2021
 ---
 
+KBS2's "Imitation" premieres, with Seonghwa's acting debut as Nam Se-young.
+
+<!-- full-text -->
+
 KBS2's idol-industry drama "Imitation" premiered May 7, 2021, with Seonghwa in his acting debut as Nam Se-young, rapper and leader of the fictional group Sparkling — confirmed the same day via ATEEZ's own official X account, which posted a news link naming Seonghwa among the four members making their acting debuts.

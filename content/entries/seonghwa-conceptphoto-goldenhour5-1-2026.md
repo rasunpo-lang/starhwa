@@ -10,8 +10,6 @@ tags:
 sources:
   - label: "ATEEZ Official Platform (KQ) — GOLDEN HOUR : Part.5 Concept Photo 1"
     url: "https://ateez.kqent.com/contents/6a197ffcfe01ae1d401f2a17"
-  - label: "ATEEZ Official X — [📷] GOLDEN HOUR : Part.5 Concept Photo 1 #SEONGHWA"
-    url: "https://x.com/ATEEZofficial/status/2061100448506171446"
 related:
   - seonghwa-conceptphoto-goldenhour5-2-2026
 ---

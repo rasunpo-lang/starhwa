@@ -14,4 +14,4 @@ related:
   - seonghwa-weeklyidol-sexy-2019
 ---
 
-An individual Weekly Idol segment featuring Seonghwa in a cleaning-themed game ("청소왕 성화," "Cleaning King Seonghwa"), from EP.429, which aired October 16, 2019. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An individual Weekly Idol segment featuring Seonghwa in a cleaning-themed game ("청소왕 성화," "Cleaning King Seonghwa"), from EP.429, which aired October 16, 2019.

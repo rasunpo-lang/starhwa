@@ -14,4 +14,4 @@ sources:
 related:
 ---
 
-ATEEZ's appearance on "MBC Show! Music Core — Japan Special," per the official ATEEZ platform's schedule.
+ATEEZ's appearance on "MBC Show! Music Core — Japan Special."

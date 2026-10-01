@@ -7,9 +7,13 @@ tags:
   - "individual content"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: '리무진 서비스'"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "KBS Kpop Official YouTube — '[리무진서비스] EP.169 에이티즈 성화' (Lemon Drop, 팔레트, The Door, Sugar Sweet)"
+    url: "https://www.youtube.com/watch?v=qV4IizJmFas"
+  - label: "KBS Kpop Official YouTube Shorts — EP.169 pre-release preview clip"
+    url: "https://www.youtube.com/shorts/gEihcoeE-sk"
+  - label: "KBS Kpop Official YouTube — '[리무진서비스 클립] Sugar Sweet | 에이티즈 성화 X 이무진'"
+    url: "https://www.youtube.com/watch?v=yBwmBCQ1Byk"
 related:
 ---
 
-Seonghwa's appearance on "'Limousine Service'," per the official ATEEZ platform's schedule.
+Seonghwa's appearance on "'Limousine Service'."

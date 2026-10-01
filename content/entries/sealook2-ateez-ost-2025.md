@@ -26,4 +26,8 @@ sources:
 related:
 ---
 
+ATEEZ recorded both theme songs for the animated series "SEALOOK 2," with Seonghwa fronting the countdown teaser that opened a monthlong promotional splash. The run closed out the year with a Christmas message and a New Year's greeting to ATINY.
+
+<!-- full-text -->
+
 ATEEZ recorded both the opening theme ("Me Crazy") and ending theme ("Your Journey") for "SEALOOK 2," posted directly on SEALOOK's own official YouTube channel (9.45M subscribers) across a promotional run from December 21, 2025 through January 9, 2026 — opening with a Seonghwa-fronted countdown teaser, followed by both OST music videos, a Christmas message, a behind-the-scenes "talks about the OST" clip, and a New Year's greeting.

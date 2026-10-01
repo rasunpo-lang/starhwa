@@ -13,5 +13,9 @@ sources:
 related:
 ---
 
-Korean skincare brand MERNEL announced ATEEZ (all eight members, including Seonghwa) as its new global ambassadors on July 14, 2022, confirmed by MERNEL's own official YouTube channel. The group promoted the brand across multiple international markets. No source directly from ATEEZ's own official platform was found confirming this partnership, so it is marked unverified.
+MERNEL named ATEEZ its new global ambassadors.
+
+<!-- full-text -->
+
+Korean skincare brand MERNEL announced ATEEZ (all eight members, including Seonghwa) as its new global ambassadors on July 14, 2022, confirmed by MERNEL's own official YouTube channel. The group promoted the brand across multiple international markets.
 

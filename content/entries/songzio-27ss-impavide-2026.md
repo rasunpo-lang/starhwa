@@ -22,8 +22,26 @@ sources:
     url: "https://www.dispatch.co.kr/2343721"
   - label: "Dispatch — \"[현장포토] '아드레날린 터지네'…성화, 폭주하는 잘생김\" (\"Adrenaline Bursting\"…Seonghwa, Rampaging Handsome, departing for the SONGZIO Paris show)"
     url: "https://www.dispatch.co.kr/2344358"
+  - label: "DAZED Korea Official Instagram (@dazedkorea) — Seonghwa on walking the SONGZIO show three times, editor RYO"
+    url: "https://www.instagram.com/dazedkorea/reel/DZ-Zt1ksAg2/"
+  - label: "SONGZIO Official Instagram (@songzio_official) — 'The Rehearsal' from Songzio Woman's 27SS Collection #IMPAVIDE, Paris Fashion Week"
+    url: "https://www.instagram.com/songzio_official/p/DdQrvK2keoM/?img_index=11"
+  - label: "SONGZIO Official Instagram (@songzio_official) — 'Backstage Moments' from Songzio's 27SS Collection #IMPAVIDE, Paris Fashion Week"
+    url: "https://www.instagram.com/songzio_official/p/DdIcIK7ETJQ/?img_index=6"
+  - label: "SONGZIO Official Instagram (@songzio_official) — 'The Rehearsal' from Songzio's 27SS Collection #IMPAVIDE, Paris Fashion Week"
+    url: "https://www.instagram.com/songzio_official/p/DdEOASaE16L/"
+  - label: "SONGZIO Official Instagram (@songzio_official) — 'Songzio 27 Spring Summer Collection' show post"
+    url: "https://www.instagram.com/songzio_official/p/DZ-u7isAMcZ/"
+  - label: "SONGZIO Official YouTube — SONGZIO 27 SPRING SUMMER COLLECTION 'IMPAVIDE'"
+    url: "https://www.youtube.com/watch?v=raoIXHspD6o&t=201s"
 related:
   - songzio-ambassador-2025
 ---
 
-Seonghwa walked the runway for SONGZIO's 27SS "Impavide" collection at its Paris show on June 24, 2026 (local time), then met briefly backstage with Korean fashion outlet dip_magazine. SONGZIO/ATEEZ's official campaign video for the same collection followed on YouTube on July 9, 2026; that video's title was confirmed by direct fetch, while its date is drawn from secondary reporting.
+Seonghwa walked SONGZIO's 27SS "Impavide" show at Paris Fashion Week (June 24, 2026).
+
+<!-- full-text -->
+
+Seonghwa walked the runway for SONGZIO's 27SS "Impavide" collection at its Paris show on June 24, 2026 (local time), then met briefly backstage with Korean fashion outlet dip_magazine. SONGZIO/ATEEZ's official campaign video for the same collection followed on YouTube on July 9, 2026.
+
+For Spring/Summer 2027, the "Impavide" collection explores the tension between tradition and new ideas through sculptural silhouettes and unconventional tailoring — draped, asymmetric forms alongside protective layered pieces, with tailored garments reshaped and rotated for a sense of movement and volume. Slit necklines, flowing panels, and angled cuts break from familiar tailoring, giving the collection a more fluid, sculptural character.

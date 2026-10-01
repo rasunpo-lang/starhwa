@@ -28,4 +28,4 @@ sources:
 related:
 ---
 
-ATEEZ's participation at the "2025 Asia Artist Awards," per the official ATEEZ platform's schedule.
+ATEEZ's participation at the "2025 Asia Artist Awards."

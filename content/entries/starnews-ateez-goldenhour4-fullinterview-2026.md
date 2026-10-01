@@ -14,6 +14,10 @@ sources:
 related:
 ---
 
+StarNews's exclusive ATEEZ interview for "GOLDEN HOUR: Part.4," on their AAA sweep and enlistment plans.
+
+<!-- full-text -->
+
 An extensive exclusive full-length group interview by StarNews, published February 23, 2026, tied to the release of eleventh mini album "GOLDEN HOUR: Part.4" and title track "Adrenaline," and looking back on ATEEZ's five-trophy sweep at the 10th Anniversary Asia Artist Awards 2025. Seonghwa answers individually at length throughout: on the AAA win, expressing satisfaction that the show captured their stage well and gratitude for how it let the members focus while considering fans' needs; on the concept behind "GOLDEN HOUR: Part.4," saying he agonizes musically over every album, and that thinking as a team about what ATEEZ's beginnings were and what their "conviction" (신념) is led to "Adrenaline" — an unwavering expression of that conviction; on the "Adrenaline" choreography, recalling that from the moment they commissioned it he said "we want to show this ourselves this time, even if it's hard," with San joining the choreography-making process; and on military enlistment, stating plainly that enlisting is a given, that he has no regrets after seven years of activity, that their recent contract renewal means little should change after discharge, and that in the meantime their job is to make sure fans don't feel shortchanged.
 
 Seonghwa's Words — English Translation

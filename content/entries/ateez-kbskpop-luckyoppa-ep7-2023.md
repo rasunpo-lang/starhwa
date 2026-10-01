@@ -12,4 +12,8 @@ sources:
 related:
 ---
 
+ATEEZ on KBS Kpop's "Lucky OPPA" (EP.7), contrasting on-stage and off-stage personas.
+
+<!-- full-text -->
+
 ATEEZ (full group) appears on episode 7 of KBS Kpop's "Lucky OPPA" series, a segment contrasting idols' intense on-stage personas with their off-stage personalities, posted to KBS Kpop's official YouTube channel January 20, 2023.

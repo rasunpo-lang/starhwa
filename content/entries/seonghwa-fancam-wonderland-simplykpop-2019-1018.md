@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-wonderland-mcountdown-2019-10-24
 ---
 
-An official individual fancam of Seonghwa performing "WONDERLAND" on Arirang's Simply K-Pop, Ep.384, aired October 18, 2019. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing "WONDERLAND" on Arirang's Simply K-Pop, Ep.384, aired October 18, 2019.

@@ -7,9 +7,9 @@ tags:
   - "award show"
   - "the world era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: 제10회 이데일리 문화대상"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "이데일리 프렌즈 (Edaily Friends) Official YouTube — '제10회 이데일리 문화대상'"
+    url: "https://www.youtube.com/watch?v=HXbvZhqSjkI&t=12260s"
 related:
 ---
 
-ATEEZ's participation at the "10th Edaily Culture Awards," per the official ATEEZ platform's schedule.
+ATEEZ's participation at the "10th Edaily Culture Awards."

@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-fireworks-showchampion-2021
 ---
 
-An official individual fancam of Seonghwa performing "Fireworks (I'm The One)," released as unaired ("미방") bonus footage from Weekly Idol EP.505, which aired March 31, 2021. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing "Fireworks (I'm The One)," released as unaired ("미방") bonus footage from Weekly Idol EP.505, which aired March 31, 2021.

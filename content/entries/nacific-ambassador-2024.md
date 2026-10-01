@@ -19,5 +19,9 @@ related:
   - nacific-seonghwa-dewglaze-2024
 ---
 
-Korean skincare brand NACIFIC announced ATEEZ (all eight members, including Seonghwa) as its new brand ambassadors, with the announcement posted by NACIFIC's own regional official account on January 4, 2024, and the group's first campaign photos following on January 8–9. NACIFIC's global X account continued the partnership through 2024 with further ATEEZ-branded product sets. No source directly from ATEEZ's own official platform was found confirming this partnership, so it is marked unverified.
+NACIFIC named ATEEZ its new brand ambassadors.
+
+<!-- full-text -->
+
+Korean skincare brand NACIFIC announced ATEEZ (all eight members, including Seonghwa) as its new brand ambassadors, with the announcement posted by NACIFIC's own regional official account on January 4, 2024, and the group's first campaign photos following on January 8–9.
 

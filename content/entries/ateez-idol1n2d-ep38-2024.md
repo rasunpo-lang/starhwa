@@ -18,4 +18,8 @@ related:
   - ateez-idol1n2d-ep46-2025
 ---
 
+ATEEZ's 5th appearance on KBS Kpop's "Idol 1N2D" ("Entertainment Veteran").
+
+<!-- full-text -->
+
 ATEEZ's fifth appearance on "Idol 1N2D," a two-part episode broadcast directly on KBS Kpop's official YouTube channel November 10 and 17, 2024, confirmed by a matching official ATEEZ X post sharing behind photos from the "돌박이일" shoot.

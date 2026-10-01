@@ -14,4 +14,4 @@ related:
   - seonghwa-voicecam-dreamyday-2023-b
 ---
 
-A voice-focused fancam of Seonghwa performing "Dreamy Day (꿈날)," a group track from THE WORLD EP.FIN: WILL, released December 1, 2023. The video's own upload date could not be independently confirmed, so this entry uses the track's release date and is marked unverified.
+A voice-focused fancam of Seonghwa performing "Dreamy Day (꿈날)," a group track from THE WORLD EP.FIN: WILL, released December 1, 2023.

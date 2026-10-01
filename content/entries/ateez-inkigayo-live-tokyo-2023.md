@@ -7,11 +7,9 @@ tags:
   - "special broadcast"
   - "the world era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: SBS INKYGAYO LIVE in TOKYO"
-    url: "https://ateez.kqent.com/schedule"
   - label: "Dispatch — \"[현장포토] '비주얼이 영화'...성화, 공항의 남신\" (\"A Visual Straight Out of a Movie\"...Seonghwa, Airport God, departing for Tokyo)"
     url: "https://www.dispatch.co.kr/2266217"
 related:
 ---
 
-ATEEZ's appearance on "SBS Inkigayo Live — Tokyo," per the official ATEEZ platform's schedule.
+ATEEZ's appearance on "SBS Inkigayo Live — Tokyo."

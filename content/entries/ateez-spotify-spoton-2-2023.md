@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-ATEEZ's appearance on "Spotify 'Spot ON!' Part.2," per the official ATEEZ platform's schedule.
+ATEEZ's appearance on "Spotify 'Spot ON!' Part.2."

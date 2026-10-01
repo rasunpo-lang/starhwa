@@ -13,4 +13,8 @@ sources:
 related:
 ---
 
+Seonghwa's X post marking 2 years since ATEEZ's debut.
+
+<!-- full-text -->
+
 A message from Seonghwa posted via ATEEZ's official X account marking two years since debut, punning on his own name (성화 also meaning "pressuring"): "Unable to resist ATINY's pressuring, Seonghwa posts the photo he meant to post yesterday now... Love ATINY so much. Good night."

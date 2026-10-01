@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-guerrilla-showchampion-2022
 ---
 
-An official individual fancam of Seonghwa performing "Guerrilla" on Show Champion, EP.445, aired August 10, 2022 — one week after the already-archived EP.444 fancam. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing "Guerrilla" on Show Champion, EP.445, aired August 10, 2022 — one week after the already-archived EP.444 fancam.

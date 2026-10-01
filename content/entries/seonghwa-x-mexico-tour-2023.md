@@ -1,7 +1,7 @@
 ---
 title: "Tour Update — 'Gracias Mexico'"
 date: "2023-08-23"
-category: "Tours"
+category: "Social Media"
 verification: "verified"
 tags:
   - "individual content"

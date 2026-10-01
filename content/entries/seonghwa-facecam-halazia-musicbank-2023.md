@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-halazia-musicbank-2023
 ---
 
-An official individual facecam of Seonghwa performing "HALAZIA" on KBS's Music Bank, self-dated 230106 — the companion facecam to the same day's fancam.
+An official individual facecam of Seonghwa performing "HALAZIA" on KBS's Music Bank, self-dated 230106 — the facecam from the same performance.

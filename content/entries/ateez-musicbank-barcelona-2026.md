@@ -1,15 +1,17 @@
 ---
 title: "KBS Music Bank — Barcelona Special"
 date: "2026-09-12"
-category: "TV"
+category: "Performances"
 verification: "verified"
 tags:
   - "special broadcast"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: KBS2 뮤직뱅크 IN BARCELONA"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "Koreanpower (@koreanpowerkpop) — 'ATEEZ Are Coming Back to Barcelona' ticket announcement"
+    url: "https://www.instagram.com/koreanpowerkpop/p/Db-lZuAjMW_/"
+  - label: "Koreanpower (@koreanpowerkpop) — 'What Is Your Treasure?' pre-show promo post"
+    url: "https://www.instagram.com/p/DY4o4msFUZQ/"
 related:
 ---
 
-ATEEZ's appearance on "KBS Music Bank — Barcelona Special," per the official ATEEZ platform's schedule.
+ATEEZ's appearance on "KBS Music Bank — Barcelona Special."

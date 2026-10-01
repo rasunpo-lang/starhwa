@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-answer-kingdom-round3-2021
 ---
 
-An official individual fancam of Seonghwa performing ATEEZ's reimagined "Symphony No.9 'From The Wonderland'" in Round 1 of Mnet's Kingdom: Legendary War, aired April 15, 2021 (EP.3). Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing ATEEZ's reimagined "Symphony No.9 'From The Wonderland'" in Round 1 of Mnet's Kingdom: Legendary War, aired April 15, 2021 (EP.3).

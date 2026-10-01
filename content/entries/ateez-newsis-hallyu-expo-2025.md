@@ -14,4 +14,4 @@ sources:
 related:
 ---
 
-ATEEZ's participation in "2025 Newsis Hallyu Expo", per the event broadcaster's official livestream recording.
+ATEEZ's appearance at the 2025 Newsis Hallyu Expo.

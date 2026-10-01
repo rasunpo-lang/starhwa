@@ -11,11 +11,13 @@ tags:
 sources:
   - label: "CREA WEB (Bunshun) — Seonghwa and Jongho on loving emotionally expressive music and what sets them apart"
     url: "https://crea.bunshun.jp/articles/-/53101"
-  - label: "CREA WEB (Bunshun) — same interview, re-featured May 5, 2025"
-    url: "https://crea.bunshun.jp/articles/-/53783"
 related:
   - jinju-ambassador-2025
 ---
+
+CREA's paired Seonghwa & Jongho interview on what they admire in each other.
+
+<!-- full-text -->
 
 In a paired interview for CREA's Spring 2025 Korea feature, Seonghwa and Jongho — the group's oldest and youngest members, only two years apart — discussed what they admire in each other and where their tastes diverge.
 

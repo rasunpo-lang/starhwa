@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A live-broadcast stage greeting tied to the "TOWARDS THE LIGHT: WILL TO POWER" tour film screening in cinemas, per the official ATEEZ platform's schedule.
+A live-broadcast stage greeting tied to the "TOWARDS THE LIGHT: WILL TO POWER" tour film screening in cinemas.

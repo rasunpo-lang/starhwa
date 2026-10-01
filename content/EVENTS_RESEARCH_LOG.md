@@ -107,3 +107,17 @@ Re-fetched the **complete** KQ calendar — every month from March 2023 through 
 **202 new entries added across all passes**: 140 (first pass, CONCERT/EVENT/ETC) + 4 (pre-calendar sweep) + 58 (fourth pass, full category sweep: TV/RADIO/YouTube/FAN SIGN/remaining ETC/CONCERT gaps). 0 duplicates created — every candidate was cross-checked against the existing archive first; the handful of overlaps found (same event covered by both a calendar row and an existing casual-photo/X-post entry) were linked via `related` or merged as an additional source rather than duplicated.
 
 **11 existing entries enhanced** with organizer-side official sources across the second and third passes (no new entries — additional official sources only), as listed above.
+
+## Fifth pass: post-sweep audit (calendar re-check, June–November 2026)
+
+Re-fetched the full KQ calendar (`/svc/space/api/v1/calendar`) for June through November 2026 — the window since the fourth pass — and re-fetched the platform's `성화` tag-feed API in full to check for anything posted since. The tag feed returned the same 50 items, ending at the same 2026-06-22 post, confirming no new individually-tagged Seonghwa content exists on the platform since the fourth pass; nothing further to add from that source.
+
+The calendar re-check turned up 8 events (excluding birthdays, single-other-member-tagged items, and routine weekly-show broadcasts already covered by existing fancam entries — same exclusion criteria as prior passes). 4 were already accurately represented in the archive (2026 Seoul Music Awards, KBS `살림하는 남자들`, SONGZIO x Heliot Emil "Falconry" launch, SONGZIO 27SS "Impavide," plus the already-covered Music Bank Barcelona, The Fact Music Awards 2026, K-World Dream Awards, and both ATINY'S VOYAGE fanmeeting legs).
+
+**A discrepancy was found and is worth flagging separately:** 3 calendar-derived entries this log had previously recorded as added — `ateez-bsthydepark-2026.md` (BST Hyde Park, 2026-06-28), `ateez-istanbul-festivali-2026.md` (İstanbul Festivali, 2026-08-14), and `ateez-asiatopartist-festival-2026.md` (2026 Asia Top Artist Festival, 2026-09-20) — exist in the repository's last commit but were absent from the working tree at the start of this pass, as uncommitted deletions unrelated to this session. They were recreated here using their last-known-good frontmatter/sources (unchanged), since this pass's own independent calendar sweep flagged the same 3 dates as gaps anyway. The BST Hyde Park entry's body was also enriched with a genuine Seonghwa-specific detail (his own account, in the already-archived Arena Homme Plus interview, of crying on stage during that specific show) and cross-linked via `related`.
+
+**Added (1 genuinely new entry):** ROCK IN ROMA 2026 (2026-07-08, Rome — ATEEZ's first appearance at the festival), sourced from the festival's own official X account's announcement and an `@ATEEZofficial` post sharing post-show press coverage of the performance.
+
+Also spot-checked the ATEEZ Japan official site (`ateez-official.jp`) homepage/news feed for anything not mirrored on the KR KQ calendar — found only group-wide release/merchandise news (JP single, Hello Kitty collab, MIGHTEEZ pop-up) already covered or out of scope (not individual schedule appearances).
+
+**Totals this pass:** 1 new entry added, 3 previously-researched entries recreated after an uncommitted deletion, 0 duplicates.

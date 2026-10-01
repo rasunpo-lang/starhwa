@@ -14,4 +14,8 @@ related:
   - special-clip-troye-sivan-2023
 ---
 
-An individual Seonghwa episode of ATEEZ's "What's In [Member]'s Head" official content series, released April 3, 2023 — Seonghwa's birthday, and the same day as his "Troye Sivan - Angel Baby" Special Clip cover, both apparently part of the same annual birthday content drop. Title confirmed by direct fetch; the date is drawn from secondary reporting, so this entry is marked unverified.
+Seonghwa's birthday episode of ATEEZ's "What's In [Member]'s Head" series.
+
+<!-- full-text -->
+
+An individual Seonghwa episode of ATEEZ's "What's In [Member]'s Head" official content series, released April 3, 2023 — Seonghwa's birthday, and the same day as his "Troye Sivan - Angel Baby" Special Clip cover, both apparently part of the same annual birthday content drop.

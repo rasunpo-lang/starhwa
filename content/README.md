@@ -31,7 +31,66 @@ correct one. That's the whole workflow.
 | `sources`      | yes      | List of `{ label, url }`. At least one. Link to the original — never rehost media.               |
 | `image`        | no       | `{ url, credit, type }`. An editorially curated visual anchor — see "Image selection" below.    |
 | `related`      | no       | List of **other entries' filenames** (no `.md`), e.g. `golden-hour-part-1`.                     |
-| body text      | yes      | Everything below the closing `---` is the entry's summary. One or two original sentences.        |
+| body text      | yes      | Everything below the closing `---` is the entry's summary. Follow the "Main page / Read entry" structure below.        |
+
+## Body structure: Main page / Read entry
+
+Every entry's body follows the same two-part structure, applied
+consistently across the whole archive — old entries being revised and
+new entries alike. Never invent a different shape for an individual
+entry.
+
+**Main page** — the `summary` shown on cards, in search results, and as
+the page's meta description:
+
+- One short line. A fragment is fine — it doesn't need to be a complete
+  sentence.
+- Concise, but meaningfully descriptive: keep the most important/
+  newsworthy identifying information — the brand, collaborator, project,
+  event, performance, or publication — that's the actual reason the
+  entry is notable. Don't strip it down to a bare "who/what/when" label
+  if that loses that reason.
+- Secondary detail — photographer/stylist credits, extended event
+  context, background, supporting facts — belongs in "Read entry" below,
+  not here.
+- No research methodology, source explanations, uncertainty notes, or
+  long detail — none of that belongs here.
+
+**Read entry** — the fuller text shown on the entry's own page:
+
+- 1–3 short paragraphs.
+- Opens with basic context: what it is, the publication/brand, the
+  issue or event, and the date when relevant.
+- Then briefly covers the Seonghwa-specific content.
+- Includes a quote or detail only when it adds real value — not
+  exhaustively.
+- Reads like a normal archive entry, not a research report — never
+  explains how information was found, reconstructed, or verified.
+- Never includes "unverified," "could not be confirmed," or similar
+  methodology language. If a detail can't be supported, leave it out
+  rather than caveating it — `verification` in the frontmatter is where
+  that status actually lives.
+- Mentions other ATEEZ members only when necessary to understand the
+  Seonghwa-specific content.
+- Paraphrases the source naturally — never copies its wording directly.
+
+**Sources** stay in the frontmatter `sources` field, not in the prose —
+keep links/credits out of both "Main page" and "Read entry" text.
+
+`SHW-YYYY-###` catalog IDs are internal bookkeeping (see "What you never
+set by hand" below) — never write one into the "Main page" or "Read
+entry" prose itself.
+
+This short-card/full-text split is the standing default structure for
+every entry — new entries and edits to existing ones alike, not a
+special case reserved for unusually long material. Always put the
+`<!-- full-text -->` marker on its own blank line between the two parts:
+everything **before** it is the "Main page" summary (`summary`),
+everything **after** it is the "Read entry" content, shown collapsed as
+"Read the Full Entry" on the entry's own page. When revising an existing
+entry to fit this structure, preserve all of its existing substantive
+information — move it into the `fullText` section below the marker
+rather than deleting it.
 
 Valid `category` values — from `src/lib/types.ts`, edit that file to add a
 new one:
@@ -86,6 +145,81 @@ minutes of each other) — but never remove a Japan-account source that's
 the entry's only source or that covers genuinely Japan-specific content
 with no KR equivalent.
 
+## Tour/concert entry sourcing (Tours category)
+
+This is a stricter, permanent override of "Source link priority" above,
+scoped to `category: "Tours"` entries tagged `"concert"` — the shows
+listed on `/tours` (`src/app/tours/page.tsx`, `src/lib/tours.ts`), which
+enforces one uniform row per entry (`[Date] — [Tour/Event]` /
+`[Location]` / `View source →`) and never shows a source's type, only
+the link itself, when one qualifies.
+
+**The rule.** A concert entry's "View source" link may point ONLY to
+official ATEEZ content specifically about that show:
+- an `@ateezofficial`/`@ateezofficialjp` post on X — either a
+  `#TODAY_ATEEZ` post, or a confirmed ATEEZ selfie/photo taken at that
+  specific concert venue; or
+- an official ATEEZ YouTube video/short about that specific show (e.g.
+  a per-city tour-recap short).
+
+Never a KQ platform link (schedule or a specific `contents/` page),
+never Facebook, Dispatch, a venue/promoter account, a fan account, a
+repost, or any other secondary source — regardless of how
+official-looking or KQ-adjacent it is.
+
+**Adding or fixing a concert entry's source:**
+1. Identify the concert's date, tour/event name, and city (venue if
+   known — most entries only record city, since that's what the
+   platform itself publishes; never invent a venue name).
+2. Find the actual official post/video for that specific date —
+   for X, read its real content (a proxy like
+   `api.fxtwitter.com/<handle>/status/<id>` works when `x.com` itself
+   returns a 402; do not guess a status ID); for YouTube, a title alone
+   is often enough to confirm the city, but cross-check the date
+   against a source like setlist.fm when the upload date itself isn't
+   readable (YouTube's own pages don't expose it to a simple fetch).
+3. Confirm the post/video genuinely corresponds to that show — a
+   matching date alone isn't enough if the account posted about
+   something else that day; it should name the tour/city/day number, or
+   be an unambiguous same-event photo/video.
+4. Save it as a `source` on that entry, and set
+   `qualifiesForTourSource: true` on that specific source (see
+   `src/lib/types.ts` `Source.qualifiesForTourSource` and
+   `src/lib/schema.ts`) — only after actually confirming step 3, never
+   by default or by inferring it from the label text. This flag, not
+   the label wording, is what `qualifyingSourceUrl()` in
+   `src/lib/tours.ts` uses to decide whether `/tours` shows a link at
+   all. For a YouTube source this flag is the ONLY signal the code can
+   use (there's no handle to check in a `youtube.com`/`youtu.be` URL the
+   way an X profile has one) — never skip actually confirming it's the
+   official ATEEZ channel first. (A same-day pre-show
+   announcement/poster/hype post does not qualify, even from the right
+   X account — it must be the day-of venue content itself.)
+5. If more than one qualifying post/video exists for the same date, use
+   whichever is more directly about that specific show (a
+   `@ateezofficialjp` post naming the exact Japan date beats a generic
+   `@ateezofficial` regional poster, for instance).
+6. **If nothing qualifies, don't substitute KQ or anything else to fill
+   the slot.** The entry still needs at least one `source` (the schema
+   requires it), so keep whatever's the best available citation — KQ
+   is fine here, same as any other category — but do not set
+   `qualifiesForTourSource` on it. `/tours` will correctly show no
+   "View source" link for that entry until a real one is found; that's
+   the intended, permanent state, not a bug to route around.
+
+**On an aggregate multi-date entry** (e.g. a "Europe Leg" entry covering
+several cities under one entry rather than per-city entries): don't
+split it into per-city entries just because a per-city source (like a
+YouTube short) happens to name one. Attach each verified source to the
+existing aggregate entry instead — multiple qualifying sources can
+coexist on one entry; `qualifyingSourceUrl()` just uses the first
+match. Only restructure into per-city entries if that's explicitly
+asked for.
+
+This process applies automatically to every new Tours/concert entry
+going forward, not just a one-time cleanup — check it every time such
+an entry is added or edited.
+
 ## Verification claims
 
 `verification: "verified"` requires direct inspection of the actual
@@ -122,10 +256,8 @@ English body-text summary instead.
 ## Description style
 
 Body text should be natural, concise, reader-facing encyclopedia prose —
-state plainly what the entry is about. Never put research methodology,
-uncertainty explanations, source-validation commentary, or verification
-reasoning into the body text; that belongs in metadata (`verification`,
-source labels), not the prose.
+state plainly what the entry is about. See "Body structure: Main page /
+Read entry" above for the specific shape every entry's body follows.
 
 ## Source labels
 
@@ -170,6 +302,50 @@ Availability of *a* legitimate photo is necessary but not sufficient:
   curated `image` can coexist on the same entry without conflict.
 - New hosts must be added to `next.config.ts`'s `images.remotePatterns`
   before an `image.url` on that host will load — see `DESIGN.md`.
+
+## Image sourcing & permission
+
+Different official boards/platforms have different rules about external
+sharing — e.g. KQ's ATEEZ Official Platform has multiple boards, and
+they don't all permit the same thing: the **FOR_ATINY** board explicitly
+permits external sharing with ATEEZ Official Platform attribution, while
+**ATINY ZONE** explicitly prohibits it. A screenshot being technically
+possible, or a post being publicly visible, is never evidence of
+permission — only an explicit, confirmed rule from the source is.
+
+Every `image` therefore carries a `sharePermission` field
+(`"permitted" | "prohibited" | "unknown"`, see `EntryImage` in
+`src/lib/types.ts`):
+
+- Set `sharePermission: "permitted"` **only** after you've actually
+  confirmed the specific board/platform/outlet allows it — e.g. an image
+  from KQ's FOR_ATINY board. Also fill in `sourcePlatform` (the specific
+  board/outlet, not just the general brand — e.g.
+  `"ATEEZ Official Platform — FOR_ATINY"`) and `sourceUrl` (the original
+  post/page) when available, so the permission decision stays traceable
+  back to where it was confirmed.
+- Set `sharePermission: "prohibited"` for an image from a board/source
+  known to disallow external sharing (e.g. ATINY ZONE) — this documents
+  the finding, and also guarantees the app never surfaces it (see
+  below), even if someone later adds a `url`/`credit` for it.
+- **Leave the field unset (or explicitly `"unknown"`) whenever
+  permission hasn't actually been confirmed** — this is the default, and
+  the correct choice any time you're not sure. Never write `"permitted"`
+  as a guess, and never reason from "it's an official account" or "it's
+  already public" to "permitted" — those aren't the same thing, and
+  KQ's own boards prove it (FOR_ATINY and ATINY ZONE are both official,
+  both public, and have opposite rules).
+
+**This isn't just documentation — it's enforced in code.**
+`publicImage(entry)` in `src/lib/layout.ts` is the single gate every
+public image display in the app goes through (card thumbnails, an
+entry's hero image, OG/Twitter meta images, the homepage's Featured Era
+photo) — it returns an entry's `image` only when `sharePermission` is
+exactly `"permitted"`, and `null` otherwise. An `"unknown"` or
+`"prohibited"` image still renders fine as data (it's valid frontmatter,
+and still useful as a documented, traceable record of what exists and
+why it can't be shown), it just never appears anywhere on the live site
+until someone actually confirms permission and updates the field.
 
 ## Adding a new era
 

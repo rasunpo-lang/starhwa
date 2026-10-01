@@ -13,4 +13,8 @@ sources:
 related:
 ---
 
+Seonghwa's pre-debut throwback photos, posted via ATEEZ's X.
+
+<!-- full-text -->
+
 A set of throwback photos from Seonghwa's pre-debut training days posted via ATEEZ's official X account — including his time training in the US, "Operation ATEEZ," Morocco, and "ATEEZ in School" — captioned as a look back on the year.

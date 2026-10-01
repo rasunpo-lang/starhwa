@@ -15,5 +15,9 @@ related:
   - silladutyfree-seonghwa-eyecontact-2026
 ---
 
-ATEEZ (all eight members, including Seonghwa) was widely reported by Korean press (Herald Corp, Starnews, and others) as named The Shilla Duty Free's new promotional models/brand ambassadors on November 12, 2025, accompanied by a group photoshoot. No source directly from The Shilla Duty Free's or ATEEZ's own official channels was found confirming that specific announcement date or "ambassador" wording, so it is marked unverified. The partnership was directly confirmed through content that followed on The Shilla Duty Free's own official YouTube channel, starting with a "What's In My Luggage" teaser (Feb 13, 2026) and a four-episode series pairing up members (Hongjoong & Wooyoung, Yunho & Yeosang, Jongho & Mingi, San & Seonghwa).
+ATEEZ named The Shilla Duty Free's brand ambassadors.
+
+<!-- full-text -->
+
+ATEEZ (all eight members, including Seonghwa) was widely reported by Korean press (Herald Corp, Starnews, and others) as named The Shilla Duty Free's new promotional models/brand ambassadors on November 12, 2025, accompanied by a group photoshoot. The partnership was directly confirmed through content that followed on The Shilla Duty Free's own official YouTube channel, starting with a "What's In My Luggage" teaser (Feb 13, 2026) and a four-episode series pairing up members (Hongjoong & Wooyoung, Yunho & Yeosang, Jongho & Mingi, San & Seonghwa).
 

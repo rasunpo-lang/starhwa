@@ -14,7 +14,10 @@ import {
 import {
   getAtmospherePreviewMode,
   getPreviewDate,
+  getRainAmount,
+  getRainPreviewLevel,
   subscribeAtmospherePreviewMode,
+  subscribeRainPreviewLevel,
 } from "@/lib/atmospherePreview";
 import { BORN_STAR_POSITION, isSeonghwaBirthdayToday } from "@/lib/birthday";
 
@@ -76,6 +79,16 @@ import { BORN_STAR_POSITION, isSeonghwaBirthdayToday } from "@/lib/birthday";
  * they read --night/--golden/--scroll-y exactly like everything else
  * Atmosphere.tsx already sets, so Live/Sunrise/Night all drive them for
  * free with no separate cloud logic.
+ *
+ * RAIN PREVIEW (dev-only prototype — src/lib/atmospherePreview.ts): a
+ * completely independent overlay, not a sixth sky state. --rain (0 →
+ * off, up to 1 → "moderate") never feeds into --night/--golden or any
+ * astronomy in atmosphere.ts, and nothing here changes when --rain is 0
+ * — Night stays Night, Golden Hour stays Golden Hour, exactly as before
+ * this prototype existed. It's driven by its own preview control
+ * (AtmospherePreviewToggle.tsx), gated out of production the same way
+ * the sky-state preview is (layout.tsx). See .atmosphere-rain-far/-near
+ * in globals.css for the actual streak rendering.
  *
  * BIRTH OF A STAR (src/lib/birthday.ts): on April 3 KST, one extra star
  * is added to .atmosphere-stars below, styled with the same
@@ -199,6 +212,7 @@ export default function Atmosphere() {
       const goldenProgress = getGoldenProgress(now);
       const sun = getSolarPosition(now);
       const moon = getMoonPhase(now);
+      const rain = getRainAmount(getRainPreviewLevel());
       const style = document.documentElement.style;
       style.setProperty("--night", String(night));
       style.setProperty("--night-text", String(nightText));
@@ -208,6 +222,7 @@ export default function Atmosphere() {
       style.setProperty("--sun-x", String(sun.horizontalProgress));
       style.setProperty("--moon-illum", String(moon.illumination));
       style.setProperty("--moon-dir", moon.waxing ? "-1" : "1");
+      style.setProperty("--rain", String(rain));
       return night;
     }
 
@@ -246,6 +261,11 @@ export default function Atmosphere() {
     // atmosphere-ready is already set, so this transitions smoothly (the
     // same 8s/3.5s ease as any other change) instead of snapping.
     const unsubscribePreview = subscribeAtmospherePreviewMode(apply);
+    // Rain is a second, independent dev-only override (see
+    // atmospherePreview.ts) — re-applies the moment its own preview
+    // control changes, same immediacy reasoning as the mode subscription
+    // above.
+    const unsubscribeRain = subscribeRainPreviewLevel(apply);
 
     // The site's one scroll-driven value — --scroll-y, consumed only by
     // .atmosphere-midground's parallax transform (globals.css). rAF-
@@ -271,6 +291,7 @@ export default function Atmosphere() {
       window.clearInterval(interval);
       window.removeEventListener("scroll", onScroll);
       unsubscribePreview();
+      unsubscribeRain();
     };
   }, []);
 
@@ -335,6 +356,15 @@ export default function Atmosphere() {
       <div className="atmosphere-clouds-mid" />
       <div className="atmosphere-clouds-near" />
       {shootingStar && <div className="atmosphere-shooting-star" style={{ top: "14%", left: "70%" }} />}
+      {/* RAIN PREVIEW (dev-only prototype) — rendered last so it sits in
+          front of everything else in the scene, the way real rain would
+          read as nearest to the viewer. Always present in the markup,
+          exactly like the cloud tiers above; --rain (globals.css) is 0
+          off the dev Rain preview control, which is the only value
+          production ever sees, so both layers resolve to opacity 0 and
+          are visually absent by default. */}
+      <div className="atmosphere-rain-far" />
+      <div className="atmosphere-rain-near" />
     </div>
   );
 }

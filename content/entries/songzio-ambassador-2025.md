@@ -12,6 +12,22 @@ sources:
     url: "https://www.instagram.com/p/DMzbqR4vopV/"
   - label: "SONGZIO Official Instagram — Seonghwa at Songzio's Paris Flagship Store (25AW 'Piccadill')"
     url: "https://www.instagram.com/songzio_official/reel/DFaDABtzcnb/"
+  - label: "SONGZIO Official Instagram (@songzio_official) — Songzio's 25 Autumn Winter Campaign featuring Seonghwa, New Global Ambassador (July 20, 2025)"
+    url: "https://www.instagram.com/songzio_official/reel/DMWcciNTpfc/"
+  - label: "SONGZIO Official Instagram (@songzio_official) — 25 Autumn Winter Campaign featuring Seonghwa (July 20, 2025, companion reel)"
+    url: "https://www.instagram.com/songzio_official/reel/DMWclgIzv2r/"
+  - label: "SONGZIO Official Instagram (@songzio_official) — 25 Autumn Winter Campaign featuring Seonghwa (July 20, 2025, companion reel)"
+    url: "https://www.instagram.com/songzio_official/reel/DMWcqyeTFIv/"
+  - label: "SONGZIO Official Instagram (@songzio_official) — 25 Autumn Winter Campaign featuring Seonghwa (July 22, 2025)"
+    url: "https://www.instagram.com/songzio_official/p/DMaAZxWzIBY/"
+  - label: "SONGZIO Official Instagram (@songzio_official) — 25 Autumn Winter Campaign featuring Seonghwa (July 24, 2025)"
+    url: "https://www.instagram.com/songzio_official/reel/DMfeXcDTtI4/"
+  - label: "SONGZIO Official Instagram (@songzio_official) — 25 Autumn Winter Campaign featuring Seonghwa (July 26, 2025)"
+    url: "https://www.instagram.com/songzio_official/p/DMkPlRvT8So/"
+  - label: "SONGZIO Official Instagram (@songzio_official) — 25 Autumn Winter Campaign (July 28, 2025)"
+    url: "https://www.instagram.com/songzio_official/p/DMrigc4PVjB/"
+  - label: "SONGZIO Official Instagram (@songzio_official) — 25 Autumn Winter Campaign featuring Seonghwa (July 29, 2025)"
+    url: "https://www.instagram.com/songzio_official/reel/DMuDFkvPOR9/"
 related:
   - isabel-marant-ambassador-2025
   - songzio-paris-flagship-2025
@@ -20,6 +36,10 @@ related:
   - songzio-27ss-impavide-2026
 ---
 
-Seonghwa fronted Korean designer brand SONGZIO's 2025 Fall/Winter "Piccadill" campaign, directly confirmed by two of SONGZIO's own official Instagram posts: a January 29, 2025 post from a Paris flagship-store appearance during Paris Men's Fashion Week, and an August 1, 2025 campaign post for Dazed Korea, both tagging Seonghwa's account with full creative credits (Creative Director Jay Songzio, photographer Kim Heejune). SONGZIO's own site independently catalogs this same "Piccadill" 25FW collection in its News and Media section.
+Seonghwa named SONGZIO's Global Ambassador, fronting its 2025 FW "Piccadill" campaign.
 
-Press coverage (including PAP Magazine, dated July 22, 2025) has widely characterized this relationship as Seonghwa being named SONGZIO's "Global Ambassador" and reports that date as the announcement. However, neither of SONGZIO's own posts found and directly verified here uses "ambassador" language — they describe the relationship in campaign terms only. This entry keeps the widely-reported "Global Ambassador" framing and announcement date as press characterization, while noting that SONGZIO's own confirmed wording is narrower, so it remains marked unverified for that specific title.
+<!-- full-text -->
+
+Seonghwa fronted SONGZIO's 2025 Fall/Winter "Piccadill" campaign, with his involvement confirmed by two official SONGZIO Instagram posts: a January 29, 2025 post from his appearance at the brand's Paris flagship during Paris Men's Fashion Week, and an August 1, 2025 campaign post for Dazed Korea. Both posts tag Seonghwa and include the campaign's creative credits.
+
+Press coverage, including PAP Magazine on July 22, 2025, later described Seonghwa as SONGZIO's "Global Ambassador."

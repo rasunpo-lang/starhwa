@@ -14,10 +14,10 @@ sources:
 related:
 ---
 
-A Q&A interview with Seonghwa published by CanCam to mark ATEEZ's Japan 2nd mini album "BEYOND : ZERO" and their first Japan solo concert. Published May 27, 2022.
+A CanCam Q&A interview with Seonghwa marking ATEEZ's Japan single "BEYOND : ZERO" and their first Japan solo concert.
 
-Seonghwa's Words — Translated Highlights
+<!-- full-text -->
 
-Asked about the new song "The King," Seonghwa said listening to it repeatedly felt like watching a movie, and he hoped ATINY would experience it the same way. On the "ROCKY (Boxers ver.)" music video, he said the new styling and concept offered a lot to enjoy. Asked which member "title" he'd give himself, he named himself "Visual King." Naming three travel essentials, he listed digital devices like a game console and laptop to pass the time, plenty of clothes since he enjoys dressing up and taking photos, and his own shampoo, since he didn't want his hair damaged by an unfamiliar product.
+Published May 27, 2022, the interview touches on the new song "The King," the "ROCKY (Boxers ver.)" music video, and Seonghwa's self-given nickname of "Visual King." He also shares his go-to travel essentials — gaming devices, plenty of outfits for photos, and his own shampoo — and reflects on the teamwork behind ATEEZ's return to offline concerts.
 
-Asked about a moment that made him feel the group's teamwork strongly during their return to offline touring, he described a segment in an intense performance where the members sing without heavy instrumentation, and said watching everyone match each other's energy to fill the stage made him think their teamwork was what made it possible. Ahead of ATEEZ's first solo concert in Japan that July, he said there's an energy only felt live, especially after a long time apart from fans, and told ATINY to come ready to enjoy themselves. Asked about the group's future goals, he said he wants to meet and communicate with more ATINY, in Japan and elsewhere. He closed with a message thanking Japanese ATINY for their long wait and promising a cooler, more grown version of ATEEZ.
+Looking ahead to ATEEZ's first solo concert in Japan that July, he promises a show only ATEEZ can deliver and asks fans to simply come ready to enjoy themselves. He closes by thanking Japanese ATINY for their patience and promising an even more grown, polished ATEEZ.

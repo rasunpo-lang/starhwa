@@ -14,4 +14,8 @@ related:
   - seonghwa-frommstudio-ashu-helium-2022
 ---
 
+Seonghwa's "Seonghwa's Choice" segment, "ATEEZ Bellruns" (fromm studio).
+
+<!-- full-text -->
+
 A solo Seonghwa short from fromm studio's "성화의 선택" (Seonghwa's Choice) series, a would-you-rather-style segment framed around pirate-voyage scenarios, posted directly on fromm studio's official YouTube channel May 20, 2022.

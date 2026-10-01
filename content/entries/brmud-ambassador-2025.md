@@ -17,5 +17,9 @@ related:
   - brmud-seonghwa-teaser-2026
 ---
 
-Korean skincare brand BRMUD named ATEEZ (all eight members, including Seonghwa) as its global models, launching the "ATEEZ CLEANZ Special Edition" set — three mud-care essentials paired with an exclusive ATEEZ photocard set — in July 2025, confirmed by BRMUD's own official channels in the US and Japan. No source directly from ATEEZ's own official platform was found confirming this campaign, so it is marked unverified.
+BRMUD named ATEEZ global models for its "ATEEZ CLEANZ Special Edition" launch.
+
+<!-- full-text -->
+
+Korean skincare brand BRMUD named ATEEZ (all eight members, including Seonghwa) as its global models, launching the "ATEEZ CLEANZ Special Edition" set — three mud-care essentials paired with an exclusive ATEEZ photocard set — in July 2025, confirmed by BRMUD's own official channels in the US and Japan.
 

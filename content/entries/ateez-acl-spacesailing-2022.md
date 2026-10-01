@@ -15,4 +15,8 @@ related:
   - seonghwa-frommstudio-bellruns-2022
 ---
 
+EP.1 of fromm studio's "The Beginning of Space Sailing" interview series for the ATEEZ X ACL collaboration (Seonghwa, Yunho, Yeosang, San).
+
+<!-- full-text -->
+
 The first episode of "The Beginning of Space Sailing," an interview-format content series produced by fromm studio for the "ATEEZ X ACL" collaboration, featuring Seonghwa, Yunho, Yeosang, and San, posted directly on fromm studio's official YouTube channel May 26, 2022. A companion EP.1-2, covering the remaining four members, was posted the same week.

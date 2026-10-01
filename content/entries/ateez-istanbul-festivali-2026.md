@@ -26,4 +26,8 @@ sources:
 related:
 ---
 
-ATEEZ's participation in "Istanbul Festivali", per the official ATEEZ platform's schedule.
+Dispatch photo coverage of ATEEZ's Istanbul Festivali set singled out Seonghwa's stage expressions toward the crowd.
+
+<!-- full-text -->
+
+ATEEZ's participation in "Istanbul Festivali". Dispatch's on-site photo coverage of the show ran under a headline calling out Seonghwa specifically for his crowd-directed stage expressions during the set.

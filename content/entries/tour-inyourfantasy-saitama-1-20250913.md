@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official Japan X — [📷] ATEEZ 2025 WORLD TOUR [IN YOUR FANTASY] IN JAPAN SAITAMA DAY 1"
     url: "https://x.com/ATEEZofficialjp/status/1966864444849262886"
+    qualifiesForTourSource: true
   - label: "Dispatch — \"[현장포토] '안경으로 완성'...성화, 지적한 매력\" (\"Completed by Glasses\"...Seonghwa, Intellectual Charm, departing for the Saitama tour dates)"
     url: "https://www.dispatch.co.kr/2331424"
 related:

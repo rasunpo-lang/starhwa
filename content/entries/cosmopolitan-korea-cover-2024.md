@@ -15,4 +15,8 @@ related:
   - cosmopolitan-korea-cover-2023
 ---
 
-A second individual Seonghwa cover variant (Cover J) of Cosmopolitan Korea, this time for the July 2024 issue, part of a photo spread featuring individual covers for all ATEEZ members. The issue date is consistently corroborated across multiple retail and press sources, but no directly fetchable primary confirmation from Cosmopolitan Korea's own channels was found, so this entry is marked unverified.
+Seonghwa's second individual Cosmopolitan Korea cover (Cover J, July 2024 issue).
+
+<!-- full-text -->
+
+A second individual Seonghwa cover variant (Cover J) of Cosmopolitan Korea, this time for the July 2024 issue, part of a photo spread featuring individual covers for all ATEEZ members.

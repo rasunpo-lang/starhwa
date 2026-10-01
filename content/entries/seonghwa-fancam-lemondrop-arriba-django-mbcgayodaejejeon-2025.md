@@ -13,7 +13,6 @@ sources:
 related:
   - seonghwa-fancam-lemondrop-musicbank-2025-0613
   - seonghwa-fancam-lemondrop-musicbank-2025-0620
-  - ateez-mbc-gayodaejejeon-2025
 ---
 
 An official individual fancam of Seonghwa performing a "Lemon Drop + ARRIBA + DJANGO" medley at MBC's year-end Gayo Daejejeon music festival, self-dated MBC251231, posted to MBCkpop's official YouTube channel.

@@ -13,4 +13,8 @@ related:
   - inception-mv-2020
 ---
 
+Seonghwa's X post after a special "INCEPTION" stage.
+
+<!-- full-text -->
+
 A message from Seonghwa posted via ATEEZ's official X account after performing "INCEPTION" again on a special stage months after its original promotion, captioned "You worked hard, Seonghwa — felt good performing on stage again."

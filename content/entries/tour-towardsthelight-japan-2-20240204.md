@@ -8,9 +8,10 @@ tags:
   - "concert"
   - "the world era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: ATEEZ WORLD TOUR [TOWARDS THE LIGHT : WILL TO POWER] IN JAPAN"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "ATEEZ Official Japan X — [📷] ATEEZ 2024 WORLD TOUR [TOWARDS THE LIGHT : WILL TO POWER] IN JAPAN DAY2"
+    url: "https://x.com/ATEEZofficialjp/status/1754097466843308150"
+    qualifiesForTourSource: true
 related:
 ---
 
-ATEEZ performed in Japan as part of the "TOWARDS THE LIGHT: WILL TO POWER" world tour, per the official ATEEZ platform's schedule.
+ATEEZ performed in Japan as part of the "TOWARDS THE LIGHT: WILL TO POWER" world tour.

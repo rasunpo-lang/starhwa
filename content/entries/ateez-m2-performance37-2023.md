@@ -7,9 +7,9 @@ tags:
   - "group content"
   - "the world era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: M2 'Performance37'"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "M2 Official YouTube — '[Performance37] ATEEZ(에이티즈) 'BOUNCY (K-HOT CHILLI PEPPERS)' (4K)'"
+    url: "https://www.youtube.com/watch?v=FKJk2Lr7Sck"
 related:
 ---
 
-ATEEZ's appearance on "M2 'Performance37'," per the official ATEEZ platform's schedule.
+ATEEZ's appearance on "M2 'Performance37'."

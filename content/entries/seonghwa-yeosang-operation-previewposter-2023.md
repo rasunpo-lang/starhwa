@@ -15,4 +15,8 @@ related:
   - seonghwa-conceptphoto-outlaw-1-2023
 ---
 
+Seonghwa and Yeosang's "Choose Your Outlaw Partner" preview poster.
+
+<!-- full-text -->
+
 A "Choose Your Outlaw Partner" preview poster pairing Seonghwa and Yeosang as part of the "OPERATION: This World" promotional rollout for "THE WORLD EP.2: OUTLAW," posted on ATEEZ's official KQ platform ahead of the album's June 16, 2023 release.

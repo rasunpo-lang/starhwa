@@ -18,4 +18,8 @@ related:
   - mars-asmr-3-2020
 ---
 
-An episode of ATEEZ's official "MARS ASMR" series, built entirely around Seonghwa (named for his nickname "Mars"), themed "Tea Time with Prince Seonghwa." Title confirmed by direct fetch; the June 19, 2020 release date is corroborated by ATEEZ's own official X account promoting the episode that same day.
+"MARS ASMR" #2: "Tea Time with Prince Seonghwa."
+
+<!-- full-text -->
+
+An episode of ATEEZ's official "MARS ASMR" series, built entirely around Seonghwa (named for his nickname "Mars"), themed "Tea Time with Prince Seonghwa."

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-Seonghwa's appearance on "'Shooming's Ramen Shop'," per the official ATEEZ platform's schedule.
+Seonghwa's appearance on "'Shooming's Ramen Shop'."

@@ -9,7 +9,13 @@ tags:
 sources:
   - label: "DNE (동해물과 백두은혁) Official YouTube — '[EN/JP/CN] 오늘부터 에이티즈 내동생들 | EP.10 에이티즈 홍중&성화 | 이쪽으로올래'"
     url: "https://www.youtube.com/watch?v=2A4a3ni5TWk"
+  - label: "ATEEZ Official Instagram — [📷] 동해물과 백두은혁 '이쪽으로 올래' Behind Photo"
+    url: "https://www.instagram.com/ateez_official_/p/C73_lChynI0/"
 related:
 ---
+
+Hongjoong and Seonghwa guest on Donghae & Eunhyuk's "이쪽으로올래" (EP.10).
+
+<!-- full-text -->
 
 Hongjoong and Seonghwa guest on episode 10 of "이쪽으로올래" ("Wanna Come Here?"), Super Junior's Donghae and Eunhyuk's guest-variety series — whose fan nickname, "동해물과 백두은혁," is a pun on the opening line of the Korean national anthem combining the hosts' names. Posted to the show's official YouTube channel June 6, 2024.

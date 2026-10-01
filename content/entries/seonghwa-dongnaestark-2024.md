@@ -7,9 +7,9 @@ tags:
   - "individual content"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: 동네스타K"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "ATEEZ Official Instagram — [📷] '동네스타K4' Behind Photo"
+    url: "https://www.instagram.com/ateez_official_/p/C71Sng_yUrw/"
 related:
 ---
 
-Seonghwa's appearance on "'Dongnaesta K'," per the official ATEEZ platform's schedule.
+Seonghwa's appearance on "'Dongnaesta K'."

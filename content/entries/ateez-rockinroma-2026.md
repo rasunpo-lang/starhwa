@@ -7,13 +7,15 @@ tags:
   - "festival"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official X — [📷] TODAY ATEEZ, Rock In Roma"
-    url: "https://x.com/ATEEZofficial/status/2075023422309253168"
-  - label: "Rock in Roma Official Instagram — 'Now close your eyes e rivivi la magia di quella notte. Grazie @ateez_official_'"
-    url: "https://www.instagram.com/rockinroma/reel/DbI1PYNNrof/"
-  - label: "Rock in Roma Official Instagram — 'Pumpin' adrenaline: con gli @ateez_official_ era inevitabile'"
-    url: "https://www.instagram.com/rockinroma/p/DbIZukTDY-k/"
+  - label: "Rock in Roma Official X (@Rock_in_Roma) — 'Gli @ATEEZofficial sbarcano per la prima volta al Rock in Roma!'"
+    url: "https://x.com/Rock_in_Roma/status/2049099141351960669"
+  - label: "ATEEZ Official X — News share: \"에이티즈, 이탈리아 로마 페스티벌 완벽 접수…폭발적 함성\" (ATEEZ completely conquers Italy's Rome festival... explosive cheers)"
+    url: "https://x.com/ATEEZofficial/status/2075186189116780836"
 related:
 ---
 
-ATEEZ's participation in "Rock in Roma 2026", per the official ATEEZ platform's schedule.
+ATEEZ's first appearance at Rock in Roma, headlining the festival at Ippodromo delle Capannelle in Rome.
+
+<!-- full-text -->
+
+ATEEZ's participation in "Rock in Roma 2026" — the group's first appearance at the long-running Italian festival, held July 8, 2026 at Ippodromo delle Capannelle.

@@ -15,5 +15,9 @@ related:
   - silladutyfree-seonghwa-luggage-2026
 ---
 
+Seonghwa's "떵냥이" solo short for The Shilla Duty Free.
+
+<!-- full-text -->
+
 Part of The Shilla Duty Free's "에이티즈 모음zip" short-video series, giving each ATEEZ member a solo clip built around their own nickname — Seonghwa's entry uses his "떵냥이" (Ddeongnyangi) nickname, captioned "시선마저 황홀함" ("even his gaze is mesmerizing"). Posted directly on The Shilla Duty Free's own official YouTube channel on July 8, 2026, tagging @ateez_official_.
 

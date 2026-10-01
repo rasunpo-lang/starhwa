@@ -14,4 +14,4 @@ related:
   - mars-asmr-1-2020
 ---
 
-Seonghwa's episode of ATEEZ's "AchallenZ" official content series, an ASMR challenge distinct from the later "MARS ASMR" series. Title confirmed by direct fetch; the January 31, 2020 date is drawn from secondary reporting, so this entry is marked unverified.
+Seonghwa's episode of ATEEZ's "AchallenZ" official content series, an ASMR challenge distinct from the later "MARS ASMR" series. It aired January 31, 2020.

@@ -12,4 +12,8 @@ sources:
 related:
 ---
 
+ATEEZ on Studio Owha's "큐레이터" (Curator), examining their "Crazy Form" reputation and "MATZ."
+
+<!-- full-text -->
+
 ATEEZ (full group) is featured on episode 10 of Studio Owha's "큐레이터" (Curator) series, examining the group's "Crazy Form" (미친 폼) reputation and the unit track "MATZ," posted to Studio Owha's official YouTube channel December 6, 2023.

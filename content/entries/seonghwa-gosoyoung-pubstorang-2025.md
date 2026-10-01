@@ -12,4 +12,8 @@ sources:
 related:
 ---
 
+ATEEZ on KBS's "고소영의 펍스토랑," celebrating their 7th anniversary.
+
+<!-- full-text -->
+
 ATEEZ (full group) appears on episode 4 of KBS's "고소영의 펍스토랑" (Go So-young's Pub-storang), with self-professed superfan Go So-young celebrating the group's 7th anniversary, posted to KBS Entertain's official YouTube channel September 29, 2025.

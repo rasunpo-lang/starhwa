@@ -15,4 +15,8 @@ related:
   - seonghwa-draw-my-life-2022
 ---
 
-A birthday "Voice Rolling Paper" video for Seonghwa, part of ATEEZ's recurring per-member birthday format (also produced for other members, e.g. Hongjoong, Wooyoung, San). Released April 2, 2021, the eve of his April 3 birthday. Title confirmed by direct fetch; the date is drawn from secondary reporting, so this entry is marked unverified.
+Seonghwa's birthday "Voice Rolling Paper" video.
+
+<!-- full-text -->
+
+A birthday "Voice Rolling Paper" video for Seonghwa, part of ATEEZ's recurring per-member birthday format (also produced for other members, e.g. Hongjoong, Wooyoung, San). Released April 2, 2021, the eve of his April 3 birthday.

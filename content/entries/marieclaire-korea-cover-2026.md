@@ -30,6 +30,10 @@ related:
   - seonghwa-solo-skin-2025
 ---
 
+Seonghwa's April 2026 solo cover story for Marie Claire Korea's "STARRY" series.
+
+<!-- full-text -->
+
 Seonghwa's April 2026 solo cover story and pictorial for Marie Claire Korea's "STARRY" series (editor Kim Sun-hee), a substantial written Q&A published April 10, 2026, with the digital cover and pictorial teasers rolled out on the magazine's official Instagram from March 22 through a birthday-themed reel on April 3 (Seonghwa's birthday). In the interview he reflects on the closing "IN YOUR FANTASY" world tour, describing the bittersweetness of each show's finale and the members shouting "let's die out here" backstage before going on; on the just-wrapped "GOLDEN HOUR: Part.4" promotions as their first comeback since the group's seven-year contract renewal; on his personal standard for "최선" (doing one's best) as leaving no regrets, guided by the phrase "진인사대천명" (do everything within your power, then await heaven's will); on drawing stage-performance inspiration from specific film/drama/game references (a sword prop on "WONDERLAND" inspired by Alchemy of Souls, a cape and light-control motif on "New World" inspired by Star Wars, and DPR IAN's conceptual artistry inspiring his solo "Skin"); on his poetry-writing habit, including the poem "다정" (Affection), written after reading a fan description of his personality; and on the meaning of his name, "성화" (星化, "become a star"): "팬들의 마음 깊은 곳에서 반짝이는 별이 된 것 같아요... 이제부터는 제가, 우리 팀이 우주였으면 좋겠어요. 까만 우주가 되어서 우리를 사랑해주는 사람들이 스스로 빛나는 별이라는 걸 알려주고 싶어요" ("I think I've become a star that shines deep in fans' hearts... From now on, I want myself, and our team, to be the universe — a black universe that shows the people who love us that they themselves are shining stars"). Directly confirmed by Marie Claire Korea's own published interview text.
 
 Seonghwa's Words — English Translation
@@ -102,5 +106,3 @@ A: "I like spring. Lush and green, fresh and green. I feel like spring is not a 
 
 Q: I heard your name "Seonghwa" means "become a star" (星化). Has today's Seonghwa become a star?
 A: "Yes. I think I've become a star that shines deep in fans' hearts. I can only be grateful. That's how proud I am... of my own name. From now on, I want myself, and our team, to be the universe. I want to become a black universe, and show the people who love us that they themselves are shining stars. Even if that light is very faint, because we're the blackest, we can shine together with them. That's the kind of ATEEZ, the kind of Seonghwa, I want to become."
-
-This is a solo interview, so every answer above is Seonghwa's own; none belongs to another member. Translated directly from the original Korean Q&A text of the Marie Claire Korea article linked below.

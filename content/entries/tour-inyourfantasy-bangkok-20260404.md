@@ -15,4 +15,4 @@ sources:
 related:
 ---
 
-ATEEZ performed in Bangkok as part of the "IN YOUR FANTASY" world tour, per an official ATEEZ platform notice.
+ATEEZ performed in Bangkok as part of the "IN YOUR FANTASY" world tour.

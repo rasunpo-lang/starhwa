@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-ATEEZ's appearance on "2025 FNS Kayosai," per the official ATEEZ platform's schedule.
+ATEEZ's appearance on "2025 FNS Kayosai."

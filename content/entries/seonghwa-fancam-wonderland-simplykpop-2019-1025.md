@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-wonderland-simplykpop-2019-1018
 ---
 
-An official individual fancam of Seonghwa performing "Wonderland" on Arirang's Simply K-Pop, Ep.385, aired October 25, 2019 — a second, separate broadcast one week after Ep.384. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing "Wonderland" on Arirang's Simply K-Pop, Ep.385, aired October 25, 2019 — a second, separate broadcast one week after Ep.384.

@@ -16,4 +16,4 @@ related:
   - seonghwa-fancam-thanxx-musicbank-2020-09-04
 ---
 
-An official individual fancam of Seonghwa performing a "춤을 춰 + THANXX" medley at the 2020 SBS Gayo Daejeon year-end awards show. The video's title identifies the event as "2020 가요대전" but does not include a specific broadcast day, so the date reflects SBS Gayo Daejeon's known 2020 broadcast date and this entry is marked unverified.
+An official individual fancam of Seonghwa performing a "춤을 춰 + THANXX" medley at the 2020 SBS Gayo Daejeon year-end awards show.

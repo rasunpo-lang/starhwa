@@ -13,4 +13,8 @@ sources:
 related:
 ---
 
+Seonghwa's X post practicing for the "PORT OF CALL" concert.
+
+<!-- full-text -->
+
 A message from Seonghwa posted via ATEEZ's official X account while practicing for the "PORT OF CALL" concert, tagged for the group's second anniversary: "ATINY! This is Seonghwa, practicing for the concert~ Are any of you also preparing for the concert?"

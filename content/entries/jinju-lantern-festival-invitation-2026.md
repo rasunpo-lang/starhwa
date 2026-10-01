@@ -16,6 +16,8 @@ sources:
     url: "https://www.instagram.com/jinjugogo/reel/Ddx6q5aPPSY/"
   - label: "Jinju Tourism Instagram (@jinjugogo) — '성화 LIVE : 지금 진주는요?' lantern festival live broadcast reel"
     url: "https://www.instagram.com/jinjugogo/reel/Ddz9IbEvEFI/"
+  - label: "Jinju Tourism Instagram (@jinjugogo) — 'PLAY [성화와 함께 미리 만나보는 2026 진주남강유등축제]' lantern festival preview reel"
+    url: "https://www.instagram.com/jinjugogo/reel/Dd5o_iUPucK/"
 related:
   - jinju-ambassador-2025
   - crea-seonghwa-jinju-hometown-2025

@@ -13,4 +13,8 @@ sources:
 related:
 ---
 
+Seonghwa's X video marking 600 days since ATEEZ's debut.
+
+<!-- full-text -->
+
 A video message from Seonghwa posted via ATEEZ's official X account marking 600 days since debut, reflecting on greeting ATINY each Sunday with shared song lyrics: "I'll become someone who can repay the love received over these 600 days, and all the time to come."

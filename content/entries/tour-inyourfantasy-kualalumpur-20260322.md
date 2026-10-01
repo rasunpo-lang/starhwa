@@ -8,9 +8,9 @@ tags:
   - "concert"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — ATEEZ 2026 WORLD TOUR [IN YOUR FANTASY] IN ASIA & AUSTRALIA 개최 안내"
-    url: "https://ateez.kqent.com/contents/68be6fc208a5cf2c3fb3e1be"
+  - label: "ATEEZ Official X — [📷] TODAY ATEEZ ATEEZ 2026 WORLD TOUR [IN YOUR FANTASY] IN KUALA LUMPUR❤️ #TODAY_ATEEZ #ATEEZ #에이티즈 #In_Your_Fantasy"
+    url: "https://x.com/ATEEZofficial/status/2035736477666255241"
 related:
 ---
 
-ATEEZ performed in Kuala Lumpur as part of the "IN YOUR FANTASY" world tour, per an official ATEEZ platform notice.
+ATEEZ performed in Kuala Lumpur as part of the "IN YOUR FANTASY" world tour.

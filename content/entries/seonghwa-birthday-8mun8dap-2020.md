@@ -15,4 +15,8 @@ related:
   - seonghwa-draw-my-life-2022
 ---
 
-A birthday "8 Questions 8 Answers" interview with Seonghwa, part of ATEEZ's recurring per-member birthday interview format (also produced for other members, e.g. Hongjoong, San, Jongho, Yeosang, Wooyoung). Released April 3, 2020, his 22nd birthday. Title confirmed by direct fetch; the date is drawn from secondary reporting, so this entry is marked unverified.
+Seonghwa's birthday "8 Questions 8 Answers" interview (his 22nd birthday).
+
+<!-- full-text -->
+
+A birthday "8 Questions 8 Answers" interview with Seonghwa, part of ATEEZ's recurring per-member birthday interview format (also produced for other members, e.g. Hongjoong, San, Jongho, Yeosang, Wooyoung). Released April 3, 2020, his 22nd birthday.

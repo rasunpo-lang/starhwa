@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-inception-mcountdown-2020
 ---
 
-An official individual fancam of Seonghwa performing "INCEPTION" on Show Champion, EP.366, aired July 29, 2020. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing "INCEPTION" on Show Champion, EP.366, aired July 29, 2020.

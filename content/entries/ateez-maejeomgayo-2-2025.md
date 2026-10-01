@@ -7,9 +7,9 @@ tags:
   - "group content"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: '매점가요'"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "SBSKPOP X INKIGAYO Official YouTube — '풍선 팡팡 ... #인기가요끝나면매점가요 EP.10-2'"
+    url: "https://www.youtube.com/watch?v=mA1FG65pQ_o"
 related:
 ---
 
-ATEEZ's appearance on "'Maejeom Gayo' — Episode 2," per the official ATEEZ platform's schedule.
+ATEEZ's appearance on "'Maejeom Gayo' — Episode 2."

@@ -15,4 +15,8 @@ related:
   - ateez-aniteez-familiar-transition-dejavu-2026
 ---
 
+Seonghwa's DDEONGbyeoli concept image for "ANITEEZ IN Deja Vu."
+
+<!-- full-text -->
+
 Seonghwa's individual concept image as DDEONGbyeoli (떵별이), his ANITEEZ mascot, posted on the ANITEEZ Official Instagram account ahead of the "ANITEEZ IN Deja Vu" pop-up store, held August 21 – September 2, 2026 at The Hyundai Seoul.

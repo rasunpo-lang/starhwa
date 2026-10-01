@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-work-inkigayo-2024
 ---
 
-An official individual fancam of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on SBS's Inkigayo, self-dated 240609 — the companion fancam to the same day's "WORK" performance.
+An official individual fancam of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on SBS's Inkigayo, self-dated 240609 — filmed the same day as his "WORK" performance.

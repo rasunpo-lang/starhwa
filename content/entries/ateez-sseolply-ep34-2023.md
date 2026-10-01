@@ -12,4 +12,8 @@ sources:
 related:
 ---
 
+ATEEZ joins singer Lee Seok-hoon on Studio Sseol's "썰플리" (EP.34).
+
+<!-- full-text -->
+
 ATEEZ (full group) appears alongside singer Lee Seok-hoon on episode 34 of Studio Sseol's "썰플리" series, in a "꼰대 썰" (out-of-touch senior stories) segment, posted to Studio Sseol's official YouTube channel January 12, 2023.

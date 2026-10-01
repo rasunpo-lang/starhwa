@@ -9,7 +9,7 @@ tags:
   - "the world era"
 sources:
   - label: "MBC 예능연구소 Official — Seonghwa 'Crazy Form' FanCam @Show!MusicCore, MBC231216"
-    url: "https://www.youtube.com/watch?v=ngjJD5OKlIg"
+    url: "https://www.youtube.com/watch?v=zNB4s3IwjKs"
 related:
   - seonghwa-fancam-crazyform-musiccore-2023-1202
 ---

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-ATEEZ's official fanmeeting event, "2024 Fanmeeting <ATINY's Voyage: From A to Z> — Tokyo," per the official ATEEZ platform's schedule.
+ATEEZ's official fanmeeting event, "2024 Fanmeeting <ATINY's Voyage: From A to Z> — Tokyo."

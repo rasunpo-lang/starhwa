@@ -17,4 +17,8 @@ sources:
 related:
 ---
 
+Hongjoong, Seonghwa, Yunho, and Mingi guest on "Idol Radio" Season 3.
+
+<!-- full-text -->
+
 Hongjoong, Seonghwa, Yunho, and Mingi's guest appearance on "Idol Radio" Season 3, EP#56 ("Old Friends"), broadcast directly on MBC Radio's official YouTube channel March 22, 2023, including a segment named for Seonghwa's own nickname ("떵화의 숲").

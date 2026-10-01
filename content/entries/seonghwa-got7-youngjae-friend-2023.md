@@ -13,4 +13,8 @@ sources:
 related:
 ---
 
+Seonghwa, San, Wooyoung, and Jongho guest on "GOT7 Youngjae's Close Friend" (MBC Radio).
+
+<!-- full-text -->
+
 Seonghwa, San, Wooyoung, and Jongho's guest appearance on "GOT7 Youngjae's Close Friend," broadcast directly on MBC Radio's official YouTube channel June 29, 2023, during BOUNCY promotion. The lineup is corrected here from an earlier listing naming a member ("Jungwoo") who does not exist in ATEEZ — the official video's own hashtags confirm Seonghwa, San, Wooyoung, and Jongho.

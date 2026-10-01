@@ -15,4 +15,4 @@ sources:
 related:
 ---
 
-ATEEZ's European leg of the "TOWARDS THE LIGHT: WILL TO POWER" world tour, running January 18 – February 25, 2025 per official dates on the ATEEZ platform's schedule. The platform's own calendar entries for this leg are titled simply "IN EUROPE" for each date (Jan 18, 20, 23, 27, 30; Feb 3, 7, 11, 14, 18, 22, 25) without naming individual cities, so this entry covers the leg as a whole rather than inventing per-date locations.
+ATEEZ's European leg of the "TOWARDS THE LIGHT: WILL TO POWER" world tour, running January 18 – February 25, 2025.

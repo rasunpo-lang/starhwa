@@ -15,4 +15,4 @@ related:
   - tour-fellowship-beginningoftheend-europe-2022
 ---
 
-The Seoul leg of ATEEZ's 2022 world tour "THE FELLOWSHIP: BEGINNING OF THE END," running January 7–9, 2022 per the official tour poster posted via ATEEZ's X account. The poster does not name a specific venue or break out individual show dates within the leg.
+The Seoul leg of ATEEZ's 2022 world tour "THE FELLOWSHIP: BEGINNING OF THE END," running January 7–9, 2022.

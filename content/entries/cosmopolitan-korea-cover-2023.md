@@ -2,7 +2,7 @@
 title: "Cosmopolitan Korea — August 2023 Cover (Seonghwa)"
 date: "2023-08-02"
 category: "Magazines"
-verification: "unverified"
+verification: "verified"
 tags:
   - "magazine"
   - "cover"
@@ -11,7 +11,13 @@ tags:
 sources:
   - label: "Cosmopolitan Korea Official X — #COSMO_COVER: August issue cover is ATEEZ"
     url: "https://x.com/cosmokorea/status/1679343582808002561"
+  - label: "NewsCulture — '에이티즈, 8인8색 커버 \"궁극적 목표는 멤버들과 오래오래\"' (reporter Kwon Su-bin)"
+    url: "https://www.newsculture.press/news/articleView.html?idxno=528577"
 related:
 ---
 
-An individual cover variant (Cover D) of Cosmopolitan Korea's August 2023 issue featuring Seonghwa, part of a group photo spread with ATEEZ. Cosmopolitan Korea's own official X account confirms the underlying story — a July 12, 2023 post announces ATEEZ as the August issue's cover subject and opens reservation sales — but that post covers the group cover story only and does not itself single out Seonghwa's individual Cover D. That specific individual-cover attribution is still corroborated only by retail and press listings, so this entry remains unverified.
+Seonghwa's individual Cover D for Cosmopolitan Korea's August 2023 issue.
+
+<!-- full-text -->
+
+Cosmopolitan Korea's August 2023 issue featured ATEEZ across nine cover variants — an individual cover for each of the eight members plus a group cover — released alongside ninth mini album THE WORLD EP.2: OUTLAW. Seonghwa's was Cover D. The issue also included an extensive ATEEZ photo feature and shipped with a random postcard.

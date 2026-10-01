@@ -13,6 +13,7 @@ sources:
 related:
   - nacific-ambassador-2024
   - nacific-seonghwa-summervibe-2024
+  - nacific-seonghwa-dewglaze-clearcherry-2024
 ---
 
 Seonghwa and Yeosang paired up for a promotional clip for NACIFIC's Dew Glaze Tint, posted directly on NACIFIC's own official YouTube channel November 13, 2024.

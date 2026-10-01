@@ -7,9 +7,9 @@ tags:
   - "group content"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: '매점가요'"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "SBSKPOP X INKIGAYO Official YouTube — '이런 생일 파티는 처음이야 ... #인기가요끝나면매점가요 EP.10-1'"
+    url: "https://www.youtube.com/watch?v=CoaCAf8asyA"
 related:
 ---
 
-ATEEZ's appearance on "'Maejeom Gayo' — Episode 1," per the official ATEEZ platform's schedule.
+ATEEZ's appearance on "'Maejeom Gayo' — Episode 1."

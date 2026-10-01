@@ -15,4 +15,4 @@ related:
   - seonghwa-immortalsongs2-thereal-2023
 ---
 
-An official individual fancam of Seonghwa performing "The Real" (Heung Ver.) on Show Champion, EP.420, aired December 15, 2021 — the same episode as the group's "Turbulence" comeback stage. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+Seonghwa performs "The Real (Heung Ver.)" in an individual fancam from Show Champion, alongside ATEEZ's "Turbulence" comeback stage.

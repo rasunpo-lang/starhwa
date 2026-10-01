@@ -14,4 +14,4 @@ related:
   - seonghwa-voicecam-dreamyday-2023-a
 ---
 
-A second, separate voice-focused fancam of Seonghwa performing "Dreamy Day (꿈날)," distinct from the other VoiceCam360 upload of the same track. The video's own upload date could not be independently confirmed, so this entry uses the track's December 1, 2023 release date and is marked unverified.
+A second, separate voice-focused fancam of Seonghwa performing "Dreamy Day (꿈날)," distinct from the other VoiceCam360 upload of the same track.

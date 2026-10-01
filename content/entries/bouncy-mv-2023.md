@@ -11,7 +11,6 @@ sources:
   - label: "ATEEZ Official YouTube — 'BOUNCY (K-HOT CHILLI PEPPERS)' Official MV"
     url: "https://www.youtube.com/watch?v=U0G5OA6ZH5w"
 related:
-  - ateez-outlaw-showcase-2023
   - seonghwa-conceptphoto-outlaw-1-2023
 ---
 

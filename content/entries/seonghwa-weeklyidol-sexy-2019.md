@@ -14,4 +14,4 @@ related:
   - seonghwa-weeklyidol-cleaning-2019
 ---
 
-A second individual Weekly Idol segment featuring Seonghwa from the same EP.429 broadcast (October 16, 2019) as the "Cleaning King" segment. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+A second individual Weekly Idol segment featuring Seonghwa from the same EP.429 broadcast (October 16, 2019) as the "Cleaning King" segment.

@@ -13,4 +13,8 @@ sources:
 related:
 ---
 
-A Jeju Island travel vlog featuring Seonghwa, part of ATEEZ's official "Guerrilla Log" informal vlog series. The video's title and #성화 tag were confirmed by direct fetch, but the May 27, 2026 upload date is drawn from secondary reporting, so this entry is marked unverified.
+Seonghwa's Jeju Island travel vlog on ATEEZ's "Guerrilla Log" series.
+
+<!-- full-text -->
+
+A Jeju Island travel vlog featuring Seonghwa, part of ATEEZ's official "Guerrilla Log" informal vlog series.

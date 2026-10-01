@@ -22,4 +22,8 @@ sources:
 related:
 ---
 
+Dispatch's hanji (Korean paper) pictorial with Hongjoong, Seonghwa, Yunho, and San at Bukchon.
+
+<!-- full-text -->
+
 A Dispatch photoshoot of Hongjoong, Seonghwa, Yunho, and San at Bukchon Hanok Village promoting hanji (traditional Korean paper) alongside the Korean Craft and Design Culture Promotion Agency, with additional individual portraits of Seonghwa from the same shoot, coinciding with ATEEZ's "ZERO: FEVER Epilogue" comeback activities.

@@ -16,4 +16,4 @@ related:
   - seonghwa-fancam-dejavu-musicbank-2021
 ---
 
-An official individual fancam of Seonghwa performing "Deja Vu" on Show Champion, EP.410, aired September 22, 2021. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing "Deja Vu" on Show Champion, EP.410, aired September 22, 2021.

@@ -17,4 +17,8 @@ related:
   - skin-mv-2026
 ---
 
+Seonghwa's solo track "Skin," from "GOLDEN HOUR: Part.3."
+
+<!-- full-text -->
+
 Seonghwa's individual solo track "Skin," released July 11, 2025 as part of ATEEZ's "GOLDEN HOUR: Part.3 'In Your Fantasy Edition,'" with songwriting credits including EDEN, Hongjoong, Maddox, Peperoni, and Oliv. Confirmed via Apple Music's own release listing.

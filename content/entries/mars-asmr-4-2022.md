@@ -18,4 +18,8 @@ related:
   - mars-asmr-3-2020
 ---
 
+"MARS ASMR" #4, themed as a school-club recruitment concept ("TEEZ High School").
+
+<!-- full-text -->
+
 An episode of ATEEZ's "MARS ASMR" series — named for Seonghwa's nickname "Mars" and built entirely around him — themed as a school-club recruitment concept ("TEEZ High School"). ATEEZ's own official X account directly confirms the episode as Seonghwa's ("성화가 담아온 4번째 소리," "the 4th sound Seonghwa brought"), posted June 1, 2022, matching the video's release.

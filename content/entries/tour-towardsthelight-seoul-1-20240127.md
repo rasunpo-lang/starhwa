@@ -8,9 +8,10 @@ tags:
   - "concert"
   - "the world era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — 2024 WORLD TOUR [TOWARDS THE LIGHT : WILL TO POWER] IN SEOUL Poster"
-    url: "https://ateez.kqent.com/contents/65829d197979cc304e3ebc4f"
+  - label: "ATEEZ Official (X) — Post: [📷] TODAY ATEEZ / ATEEZ 2024 WORLD TOUR [TOWARDS THE LIGHT : WILL TO POWER] IN SEOUL DAY 1 #TODAY_ATEEZ"
+    url: "https://x.com/ATEEZofficial/status/1751216141756932114"
+    qualifiesForTourSource: true
 related:
 ---
 
-ATEEZ performed in Seoul as part of the "TOWARDS THE LIGHT: WILL TO POWER" world tour, per the official ATEEZ platform's schedule.
+ATEEZ performed in Seoul as part of the "TOWARDS THE LIGHT: WILL TO POWER" world tour.

@@ -16,4 +16,8 @@ related:
   - seonghwa-fancam-bouncy-musiccore-2023-0624-closeup
 ---
 
-An official individual "Close-up Cam" of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on MBC's Show! Music Core, self-dated MBC230617 — a companion close-up format alongside the already-archived regular fancam from the same broadcast.
+Seonghwa's close-up cam for "BOUNCY" (Show! Music Core, Jun 17).
+
+<!-- full-text -->
+
+An official individual "Close-up Cam" of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on MBC's Show! Music Core, self-dated MBC230617 — a close-up format of the same performance as the regular fancam already in the archive.

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-ATEEZ's appearance on "'Sound BOMB 360˚'," per the official ATEEZ platform's schedule.
+ATEEZ's appearance on "'Sound BOMB 360˚'."

@@ -15,4 +15,8 @@ related:
   - tour-towardsthelight-seoul-2-20240128
 ---
 
+Seonghwa's individual promo photo for the Seoul leg of "TOWARDS THE LIGHT: WILL TO POWER."
+
+<!-- full-text -->
+
 An individual promotional photo of Seonghwa for the Seoul leg of the "TOWARDS THE LIGHT: WILL TO POWER" world tour, posted on ATEEZ's official KQ platform ahead of the January 27–28, 2024 concert dates at Jamsil Indoor Stadium.

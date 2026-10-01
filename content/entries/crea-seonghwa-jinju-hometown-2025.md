@@ -12,11 +12,23 @@ sources:
   - label: "CREA WEB (Bunshun) — Seonghwa on his hometown, the historic city of Jinju, and its lantern festival"
     url: "https://crea.bunshun.jp/articles/-/53216"
 related:
-  - jinju-ambassador-2025
+  - "jinju-ambassador-2025"
 ---
 
 For a CREA feature tracing each ATEEZ member's hometown roots, Seonghwa discussed growing up in Jinju, a centuries-old city in South Gyeongsang Province.
 
-Seonghwa on Jinju — Translation
+<!-- full-text -->
 
-He compared Jinju's Nam River to Seoul's Han River, and described the city's annual Namgang Lantern Festival, held every October, as a fantastical sight — colorful lanterns floating down the slow-moving river, especially striking after dark. Asked for a favorite recent Korean culture spot, Seonghwa — described in the piece as gentle-natured and known to fans as "ATEEZ's mom" — instead shared a piece of local trivia: Korean amusement parks offer school-uniform rentals for couples who want an amusement-park date with a nostalgic, back-to-school feel, though he noted he hadn't tried it himself.
+Seonghwa on Jinju — English Translation
+
+My hometown is the old city of Jinju. The lantern festival's night view is beautiful.
+
+Hearing that Seonghwa, whose elegant bearing leaves such an impression, comes from Jinju — a city in southern Korea that has stood since the Goryeo dynasty — you can't help but nod in understanding.
+
+"Just as Seoul has the Han River, my hometown of Jinju has a large river called the Nam River. Every October, a big festival called the Jinju Namgang Yudeung (Lantern) Festival is held, and the sight of colorful lanterns floating on the slow-moving river is really fantastical. The night view is even more beautiful."
+
+When asked about the latest Korean culture spots, true to Seonghwa — known for his gentle nature and called "ATEEZ's mom" — he thought carefully and shared an interesting story instead.
+
+"I've never used it myself, but Korean amusement parks have a service that rents out school uniforms. Apparently Korean couples wear rented uniforms on amusement-park dates to make memories that feel like their school days."
+
+Translated directly from the original Japanese text of the CREA WEB (Bunshun) article linked below.

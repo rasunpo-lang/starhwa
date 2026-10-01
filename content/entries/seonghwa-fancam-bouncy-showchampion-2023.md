@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-bouncy-musicbank-2023
 ---
 
-An official individual fancam of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on Show Champion, EP.480, aired June 21, 2023. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on Show Champion, EP.480, aired June 21, 2023.

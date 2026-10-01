@@ -15,4 +15,8 @@ related:
   - marieclaire-korea-cover-2026
 ---
 
+Seonghwa meets musician DPR IAN on ATEEZ's "Guerrilla Log" vlog series.
+
+<!-- full-text -->
+
 Seonghwa meets with musician DPR IAN for an episode of ATEEZ's official "Guerrilla Log" vlog series, posted to ATEEZ's official YouTube channel September 20, 2025. Seonghwa has separately cited DPR IAN's conceptual artistry as an inspiration for his solo song "Skin."

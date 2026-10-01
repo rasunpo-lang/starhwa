@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-guerrilla-musicbank-2022-0729
 ---
 
-An official individual fancam of Seonghwa performing "Guerrilla" on Weekly Idol, EP.573, aired August 3, 2022. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing "Guerrilla" on Weekly Idol, EP.573, aired August 3, 2022.

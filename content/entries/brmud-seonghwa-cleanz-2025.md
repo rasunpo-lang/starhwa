@@ -16,5 +16,9 @@ related:
   - brmud-ambassador-2025
 ---
 
+Seonghwa's individual clips for BRMUD's "CLEANZ Special Edition" rollout.
+
+<!-- full-text -->
+
 Two short individual clips captioned "클렌징을 기능적으로, BRMUD = ATEEZ With 성화" ("Functional Cleansing, BRMUD = ATEEZ With Seonghwa"), posted directly on BRMUD's own official YouTube channel on August 8, 2025, as part of the brand's "CLEANZ Special Edition" rollout naming Seonghwa individually.
 

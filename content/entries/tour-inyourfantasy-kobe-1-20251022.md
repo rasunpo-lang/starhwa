@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official Japan X — [📷] ATEEZ 2025 WORLD TOUR [IN YOUR FANTASY] IN JAPAN KOBE DAY1"
     url: "https://x.com/ATEEZofficialjp/status/1981006042541801896"
+    qualifiesForTourSource: true
 related:
 ---
 

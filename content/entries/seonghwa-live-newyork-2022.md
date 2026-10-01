@@ -13,4 +13,8 @@ sources:
 related:
 ---
 
-An individual Seonghwa YouTube Live broadcast, recorded during ATEEZ's time in New York and archived on the official channel under the title "Late at night in New York." Title confirmed by direct fetch; the January 25, 2022 date is drawn from secondary reporting (matching a widely-circulated fan-subbed reupload dated 220125), so this entry is marked unverified.
+Seonghwa's YouTube Live, "Late at Night in New York."
+
+<!-- full-text -->
+
+An individual Seonghwa YouTube Live broadcast, recorded during ATEEZ's time in New York and archived on the official channel under the title "Late at night in New York."

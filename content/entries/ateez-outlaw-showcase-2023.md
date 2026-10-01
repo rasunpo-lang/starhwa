@@ -15,4 +15,4 @@ related:
   - bouncy-mv-2023
 ---
 
-ATEEZ's official media showcase for "THE WORLD EP.2: OUTLAW," per the official ATEEZ platform's schedule.
+ATEEZ's official media showcase for "THE WORLD EP.2: OUTLAW."

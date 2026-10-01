@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-ottokesong-weeklyidol-2020
 ---
 
-An official individual fancam of Seonghwa performing "INCEPTION," released as unaired ("미방") footage from Weekly Idol EP.472, aired around August 12, 2020, the same episode as the "오또케송" bonus cut. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing "INCEPTION," released as unaired ("미방") footage from Weekly Idol EP.472, aired around August 12, 2020, the same episode as the "오또케송" bonus cut.

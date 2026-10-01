@@ -8,9 +8,9 @@ tags:
   - "concert"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — 2024 ATEEZ WORLD TOUR [TOWARDS THE LIGHT : WILL TO POWER] IN NORTH AMERICA IN 'NEW YORK' 공연 관련 안내"
-    url: "https://ateez.kqent.com/contents/66adc37de623b5242892fe36"
+  - label: "ATEEZ Official (X) — Post: [📷] TODAY ATEEZ / ATEEZ 2024 WORLD TOUR [TOWARDS THE LIGHT : WILL TO POWER] IN NEW YORK"
+    url: "https://x.com/ATEEZofficial/status/1819956096171417933"
 related:
 ---
 
-ATEEZ performed in New York as part of the "TOWARDS THE LIGHT: WILL TO POWER" world tour, per an official ATEEZ platform notice.
+ATEEZ performed in New York as part of the "TOWARDS THE LIGHT: WILL TO POWER" world tour.

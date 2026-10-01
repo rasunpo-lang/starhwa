@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-ATEEZ's official fanmeeting event, "2026 Fanmeeting <ATINY's Voyage: Tiny Mystery> — Japan," per the official ATEEZ platform's schedule.
+ATEEZ's official fanmeeting event, "2026 Fanmeeting <ATINY's Voyage: Tiny Mystery> — Japan."

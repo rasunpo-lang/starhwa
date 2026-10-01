@@ -26,4 +26,4 @@ related:
   - isabel-marant-ambassador-2025
 ---
 
-A 10-page solo feature and interview with Seonghwa in Esquire Korea's January 2025 issue, covering his artistic growth and reflections on the past year. Only the issue month is confirmed — the exact on-sale date is inconsistently reported across retailers, so the date above is an approximation and this entry is marked unverified.
+A 10-page solo feature and interview with Seonghwa in Esquire Korea's January 2025 issue, covering his artistic growth and reflections on the past year.

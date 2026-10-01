@@ -14,4 +14,8 @@ related:
   - thanxx-mv-2020
 ---
 
+Seonghwa's reaction post for "THANXX"'s release.
+
+<!-- full-text -->
+
 Seonghwa's reaction post marking the release of "THANXX," the second title track from ZERO: FEVER Part.1, captioned "Is this really the ATEEZ I know? THANXX is really the best," posted via ATEEZ's official X account on the single's release day.

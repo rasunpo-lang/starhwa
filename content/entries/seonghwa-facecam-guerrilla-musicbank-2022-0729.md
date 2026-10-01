@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-guerrilla-musicbank-2022-0729
 ---
 
-An official individual facecam of Seonghwa performing "Guerrilla" on KBS's Music Bank, self-dated 220729 — the companion facecam to the same day's fancam.
+An official individual facecam of Seonghwa performing "Guerrilla" on KBS's Music Bank, self-dated 220729 — the corresponding facecam from the same performance.

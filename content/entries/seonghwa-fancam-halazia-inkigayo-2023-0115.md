@@ -14,4 +14,8 @@ related:
   - seonghwa-fancam-halazia-inkigayo-2023-0108
 ---
 
+Seonghwa's fancam for "HALAZIA" (Inkigayo, Jan 15).
+
+<!-- full-text -->
+
 An official individual fancam of Seonghwa performing "HALAZIA" on SBS's Inkigayo, uploaded by SBS's own "안방1열 직캠4K" fancam series, self-dated 230115 — a second, separate Inkigayo broadcast one week after the January 8 fancam.

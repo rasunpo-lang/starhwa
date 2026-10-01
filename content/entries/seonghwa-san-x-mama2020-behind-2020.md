@@ -14,4 +14,8 @@ related:
   - seonghwa-x-san-sorry-2020
 ---
 
+San and Seonghwa's V LIVE behind photo from MAMA 2020.
+
+<!-- full-text -->
+
 A behind-the-scenes photo from a San and Seonghwa V LIVE broadcast, posted via ATEEZ's official X account. The caption describes the pair covering their 2020 MAMA awards-show behind-the-scenes and everyday chit-chat, closing with an early "Merry Christmas" message to ATINY.

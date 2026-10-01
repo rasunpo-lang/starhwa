@@ -13,4 +13,8 @@ sources:
 related:
 ---
 
+Seonghwa, Mingi, and Wooyoung guest on "Lee Eun-ji's Gayo Gwangjang" (KBS Cool FM).
+
+<!-- full-text -->
+
 Seonghwa, Mingi, and Wooyoung's guest appearance on "Lee Eun-ji's Gayo Gwangjang," broadcast live on KBS Cool FM's official YouTube channel June 27, 2023. The lineup is corrected here from an earlier listing naming a member ("Jungwoo") who does not exist in ATEEZ; corroborating press coverage of the same broadcast confirms Seonghwa, Mingi, and Wooyoung.

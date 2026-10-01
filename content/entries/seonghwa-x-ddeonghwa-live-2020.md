@@ -15,4 +15,8 @@ related:
   - seonghwa-birthday-8mun8dap-2020
 ---
 
+Seonghwa's X post announcing a birthday live broadcast.
+
+<!-- full-text -->
+
 A message from Seonghwa posted via ATEEZ's official X account on his birthday, announcing a live broadcast starting in five minutes: "I just saw you but already miss you, so I came running back — come meet Ddeonghwa in 5 minutes."

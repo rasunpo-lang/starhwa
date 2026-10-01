@@ -8,9 +8,9 @@ tags:
   - "concert"
   - "the world era"
 sources:
-  - label: "ATEEZ Official (X) — Post: WORLD TOUR [THE FELLOWSHIP : BREAK THE WALL] IN ASIA (Taipei 7.8, Hong Kong 7.15, Bangkok 8.5, Singapore 9.9, Manila 9.16)"
-    url: "https://x.com/ATEEZofficial/status/1652976249357352961"
+  - label: "ATEEZ Official (X) — Post: [📷] TODAY ATEEZ THE FELLOWSHIP : BREAK THE WALL IN BANGKOK #TODAY_ATEEZ"
+    url: "https://x.com/ATEEZofficial/status/1687836654336405504"
 related:
 ---
 
-ATEEZ performed in Bangkok as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour, per the official ATEEZ platform's schedule.
+ATEEZ performed in Bangkok as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour.

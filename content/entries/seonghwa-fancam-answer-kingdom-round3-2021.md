@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-rhythmta-kingdom-round2-2021
 ---
 
-An official individual fancam of Seonghwa performing ATEEZ's reimagined "Answer," combined with Beethoven's "Ode to Joy," in Round 3 (2R) of Mnet's Kingdom: Legendary War, aired May 27, 2021. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An official individual fancam of Seonghwa performing ATEEZ's reimagined "Answer," combined with Beethoven's "Ode to Joy," in Round 3 (2R) of Mnet's Kingdom: Legendary War, aired May 27, 2021.

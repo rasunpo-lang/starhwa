@@ -1,7 +1,7 @@
 ---
 title: "Tour Update — Madrid, 'The Fellowship'"
 date: "2022-04-16"
-category: "Tours"
+category: "Social Media"
 verification: "verified"
 tags:
   - "individual content"

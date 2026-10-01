@@ -7,9 +7,9 @@ tags:
   - "individual content"
   - "golden hour era"
 sources:
-  - label: "ATEEZ Official Platform (KQ) — Official Schedule: KBS 슈퍼맨이 돌아왔다 '춤친구'"
-    url: "https://ateez.kqent.com/schedule"
+  - label: "ATEEZ Official Instagram — [📷] KBS #슈퍼맨이_돌아왔다 '내 친구는 아이돌' Behind Photo"
+    url: "https://www.instagram.com/ateez_official_/p/C8MkpnoyU2Y/"
 related:
 ---
 
-Seonghwa's appearance on "'The Return of Superman' — 'Dance Friend' Segment," per the official ATEEZ platform's schedule.
+Seonghwa's appearance on "'The Return of Superman' — 'Dance Friend' Segment."

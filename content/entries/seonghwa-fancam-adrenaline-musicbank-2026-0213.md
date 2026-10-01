@@ -15,4 +15,8 @@ related:
   - seonghwa-fancam-adrenaline-inkigayo-2026
 ---
 
+Seonghwa's fancam for "Adrenaline" (Music Bank, Feb 13).
+
+<!-- full-text -->
+
 An official individual fancam of Seonghwa performing "Adrenaline" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series, self-dated 260213 — a second, separate Music Bank broadcast one week after the February 6 fancam.

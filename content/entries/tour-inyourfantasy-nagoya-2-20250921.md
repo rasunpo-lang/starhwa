@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official Japan X — [📷] ATEEZ 2025 WORLD TOUR [IN YOUR FANTASY] IN JAPAN NAGOYA DAY 2"
     url: "https://x.com/ATEEZofficialjp/status/1969719342079393894"
+    qualifiesForTourSource: true
 related:
 ---
 

@@ -8,9 +8,10 @@ tags:
   - "concert"
   - "the world era"
 sources:
-  - label: "ATEEZ Japan Official (X) — Post: WORLD TOUR [THE FELLOWSHIP : BREAK THE WALL] ANCHOR IN JAPAN (Tokyo 5/2-5/3, Kobe 5/6-5/7)"
-    url: "https://x.com/ATEEZofficialjp/status/1635128549911957506"
+  - label: "ATEEZ Official Japan X — [📸] ATEEZ WORLD TOUR [THE FELLOWSHIP : BREAK THE WALL] ANCHOR IN JAPAN DAY2"
+    url: "https://x.com/ATEEZofficialjp/status/1653731127935512578"
+    qualifiesForTourSource: true
 related:
 ---
 
-ATEEZ performed in Japan (ANCHOR) as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour, per the official ATEEZ platform's schedule.
+ATEEZ performed in Japan (ANCHOR) as part of the "THE FELLOWSHIP: BREAK THE WALL" world tour.

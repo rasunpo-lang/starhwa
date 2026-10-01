@@ -13,15 +13,43 @@ sources:
   - label: "Numéro TOKYO — ATEEZ SEONGHWA solo Q&A"
     url: "https://numero.jp/20240928-ateez-seonghwa/p2"
 related:
-  - numerotokyo-ateez-interview-2024
+  - "numerotokyo-ateez-interview-2024"
 ---
 
 A ten-question solo Q&A with Seonghwa, published by Numéro TOKYO alongside ATEEZ's cover feature for the magazine's November 2024 special issue.
 
-Seonghwa's Words — Translated Highlights
+<!-- full-text -->
 
-Asked to describe ATEEZ in this moment, Seonghwa called it a "peak" — the team's chemistry fully realized, with more room still to climb. His current hobby is fitness and strength training, which he said clears away negative thoughts. The first thing he did the morning of the interview was check his own Instagram. His personal motto is a belief that even a 1% chance can hold 99% hope.
+Seonghwa's Words — English Translation
 
-Asked where he most wants to go right now, he named his hometown specifically: Samcheonpo, where he lived for his first ten years, and Jinju, where he lived during his school years. If he could speak to himself at debut, he said he'd tell that version of himself not to fear what hasn't happened yet, not to worry over the situation at the time, and to value who he was in that moment. Two films stayed with him recently — "Me Before You" and "About Time," both watched on a flight — which he said work as more than romance stories, since underneath that they're really about the value of life.
+Q1: If you had to describe ATEEZ right now in one word?
+A1: "'Peak.' Our teamwork is complete. And on top of that, we're ready to keep aiming even higher and keep moving forward."
 
-Asked what he wants most right now, he said ATINY's love, adding he wants even more of it. He described "cool" as speaking and acting honestly regardless of the era, and living true to oneself. Asked about his most treasured possession, he named his LEGO collection, saying he was looking forward to an upcoming Legend of Zelda LEGO set arriving soon.
+Q2: What's your current hobby?
+A2: "Training to build up stamina, and strength training. When I exercise, negative thoughts and distractions disappear."
+
+Q3: What was the first thing you did this morning when you woke up?
+A3: "I checked my own Instagram."
+
+Q4: What's your motto?
+A4: "I believe in: 'If there's a 1% chance, you can hold onto 99% hope.'"
+
+Q5: Where do you most want to go right now?
+A5: "My hometown. Samcheonpo, where I lived for the first ten years after I was born, and Jinju, where I lived during my school years."
+
+Q6: If you could say something to yourself back at debut, what would you say?
+A6: "Don't be afraid of things that haven't happened yet, don't worry about your current situation, and value who you are right now."
+
+Q7: What's a movie or book that has stayed with you recently?
+A7: "The films 'Me Before You' and 'About Time,' which I watched on a flight. At first glance they look like romance films, but underneath that, I like how they portray the value of life."
+
+Q8: What do you want most right now?
+A8: "ATINY's love. I want even more of it ♡"
+
+Q9: What kind of person do you think is "cool"?
+A9: "Speaking honestly and acting honestly, no matter the era. I think people who live true to themselves are cool."
+
+Q10: Tell us your treasure.
+A10: "My LEGO® collection. I'm looking forward to the 'The Legend of Zelda™' set arriving soon!"
+
+Translated directly from the original Japanese text of the Numéro TOKYO article linked below.

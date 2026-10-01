@@ -14,6 +14,10 @@ sources:
 related:
 ---
 
+A CanCam Q&A introducing Seonghwa ahead of ATEEZ's first Japanese album, "Into the A to Z."
+
+<!-- full-text -->
+
 A Q&A interview with Seonghwa published by CanCam to introduce ATEEZ ahead of their first Japanese album, "Into the A to Z," including behind-the-scenes cuts and a hand-drawn illustration. Published April 3, 2021 — Seonghwa's birthday.
 
 Seonghwa's Words — Translated Highlights

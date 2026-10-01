@@ -15,5 +15,9 @@ related:
   - silladutyfree-seonghwa-eyecontact-2026
 ---
 
+San and Seonghwa close out The Shilla Duty Free's "What's In My Luggage" series.
+
+<!-- full-text -->
+
 The final episode of The Shilla Duty Free's official "What's In My Luggage" content series paired San and Seonghwa, showing the two members revealing their travel-bag items. Posted directly on The Shilla Duty Free's own official YouTube channel on June 16, 2026, closing out the four-episode series that split ATEEZ into pairs (Hongjoong & Wooyoung, Yunho & Yeosang, Jongho & Mingi, San & Seonghwa).
 

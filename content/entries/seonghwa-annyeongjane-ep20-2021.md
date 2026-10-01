@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa — 안녕자네 Ep.20 (Fan's Mother)"
 date: "2021-12-24"
-category: "Performances"
+category: "Variety"
 verification: "unverified"
 tags:
   - "individual content"
@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-An individual segment featuring Seonghwa meeting the mother of a fan on the show 안녕자네 (Annyeongjane), Ep.20. Date corroborated by secondary sources rather than a self-dated title, so this entry is marked unverified.
+An individual segment featuring Seonghwa meeting the mother of a fan on the show 안녕자네 (Annyeongjane), Ep.20.

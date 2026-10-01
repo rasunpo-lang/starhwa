@@ -1,7 +1,7 @@
 ---
 title: "Tour Update — 'London BOY'"
 date: "2023-02-24"
-category: "Tours"
+category: "Social Media"
 verification: "verified"
 tags:
   - "individual content"

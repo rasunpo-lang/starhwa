@@ -8,10 +8,10 @@ tags:
   - "hometown"
   - "civic honor"
 sources:
-  - label: "Jinju Tourism Instagram (@jinjugogo) — '진주시 홍보대사 성화가 소개합니다' 2026 Uigi Nongae historical musical"
-    url: "https://www.instagram.com/jinjugogo/reel/DXGzUb9kYL8/"
-  - label: "Jinju Tourism Instagram (@jinjugogo) — '진주시 홍보대사 성화가 소개합니다' Jinju's nine signature cultural tourism products"
-    url: "https://www.instagram.com/jinjugogo/reel/DXLvHgNk6aD/"
+  - label: "Jinju Tourism YouTube (진주관광 공식 유튜브, @jinjugogo) — 진주시 홍보대사 성화가 소개합니다! 🎭 2026 실경역사뮤지컬 의기논개 🎭 (Short)"
+    url: "https://www.youtube.com/watch?v=cfIzw8DHUno"
+  - label: "Jinju Tourism YouTube (진주관광 공식 유튜브, @jinjugogo) — 진주시 홍보대사 성화가 소개하는 2026 진주문화관광 9대대표상품💙 (Short)"
+    url: "https://www.youtube.com/watch?v=W9FJxQf18zY"
 related:
   - jinju-ambassador-2025
 ---

@@ -8,8 +8,8 @@ tags:
   - "hometown"
   - "civic honor"
 sources:
-  - label: "Jinju City Official Instagram (@jinjucity) — '[성화의 아시아 이스포츠대회 전국민생각챌린지]' reel"
-    url: "https://www.instagram.com/jinjucity/reel/DXELUpBkx_3/"
+  - label: "Jinju Tourism YouTube (진주관광 공식 유튜브, @jinjugogo) — [성화의 아시아 이스포츠대회 전국민생각챌린지] (Short)"
+    url: "https://www.youtube.com/watch?v=ehE2pCqcnsk"
 related:
   - jinju-ambassador-2025
 ---

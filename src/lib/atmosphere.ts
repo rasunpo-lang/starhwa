@@ -342,11 +342,11 @@ export function getSkyMessagePhase(date: Date): SkyMessagePhase {
  * needing to know about markup.
  */
 export const SKY_MESSAGES: Record<SkyMessagePhase, string> = {
-  sunrise: "Morning leaves a little light at the edge of the world.",
-  day: "Somewhere above us, the sky keeps changing.",
-  "golden-hour": "For a moment, the light forgets to leave.",
-  sunset: "Even after the light fades, a little of it stays.",
-  night: "Come in, there's always room among the stars.",
+  sunrise: "The sky is still deciding what color to be.",
+  day: "Behind all this blue, the stars are still there.",
+  "golden-hour": "The sun is leaning in for one last good angle.",
+  sunset: "The sky never says goodbye the same way twice.",
+  night: "The moon showed up again, as it does.",
 };
 
 export type MoonPhaseName =

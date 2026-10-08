@@ -12,6 +12,7 @@ sources:
   - label: "Koreanpower (@koreanpowerkpop) — 'What Is Your Treasure?' pre-show promo post"
     url: "https://www.instagram.com/p/DY4o4msFUZQ/"
 related:
+  - ateez-musicbank-barcelona-stages-2026
 ---
 
 ATEEZ's appearance on "KBS Music Bank — Barcelona Special."

@@ -5,8 +5,9 @@ import { Source } from "./types";
  * specific-video YouTube link (e.g. a bare channel URL, a non-YouTube
  * source, or an unrecognized format).
  *
- * Deliberately narrow: only youtube.com/watch?v=ID and youtu.be/ID are
- * recognized. A channel homepage (youtube.com/@handle) never matches, so
+ * Deliberately narrow: only youtube.com/watch?v=ID, youtube.com/shorts/ID
+ * and youtu.be/ID are recognized (a Short's ID plays in the same
+ * /embed/ player as any other video). A channel homepage (youtube.com/@handle) never matches, so
  * only sources that already point at one specific official upload are
  * ever eligible for embedding.
  */
@@ -19,7 +20,8 @@ export function getYouTubeVideoId(url: string): string | null {
       if (parsed.pathname === "/watch") {
         return parsed.searchParams.get("v");
       }
-      return null;
+      const short = parsed.pathname.match(/^\/shorts\/([\w-]+)\/?$/);
+      return short ? short[1] : null;
     }
 
     if (host === "youtu.be") {
@@ -44,9 +46,14 @@ export function getYouTubeVideoId(url: string): string | null {
 export function findEmbeddableVideo(
   sources: Source[]
 ): { source: Source; videoId: string } | null {
+  // A regular watch link always wins over a Short, so adding Shorts support
+  // never swaps an entry's existing full-video embed for a Short.
+  let short: { source: Source; videoId: string } | null = null;
   for (const source of sources) {
     const videoId = getYouTubeVideoId(source.url);
-    if (videoId) return { source, videoId };
+    if (!videoId) continue;
+    if (!source.url.includes("/shorts/")) return { source, videoId };
+    short ??= { source, videoId };
   }
-  return null;
+  return short;
 }

@@ -47,17 +47,31 @@ export default function Aurora() {
   // null = not showing. A number = ms already elapsed in this appearance.
   const [elapsedMs, setElapsedMs] = useState<number | null>(null);
   const [anniversary, setAnniversary] = useState(false);
+  const [years, setYears] = useState(0);
   const [run, setRun] = useState(0); // dev test button: remounts to replay
 
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let timer: number | undefined;
 
+    // Development-only date override (`?anniversary-date=2026-10-24T00:00:00+09:00`)
+    // so both sides of the Oct 24 KST boundary can be exercised without
+    // touching the real clock. Compiled out of production builds.
+    const override =
+      process.env.NODE_ENV === "development"
+        ? new URLSearchParams(window.location.search).get("anniversary-date")
+        : null;
+    const refDate = override && !Number.isNaN(Date.parse(override)) ? new Date(override) : new Date();
+    const anniversaryYears = getAnniversaryYears(refDate);
+
     function show(startedAt: number, celebrate = false) {
       const elapsed = Date.now() - startedAt;
       if (elapsed < 0 || elapsed >= CFG.durationMs) return;
       window.clearTimeout(timer);
-      if (celebrate) setAnniversary(true);
+      if (celebrate) {
+        setAnniversary(true);
+        setYears(anniversaryYears);
+      }
       setElapsedMs(elapsed);
       // Reduced motion: no fade lifecycle, so it simply stays, static, for
       // the rest of this page load (the night/golden gate still lets it
@@ -67,7 +81,7 @@ export default function Aurora() {
       }
     }
 
-    const anniversaryKey = `${ANNIVERSARY_KEY_PREFIX}${getAnniversaryYears()}`;
+    const anniversaryKey = `${ANNIVERSARY_KEY_PREFIX}${anniversaryYears}`;
 
     function begin(celebrate = false) {
       const now = Date.now();
@@ -92,7 +106,7 @@ export default function Aurora() {
     }
 
     const forced = new URLSearchParams(window.location.search).get("aurora") === "now";
-    if (!forced && isDebutAnniversary()) {
+    if (!forced && isDebutAnniversary(refDate)) {
       let recorded: string | null = null;
       try {
         recorded = window.sessionStorage.getItem(anniversaryKey);
@@ -183,7 +197,7 @@ export default function Aurora() {
       {anniversary &&
         createPortal(
           <p key={run} role="status" className="anniversary-message" style={lifeStyle}>
-            {getAnniversaryMessage(getAnniversaryYears())}
+            {getAnniversaryMessage(years)}
           </p>,
           document.body,
         )}

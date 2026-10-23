@@ -2129,8 +2129,9 @@ html.atmosphere-ready {
      reading as "upper sky." */
   top: clamp(180px, 18vh, 240px);
   right: 8%;
-  width: clamp(40px, 6vw, 68px);
-  height: clamp(40px, 6vw, 68px);
+  --moon-size: clamp(40px, 6vw, 68px);
+  width: var(--moon-size);
+  height: var(--moon-size);
   border-radius: 9999px;
   overflow: hidden;
   /* Celestial dimensionality (DESIGN.md §12) — a very small, capped
@@ -2258,10 +2259,34 @@ html.atmosphere-ready {
   clip-path: circle(50% at 50% 50%);
 }
 
+/* Dark side = transparent, not painted. The shadow used to be an opaque
+   disc (--moon-shadow-color) sliding over the lit disc, so the unlit part
+   of the moon was a solid dark circle that sat in front of the aurora and
+   hid it. The same shadow circle now cuts the lit disc out with a mask
+   (same offset, same ~1.2px soft terminator), so whatever is behind the
+   moon — sky, aurora — shows through the unlit part. */
+@property --moon-shadow-x {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+
 .atmosphere-moon-lit {
   position: absolute;
   inset: 0;
   border-radius: 9999px;
+  --moon-shadow-x: calc(var(--moon-dir, -1) * var(--moon-illum, 0.5) * 100%);
+  transition: --moon-shadow-x 3s ease;
+  -webkit-mask-image: radial-gradient(
+    circle calc(var(--moon-size) / 2 + 0.6px) at calc(50% + var(--moon-shadow-x)) 50%,
+    transparent calc(100% - 1.2px),
+    #000 100%
+  );
+  mask-image: radial-gradient(
+    circle calc(var(--moon-size) / 2 + 0.6px) at calc(50% + var(--moon-shadow-x)) 50%,
+    transparent calc(100% - 1.2px),
+    #000 100%
+  );
   /* The highlight was fixed at one corner regardless of phase — at some
      phases it could land under the area the shadow disc slides over and
      get clipped away, and it never matched the direction light actually
@@ -2290,24 +2315,6 @@ html.atmosphere-ready {
   }
 }
 
-.atmosphere-moon-shadow {
-  position: absolute;
-  inset: 0;
-  border-radius: 9999px;
-  background: var(--moon-shadow-color);
-  transform: translateX(calc(var(--moon-dir, -1) * var(--moon-illum, 0.5) * 100%));
-  transition: transform 3s ease;
-  /* A small, fixed blur softens just this disc's own edge — the
-     terminator where it overlaps the lit disc — into a gradual falloff
-     rather than a knife-sharp cut, reading as light curving across a
-     sphere. Parent .atmosphere-moon's overflow:hidden + border-radius
-     clips a rounded child's rendering to that same rounded shape (not
-     just its bounding box), so this blur is clipped away at the moon's
-     own outer silhouette (still crisp) and only visibly softens the
-     internal lit/shadow boundary. Deliberately small per "avoid
-     excessive blur" — this is a falloff cue, not a defocus effect. */
-  filter: blur(1.2px);
-}
 
 /* Stars fade in after the moon, not in lockstep with it — "a moon
    appears, and the first tiny stars begin to emerge" reads as two
@@ -2442,6 +2449,237 @@ html.atmosphere-ready {
   100% {
     opacity: 0.85;
   }
+}
+
+/* ✦ RARE AURORA (DESIGN.md §19; Aurora.tsx) — only exists in the DOM during
+   the occasional appearance. Same night/golden gate as .atmosphere-stars
+   (steeply zeroed through Golden Hour), so it belongs to twilight/night
+   and recedes with the sky. Palette is mint / turquoise / ice blue /
+   lavender with a trace of champagne, kept at low alpha and confined to
+   the upper sky so light night-time text stays well above AA contrast.
+   Motion is transform/opacity only (compositor); the blur sits on an inner
+   element so the animated parent is never re-rasterised. */
+.atmosphere-aurora {
+  position: absolute;
+  inset: 0;
+  /* Blue hour (night ~0.3–0.6): a soft, translucent version (≤ 0.35); full
+     night (≥ 0.9): the most luminous. Zero by day. */
+  opacity: calc(
+    max(
+      clamp(0, calc((var(--night) - 0.3) / 0.2), 1) * 0.35,
+      clamp(0, calc((var(--night) - 0.5) / 0.4), 1)
+    ) * max(0, 1 - var(--golden) * 10)
+  );
+}
+
+/* Debut anniversary (every Oct 24, KST; Aurora.tsx): same artwork, but not
+   gated by time of day — visible by day and through Golden Hour too. */
+.atmosphere-aurora--anniversary {
+  opacity: 1;
+}
+
+/* Anniversary-only iridescent foil, layered over the artwork: shifting
+   turquoise / mint / lavender / pearl-silver in soft bands plus a faint
+   holographic sheen that slowly sweeps across. Same upper-sky footprint and
+   feathered mask as the art; transform-only motion (an oversized layer that
+   drifts), so nothing is repainted per frame. Low alpha keeps it a sheen on
+   the aurora's own light, not a flat neon wash. */
+.atmosphere-aurora-foil {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: clamp(300px, 64vh, 760px);
+  overflow: hidden;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 0%, #000 52%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, #000 0%, #000 52%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.atmosphere-aurora-foil::before,
+.atmosphere-aurora-foil::after {
+  content: "";
+  position: absolute;
+  inset: -20% -40%;
+}
+
+.atmosphere-aurora-foil::before {
+  background:
+    linear-gradient(
+      105deg,
+      rgba(64, 224, 208, 0.34) 0%,
+      rgba(152, 255, 214, 0.26) 16%,
+      rgba(226, 232, 244, 0.30) 30%,
+      rgba(186, 160, 255, 0.34) 46%,
+      rgba(120, 200, 255, 0.28) 62%,
+      rgba(168, 255, 226, 0.26) 78%,
+      rgba(236, 226, 255, 0.30) 90%,
+      rgba(64, 224, 208, 0.34) 100%
+    );
+  animation: atmosphere-aurora-foil-drift 38s ease-in-out infinite alternate;
+}
+
+.atmosphere-aurora-foil::after {
+  background:
+    linear-gradient(
+      100deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.42) 48%,
+      rgba(255, 214, 240, 0.22) 51%,
+      rgba(190, 240, 255, 0.30) 54%,
+      transparent 62%
+    );
+  animation: atmosphere-aurora-foil-sheen 22s ease-in-out infinite alternate;
+}
+
+@keyframes atmosphere-aurora-foil-drift {
+  0% { transform: translate3d(-12%, 0, 0); }
+  100% { transform: translate3d(12%, 2%, 0); }
+}
+
+@keyframes atmosphere-aurora-foil-sheen {
+  0% { transform: translate3d(-30%, 0, 0); }
+  100% { transform: translate3d(30%, 0, 0); }
+}
+
+/* Anniversary message (Aurora.tsx): understated display-face line, centered
+   near the foot of the viewport (below the z-40 header, above the sky),
+   non-interactive. Reuses the aurora's own lifecycle keyframe, duration and
+   elapsed-time offset so it fades in and out with it. */
+.anniversary-message {
+  position: fixed;
+  left: 50%;
+  bottom: 1.25rem;
+  z-index: 30;
+  width: max-content;
+  max-width: calc(100vw - 2rem);
+  margin: 0;
+  transform: translateX(-50%);
+  pointer-events: none;
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  text-wrap: balance;
+  color: var(--ink);
+  /* A faint ivory veil + hairline keeps the line legible when it passes
+     over archive text, without becoming a card. */
+  padding: 0.5rem 0.875rem;
+  border: 1px solid var(--line-soft);
+  background-color: color-mix(in srgb, var(--ivory) 72%, transparent);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  animation: atmosphere-aurora-life var(--aurora-duration, 150s) ease-in-out both;
+}
+
+@media (min-width: 640px) {
+  .anniversary-message {
+    font-size: 1.0625rem;
+  }
+}
+
+.atmosphere-aurora-life {
+  position: absolute;
+  inset: 0;
+  animation: atmosphere-aurora-life var(--aurora-duration, 150s) ease-in-out both;
+}
+
+@keyframes atmosphere-aurora-life {
+  0% { opacity: 0; }
+  10% { opacity: 0.55; }
+  18% { opacity: 1; }
+  68% { opacity: 1; }
+  84% { opacity: 0.45; }
+  100% { opacity: 0; }
+}
+
+/* The appearance is the original STARHWA aurora artwork
+   (public/brand/aurora-sky.jpg — the sky of the supplied aurora scene,
+   星化 calligraphy included, cropped clear of its baked-in UI text and
+   landscape), not generated shapes. `screen` blending lets the picture's
+   deep-blue sky dissolve into the live sky and only its light add to it;
+   the mask feathers every edge so there is no frame. The picture is
+   completely static: a drift/zoom of an upscaled, ray-streaked image made
+   its diagonal structure visibly crawl across the screen, so it only
+   fades in and out with the appearance's own lifecycle. */
+.atmosphere-aurora-art {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: clamp(300px, 64vh, 760px);
+  overflow: hidden;
+  mix-blend-mode: screen;
+  -webkit-mask-image:
+    linear-gradient(to bottom, #000 0%, #000 52%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to bottom, #000 0%, #000 52%, transparent 100%),
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.atmosphere-aurora-breath {
+  position: absolute;
+  inset: 0;
+  opacity: clamp(0, calc((var(--night) - 0.85) / 0.1), 1);
+}
+
+.atmosphere-aurora-swell {
+  position: absolute;
+  inset: 0;
+  background: url("/brand/aurora-sky.jpg") 50% 40% / cover no-repeat;
+  filter: blur(12px) saturate(1.5) brightness(1.2);
+  opacity: 0;
+  animation: atmosphere-aurora-swell 52s ease-in-out infinite;
+}
+
+.atmosphere-aurora-swell--a {
+  -webkit-mask-image: radial-gradient(ellipse 46% 70% at 24% 38%, #000, transparent 72%);
+  mask-image: radial-gradient(ellipse 46% 70% at 24% 38%, #000, transparent 72%);
+}
+
+.atmosphere-aurora-swell--b {
+  -webkit-mask-image: radial-gradient(ellipse 42% 66% at 76% 34%, #000, transparent 70%);
+  mask-image: radial-gradient(ellipse 42% 66% at 76% 34%, #000, transparent 70%);
+  animation-duration: 67s;
+  animation-delay: -31s;
+}
+
+@keyframes atmosphere-aurora-swell {
+  0%, 100% { opacity: 0.04; }
+  50% { opacity: 0.42; }
+}
+
+.atmosphere-aurora-art--gl {
+  /* The WebGL pass outputs premultiplied light with its own alpha (AuroraArt.tsx), so the
+     layer composites normally — the CSS screen blend was the costly part of this layer. */
+  mix-blend-mode: normal;
+}
+
+.atmosphere-aurora-gl {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.atmosphere-aurora-gl-host {
+  position: absolute;
+  inset: 0;
+}
+
+.atmosphere-aurora-art-img {
+  position: absolute;
+  inset: 0;
+  background: url("/brand/aurora-sky.jpg") 50% 40% / cover no-repeat;
+  opacity: 0.62;
 }
 
 .atmosphere-shooting-star {
@@ -2781,6 +3019,24 @@ html.atmosphere-ready {
   }
   .atmosphere-shooting-star {
     display: none;
+  }
+  /* Rare Aurora (§19): no fade lifecycle, sway or shimmer — a still,
+     softer picture for the rest of the page load. */
+  .atmosphere-aurora-life {
+    animation: none;
+    opacity: 0.75;
+  }
+  .anniversary-message {
+    animation: none;
+    opacity: 0.85;
+  }
+  .atmosphere-aurora-foil::before,
+  .atmosphere-aurora-foil::after {
+    animation: none;
+  }
+  .atmosphere-aurora-swell {
+    animation: none;
+    opacity: 0.16;
   }
   /* Celestial dimensionality (DESIGN.md §12): the sun's breathing pulse
      and the moon's surface drift are the only two new animations this

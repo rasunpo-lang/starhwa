@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Atmosphere from "@/components/Atmosphere";
 import AtmospherePreviewToggle from "@/components/AtmospherePreviewToggle";
+import AuroraTestButton from "@/components/AuroraTestButton";
 import DdeongbyeolSighting from "@/components/DdeongbyeolSighting";
 import BirthdaySighting from "@/components/BirthdaySighting";
 import { getAllEntriesSorted } from "@/data/entries";
@@ -142,6 +143,7 @@ export default function RootLayout({
             build time, so Next dead-code-eliminates this entirely from a
             production bundle; it's never part of the public experience. */}
         {process.env.NODE_ENV !== "production" && <AtmospherePreviewToggle />}
+        {process.env.NODE_ENV === "development" && <AuroraTestButton />}
         <DdeongbyeolSighting />
         <BirthdaySighting />
       </body>

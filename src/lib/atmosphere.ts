@@ -427,4 +427,22 @@ export const ATMOSPHERE_CONFIG = {
   shootingStarChancePerRoll: 0.05,
   sparkleDurationMs: 900,
   shootingStarDurationMs: 1100,
+  /** Rare Aurora event (Aurora.tsx, DESIGN.md §19). */
+  aurora: {
+    /** Chance an eligible visit's single per-session roll succeeds. */
+    chancePerSession: 0.05,
+    /** After one appearance, no further roll for this long (per browser). */
+    cooldownMs: 5 * 24 * 60 * 60 * 1000,
+    /** Blue hour or deeper only — never daytime, never mid-Golden-Hour.
+     *  Below `softNight` the appearance is the softer, translucent twilight
+     *  version (globals.css) and its roll is `twilightChanceFactor` as likely. */
+    minNight: 0.3,
+    softNight: 0.6,
+    twilightChanceFactor: 0.5,
+    maxGolden: 0.05,
+    /** One appearance, fade-in to fade-out. Must match the
+     *  `atmosphere-aurora-life` keyframe's shape in globals.css (the
+     *  duration itself is passed in as --aurora-duration). */
+    durationMs: 150_000,
+  },
 };

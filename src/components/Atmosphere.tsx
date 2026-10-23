@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Aurora from "./Aurora";
 import Glint from "./Glint";
 import {
   ATMOSPHERE_CONFIG as CFG,
@@ -306,12 +307,17 @@ export default function Atmosphere() {
         ))}
       </div>
       <div className="atmosphere-sun" />
+      {/* RARE AURORA (Aurora.tsx, DESIGN.md §19) — renders nothing at all
+          unless its once-per-session roll succeeded. Placed behind the
+          moon and stars so the aurora flows behind them (its screen-blended
+          light would otherwise fill in the moon's dark side), and still
+          behind the clouds, which are far lower and drift in front. */}
+      <Aurora />
       <div className="atmosphere-moon">
         {/* The disc wrapper clips lit + shadow to the moon's circle with
             clip-path (see .atmosphere-moon-disc in globals.css). */}
         <div className="atmosphere-moon-disc">
           <div className="atmosphere-moon-lit" />
-          <div className="atmosphere-moon-shadow" />
         </div>
       </div>
       <div className="atmosphere-stars">

@@ -49,4 +49,10 @@ export const officialLinks: OfficialLink[] = [
     url: "https://ateez-official.jp/",
     note: "Official Japan site with news, discography, and tour information.",
   },
+  {
+    platform: "ATEEZ Japan Official X",
+    handle: "@ATEEZofficialjp",
+    url: "https://twitter.com/ATEEZofficialjp",
+    note: "Japan announcements, releases, and event information.",
+  },
 ];

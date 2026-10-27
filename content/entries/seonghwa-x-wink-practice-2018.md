@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A video of Seonghwa posted via ATEEZ's official X account, captioned "I practiced winking!! (why am I so bad at this;;) And so this selfie was born!!"
+"I practiced winking!! (why am I so bad at this;;) And so this selfie was born!!" A video of Seonghwa, posted on ATEEZ's official X account.

@@ -13,4 +13,4 @@ related:
   - seonghwa-fancam-guerrilla-kcon2022-saudi
 ---
 
-A photo of Seonghwa posted via ATEEZ's official X account around the group's KCON 2022 Saudi Arabia appearance in Riyadh, held September 30–October 1, 2022.
+"See you Saudi Arabia🫶🏻" A photo of Seonghwa, posted on ATEEZ's official X account around the group's KCON 2022 Saudi Arabia appearance in Riyadh, held September 30–October 1, 2022.

@@ -14,4 +14,4 @@ related:
   - seonghwa-conceptphoto-jp-bad-2026
 ---
 
-A video message from Seonghwa to ATINY promoting ATEEZ's Japan 5th single "BAD (Japanese Ver.)," posted via ATEEZ's official Japan X account.
+A video message from Seonghwa to ATINY promoting ATEEZ's Japan 5th single "BAD (Japanese Ver.)," posted on ATEEZ Japan's official X account.

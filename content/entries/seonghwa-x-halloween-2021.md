@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual Halloween-themed photo of Seonghwa posted via ATEEZ's official X account.
+"해피 할로윈~🎃" ("Happy Halloween~🎃") A Halloween photo of Seonghwa, posted on ATEEZ's official X account.

@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, marking the second week of "Bouncy" promotions.
+"2주차도❤‍🔥" ("Week 2 too❤‍🔥") — marking the second week of "Bouncy" promotions, in a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

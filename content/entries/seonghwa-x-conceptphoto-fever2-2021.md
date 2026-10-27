@@ -14,4 +14,4 @@ related:
   - fireworks-mv-2021
 ---
 
-Seonghwa's individual concept photo for "ZERO: FEVER Part.2," posted ahead of the album's March 1, 2021 release.
+Seonghwa's individual concept photo for "ZERO: FEVER Part.2," posted on ATEEZ's official X account ahead of the album's March 1, 2021 release.

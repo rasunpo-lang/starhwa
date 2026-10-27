@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual mirror selfie of Seonghwa in a bucket hat, posted via ATEEZ's official X account with a wordplay caption professing love for ATINY.
+A mirror selfie of Seonghwa in a hat, with a wordplay caption professing his love for ATINY, posted on ATEEZ's official X account.

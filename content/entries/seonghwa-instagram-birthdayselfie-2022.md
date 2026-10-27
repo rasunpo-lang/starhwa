@@ -14,4 +14,4 @@ related:
   - happy-seonghwa-day-2022
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram on the evening of his birthday.
+A photo posted on the evening of Seonghwa's birthday on ATEEZ's official Instagram, captioned like a filename: "성화의_배도_양손도_든든한_귀갓길.jpg" (roughly, a walk home with a full stomach and full hands).

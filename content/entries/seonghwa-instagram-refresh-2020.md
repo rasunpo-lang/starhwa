@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram promoting his appearance on Park Kyung's radio show.
+A photo on ATEEZ's official Instagram promoting Seonghwa's appearance on Park Kyung's radio show, captioned "#새로고침 — Seonghwa's Refresh."

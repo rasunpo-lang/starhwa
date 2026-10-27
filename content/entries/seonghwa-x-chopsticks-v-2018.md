@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Chopsticks V✌ Have you had dinner yet~?"
+"Chopsticks V✌ Have you had dinner yet~?" A photo of Seonghwa, posted on ATEEZ's official X account.

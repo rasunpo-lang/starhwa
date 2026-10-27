@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram account as part of the #DAILY_ATEEZ series, captioned "Seonghwa the prince has come down from heaven."
+A photo from the #DAILY_ATEEZ series on ATEEZ's official Instagram account, captioned "Seonghwa the prince has come down from heaven."

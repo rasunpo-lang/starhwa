@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Me wearing a check(plaid) set — attendance check today too."
+"Me wearing a check(plaid) set — attendance check today too." A photo of Seonghwa, posted on ATEEZ's official X account.

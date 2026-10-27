@@ -26,7 +26,7 @@ correct one. That's the whole workflow.
 | `title`        | yes      | Plain text, no markdown.                                                                        |
 | `date`         | yes      | `YYYY-MM-DD`. Drives sort order, the year filter, and which era the entry belongs to.           |
 | `category`     | yes      | One of the fixed categories below — must match exactly.                                          |
-| `verification` | no       | `"verified"` or `"unverified"` (default). Unverified entries show a small badge on their page.  |
+| `verification` | no       | `"verified"` or `"unverified"` (default). Internal only; not shown to visitors.  |
 | `tags`         | no       | Short lowercase phrases. Used by search and future filtering.                                    |
 | `sources`      | yes      | List of `{ label, url }`. At least one. Link to the original — never rehost media.               |
 | `image`        | no       | `{ url, credit, type }`. An editorially curated visual anchor — see "Image selection" below.    |
@@ -120,6 +120,24 @@ site starts or builds. A missing required field, a malformed date, an
 unrecognized `category`, or a `related` entry that points at a filename
 that doesn't exist will throw a build/dev error naming the exact file and
 what's wrong — bad data can't silently reach the site.
+
+## Embedding an X post
+
+Social Media and Music entries automatically embed their first official
+ATEEZ X post. Any other entry (e.g. an Awards entry whose key source is an
+organizer's or ATEEZ's X post) can opt in by adding `embed: true` to that
+one source:
+
+```yaml
+sources:
+  - label: "Hanteo Music Awards Official X — ..."
+    url: "https://x.com/Hanteo_HMAs/status/..."
+    embed: true
+```
+
+It works for any X account, is ignored when the entry already has an
+embeddable YouTube video (never two players), and the link stays listed
+as a normal source.
 
 ## Source link priority
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PlannedEntry } from "@/lib/layout";
-import { entryHref, externalLinkProps, formatEntryDate, singleSourceUrl } from "./entryLink";
+import { entryHref, formatEntryDate } from "./entryLink";
 import Glint from "@/components/Glint";
 
 export default function CompactGroup({ items }: { items: PlannedEntry[] }) {
@@ -8,7 +8,6 @@ export default function CompactGroup({ items }: { items: PlannedEntry[] }) {
     <div className="col-span-full border border-line">
       <ul className="divide-y divide-line">
         {items.map(({ entry }) => {
-          const sourceUrl = singleSourceUrl(entry);
           return (
             <li key={entry.id} className="glint-hover group relative">
               <Glint className="right-8 top-1/2 -mt-[6.5px] hidden sm:block" />
@@ -31,16 +30,6 @@ export default function CompactGroup({ items }: { items: PlannedEntry[] }) {
                   {entry.title}
                 </span>
                 <span className="flex items-center gap-3 justify-self-end">
-                  {sourceUrl && (
-                    <a
-                      href={sourceUrl}
-                      {...externalLinkProps}
-                      className="meta relative z-10 hidden text-charcoal/75 underline decoration-line underline-offset-4 hover:text-plum sm:inline"
-                    >
-                      View source ↗
-                      <span className="sr-only"> (opens original source in a new tab)</span>
-                    </a>
-                  )}
                   <span
                     aria-hidden="true"
                     className="pointer-events-none font-mono text-xs text-charcoal/75 transition-transform group-hover:translate-x-0.5 group-hover:text-plum"

@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, taken during a Berlin stop.
+"In Berlin🇩🇪", a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram, from a Berlin stop.

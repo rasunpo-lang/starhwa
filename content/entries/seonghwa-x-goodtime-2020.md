@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual message from Seonghwa posted via ATEEZ's official X account, captioned "Have a good time~ ATINY."
+"Have a good time~ ATINY." A message from Seonghwa, posted on ATEEZ's official X account.

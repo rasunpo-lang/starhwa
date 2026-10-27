@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Today's clothing style: baby chick."
+A photo of Seonghwa on ATEEZ's X, captioned "Today's clothing style: baby chick."

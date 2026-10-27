@@ -29,4 +29,4 @@ On how debut day feels: "Now that it's actually debut day, I feel overwhelmed an
 
 On why the group chose a double title track: "We had so much we wanted to show you, so we decided on a double title track."
 
-Translated directly from the original Korean text of the Voice of the People article linked below.
+Translated directly from the original Korean text of the Voice of the People article.

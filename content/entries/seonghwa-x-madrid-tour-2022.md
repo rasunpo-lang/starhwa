@@ -13,4 +13,4 @@ related:
   - seonghwa-x-london-tour-2023
 ---
 
-A tour-stop photo of Seonghwa from ATEEZ's Madrid leg of "THE FELLOWSHIP," posted via the official X account with a puppy-outfit caption.
+A photo of Seonghwa from the Madrid leg of "THE FELLOWSHIP," posted on ATEEZ's official X account, captioned "예쁜 꼬까옷 입고 ATINY 만나러 가야지🥰 에이티니 오늘 하루도 고생 많았구 성화랑 같이 꿀잠자요!" (roughly, "Gotta put on pretty clothes and go meet ATINY🥰 ATINY, you worked hard today too — sleep well with Seonghwa!").

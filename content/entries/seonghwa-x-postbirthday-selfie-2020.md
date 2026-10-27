@@ -14,4 +14,4 @@ related:
   - seonghwa-birthday-greeting-2020
 ---
 
-A selfie from Seonghwa posted via ATEEZ's official X account five days after his April 2, 2020 birthday, captioned "The birthday's over, but the selfies remain."
+A selfie from Seonghwa on ATEEZ's official X account five days after his April 2, 2020 birthday, captioned "The birthday's over, but the selfies remain."

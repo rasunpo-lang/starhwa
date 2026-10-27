@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Gather round, ATINY."
+"Gather round, ATINY." A photo of Seonghwa, posted on ATEEZ's official X account.

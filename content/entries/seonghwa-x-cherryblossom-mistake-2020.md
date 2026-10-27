@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "I thought it was ATINY so I went out, but it was cherry blossoms..."
+"I thought it was ATINY so I went out, but it was cherry blossoms..." A photo of Seonghwa, posted on ATEEZ's official X account.

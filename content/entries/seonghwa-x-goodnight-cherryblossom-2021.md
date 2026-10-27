@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A good-night message from Seonghwa posted via ATEEZ's official X account during cherry blossom season, captioned "Good night ATINY🌸"
+A good-night message from Seonghwa on ATEEZ's official X account during cherry blossom season, captioned "Good night ATINY🌸"

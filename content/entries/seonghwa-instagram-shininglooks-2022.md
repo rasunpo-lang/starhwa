@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram.
+A photo on ATEEZ's official Instagram, captioned like a filename: "여기저기_울려_퍼져_빛나는_성화의_미모.jpg" (roughly, "Seonghwa's shining looks, echoing everywhere.jpg").

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual travel/event photo of Seonghwa posted via ATEEZ's official X account.
+"여기 포토존 맛집이네👍" (roughly, "This place is a great photo zone👍") A travel/event photo of Seonghwa, posted on ATEEZ's official X account.

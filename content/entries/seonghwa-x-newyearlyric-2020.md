@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A New Year's message from Seonghwa posted via ATEEZ's official X account: "I'll always make you shine — forever you are my ATINY."
+A New Year's message from Seonghwa on ATEEZ's official X account: "I'll always make you shine — forever you are my ATINY."

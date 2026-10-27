@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A good-night message from Seonghwa posted via ATEEZ's official X account, captioned "Finish the day well with Seonghwa — you worked hard today, ATINY."
+"Finish the day well with Seonghwa — you worked hard today, ATINY." A good-night message from Seonghwa, posted on ATEEZ's official X account.

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A dance challenge video of Seonghwa performing to "Eternal Sunshine," posted via ATEEZ's official X account and cross-posted to TikTok and YouTube.
+A dance challenge video of Seonghwa performing to "Eternal Sunshine," on ATEEZ's official X account and cross-posted to TikTok and YouTube.

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account during the "WONDERLAND" promotion period, captioned "ATINY is my star."
+A photo of Seonghwa on ATEEZ's official X account during the "WONDERLAND" promotion period, captioned "ATINY is my star."

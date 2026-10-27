@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A message from Seonghwa posted via ATEEZ's official X account: "Did you enjoy my magazine pictorial? Please look forward to 'Kingdom' next week too."
+A message from Seonghwa on ATEEZ's official X account: "Did you enjoy my magazine pictorial? Please look forward to 'Kingdom' next week too."

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A New Year's message from Seonghwa posted via ATEEZ's official X account: "2019 was hard work — in 2020, let's be happy and healthy with ATEEZ."
+A New Year's message from Seonghwa on ATEEZ's official X account: "2019 was hard work — in 2020, let's be happy and healthy with ATEEZ."

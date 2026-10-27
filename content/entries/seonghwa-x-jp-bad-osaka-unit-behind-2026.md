@@ -14,4 +14,4 @@ related:
   - seonghwa-x-jp-bad-osaka-behind-2026
 ---
 
-A unit behind-the-scenes photo of Seonghwa and Jongho from a "BAD (Japanese Ver.)" release event in Osaka, posted via the official ATEEZ Japan X account.
+A unit behind-the-scenes photo of Seonghwa and Jongho from a "BAD (Japanese Ver.)" release event in Osaka, posted on ATEEZ Japan's official X account.

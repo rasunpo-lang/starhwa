@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series.
+"수요일도 성화이팅🥰" (roughly, "Fighting on Wednesday too — Seonghwa-style🥰"). A photo from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram.

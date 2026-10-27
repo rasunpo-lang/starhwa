@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo dump of Seonghwa posted via ATEEZ's official Instagram during "ZERO: FEVER Part.2" promotions.
+A photo dump of Seonghwa, titled like a file — "ATEEZ ZERO : FEVER Part.2 '성화' 사진.zip" — posted on ATEEZ's official Instagram during "ZERO: FEVER Part.2" promotions.

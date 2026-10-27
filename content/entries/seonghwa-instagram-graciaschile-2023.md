@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, thanking fans in Spanish ahead of a return to Chile.
+"Gracias por esperar, Chile!!" ("Thanks for waiting, Chile!!") — thanking fans in Spanish ahead of a return to Chile, in a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

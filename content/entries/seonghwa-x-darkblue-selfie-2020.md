@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual selfie posted by Seonghwa via ATEEZ's official X account, captioned "Dark blue Seonghwa."
+"Dark blue Seonghwa." A selfie of Seonghwa, posted on ATEEZ's official X account.

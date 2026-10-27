@@ -34,4 +34,4 @@ A: "From the moment we commissioned the choreography, I said, 'This time, we wan
 Q: It's a bit early, but what are your enlistment plans?
 A: "I think enlisting is just a given. I've been active for seven years without regret, and the most important thing is that we've renewed our contract, so I don't think it'll be a big problem even after we're discharged. That said, I think it's on us to make sure fans don't feel shortchanged in the meantime."
 
-Translated directly from the original Korean text of the StarNews (via Nate) article linked below.
+Translated directly from the original Korean text of the StarNews (via Nate) article.

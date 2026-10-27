@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A photo of Seonghwa taken by fellow member Wooyoung, posted via ATEEZ's official X account.
+"by 우영📸" ("by Wooyoung📸") A photo of Seonghwa taken by fellow member Wooyoung, posted on ATEEZ's official X account.

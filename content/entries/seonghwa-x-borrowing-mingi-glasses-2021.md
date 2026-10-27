@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, borrowing fellow member Mingi's glasses.
+Seonghwa borrows Mingi's glasses — "Mingi, I'll borrow these for a second💙" — in a photo on ATEEZ's official X account.

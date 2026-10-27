@@ -7,14 +7,16 @@ tags:
   - "award show"
   - "golden hour era"
 sources:
+  - label: "Golden Disc Official YouTube — [Golden Capsule] ATEEZ"
+    url: "https://www.youtube.com/watch?v=SbFhPPFfrl4"
   - label: "Golden Disc Official YouTube — [40th Golden Disc Awards] ATEEZ - 'Intro + Ice On My Teeth + In Your Fantasy'"
     url: "https://www.youtube.com/watch?v=sXHNaMoZZTs"
   - label: "Golden Disc Official YouTube — [40th Golden Disc Red Carpet] ATEEZ"
     url: "https://www.youtube.com/watch?v=HzylrpawdRE"
   - label: "Golden Disc Official YouTube — [40th Golden Disc Awards] Album Category Bonsang - ATEEZ"
     url: "https://www.youtube.com/watch?v=d5NUaioghuA"
-  - label: "Golden Disc Official YouTube — [Golden Capsule] ATEEZ"
-    url: "https://www.youtube.com/watch?v=SbFhPPFfrl4"
+  - label: "Golden Disc Awards Official Site — History: 40th (2026) Album Bonsang: ATEEZ, GOLDEN HOUR : Part.2"
+    url: "https://www.goldendisc.co.kr/ko/history"
 related:
 ---
 

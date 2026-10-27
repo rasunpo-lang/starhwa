@@ -15,4 +15,4 @@ related:
   - seonghwa-x-jp-bad-message-2026
 ---
 
-A behind-the-scenes photo of Seonghwa from the showcase for ATEEZ's Japan 5th single "BAD (Japanese Ver.)," posted via the official ATEEZ Japan X account ahead of the single's July 29, 2026 release.
+A behind-the-scenes photo of Seonghwa from the showcase for ATEEZ's Japan 5th single "BAD (Japanese Ver.)," posted on ATEEZ Japan's official X account ahead of the single's July 29, 2026 release.

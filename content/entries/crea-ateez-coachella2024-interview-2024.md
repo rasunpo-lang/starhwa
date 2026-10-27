@@ -33,4 +33,4 @@ Asked which international artists he admires, he named Harry Styles and Taylor S
 
 Asked about a favorite J-pop artist, he named singer-songwriter Aimyon, saying her music is moving and that she's popular in Korea too.
 
-Paraphrased from the original Japanese text of the three-part CREA WEB interview linked below.
+Paraphrased from the original Japanese text of the three-part CREA WEB interview.

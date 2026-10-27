@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual summer greeting from Seonghwa posted via ATEEZ's official X account, captioned "It's summer~~ ATINY, please take care of us this summer too~"
+"It's summer~~ ATINY, please take care of us this summer too~" A summer greeting from Seonghwa, posted on ATEEZ's official X account.

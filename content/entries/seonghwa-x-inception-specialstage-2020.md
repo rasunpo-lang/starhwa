@@ -13,7 +13,7 @@ related:
   - inception-mv-2020
 ---
 
-Seonghwa's X post after a special "INCEPTION" stage.
+Seonghwa's post on ATEEZ's official X account after performing "INCEPTION" again on a special stage, with four photos: "오랜만에 짱셉션❤️❤️❤️ 고생했다 성화야 토닥토닥 무대해서 기분 좋음😆" (roughly, "Long time no see, super-INCEPTION❤️❤️❤️ Good work, Seonghwa, there there. Feels good being on stage😆").
 
 <!-- full-text -->
 

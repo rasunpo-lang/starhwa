@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned in Japanese expressing affection for ATINY.
+"好きだよ ATINY💙" ("I love you, ATINY💙") — a Japanese caption, in a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

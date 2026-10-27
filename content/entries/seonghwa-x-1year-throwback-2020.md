@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A throwback selfie from ATEEZ's first debut anniversary, reposted by Seonghwa via the group's official X account: "A selfie from our 1st anniversary~~ Even as seasons change, always by ATINY's side."
+A selfie from the group's first anniversary, reposted by Seonghwa on ATEEZ's X: "A selfie from our 1st anniversary~~ Even as seasons change, always by ATINY's side."

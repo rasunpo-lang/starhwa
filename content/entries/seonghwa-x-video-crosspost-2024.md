@@ -9,7 +9,9 @@ tags:
 sources:
   - label: "ATEEZ Official YouTube — Short: '떵별떵화🐰⭐️'"
     url: "https://www.youtube.com/shorts/oWI5micVMmw"
+  - label: "ATEEZ Official X — [🎬] 떵별떵화🐰⭐️"
+    url: "https://x.com/ATEEZofficial/status/1759504052910752117"
 related:
 ---
 
-A video post featuring Seonghwa shared via ATEEZ's official X account, cross-linked to TikTok content.
+A short video of Seonghwa, titled "떵별떵화🐰⭐️," on ATEEZ's official YouTube channel. It was also posted on TikTok and Instagram.

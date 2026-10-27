@@ -13,4 +13,4 @@ related:
   - inception-mv-2020
 ---
 
-A message from Seonghwa posted via ATEEZ's official X account during the "INCEPTION" promotion period: "We didn't meet on stage today, but INCEPTION Seonghwa is checking in~ Miss ATINY~"
+A message from Seonghwa on ATEEZ's official X account during the "INCEPTION" promotion period: "We didn't meet on stage today, but INCEPTION Seonghwa is checking in~ Miss ATINY~"

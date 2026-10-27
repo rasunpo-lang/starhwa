@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa in a hat, posted via ATEEZ's official X account.
+"모자모자성화성화" ("hat hat Seonghwa Seonghwa"). A photo of Seonghwa in a hat, posted on ATEEZ's official X account.

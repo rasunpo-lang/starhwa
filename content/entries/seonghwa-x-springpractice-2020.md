@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A photo of Seonghwa posted via ATEEZ's official X account, captioned "ATINY~🌸 The flower-blooming season has come — keep your heart warm today too. Took this before heading to the dorm after practice."
+"ATINY~🌸 The flower-blooming season has come — keep your heart warm today too. Took this before heading to the dorm after practice." A photo of Seonghwa, posted on ATEEZ's official X account.

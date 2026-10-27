@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A message from Seonghwa posted via ATEEZ's official X account: "'I miss you' — that's exactly my heart."
+A message from Seonghwa on ATEEZ's official X account: "'I miss you' — that's exactly my heart."

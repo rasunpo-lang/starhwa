@@ -21,7 +21,7 @@ related:
   - matz-mv-making-film-2024
 ---
 
-Official MV for "MATZ," ATEEZ's first unit track, by Hongjoong and Seonghwa.
+Official MV for "MATZ," ATEEZ's first unit music video, by Hongjoong and Seonghwa.
 
 <!-- full-text -->
 

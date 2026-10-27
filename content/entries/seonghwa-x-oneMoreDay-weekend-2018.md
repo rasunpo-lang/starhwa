@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A video message from Seonghwa posted via ATEEZ's official X account, captioned "Just one more day until the weekend! Fighting today too."
+"Just one more day until the weekend! Fighting today too." A video message from Seonghwa, posted on ATEEZ's official X account.

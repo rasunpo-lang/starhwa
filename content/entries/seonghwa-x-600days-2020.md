@@ -13,7 +13,7 @@ sources:
 related:
 ---
 
-Seonghwa's X video marking 600 days since ATEEZ's debut.
+A video for 600 days since debut, on ATEEZ's X: "I'll become someone who can repay the love received over these 600 days, and all the time to come."
 
 <!-- full-text -->
 

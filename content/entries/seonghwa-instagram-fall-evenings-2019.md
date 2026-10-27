@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram account as part of the #DAILY_ATEEZ series, captioned "I don't know why Seonghwa comes to mind on cool fall evenings."
+A photo from the #DAILY_ATEEZ series on ATEEZ's official Instagram account, captioned "I don't know why Seonghwa comes to mind on cool fall evenings."

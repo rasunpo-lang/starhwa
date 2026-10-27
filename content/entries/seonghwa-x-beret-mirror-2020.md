@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A mirror selfie of Seonghwa in a beret posted via ATEEZ's official X account, captioned "Beret Seonghwa + a mirror shot after a while."
+"Beret Seonghwa + a mirror shot after a while." A mirror selfie in a beret, posted on ATEEZ's official X account.

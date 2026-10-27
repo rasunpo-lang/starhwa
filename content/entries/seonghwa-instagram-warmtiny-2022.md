@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram.
+A photo on ATEEZ's official Instagram, captioned like a filename: "아_따뜻해_티니_언제_오지?.jpg" (roughly, "Ah, so warm — when is Tiny coming?.jpg").

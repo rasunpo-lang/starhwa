@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual message from Seonghwa posted via ATEEZ's official X account, captioned "All the days that were possible because I was with ATINY🌟🌟 Have a fun weekend~"
+"All the days that were possible because I was with ATINY🌟🌟 Have a fun weekend~" A message from Seonghwa, posted on ATEEZ's official X account.

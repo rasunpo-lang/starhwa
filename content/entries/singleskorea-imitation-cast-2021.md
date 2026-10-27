@@ -53,4 +53,4 @@ I thought maybe I could show off another kind of charm through my acting. Even w
 
 On "Byeol-i" ("Little Star"): "I like the nickname 'Byeol-i.' The 'seong' in my name is the character for 'star' (星). I always try to hold onto that meaning as a goal — 'become a star, be a singer who tries to become someone's star.' My fans and I call each other 'star.' Because we need each other. This is the nickname I like best of all."
 
-Translated directly from the original Korean text of the SINGLES Korea article linked below.
+Translated directly from the original Korean text of the SINGLES Korea article.

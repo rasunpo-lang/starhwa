@@ -362,15 +362,10 @@ export default function Atmosphere() {
       <div className="atmosphere-clouds-mid" />
       <div className="atmosphere-clouds-near" />
       {shootingStar && <div className="atmosphere-shooting-star" style={{ top: "14%", left: "70%" }} />}
-      {/* RAIN PREVIEW (dev-only prototype) — rendered last so it sits in
-          front of everything else in the scene, the way real rain would
-          read as nearest to the viewer. Always present in the markup,
-          exactly like the cloud tiers above; --rain (globals.css) is 0
-          off the dev Rain preview control, which is the only value
-          production ever sees, so both layers resolve to opacity 0 and
-          are visually absent by default. */}
-      <div className="atmosphere-rain-far" />
-      <div className="atmosphere-rain-near" />
+      {/* Rain layers intentionally not rendered: the dev rain prototype's
+          tilted streaming stripes read as distracting scrolling diagonal
+          lines. The rain preview state/CSS remain inert for a future,
+          natural implementation. */}
     </div>
   );
 }

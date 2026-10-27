@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Blonde Seonghwa's wink," part of a same-day multi-member post series.
+"Blonde Seonghwa's wink," a photo posted as part of a same-day series of member posts on ATEEZ's official X account.

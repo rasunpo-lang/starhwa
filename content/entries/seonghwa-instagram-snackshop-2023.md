@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned "Let's go to the snack shop with me🤭."
+"나랑 매점가자🤭" ("Let's go to the snack shop with me🤭.") A photo from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram.

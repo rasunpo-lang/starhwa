@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, thanking ATINY.
+Thanking ATINY: "에이티니 너무 고마워 항상 사랑해" ("ATINY, thank you so much, I always love you"). A photo from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram.

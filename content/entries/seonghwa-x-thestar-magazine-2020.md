@@ -14,7 +14,7 @@ sources:
 related:
 ---
 
-Seonghwa's X post promoting ATEEZ's pictorial for "The Star" magazine.
+Seonghwa promotes ATEEZ's pictorial for "The Star" magazine: "ATINY, did you get to see the 'The Star' pictorial?" THE STAR's own Instagram account announced the same pictorial and interview in its September 2020 issue.
 
 <!-- full-text -->
 

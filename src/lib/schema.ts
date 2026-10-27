@@ -19,6 +19,9 @@ export const sourceSchema = z.object({
   label: z.string().min(1, "source.label is required"),
   url: z.string().url("source.url must be a valid URL"),
   qualifiesForTourSource: z.literal(true).optional(),
+  // Author-set: embed this specific X post on the entry page (when the entry
+  // has no video player). See content/README.md "Embedding an X post."
+  embed: z.literal(true).optional(),
 });
 
 // Optional editorial visual anchor — see content/README.md "Image

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual selfie from Seonghwa posted via ATEEZ's official X account, captioned with the playful phrase "Hakuna Matata."
+A selfie from Seonghwa on ATEEZ's official X account, captioned with the playful phrase "Hakuna Matata."

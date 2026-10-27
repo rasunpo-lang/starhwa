@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A caption-less photo post of Seonghwa, posted via ATEEZ's official X account with a row of fire emoji.
+A photo of Seonghwa on ATEEZ's official X account, with only a row of fire emoji for a caption: 🔥🔥🔥🔥🔥🔥🔥🔥🔥

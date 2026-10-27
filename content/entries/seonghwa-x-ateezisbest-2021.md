@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual message from Seonghwa posted via ATEEZ's official X account, captioned "The best, ATEEZ."
+"The best, ATEEZ." Seonghwa's message on ATEEZ's official X account, set between two hearts.

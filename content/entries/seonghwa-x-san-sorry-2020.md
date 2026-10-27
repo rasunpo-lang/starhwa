@@ -13,4 +13,4 @@ related:
   - seonghwa-san-x-mama2020-behind-2020
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Sorry, San... let's eat together," posted the same day as a San-and-Seonghwa V LIVE behind photo.
+"Sorry, San... let's eat together," a photo of Seonghwa on ATEEZ's official X account, posted the same day as a San-and-Seonghwa V LIVE behind photo.

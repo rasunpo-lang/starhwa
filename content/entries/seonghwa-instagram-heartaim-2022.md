@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram.
+A photo on ATEEZ's official Instagram, captioned like a filename: "티니_향해_조준_발사.jpg 성화의 하트💗" (roughly, "Aim and fire at Tiny.jpg — Seonghwa's heart💗").

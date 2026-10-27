@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, thanking fans in Portuguese following a Brazil stop.
+"Obrigado Brasil! Tenha cuidado para não pegar um resfriado🤗" ("Thank you, Brazil! Be careful not to catch a cold🤗") — thanking fans in Portuguese after a Brazil stop, in a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

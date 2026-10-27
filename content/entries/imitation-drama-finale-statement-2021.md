@@ -28,4 +28,4 @@ This is a written statement released through the agency rather than a Q&A, so it
 
 "I was truly happy to have met 'Imitation.' Seeing myself in the drama felt strange, like a dream. I want to give my thanks to the director for giving me such a good opportunity, and to the production staff, who worked harder than anyone during filming. Through these people, I gained a lot of motivation to work even harder. It was also a meaningful experience to be able to act alongside such wonderful, great senior actors. I'll keep coming back to you all as an even better Seonghwa from now on. Thank you so much to all the viewers who watched 'Imitation,' and to our ATINY."
 
-Translated directly from the original Korean text of the Sports Kyunghyang article linked below.
+Translated directly from the original Korean text of the Sports Kyunghyang article.

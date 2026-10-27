@@ -13,4 +13,4 @@ sources:
 related: []
 ---
 
-A short video featuring Seonghwa, posted on ATEEZ's official YouTube channel.
+A solo video of Seonghwa dancing to "Bouncy," posted on ATEEZ's official YouTube channel to mark the title track's final music-show broadcast and shared with the song's promotional challenge hashtags.

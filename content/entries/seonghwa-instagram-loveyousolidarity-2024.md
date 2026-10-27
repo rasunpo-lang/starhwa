@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned "💙사랑합니다 연대💙" ("Love you, solidarity").
+A photo from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram, captioned "💙사랑합니다 연대💙" (roughly, "Love you, solidarity").

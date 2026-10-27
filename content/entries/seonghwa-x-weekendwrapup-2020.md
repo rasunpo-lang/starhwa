@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual message from Seonghwa posted via ATEEZ's official X account, captioned "Happy weekend~ wrap it up well, ATINY."
+"Happy weekend~ wrap it up well, ATINY." A message from Seonghwa, posted on ATEEZ's official X account.

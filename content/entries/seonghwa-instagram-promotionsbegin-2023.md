@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, marking the start of "THE WORLD EP.2: OUTLAW" promotions.
+"활동 시작!!! 잘 부탁해🤗" ("Promotions begin!!! Please take care of me🤗") — marking the start of "THE WORLD EP.2: OUTLAW" promotions, in a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

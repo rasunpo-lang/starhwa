@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A pre-debut ASMR self-introduction video of Seonghwa posted via ATEEZ's official Instagram account, part of a member-by-member introduction series ahead of the group's October 2018 debut.
+Seonghwa's ASMR self-introduction, from the member-by-member series released ahead of the October 2018 debut, on ATEEZ's official Instagram account.

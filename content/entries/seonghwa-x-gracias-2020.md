@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A video of Seonghwa posted via ATEEZ's official X account, captioned "Gracias❤❤❤"
+"Gracias❤❤❤" A video of Seonghwa, posted on ATEEZ's official X account.

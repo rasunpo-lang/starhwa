@@ -13,4 +13,4 @@ related:
   - thanxx-mv-2020
 ---
 
-A casual selfie from Seonghwa posted via ATEEZ's official X account during THANXX promotions, captioned "Today's fairy! Ending fairy!"
+A selfie from Seonghwa on ATEEZ's official X account during THANXX promotions, captioned "Today's fairy! Ending fairy!"

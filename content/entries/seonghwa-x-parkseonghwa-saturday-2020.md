@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "On Saturdays, Park. Seong. Hwa."
+"On Saturdays, Park. Seong. Hwa." A photo of Seonghwa, posted on ATEEZ's official X account.

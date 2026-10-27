@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A film-camera selfie of Seonghwa posted via ATEEZ's official X account, captioned "Seonghwa's diary film selfie."
+"Seonghwa's diary film selfie." A film-camera selfie of Seonghwa, posted on ATEEZ's official X account.

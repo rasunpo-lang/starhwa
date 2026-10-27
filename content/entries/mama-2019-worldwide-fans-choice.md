@@ -10,6 +10,10 @@ tags:
 sources:
   - label: "Mnet Official Fancam (MPD직캠) — ATEEZ at 2019 MAMA"
     url: "https://www.youtube.com/watch?v=qPvdZJsDjLE"
+  - label: "Mnet K-POP Official YouTube — ATEEZ(에이티즈) at 2019 MAMA All Moments (0:05)"
+    url: "https://www.youtube.com/watch?v=vnxc7dsywvE&t=5s"
+  - label: "MAMA Official Site — 2019 MAMA Winners (Worldwide Fans' Choice TOP 10: ATEEZ)"
+    url: "https://mama.mnetplus.world/history/2019/winners"
 related:
   - wonderland-mv-2019
 ---

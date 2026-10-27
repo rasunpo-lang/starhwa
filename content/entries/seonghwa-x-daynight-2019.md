@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual message from Seonghwa posted via ATEEZ's official X account, captioned "Day & Night, I always miss you☀️🌙"
+"Day & Night, I always miss you☀️🌙" A message from Seonghwa, posted on ATEEZ's official X account.

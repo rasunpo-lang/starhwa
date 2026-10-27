@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series.
+A photo from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram, captioned "자랑스러운 국보 1호 앞에서" ("In front of the proud National Treasure No. 1").

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { navItems } from "./navData";
 import BrandLockup from "./BrandLockup";
 import AtmosphereNote from "./AtmosphereNote";
+import CrewHourglass from "./CrewHourglass";
 
 export default function Footer() {
   return (
@@ -11,8 +12,8 @@ export default function Footer() {
           <div>
             <BrandLockup size="footer" />
             <p className="mt-3 max-w-sm text-sm text-charcoal/80">
-              A living archive of Park Seonghwa of ATEEZ, documenting his
-              journey from 2018 to the present.
+              A fan archive of Park Seonghwa of ATEEZ, from the 2018 debut
+              onward.
             </p>
           </div>
 
@@ -53,18 +54,15 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
+            <CrewHourglass />
           </nav>
         </div>
 
         <div className="mt-12 border-t border-line pt-6">
           <p className="max-w-3xl text-xs leading-relaxed text-charcoal/70">
-            This is an unofficial fan-created project. It is not affiliated
-            with, endorsed by, or connected to Park Seonghwa, ATEEZ, KQ
-            Entertainment, or any associated rights holders. Original
-            photography, video, and press materials belong to their
-            respective owners and are linked to, not reproduced. All written
-            entries, descriptions, and database organization are original
-            work by this archive&apos;s maintainers.
+            An unofficial fan project, not affiliated with Park Seonghwa,
+            ATEEZ, KQ Entertainment, or any rights holders. Photography,
+            video, and press materials belong to their owners.
           </p>
           <AtmosphereNote />
           <p className="meta mt-2 text-charcoal/75">

@@ -36,4 +36,4 @@ On what he'd do with some free time: "I'd want to go to my hometown. The juniors
 
 On the power of writing things down: "Whenever I'm reading a book, watching a drama or a movie, or even just talking with someone, I write down words or sentences that strike me in my notes app. Right now, on that list, I especially like the line: 'It's not failing that's embarrassing — it's not trying at all that is.' It's made me reflect on times I got scared and held back without even trying, and made me think about what it might mean to be more forgiving of failure."
 
-Translated directly from the original Korean text of the SINGLES Korea article linked below.
+Translated directly from the original Korean text of the SINGLES Korea article.

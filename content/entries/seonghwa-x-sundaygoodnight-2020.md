@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A good-night message from Seonghwa posted via ATEEZ's official X account, captioned "Finish Sunday well, ATINY~~ and good night."
+"Finish Sunday well, ATINY~~ and good night." A good-night message from Seonghwa, posted on ATEEZ's official X account.

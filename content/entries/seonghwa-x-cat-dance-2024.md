@@ -9,7 +9,9 @@ tags:
 sources:
   - label: "ATEEZ Official YouTube — Short: '떵냥댄스'"
     url: "https://www.youtube.com/shorts/IOPw3wM9K9Q"
+  - label: "ATEEZ Official X — [🎬] 떵냥댄스"
+    url: "https://x.com/ATEEZofficial/status/1853739705910833182"
 related:
 ---
 
-A video of Seonghwa posted via ATEEZ's official X account, captioned "떵냥댄스" ("cat dance"), cross-posted from TikTok.
+A short video of Seonghwa captioned "떵냥댄스" ("cat dance"), on ATEEZ's official YouTube channel. It was also posted on TikTok and Instagram.

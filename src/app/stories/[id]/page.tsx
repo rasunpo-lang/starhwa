@@ -77,7 +77,7 @@ export default async function StoryPage({
         <time dateTime={story.date}>{formatStoryDate(story.date)}</time>
         {story.significant && (
           <span className="text-plum">
-            <span aria-hidden="true">✦</span> A Little More Meaningful
+            <span aria-hidden="true">✦</span> A Meaningful Post
           </span>
         )}
       </div>
@@ -130,9 +130,6 @@ export default async function StoryPage({
       {story.handwritten && (
         <div className="mt-10 border border-line bg-ivory-dim p-6 sm:p-8">
           <p className="eyebrow text-plum">Handwritten — Transcribed from the Image</p>
-          <p className="meta mt-2 text-charcoal/70">
-            Read from Seonghwa&apos;s own handwriting in the photo above, not text supplied by the platform.
-          </p>
           <p className="mt-5 whitespace-pre-line text-lg leading-relaxed text-ink/90">
             {story.handwritten.translation}
           </p>
@@ -167,9 +164,6 @@ export default async function StoryPage({
       {story.secondImage?.handwritten && (
         <div className="mt-6 border border-line bg-ivory-dim p-6 sm:p-8">
           <p className="eyebrow text-plum">Handwritten — Transcribed from the Second Image</p>
-          <p className="meta mt-2 text-charcoal/70">
-            Read from Seonghwa&apos;s own handwriting in the photo above, not text supplied by the platform.
-          </p>
           <p className="mt-5 whitespace-pre-line text-lg leading-relaxed text-ink/90">
             {story.secondImage.handwritten.translation}
           </p>
@@ -196,29 +190,17 @@ export default async function StoryPage({
         </div>
       )}
 
-      <div className="mt-12 border-t border-line pt-8">
-        <p className="eyebrow text-charcoal/75">Official Source</p>
+      <p className="mt-12 border-t border-line pt-6 text-sm text-charcoal/80">
         <a
           href={story.sourceUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group mt-4 flex items-center justify-between gap-4 border border-line px-5 py-4 transition-colors hover:border-plum"
+          className="underline decoration-line underline-offset-4 transition-colors hover:text-plum hover:decoration-plum"
         >
-          <span className="font-display text-lg">
-            View on ATEEZ Official Platform
-            <span className="sr-only"> (opens in a new tab)</span>
-          </span>
-          <span className="meta shrink-0 text-charcoal/75 group-hover:text-plum">
-            Visit original ↗
-          </span>
+          Original post on ATEEZ Official Platform <span aria-hidden="true">↗</span>
+          <span className="sr-only"> (opens in a new tab)</span>
         </a>
-        <p className="mt-4 text-xs leading-relaxed text-charcoal/75">
-          {story.translation &&
-            "The translation above is original work by this archive's maintainers, kept as close as possible to Seonghwa's own wording and tone. "}
-          The photo above (when present) and the original post remain the property of KQ
-          Entertainment.
-        </p>
-      </div>
+      </p>
 
       <div className="mt-12">
         <Link href="/stories" className="btn btn-secondary">

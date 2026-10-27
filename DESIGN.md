@@ -1552,3 +1552,138 @@ The identity is `[星化] | STARHWA` over "The Encyclopedia", defined once in
   supports it (Archivo regular, 14px/12px, 0.5em tracking), separated by a
   1px `charcoal/30` hairline. Don't re-bold the wordmark or shrink the mark.
 - No circles, badges, frames or added stars around the mark.
+
+## 19. Rare Aurora
+
+An occasional, unannounced appearance of the original STARHWA aurora
+artwork (mint, turquoise, ice blue, lavender; 星化 calligraphy in its
+centre) in the Astral Sky —
+a discovered moment, not a night-time default. `Aurora.tsx` is mounted
+inside `Atmosphere.tsx` (after the stars, before the clouds) and renders
+nothing at all unless its roll succeeded; there is no second sky system.
+
+**Rarity (`ATMOSPHERE_CONFIG.aurora`, `atmosphere.ts`).** Eligibility
+first, consuming nothing: `getNightAmount >= 0.6` (twilight or deeper),
+`getGoldenAmount <= 0.05`, and outside a 5-day per-browser cooldown
+(localStorage `starhwa:aurora:lastSeen`, same pattern as the 떵별이
+sighting). Then **one** roll per browser session at 5% (sessionStorage
+`starhwa:aurora:session`; win or lose is recorded, so reloads and
+navigation never re-roll). A win stores its start time; a reload during
+an appearance resumes it (negative `animation-delay`) rather than
+replaying it. An appearance lasts 150s (`durationMs`, passed to CSS as
+`--aurora-duration`): slow fade-in, hold, fade-out. No network, backend
+or identifier is involved. `?aurora=now` forces one for review (still
+invisible by day — pair with the Night preview).
+
+**Layering.** `.atmosphere-aurora`'s opacity reuses the stars' night/
+golden gate, so it recedes with dawn or Golden Hour regardless of its own
+timer. It lives in the fixed, `-z-10` `.atmosphere` layer behind all
+content at ≤ ~0.3 effective alpha in the upper sky only, so light night
+text keeps its contrast. 떵별이, shooting stars and sparkles are
+untouched and simply pass in front of it.
+
+**Performance / fallbacks.** Motion is transform and opacity only (curtain
+sway, a ray-shimmer pseudo-element, the life fade); blur sits on an inner
+element so the animated parent isn't re-rasterised. Curtains need
+`mask-image`; inside `@supports` they render, otherwise the mask-free
+`.atmosphere-aurora-glow` wash is the whole effect. Under
+`prefers-reduced-motion` there is no fade, sway or shimmer — a still,
+softer wash for the rest of that page load. The third curtain is dropped
+at ≤ 640px.
+
+**Artwork, not generated shapes.** The picture is `public/brand/aurora-sky.jpg`,
+the sky of the supplied aurora scene (source: the 2026-10-09 ChatGPT-made
+mockup, 1536px wide), cropped to y 140–740 so its baked-in nav, wordmark,
+taglines and the mountain/lake landscape are excluded; the 星化 lockup is
+left untouched. `.atmosphere-aurora-art` blends it with `mix-blend-mode:
+screen` (the sky's dark blue dissolves into the live sky, only its light
+adds), feathers all edges with a mask, and caps the image at 0.62 opacity so
+night text keeps its contrast. The picture is fully static — an earlier
+120s drift/zoom made the artwork's own diagonal ray structure crawl across
+the screen (the 1536px source is upscaled ~2x on retina), so it was removed;
+only the appearance's fade in/out remains. The earlier CSS curtains/glow were
+removed; the rarity, cooldown, fade lifecycle and `?aurora=now` are unchanged.
+Higher-resolution source would sharpen it on large displays.
+
+**When it appears (twilight tier).** Eligibility starts at `minNight` 0.3
+(blue hour); below `softNight` 0.6 the roll is half as likely
+(`twilightChanceFactor`) and the picture is capped at 0.35 opacity — a soft,
+translucent version. Full luminosity (and the night-only "swell" below) is
+reserved for deep night. By day (`--night` < 0.3) opacity is 0 and nothing is
+eligible. Golden Hour still removes it.
+
+**Living aurora — scoped WebGL exception.** §6's "motion is CSS-only, no
+animation libraries" rule has one documented exception: `AuroraArt.tsx`
+(mounted by `Aurora.tsx` only during an actual appearance) runs a small raw
+WebGL pass — no library — so the artwork has genuine, organic movement. A
+slow noise flow field pushes the picture's own pixels sideways (more toward
+the curtains' lower hem), so folds reshape and ripple; broad brightness
+swells, drifting luminous patches and soft filament shimmer move the light
+inside them. Three derived layers — `aurora-far.jpg` (diffuse far haze),
+`aurora-sky.jpg` (the artwork) and `aurora-near.jpg` (its own brightest fine
+light, premultiplied on black, ~160KB) — are warped at different speeds and
+scales for depth. Time is continuous (no loop), nothing slides as a sheet,
+and the layers are *derived* (`brand-source/aurora-layers.py`), not copies.
+Added light is gently calmed around the Moon (feathered, base sky untouched:
+no halo) and the Moon is drawn in front (§19 layering above).
+
+Safeguards: it exists only while the rare aurora is mounted, and is paused
+while the tab is hidden or the aurora's own night/golden gate has faded it to
+~0 (checked each second); ~30fps, DPR ≤ 1.5, ≤ 1.2M pixels, low-power
+context; everything (loop, observers, timer, textures, program, context,
+canvas) is released on unmount. **Reduced motion:** one stable still frame,
+no loop. **Fallback:** if WebGL is unavailable, shader/program/texture
+creation fails, or the context is lost, the earlier static picture plus two
+out-of-phase CSS opacity swells (`.atmosphere-aurora-swell`, 52s/67s, static
+under reduced motion) is shown instead.
+
+**Rain is disabled.** The dev rain prototype's layers are no longer rendered
+and its preview row is removed from `AtmospherePreviewToggle`; its state/CSS
+are inert.
+
+
+## 20. Sunrise / Golden Hour / Sunset — distinct skies
+
+These three states used to read as one mauve-gray sky. Causes: (1) one
+shared `-early → -late` golden overlay served both the morning and evening
+windows, so Sunrise (progress 0.5), Golden Hour (0.3) and Sunset (0.85) all
+sampled the same palette; (2) its hexes were desaturated mauve/blue-grays
+with only the horizon stop warm; (3) the symmetric `--sky-transition`
+rose-violet tint was mixed in underneath at every one of them (0.56–0.96
+weight), washing out whatever the overlay added.
+
+Now, in `:root` of `globals.css`: `--sky-evening` (0 = morning, 1 = evening,
+derived from `--sun-x`, no JS) picks the palette. Per stop: `-dawn-a/-dawn-b`
+(pale rose/lavender/peach with morning blue overhead) for Sunrise;
+`-early` (honey, amber, champagne) → `-late` (orange horizon, rose, magenta,
+plum, violet) for the evening, with `-early` held longer via a squared
+progress; `-transition-dawn` / `-transition` as direction-aware blue-hour
+tints. `--sky-tint-weight` holds the dusk tint back until night is under way,
+and the overlay's weight is `min(1, --golden * 1.5)` so it can dominate.
+Full day and full night are unchanged (verified: identical stop colors).
+
+## 21. The Crew's Secret entrance (footer)
+
+A single, quiet doorway to a separate multiplayer game (The Crew's Secret),
+kept deliberately outside the archive's content, search and sitemap. It lives
+in the footer's "Project" column (`CrewHourglass.tsx`, under the link list) and
+is not a banner, section or page of its own.
+
+- **Artwork:** `public/brand/crews-secret-lightstick.webp` — a 320×480
+  transparent studio render of an *original* Cromer-style light stick
+  (hourglass in an engraved star-chart globe, clear orbit band, silver grip),
+  shown at 40×60px. It was rendered in Blender, not drawn in CSS; the cube
+  button and ring markings are original geometry, not copied artwork. The
+  source scene is not in this repo.
+- **Treatment:** Decorative, so `alt=""` with the visible mono label
+  ("The Crew's Secret") as its text alternative (§5). Idle: a faint turquoise
+  glow. Hover/focus: the glow warms to turquoise + gold (200ms, `filter`
+  only) and the shared 별빛팡팡 glint pops once (§6.1). Reduced motion: no
+  transition (the glint is already hidden).
+- **Destination:** `NEXT_PUBLIC_CREWS_SECRET_URL`. Unset → hidden in
+  production, a dimmed non-interactive placeholder in development. Set → opens
+  the game in a new tab (`rel="noopener noreferrer"`) with a screen-reader note
+  that it's a separate game.
+- **Footprint:** 60px minimum height keeps a comfortable tap target without
+  adding a new layout step; no new colour token (the glow is a scoped custom
+  property in `globals.css`).

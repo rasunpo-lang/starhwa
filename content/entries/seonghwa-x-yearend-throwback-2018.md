@@ -13,7 +13,7 @@ sources:
 related:
 ---
 
-Seonghwa's pre-debut throwback photos, posted via ATEEZ's X.
+A look back at the year with throwback photos from Seonghwa's pre-debut training days, on ATEEZ's official X account — including his time training in the US, "Operation ATEEZ," Morocco, and "ATEEZ in School." Captioned "오랜만이에요~ 올해를 돌아보며 추억 사진들을 가져왔어요~" ("Long time no see~ I brought some memory photos, looking back on the year~").
 
 <!-- full-text -->
 

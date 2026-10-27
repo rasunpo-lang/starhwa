@@ -13,7 +13,7 @@ sources:
 related:
 ---
 
-Seonghwa's X post marking 2 years since ATEEZ's debut.
+Two years since debut, on ATEEZ's official X account: Seonghwa gives in to ATINY's pressuring and posts the photo he meant to share the day before (#2_years_with_ATEEZ).
 
 <!-- full-text -->
 

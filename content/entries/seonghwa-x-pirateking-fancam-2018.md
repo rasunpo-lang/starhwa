@@ -14,4 +14,4 @@ sources:
 related:
 ---
 
-A practice fancam of Seonghwa posted via the official ATEEZ X account seven days ahead of debut, captioned "Pirate King fancam."
+"Pirate King fancam." A practice fancam of Seonghwa, posted on ATEEZ's official X account seven days ahead of debut (D-7).

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A photo of Seonghwa posted via ATEEZ's official X account with only emoji as caption.
+Captioned with just 💛🤍: a photo of Seonghwa on ATEEZ's official X account.

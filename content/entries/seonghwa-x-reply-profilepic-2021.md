@@ -13,4 +13,4 @@ related:
   - seonghwa-x-reply-garbled-2021
 ---
 
-Seonghwa replying to a fan via ATEEZ's official X account, joking that their profile picture is actually Hongjoong.
+A reply to a fan on ATEEZ's official X account: "프사는 홍중인데요??????" ("But your profile picture is Hongjoong??????"), joking that their profile picture is actually Hongjoong.

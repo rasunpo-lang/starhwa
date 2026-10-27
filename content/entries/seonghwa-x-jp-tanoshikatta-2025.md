@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official Japan X account, captioned "that was fun."
+"たのしかったよ🥰" ("that was fun.") A photo of Seonghwa, posted on ATEEZ Japan's official X account.

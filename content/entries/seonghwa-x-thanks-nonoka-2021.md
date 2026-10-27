@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo posted via ATEEZ's official X account, with Seonghwa writing his own caption in Japanese to thank a fan.
+A photo on ATEEZ's official X account, with Seonghwa writing his own caption in Japanese to thank a fan: "ありがとう😃 ののかちゃん❤❤❤❤" ("Thank you😃 Nonoka-chan❤❤❤❤").

@@ -13,4 +13,4 @@ related:
   - seonghwa-instagram-towardsthelight2-2024
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned "TOWARDS THE LIGHT."
+"TOWARDS THE LIGHT." A photo from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram.

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A poetic message from Seonghwa posted via ATEEZ's official X account: "Even if everything loses its light tonight, I'll always find my way to your side."
+A poetic message from Seonghwa on ATEEZ's official X account: "Even if everything loses its light tonight, I'll always find my way to your side."

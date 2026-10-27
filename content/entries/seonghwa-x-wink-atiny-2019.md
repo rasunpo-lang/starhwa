@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo post of Seonghwa winking at ATINY, shared via ATEEZ's official X account and tagged #성화.
+A photo of Seonghwa winking at ATINY, on ATEEZ's official X account (#성화): "에이티니에게 윙크❤️" ("A wink for ATINY❤️").

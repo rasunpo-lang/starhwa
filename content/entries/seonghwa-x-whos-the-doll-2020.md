@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A set of casual photos of Seonghwa posted via ATEEZ's official X account, playfully captioned "Who's the doll~~~~."
+A set of photos of Seonghwa on ATEEZ's official X account, playfully captioned "Who's the doll~~~~."

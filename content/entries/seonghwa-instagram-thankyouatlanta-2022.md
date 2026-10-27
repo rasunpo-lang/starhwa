@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, thanking fans following an Atlanta tour stop.
+"Thank you Atlanta" — thanking fans after an Atlanta tour stop, in a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

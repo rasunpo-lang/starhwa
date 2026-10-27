@@ -29,9 +29,6 @@ export default function ArchivePage() {
     <div className="mx-auto max-w-[1400px] px-5 py-14 sm:px-8 sm:py-20">
       <p className="eyebrow text-plum">The Database</p>
       <h1 className="mt-3 font-display text-5xl sm:text-6xl">Archive</h1>
-      <p className="mt-5 max-w-xl text-sm leading-relaxed text-charcoal/85">
-        Filter the full catalogue by category, era, or year.
-      </p>
 
       <div className="mt-12">
         <Suspense fallback={null}>

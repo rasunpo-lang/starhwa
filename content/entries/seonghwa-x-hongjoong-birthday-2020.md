@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A birthday message from Seonghwa for fellow member Hongjoong, posted via ATEEZ's official X account, captioned "Best leader! Happy birthday."
+"Best leader! Happy birthday." Seonghwa's birthday message for fellow member Hongjoong, posted on ATEEZ's official X account.

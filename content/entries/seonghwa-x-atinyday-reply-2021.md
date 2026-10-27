@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-Seonghwa replying via ATEEZ's official X account during an #ATINYDAY fan-mention event, responding to a fan's comment with a bashful "hehe, embarrassing."
+Seonghwa answers a fan's comment on ATEEZ's X during the #ATINYDAY mention event: "hehe, embarrassing."

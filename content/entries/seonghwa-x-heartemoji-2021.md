@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A video of Seonghwa posted via ATEEZ's official X account, captioned only with a heart emoji.
+A video of Seonghwa on ATEEZ's official X account, captioned only with a heart emoji: ❤️

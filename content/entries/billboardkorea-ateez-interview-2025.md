@@ -75,4 +75,4 @@ A: "I'm interested in a variety of areas, including fashion. If the chance comes
 Q: If you had to leave behind just one song to be remembered forever, what message would it carry?
 A: "I'd leave behind 'Star 1117.' It's the song that means the most to me and ATINY together. I want to leave the message that we were together."
 
-Translated directly from the original Korean Q&A text of the Billboard Korea article linked below.
+Translated directly from the original Korean Q&A text of the Billboard Korea article.

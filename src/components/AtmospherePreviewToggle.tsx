@@ -3,17 +3,11 @@
 import { useSyncExternalStore } from "react";
 import {
   ATMOSPHERE_PREVIEW_MODES,
-  RAIN_PREVIEW_LEVELS,
   getAtmospherePreviewMode,
   getAtmospherePreviewServerSnapshot,
-  getRainPreviewLevel,
-  getRainPreviewServerSnapshot,
   setAtmospherePreviewMode,
-  setRainPreviewLevel,
   subscribeAtmospherePreviewMode,
-  subscribeRainPreviewLevel,
   type AtmospherePreviewMode,
-  type RainPreviewLevel,
 } from "@/lib/atmospherePreview";
 
 const LABELS: Record<AtmospherePreviewMode, string> = {
@@ -23,12 +17,6 @@ const LABELS: Record<AtmospherePreviewMode, string> = {
   "golden-hour": "Golden Hour",
   sunset: "Sunset",
   night: "Night",
-};
-
-const RAIN_LABELS: Record<RainPreviewLevel, string> = {
-  off: "Off",
-  light: "Light",
-  moderate: "Moderate",
 };
 
 /**
@@ -54,25 +42,12 @@ const RAIN_LABELS: Record<RainPreviewLevel, string> = {
  * "live" server snapshot on first paint, then re-syncs to the real stored
  * mode right after hydration — the standard pattern for this exact
  * scenario.
- *
- * A second, independent row previews RAIN (dev-only prototype — see
- * atmospherePreview.ts/Atmosphere.tsx): Off/Light/Moderate, its own
- * override with its own storage key and pub/sub, deliberately not a
- * seventh option folded into the sky-state row above — rain composes
- * with whichever sky state is showing rather than replacing it, so
- * picking "Night" up top and "Moderate" down here previews rain falling
- * through a real night sky, not a separate "rainy" preset.
  */
 export default function AtmospherePreviewToggle() {
   const mode = useSyncExternalStore(
     subscribeAtmospherePreviewMode,
     getAtmospherePreviewMode,
     getAtmospherePreviewServerSnapshot
-  );
-  const rain = useSyncExternalStore(
-    subscribeRainPreviewLevel,
-    getRainPreviewLevel,
-    getRainPreviewServerSnapshot
   );
 
   return (
@@ -94,23 +69,6 @@ export default function AtmospherePreviewToggle() {
               data-active={mode === m}
             >
               {LABELS[m]}
-            </button>
-          ))}
-        </div>
-      </div>
-      <div className="atmosphere-preview-toggle-row" role="group" aria-label="Preview rain">
-        <span className="meta text-charcoal/60">Rain</span>
-        <div className="atmosphere-preview-toggle-options">
-          {RAIN_PREVIEW_LEVELS.map((level) => (
-            <button
-              key={level}
-              type="button"
-              onClick={() => setRainPreviewLevel(level)}
-              aria-pressed={rain === level}
-              className="atmosphere-preview-toggle-btn"
-              data-active={rain === level}
-            >
-              {RAIN_LABELS[level]}
             </button>
           ))}
         </div>

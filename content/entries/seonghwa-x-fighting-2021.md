@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Fighting today too."
+"Fighting today too." A photo of Seonghwa, posted on ATEEZ's official X account.

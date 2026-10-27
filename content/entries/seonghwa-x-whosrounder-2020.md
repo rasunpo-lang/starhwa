@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account holding an apple to his cheek, captioned "Who's rounder~?"
+A photo of Seonghwa on ATEEZ's official X account holding an apple to his cheek, captioned "Who's rounder~?"

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A throwback message from Seonghwa posted via ATEEZ's official X account referencing "Say My Name," captioned "Memories of 'Say My Name'~~~"
+A throwback message from Seonghwa on ATEEZ's official X account referencing "Say My Name," captioned "Memories of 'Say My Name'~~~"

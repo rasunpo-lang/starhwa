@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A mirror selfie of Seonghwa posted via ATEEZ's official X account, self-captioned as a shot that wasn't easy to pull off.
+A mirror selfie of Seonghwa on ATEEZ's official X account, captioned "쉽지 않은 거울샷.." ("A mirror shot that isn't easy..").

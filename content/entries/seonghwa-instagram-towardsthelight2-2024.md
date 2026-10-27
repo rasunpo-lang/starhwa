@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned "TOWARDS THE LIGHT 2."
+"TOWARDS THE LIGHT 2." A photo from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram.

@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series.
+"크리스마스 선물이 도착했습니다🎁" ("Your Christmas present has arrived🎁"). A 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

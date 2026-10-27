@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A pre-debut self-introduction message from Seonghwa posted via ATEEZ's official X account: "Hello~ this is ATEEZ's Seonghwa. It's raining, so be careful, eat well, don't get sick, and have a happy rest of the day."
+A pre-debut self-introduction message from Seonghwa on ATEEZ's official X account: "Hello~ this is ATEEZ's Seonghwa. It's raining, so be careful, eat well, don't get sick, and have a happy rest of the day."

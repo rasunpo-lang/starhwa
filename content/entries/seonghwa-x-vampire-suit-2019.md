@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A mirror selfie of Seonghwa in a suit, posted via ATEEZ's official X account, captioned "Looks like a vampire wearing a suit, hahaha."
+"Looks like a vampire wearing a suit, hahaha." A mirror selfie of Seonghwa in a suit, posted on ATEEZ's official X account.

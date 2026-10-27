@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned "Let's go Coachella (thanks for the umbrella💚)" ahead of ATEEZ's Coachella 2024 appearance.
+A 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram, captioned "Let's go Coachella (우산 고마워💚)" ("Let's go Coachella (thanks for the umbrella💚)") ahead of ATEEZ's Coachella 2024 appearance.

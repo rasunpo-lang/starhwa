@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual selfie of Seonghwa taken in a car, posted via ATEEZ's official X account.
+"Car selfie 🤍🤍" Seonghwa in a car, posted on ATEEZ's official X account.

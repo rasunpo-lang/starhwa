@@ -14,7 +14,7 @@ related:
   - seonghwa-x-kqfellaz-preview-2018
 ---
 
-The finale of KQ's pre-debut "KQ Fellaz" training log, performing "From."
+On KQ Entertainment's official YouTube channel, the finale of KQ's pre-debut "KQ Fellaz" training log, performing "From."
 
 <!-- full-text -->
 

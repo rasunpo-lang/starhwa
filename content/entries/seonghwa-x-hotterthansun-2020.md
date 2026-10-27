@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A poetic message from Seonghwa posted via ATEEZ's official X account: "We're hotter than anyone under the sun, so don't worry."
+A poetic message from Seonghwa on ATEEZ's official X account: "We're hotter than anyone under the sun, so don't worry."

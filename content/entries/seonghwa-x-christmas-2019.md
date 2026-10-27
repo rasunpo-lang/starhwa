@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A Christmas Eve greeting from Seonghwa posted via ATEEZ's official X account.
+"ATINY❤️❤️🎉🎉 🎄Merry christmas🎄" A Christmas Eve greeting from Seonghwa, posted on ATEEZ's official X account.

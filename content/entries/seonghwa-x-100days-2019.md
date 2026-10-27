@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A message from Seonghwa posted via ATEEZ's official X account marking 100 days since debut: "Say My Name Seonghwa VS Hala Hala Seonghwa — whichever Seonghwa, happy 100 days, ATINY."
+Seonghwa marks 100 days since debut on ATEEZ's official X account: "Say My Name Seonghwa VS Hala Hala Seonghwa — whichever Seonghwa, happy 100 days, ATINY."

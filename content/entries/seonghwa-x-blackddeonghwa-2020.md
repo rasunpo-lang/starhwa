@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Black Ddeonghwa~ I'm in love with black & ATINY."
+"Black Ddeonghwa~ I'm in love with black & ATINY." A photo of Seonghwa, posted on ATEEZ's official X account.

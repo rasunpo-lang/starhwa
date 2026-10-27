@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, a playful caption punning on his own name and "umbrella" (우산/우성화).
+"우산화랑 휴가😚" — a playful caption that swaps the 성 of his name 성화 for 우산 ("umbrella"), in a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

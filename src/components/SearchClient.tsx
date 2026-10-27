@@ -44,9 +44,7 @@ export default function SearchClient({ entries }: { entries: Entry[] }) {
       </div>
 
       <div aria-live="polite" className="eyebrow mt-6 text-charcoal/75">
-        {query.trim() === "" ? (
-          "Start typing to search the archive"
-        ) : (
+        {query.trim() === "" ? null : (
           <>
             {results.length} {results.length === 1 ? "result" : "results"} for
             &nbsp;&ldquo;{query}&rdquo;
@@ -58,8 +56,7 @@ export default function SearchClient({ entries }: { entries: Entry[] }) {
         <div className="mt-10 border border-line p-10 text-center">
           <p className="font-display text-2xl">No entries found.</p>
           <p className="mt-2 text-sm text-charcoal/70">
-            Try a different title, category, or tag — such as
-            &ldquo;fashion&rdquo;, &ldquo;interview&rdquo;, or an era name.
+            Try a different title, category, or tag.
           </p>
         </div>
       )}

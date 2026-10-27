@@ -14,4 +14,4 @@ sources:
 related:
 ---
 
-A pre-debut video preview of Seonghwa and Wooyoung posted via the official ATEEZ X account, previewing "KQ Fellaz EP.11."
+On ATEEZ's official X account, a pre-debut video preview of Seonghwa and Wooyoung, previewing "KQ Fellaz EP.11."

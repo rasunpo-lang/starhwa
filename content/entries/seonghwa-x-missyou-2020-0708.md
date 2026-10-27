@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual message from Seonghwa posted via ATEEZ's official X account, captioned "ATINY~ I miss you~"
+"ATINY~ I miss you~" A message from Seonghwa, posted on ATEEZ's official X account.

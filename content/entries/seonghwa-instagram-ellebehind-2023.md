@@ -13,4 +13,4 @@ sources:
 related: []
 ---
 
-A behind-the-scenes photo of Seonghwa from an ELLE Singapore shoot, posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series.
+"ELLE behind🫶" A behind-the-scenes photo from an ELLE Singapore shoot, from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram.

@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, ahead of a Madrid tour stop.
+A 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram, ahead of a Madrid tour stop, captioned "예쁜 꽃까꽃 입고 ATINY 만나러 가야지" (roughly, "Gotta put on pretty clothes and go meet ATINY").

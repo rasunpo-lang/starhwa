@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A birthday message from Seonghwa for fellow member San, posted via ATEEZ's official X account.
+"사니야 생일 축하해~~~~" ("Happy birthday, San~~~~"). Seonghwa's birthday message for fellow member San, posted on ATEEZ's official X account.

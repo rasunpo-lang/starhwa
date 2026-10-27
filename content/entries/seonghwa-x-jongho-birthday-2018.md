@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A birthday message from Seonghwa for fellow member Jongho, posted via ATEEZ's official X account.
+"종호야 생일 축하해 형아들이 많이 사랑한다" ("Happy birthday, Jongho — your hyungs love you a lot"). Seonghwa's birthday message for fellow member Jongho, posted on ATEEZ's official X account.

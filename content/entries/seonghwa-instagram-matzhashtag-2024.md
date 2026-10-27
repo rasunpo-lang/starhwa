@@ -15,4 +15,4 @@ related:
   - matz-behindcut-2024
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, marking the "MATZ" unit release.
+"🔥MATZ🔥" A 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram, marking the "MATZ" unit release.

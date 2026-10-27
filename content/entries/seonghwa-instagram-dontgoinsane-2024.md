@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo reel of Seonghwa posted via ATEEZ's official Instagram, captioned "Don't Go Insane🤫."
+A solo reel of Seonghwa on ATEEZ's official Instagram, captioned "Don't Go Insane🤫."

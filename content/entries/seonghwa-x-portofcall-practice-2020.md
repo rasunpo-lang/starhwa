@@ -13,7 +13,7 @@ sources:
 related:
 ---
 
-Seonghwa's X post practicing for the "PORT OF CALL" concert.
+Seonghwa practicing for the "PORT OF CALL" concert, tagged for the group's second anniversary, on ATEEZ's official X account: "ATINY! This is Seonghwa, practicing for the concert~ Are any of you also preparing for the concert?"
 
 <!-- full-text -->
 

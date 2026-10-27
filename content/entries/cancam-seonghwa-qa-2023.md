@@ -53,4 +53,4 @@ A: "Samgyeopsal! I think what makes it special is grilling it right in front of 
 Q: Finally, please give a message to Japanese ATINY!
 A: "I want to say thank you to ATINY for always giving us so much support, and to ask you to keep looking forward to what's next. Strengthened by all of your love, we'll show you an ATEEZ that keeps working hard!"
 
-Translated directly from the original Japanese text of the CanCam.jp article linked below.
+Translated directly from the original Japanese text of the CanCam.jp article.

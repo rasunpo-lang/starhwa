@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "ATEEZ's best physique is Park Seonghwa."
+On ATEEZ's X: "ATEEZ's best physique is Park Seonghwa." A photo of Seonghwa.

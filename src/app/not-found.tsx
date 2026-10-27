@@ -14,9 +14,8 @@ export default function NotFound() {
         Entry Not Found
       </h1>
       <p className="mt-5 max-w-md text-sm leading-relaxed text-charcoal/85">
-        This page isn&apos;t catalogued in the archive — it may have been
-        moved, renamed, or never existed. Try searching, or return to the
-        chronology.
+        This page doesn&apos;t exist, or it has moved. Try searching, or head
+        back home.
       </p>
       <div className="mt-8 flex flex-wrap items-center gap-4">
         <Link href="/search" className="btn btn-primary">

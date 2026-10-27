@@ -13,4 +13,4 @@ related:
   - tour-fellowship-beginningoftheend-usa-2022
 ---
 
-A pre-arrival photo of Seonghwa posted via ATEEZ's official X account ahead of the group's Atlanta stop on the U.S. leg of "THE FELLOWSHIP: BEGINNING OF THE END" world tour, which ran January 18–30, 2022.
+"See you soon, Atlanta💫" Seonghwa's photo ahead of the Atlanta stop on the U.S. leg of THE FELLOWSHIP: BEGINNING OF THE END (January 18–30, 2022), posted on ATEEZ's official X account.

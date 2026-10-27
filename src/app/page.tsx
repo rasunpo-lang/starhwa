@@ -4,7 +4,8 @@ import EntryGrid from "@/components/entry-grid/EntryGrid";
 import Timeline from "@/components/Timeline";
 import Glint from "@/components/Glint";
 import FeaturedPortraitImage from "@/components/FeaturedPortraitImage";
-import { getAllEntriesSorted, getEntryBySlug, getOnThisDayEntry } from "@/data/entries";
+import OnThisDay from "@/components/OnThisDay";
+import { getAllEntriesSorted, getEntryBySlug, getOnThisDayByKey, monthDayKey } from "@/data/entries";
 import { eras } from "@/data/eras";
 import { officialLinks } from "@/data/officialLinks";
 import { imageFor, publicImage } from "@/lib/layout";
@@ -44,7 +45,14 @@ const jsonLd = {
 
 export default function Home() {
   const today = new Date();
-  const onThisDay = getOnThisDayEntry(today);
+  // The server doesn't know the visitor's timezone, so "On This Day" gets
+  // its own (server) date as the starting point plus ±2 days — enough to
+  // cover any visitor's local date — and OnThisDay picks the right one.
+  const dayKeys = [-2, -1, 0, 1, 2].map((offset) => {
+    const d = new Date(today.getFullYear(), today.getMonth(), today.getDate() + offset);
+    return monthDayKey(d.getMonth(), d.getDate());
+  });
+  const onThisDayByKey = getOnThisDayByKey(dayKeys);
   const allEntries = getAllEntriesSorted();
   const latest = allEntries.slice(0, 4);
 
@@ -101,7 +109,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-[1400px] gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[1.3fr_1fr] lg:items-end lg:py-32">
           <div>
             <p className="eyebrow text-plum">
-              A Living Portrait of Seonghwa, 2018—
+              Park Seonghwa · ATEEZ · 2018—
             </p>
             <h1 className="mt-5 font-display text-[clamp(3rem,6vw_+_1.5rem,5.75rem)] leading-[0.93] tracking-tight">
               The Starhwa
@@ -109,8 +117,8 @@ export default function Home() {
               Encyclopedia
             </h1>
             <p className="mt-7 max-w-md text-base leading-relaxed text-charcoal/85">
-              A living record of Park Seonghwa of ATEEZ — every era, stage,
-              and appearance.
+              Seonghwa&apos;s stages, interviews, and quiet posts, in the order
+              they happened, from the debut showcase on October 24, 2018.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-5">
               <Link href="/chronology" className="glint-hover btn btn-primary relative">
@@ -126,36 +134,7 @@ export default function Home() {
             </div>
           </div>
 
-          {onThisDay && (
-            <div className="glint-hover group relative border-l-2 border-plum/50 pl-6 sm:pl-8">
-              <Glint className="-left-2 top-0" />
-              <Glint className="left-12 top-10" style={{ animationDelay: "160ms" }} />
-              <p className="meta text-charcoal/85">On This Day</p>
-              <p className="mt-1 font-display text-3xl">
-                {today.toLocaleDateString("en-US", {
-                  month: "long",
-                  day: "numeric",
-                })}
-              </p>
-              <div className="mt-6">
-                <p className="meta text-plum">
-                  {onThisDay.category} · {formatDate(onThisDay.date)}
-                </p>
-                <h2 className="mt-2 font-display text-xl leading-snug">
-                  {onThisDay.title}
-                </h2>
-                <p className="mt-3 line-clamp-4 text-sm leading-relaxed text-charcoal/80">
-                  {onThisDay.summary}
-                </p>
-                <Link
-                  href={`/archive/${onThisDay.slug}`}
-                  className="meta mt-4 inline-block text-ink underline decoration-line underline-offset-4 hover:text-plum"
-                >
-                  View entry →
-                </Link>
-              </div>
-            </div>
-          )}
+          <OnThisDay serverKey={dayKeys[2]} days={onThisDayByKey} />
         </div>
       </section>
 

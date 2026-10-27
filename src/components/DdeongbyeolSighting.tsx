@@ -10,10 +10,10 @@ const STORAGE_KEY = "starhwa:ddeongbyeol:lastSeen";
 /**
  * PROTOTYPE — a rare, unprompted "sighting" of 떵별이 (DDEONGbyeoli,
  * Seonghwa's ANITEEZ bunny mascot — see Ddeongbyeol.tsx) in the
- * bottom-left corner: he peeks into view, a few 별빛팡팡 glints (STARHWA's
- * own starlight motif, Glint.tsx) catch up to him, he lingers briefly,
+ * bottom-left corner: it peeks into view, a few 별빛팡팡 glints (STARHWA's
+ * own starlight motif, Glint.tsx) catch up to it, it lingers briefly,
  * then floats away and disappears. The two stay visually distinct —
- * he's a character, they're an effect — orbiting rather than merging.
+ * it's a character, they're an effect — orbiting rather than merging.
  * Never visible on demand by the visitor — only chance + a cooldown
  * decide when it shows (see src/lib/ddeongbyeol.ts for the knobs).
  * Mounted once, in layout.tsx, so it can surface on any page during
@@ -58,7 +58,9 @@ export default function DdeongbyeolSighting() {
 
   return (
     <div className="ddeongbyeol-sighting" aria-hidden="true">
-      <Ddeongbyeol className="ddeongbyeol-sighting-figure" />
+      <div className="ddeongbyeol-turn">
+        <Ddeongbyeol className="ddeongbyeol-sighting-figure" />
+      </div>
       <Glint
         className="glint-burst ddeongbyeol-glint-a"
         style={{ animationDelay: "550ms" }}

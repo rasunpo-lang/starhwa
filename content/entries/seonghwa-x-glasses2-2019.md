@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual selfie of Seonghwa posted via ATEEZ's official X account, captioned "I tried wearing glasses ....?????????"
+"I tried wearing glasses ....?????????" A selfie of Seonghwa, posted on ATEEZ's official X account.

@@ -14,4 +14,4 @@ related:
   - seonghwa-x-london-tour-2023
 ---
 
-A tour/travel photo of Seonghwa posted via ATEEZ's official X account during a Mexico tour stop.
+"Gracias Mexico 🇲🇽" A tour photo of Seonghwa, posted on ATEEZ's official X account during a Mexico tour stop.

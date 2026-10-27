@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual message from Seonghwa posted via ATEEZ's official X account, captioned "I can't wait."
+Seonghwa on ATEEZ's X: "I can't wait."

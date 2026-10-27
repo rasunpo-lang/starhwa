@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A candid photo posted via ATEEZ's official X account, captioned by Seonghwa: he was taking a selfie when fellow member Wooyoung suddenly leaned in and pressed his cheek against his.
+A photo on ATEEZ's official X account, captioned by Seonghwa: he was taking a selfie when fellow member Wooyoung suddenly leaned in and pressed his cheek against his.

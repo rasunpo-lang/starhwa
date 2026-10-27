@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual outdoor photo of Seonghwa posted via ATEEZ's official X account, captioned "Glad the weather is warm☀ (ah, too dazzling🙈)"
+"Glad the weather is warm☀ (ah, too dazzling🙈)" An outdoor photo of Seonghwa, posted on ATEEZ's official X account.

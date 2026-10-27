@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned with a strawberry theme.
+"🍓❤️900❤️🍓" A strawberry-themed caption on a photo of Seonghwa, posted on ATEEZ's official X account.

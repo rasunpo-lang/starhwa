@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A set of photos from Seonghwa posted via ATEEZ's official X account, captioned "Since everyone seems to have eaten well, here's a gift — photo bomb!!"
+"Since everyone seems to have eaten well, here's a gift — photo bomb!!" A set of photos from Seonghwa, posted on ATEEZ's official X account.

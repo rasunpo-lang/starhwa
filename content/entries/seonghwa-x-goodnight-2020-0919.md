@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A good-night message from Seonghwa posted via ATEEZ's official X account: "You worked hard today~ Good night ATINY~~~ ATINY is always the best."
+A good-night message from Seonghwa on ATEEZ's official X account: "You worked hard today~ Good night ATINY~~~ ATINY is always the best."

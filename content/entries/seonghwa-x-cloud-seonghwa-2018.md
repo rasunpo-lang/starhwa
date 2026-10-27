@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Cloud Seonghwa☁️ Taken during the last broadcast~"
+"Cloud Seonghwa☁️ Taken during the last broadcast~" A photo of Seonghwa, posted on ATEEZ's official X account.

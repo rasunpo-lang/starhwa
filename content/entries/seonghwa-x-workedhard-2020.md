@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual message from Seonghwa posted via ATEEZ's official X account, captioned "You worked hard today too~"
+"You worked hard today too~" A message from Seonghwa, posted on ATEEZ's official X account.

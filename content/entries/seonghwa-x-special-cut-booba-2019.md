@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-An unreleased photo of Seonghwa, credited to photographer Booba, posted via ATEEZ's official X account.
+"공개 안됐던 스페셜 컷!! 에이티니만 보세요🥰 Photo by Booba" ("An unreleased special cut!! For ATINY's eyes only🥰 Photo by Booba"). An unreleased photo of Seonghwa, credited to photographer Booba, posted on ATEEZ's official X account.

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual post from ATEEZ's official X account asking fans whether they'd seen the "UTOPIA" music video, comparing Seonghwa's "choker" and "knit" looks from it.
+A post on ATEEZ's official X account asking fans whether they've seen the "UTOPIA" music video, comparing Seonghwa's "choker" and "knit" looks from it.

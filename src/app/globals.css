@@ -83,6 +83,18 @@
    above: it's nested inside another layer's rgba() alpha channel, and
    an unregistered custom property's calc() does not reliably resolve
    there. */
+@property --sky-evening {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --sky-tint-weight {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
 @property --sky-horizon-lift {
   syntax: '<number>';
   inherits: true;
@@ -233,6 +245,17 @@
      below for where this is actually used. */
   --sky-transition: calc(1 - abs(var(--night) * 2 - 1));
 
+  /* Dawn vs dusk, derived from --sun-x (0 east → 1 west; clamped to 0
+     before sunrise and 1 after sunset, so it needs no JS and no pre-paint
+     script change). A steep step at solar noon, where nothing warm is
+     showing. Lets the sky use a *different* palette for sunrise than for
+     golden hour / sunset (DESIGN.md §9, "Sunrise / Golden Hour / Sunset"). */
+  --sky-evening: clamp(0, calc((var(--sun-x) - 0.5) * 20 + 0.5), 1);
+  /* Weight of the blue-hour tint. Dawn: --sky-transition as before. Dusk:
+     held back until night is under way, so early Golden Hour stays gold
+     instead of being muddied by the rose/plum tint that belongs to Sunset. */
+  --sky-tint-weight: calc(var(--sky-transition) * (1 - var(--sky-evening) * (1 - clamp(0, calc((var(--night) - 0.25) / 0.4), 1))));
+
   /* Atmospheric-depth intensities — see .atmosphere-sky's background
      for where these are used, and the @property blocks above for why
      both are registered. Horizon lift is near 0 at Night (kept deep
@@ -348,44 +371,68 @@
      these still inherit down to it from :root exactly as before. */
   --sky-0-day: #f5f0e4;
   --sky-0-night: #211a2e;
-  --sky-0-transition: #d18fae;
-  --sky-0-early: #e6d8bd;
-  --sky-0-late: #f7d7a1;
+  --sky-0-transition: #d9744f;
+  --sky-0-early: #f7d27c;
+  --sky-0-late: #e07a45;
+  --sky-0-transition-dawn: #e9b4c0;
+  --sky-0-dawn-b: #fbe3c8;
+  --sky-0-dawn-a: #f3d3cf;
   --sky-8-day: #f1eee2;
   --sky-8-night: #1e1829;
-  --sky-8-transition: #c288a8;
-  --sky-8-early: #dccdb9;
-  --sky-8-late: #f0c199;
+  --sky-8-transition: #d26c5c;
+  --sky-8-early: #f5cd7b;
+  --sky-8-late: #db7152;
+  --sky-8-transition-dawn: #dfb0c4;
+  --sky-8-dawn-b: #f7e1ca;
+  --sky-8-dawn-a: #ecced2;
   --sky-16-day: #ecebe0;
   --sky-16-night: #1b1526;
-  --sky-16-transition: #b382a3;
-  --sky-16-early: #cabfb9;
-  --sky-16-late: #e5aa9b;
+  --sky-16-transition: #ca6369;
+  --sky-16-early: #f3c77b;
+  --sky-16-late: #d56960;
+  --sky-16-transition-dawn: #d5abc8;
+  --sky-16-dawn-b: #f4dfcc;
+  --sky-16-dawn-a: #e4c9d5;
   --sky-24-day: #e6e8e0;
   --sky-24-night: #191322;
-  --sky-24-transition: #a47c9d;
-  --sky-24-early: #b7b0ba;
-  --sky-24-late: #d8949c;
+  --sky-24-transition: #c35b76;
+  --sky-24-early: #f0c27a;
+  --sky-24-late: #d0606d;
+  --sky-24-transition-dawn: #caa7cc;
+  --sky-24-dawn-b: #f0dccf;
+  --sky-24-dawn-a: #ddc5d8;
   --sky-32-day: #dfe5e2;
   --sky-32-night: #17111e;
-  --sky-32-transition: #9c709c;
-  --sky-32-early: #9fa0b8;
-  --sky-32-late: #c8809b;
+  --sky-32-transition: #b7567c;
+  --sky-32-early: #efc585;
+  --sky-32-late: #c25975;
+  --sky-32-transition-dawn: #bea3cb;
+  --sky-32-dawn-b: #eadcd5;
+  --sky-32-dawn-a: #d5c4da;
   --sky-40-day: #d8e2e4;
   --sky-40-night: #150f1b;
-  --sky-40-transition: #8a6a97;
-  --sky-40-early: #8790b0;
-  --sky-40-late: #b57197;
+  --sky-40-transition: #aa5082;
+  --sky-40-early: #eeca92;
+  --sky-40-late: #b4527d;
+  --sky-40-transition-dawn: #b29fca;
+  --sky-40-dawn-b: #e2dddd;
+  --sky-40-dawn-a: #cdc5dd;
   --sky-48-day: #d1dfe6;
   --sky-48-night: #130e19;
-  --sky-48-transition: #796693;
-  --sky-48-early: #7482a5;
-  --sky-48-late: #9e6690;
+  --sky-48-transition: #9d4b87;
+  --sky-48-early: #eccf9f;
+  --sky-48-late: #a64c84;
+  --sky-48-transition-dawn: #a59bc9;
+  --sky-48-dawn-b: #dbdde4;
+  --sky-48-dawn-a: #c5c5df;
   --sky-56-day: #cadce8;
   --sky-56-night: #110c17;
-  --sky-56-transition: #6a6390;
-  --sky-56-early: #647697;
-  --sky-56-late: #855c85;
+  --sky-56-transition: #8e4988;
+  --sky-56-early: #e4cfa9;
+  --sky-56-late: #954786;
+  --sky-56-transition-dawn: #9a98c8;
+  --sky-56-dawn-b: #d2dbe7;
+  --sky-56-dawn-a: #bdc4e1;
   /* --sky-64-day through --sky-100-day (DESIGN.md §16) are deepened from
      their original, near-flat pale-blue values — progressively more so
      toward the zenith — so a clear Day sky reads as genuinely richer
@@ -395,104 +442,164 @@
      -early/-late) is unchanged. */
   --sky-64-day: #b9d5ea;
   --sky-64-night: #0f0b15;
-  --sky-64-transition: #5d6089;
-  --sky-64-early: #576c89;
-  --sky-64-late: #705376;
+  --sky-64-transition: #7f4788;
+  --sky-64-early: #d8cdb2;
+  --sky-64-late: #834486;
+  --sky-64-transition-dawn: #8e96c7;
+  --sky-64-dawn-b: #c9d9e8;
+  --sky-64-dawn-a: #b4c2e2;
   --sky-72-day: #abd0ea;
   --sky-72-night: #0d0a13;
-  --sky-72-transition: #565f80;
-  --sky-72-early: #4c6079;
-  --sky-72-late: #5c4d66;
+  --sky-72-transition: #704588;
+  --sky-72-early: #cdcbbc;
+  --sky-72-late: #724086;
+  --sky-72-transition-dawn: #8394c6;
+  --sky-72-dawn-b: #bfd6ea;
+  --sky-72-dawn-a: #acc1e4;
   --sky-80-day: #9dc9ea;
   --sky-80-night: #0c0911;
-  --sky-80-transition: #5a6a7d;
-  --sky-80-early: #40536a;
-  --sky-80-late: #494757;
+  --sky-80-transition: #624283;
+  --sky-80-early: #bcc3c0;
+  --sky-80-late: #623d82;
+  --sky-80-transition-dawn: #7990c5;
+  --sky-80-dawn-b: #b6d2ea;
+  --sky-80-dawn-a: #a4bde3;
   --sky-88-day: #8fc2eb;
   --sky-88-night: #0a080f;
-  --sky-88-transition: #58697d;
-  --sky-88-early: #35485c;
-  --sky-88-late: #3a414c;
+  --sky-88-transition: #543e7b;
+  --sky-88-early: #a6b8c3;
+  --sky-88-late: #53397b;
+  --sky-88-transition-dawn: #6e8bc2;
+  --sky-88-dawn-b: #abceeb;
+  --sky-88-dawn-a: #9bb9e2;
   --sky-94-day: #83bcec;
   --sky-94-night: #09070d;
-  --sky-94-transition: #57687d;
-  --sky-94-early: #2c3e51;
-  --sky-94-late: #2f3a44;
+  --sky-94-transition: #4a3b75;
+  --sky-94-early: #96b0c4;
+  --sky-94-late: #483775;
+  --sky-94-transition-dawn: #6788c1;
+  --sky-94-dawn-b: #a4cbec;
+  --sky-94-dawn-a: #95b6e1;
   --sky-100-day: #78b6ec;
   --sky-100-night: #08070c;
-  --sky-100-transition: #57697d;
-  --sky-100-early: #223448;
-  --sky-100-late: #26313c;
+  --sky-100-transition: #40386f;
+  --sky-100-early: #86a8c6;
+  --sky-100-late: #3d3470;
+  --sky-100-transition-dawn: #5f84bf;
+  --sky-100-dawn-b: #9cc8ec;
+  --sky-100-dawn-a: #8fb3e0;
 
   --sky-0-base: color-mix(in srgb, var(--sky-0-day), var(--sky-0-night) calc(var(--night) * 100%));
-  --sky-0-transitioned: color-mix(in srgb, var(--sky-0-base), var(--sky-0-transition) calc(var(--sky-transition) * 100%));
-  --sky-0-goldenmix: color-mix(in srgb, var(--sky-0-early), var(--sky-0-late) calc(var(--golden-progress) * 100%));
-  --sky-0-final: color-mix(in srgb, var(--sky-0-transitioned), var(--sky-0-goldenmix) calc(var(--golden) * 100%));
+  --sky-0-tmix: color-mix(in srgb, var(--sky-0-transition-dawn), var(--sky-0-transition) calc(var(--sky-evening) * 100%));
+  --sky-0-transitioned: color-mix(in srgb, var(--sky-0-base), var(--sky-0-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-0-evmix: color-mix(in srgb, var(--sky-0-early), var(--sky-0-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-0-dawnmix: color-mix(in srgb, var(--sky-0-dawn-a), var(--sky-0-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-0-goldenmix: color-mix(in srgb, var(--sky-0-evmix), var(--sky-0-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-0-final: color-mix(in srgb, var(--sky-0-transitioned), var(--sky-0-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-8-base: color-mix(in srgb, var(--sky-8-day), var(--sky-8-night) calc(var(--night) * 100%));
-  --sky-8-transitioned: color-mix(in srgb, var(--sky-8-base), var(--sky-8-transition) calc(var(--sky-transition) * 100%));
-  --sky-8-goldenmix: color-mix(in srgb, var(--sky-8-early), var(--sky-8-late) calc(var(--golden-progress) * 100%));
-  --sky-8-final: color-mix(in srgb, var(--sky-8-transitioned), var(--sky-8-goldenmix) calc(var(--golden) * 100%));
+  --sky-8-tmix: color-mix(in srgb, var(--sky-8-transition-dawn), var(--sky-8-transition) calc(var(--sky-evening) * 100%));
+  --sky-8-transitioned: color-mix(in srgb, var(--sky-8-base), var(--sky-8-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-8-evmix: color-mix(in srgb, var(--sky-8-early), var(--sky-8-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-8-dawnmix: color-mix(in srgb, var(--sky-8-dawn-a), var(--sky-8-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-8-goldenmix: color-mix(in srgb, var(--sky-8-evmix), var(--sky-8-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-8-final: color-mix(in srgb, var(--sky-8-transitioned), var(--sky-8-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-16-base: color-mix(in srgb, var(--sky-16-day), var(--sky-16-night) calc(var(--night) * 100%));
-  --sky-16-transitioned: color-mix(in srgb, var(--sky-16-base), var(--sky-16-transition) calc(var(--sky-transition) * 100%));
-  --sky-16-goldenmix: color-mix(in srgb, var(--sky-16-early), var(--sky-16-late) calc(var(--golden-progress) * 100%));
-  --sky-16-final: color-mix(in srgb, var(--sky-16-transitioned), var(--sky-16-goldenmix) calc(var(--golden) * 100%));
+  --sky-16-tmix: color-mix(in srgb, var(--sky-16-transition-dawn), var(--sky-16-transition) calc(var(--sky-evening) * 100%));
+  --sky-16-transitioned: color-mix(in srgb, var(--sky-16-base), var(--sky-16-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-16-evmix: color-mix(in srgb, var(--sky-16-early), var(--sky-16-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-16-dawnmix: color-mix(in srgb, var(--sky-16-dawn-a), var(--sky-16-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-16-goldenmix: color-mix(in srgb, var(--sky-16-evmix), var(--sky-16-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-16-final: color-mix(in srgb, var(--sky-16-transitioned), var(--sky-16-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-24-base: color-mix(in srgb, var(--sky-24-day), var(--sky-24-night) calc(var(--night) * 100%));
-  --sky-24-transitioned: color-mix(in srgb, var(--sky-24-base), var(--sky-24-transition) calc(var(--sky-transition) * 100%));
-  --sky-24-goldenmix: color-mix(in srgb, var(--sky-24-early), var(--sky-24-late) calc(var(--golden-progress) * 100%));
-  --sky-24-final: color-mix(in srgb, var(--sky-24-transitioned), var(--sky-24-goldenmix) calc(var(--golden) * 100%));
+  --sky-24-tmix: color-mix(in srgb, var(--sky-24-transition-dawn), var(--sky-24-transition) calc(var(--sky-evening) * 100%));
+  --sky-24-transitioned: color-mix(in srgb, var(--sky-24-base), var(--sky-24-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-24-evmix: color-mix(in srgb, var(--sky-24-early), var(--sky-24-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-24-dawnmix: color-mix(in srgb, var(--sky-24-dawn-a), var(--sky-24-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-24-goldenmix: color-mix(in srgb, var(--sky-24-evmix), var(--sky-24-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-24-final: color-mix(in srgb, var(--sky-24-transitioned), var(--sky-24-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-32-base: color-mix(in srgb, var(--sky-32-day), var(--sky-32-night) calc(var(--night) * 100%));
-  --sky-32-transitioned: color-mix(in srgb, var(--sky-32-base), var(--sky-32-transition) calc(var(--sky-transition) * 100%));
-  --sky-32-goldenmix: color-mix(in srgb, var(--sky-32-early), var(--sky-32-late) calc(var(--golden-progress) * 100%));
-  --sky-32-final: color-mix(in srgb, var(--sky-32-transitioned), var(--sky-32-goldenmix) calc(var(--golden) * 100%));
+  --sky-32-tmix: color-mix(in srgb, var(--sky-32-transition-dawn), var(--sky-32-transition) calc(var(--sky-evening) * 100%));
+  --sky-32-transitioned: color-mix(in srgb, var(--sky-32-base), var(--sky-32-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-32-evmix: color-mix(in srgb, var(--sky-32-early), var(--sky-32-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-32-dawnmix: color-mix(in srgb, var(--sky-32-dawn-a), var(--sky-32-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-32-goldenmix: color-mix(in srgb, var(--sky-32-evmix), var(--sky-32-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-32-final: color-mix(in srgb, var(--sky-32-transitioned), var(--sky-32-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-40-base: color-mix(in srgb, var(--sky-40-day), var(--sky-40-night) calc(var(--night) * 100%));
-  --sky-40-transitioned: color-mix(in srgb, var(--sky-40-base), var(--sky-40-transition) calc(var(--sky-transition) * 100%));
-  --sky-40-goldenmix: color-mix(in srgb, var(--sky-40-early), var(--sky-40-late) calc(var(--golden-progress) * 100%));
-  --sky-40-final: color-mix(in srgb, var(--sky-40-transitioned), var(--sky-40-goldenmix) calc(var(--golden) * 100%));
+  --sky-40-tmix: color-mix(in srgb, var(--sky-40-transition-dawn), var(--sky-40-transition) calc(var(--sky-evening) * 100%));
+  --sky-40-transitioned: color-mix(in srgb, var(--sky-40-base), var(--sky-40-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-40-evmix: color-mix(in srgb, var(--sky-40-early), var(--sky-40-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-40-dawnmix: color-mix(in srgb, var(--sky-40-dawn-a), var(--sky-40-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-40-goldenmix: color-mix(in srgb, var(--sky-40-evmix), var(--sky-40-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-40-final: color-mix(in srgb, var(--sky-40-transitioned), var(--sky-40-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-48-base: color-mix(in srgb, var(--sky-48-day), var(--sky-48-night) calc(var(--night) * 100%));
-  --sky-48-transitioned: color-mix(in srgb, var(--sky-48-base), var(--sky-48-transition) calc(var(--sky-transition) * 100%));
-  --sky-48-goldenmix: color-mix(in srgb, var(--sky-48-early), var(--sky-48-late) calc(var(--golden-progress) * 100%));
-  --sky-48-final: color-mix(in srgb, var(--sky-48-transitioned), var(--sky-48-goldenmix) calc(var(--golden) * 100%));
+  --sky-48-tmix: color-mix(in srgb, var(--sky-48-transition-dawn), var(--sky-48-transition) calc(var(--sky-evening) * 100%));
+  --sky-48-transitioned: color-mix(in srgb, var(--sky-48-base), var(--sky-48-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-48-evmix: color-mix(in srgb, var(--sky-48-early), var(--sky-48-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-48-dawnmix: color-mix(in srgb, var(--sky-48-dawn-a), var(--sky-48-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-48-goldenmix: color-mix(in srgb, var(--sky-48-evmix), var(--sky-48-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-48-final: color-mix(in srgb, var(--sky-48-transitioned), var(--sky-48-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-56-base: color-mix(in srgb, var(--sky-56-day), var(--sky-56-night) calc(var(--night) * 100%));
-  --sky-56-transitioned: color-mix(in srgb, var(--sky-56-base), var(--sky-56-transition) calc(var(--sky-transition) * 100%));
-  --sky-56-goldenmix: color-mix(in srgb, var(--sky-56-early), var(--sky-56-late) calc(var(--golden-progress) * 100%));
-  --sky-56-final: color-mix(in srgb, var(--sky-56-transitioned), var(--sky-56-goldenmix) calc(var(--golden) * 100%));
+  --sky-56-tmix: color-mix(in srgb, var(--sky-56-transition-dawn), var(--sky-56-transition) calc(var(--sky-evening) * 100%));
+  --sky-56-transitioned: color-mix(in srgb, var(--sky-56-base), var(--sky-56-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-56-evmix: color-mix(in srgb, var(--sky-56-early), var(--sky-56-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-56-dawnmix: color-mix(in srgb, var(--sky-56-dawn-a), var(--sky-56-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-56-goldenmix: color-mix(in srgb, var(--sky-56-evmix), var(--sky-56-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-56-final: color-mix(in srgb, var(--sky-56-transitioned), var(--sky-56-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-64-base: color-mix(in srgb, var(--sky-64-day), var(--sky-64-night) calc(var(--night) * 100%));
-  --sky-64-transitioned: color-mix(in srgb, var(--sky-64-base), var(--sky-64-transition) calc(var(--sky-transition) * 100%));
-  --sky-64-goldenmix: color-mix(in srgb, var(--sky-64-early), var(--sky-64-late) calc(var(--golden-progress) * 100%));
-  --sky-64-final: color-mix(in srgb, var(--sky-64-transitioned), var(--sky-64-goldenmix) calc(var(--golden) * 100%));
+  --sky-64-tmix: color-mix(in srgb, var(--sky-64-transition-dawn), var(--sky-64-transition) calc(var(--sky-evening) * 100%));
+  --sky-64-transitioned: color-mix(in srgb, var(--sky-64-base), var(--sky-64-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-64-evmix: color-mix(in srgb, var(--sky-64-early), var(--sky-64-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-64-dawnmix: color-mix(in srgb, var(--sky-64-dawn-a), var(--sky-64-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-64-goldenmix: color-mix(in srgb, var(--sky-64-evmix), var(--sky-64-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-64-final: color-mix(in srgb, var(--sky-64-transitioned), var(--sky-64-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-72-base: color-mix(in srgb, var(--sky-72-day), var(--sky-72-night) calc(var(--night) * 100%));
-  --sky-72-transitioned: color-mix(in srgb, var(--sky-72-base), var(--sky-72-transition) calc(var(--sky-transition) * 100%));
-  --sky-72-goldenmix: color-mix(in srgb, var(--sky-72-early), var(--sky-72-late) calc(var(--golden-progress) * 100%));
-  --sky-72-final: color-mix(in srgb, var(--sky-72-transitioned), var(--sky-72-goldenmix) calc(var(--golden) * 100%));
+  --sky-72-tmix: color-mix(in srgb, var(--sky-72-transition-dawn), var(--sky-72-transition) calc(var(--sky-evening) * 100%));
+  --sky-72-transitioned: color-mix(in srgb, var(--sky-72-base), var(--sky-72-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-72-evmix: color-mix(in srgb, var(--sky-72-early), var(--sky-72-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-72-dawnmix: color-mix(in srgb, var(--sky-72-dawn-a), var(--sky-72-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-72-goldenmix: color-mix(in srgb, var(--sky-72-evmix), var(--sky-72-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-72-final: color-mix(in srgb, var(--sky-72-transitioned), var(--sky-72-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-80-base: color-mix(in srgb, var(--sky-80-day), var(--sky-80-night) calc(var(--night) * 100%));
-  --sky-80-transitioned: color-mix(in srgb, var(--sky-80-base), var(--sky-80-transition) calc(var(--sky-transition) * 100%));
-  --sky-80-goldenmix: color-mix(in srgb, var(--sky-80-early), var(--sky-80-late) calc(var(--golden-progress) * 100%));
-  --sky-80-final: color-mix(in srgb, var(--sky-80-transitioned), var(--sky-80-goldenmix) calc(var(--golden) * 100%));
+  --sky-80-tmix: color-mix(in srgb, var(--sky-80-transition-dawn), var(--sky-80-transition) calc(var(--sky-evening) * 100%));
+  --sky-80-transitioned: color-mix(in srgb, var(--sky-80-base), var(--sky-80-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-80-evmix: color-mix(in srgb, var(--sky-80-early), var(--sky-80-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-80-dawnmix: color-mix(in srgb, var(--sky-80-dawn-a), var(--sky-80-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-80-goldenmix: color-mix(in srgb, var(--sky-80-evmix), var(--sky-80-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-80-final: color-mix(in srgb, var(--sky-80-transitioned), var(--sky-80-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-88-base: color-mix(in srgb, var(--sky-88-day), var(--sky-88-night) calc(var(--night) * 100%));
-  --sky-88-transitioned: color-mix(in srgb, var(--sky-88-base), var(--sky-88-transition) calc(var(--sky-transition) * 100%));
-  --sky-88-goldenmix: color-mix(in srgb, var(--sky-88-early), var(--sky-88-late) calc(var(--golden-progress) * 100%));
-  --sky-88-final: color-mix(in srgb, var(--sky-88-transitioned), var(--sky-88-goldenmix) calc(var(--golden) * 100%));
+  --sky-88-tmix: color-mix(in srgb, var(--sky-88-transition-dawn), var(--sky-88-transition) calc(var(--sky-evening) * 100%));
+  --sky-88-transitioned: color-mix(in srgb, var(--sky-88-base), var(--sky-88-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-88-evmix: color-mix(in srgb, var(--sky-88-early), var(--sky-88-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-88-dawnmix: color-mix(in srgb, var(--sky-88-dawn-a), var(--sky-88-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-88-goldenmix: color-mix(in srgb, var(--sky-88-evmix), var(--sky-88-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-88-final: color-mix(in srgb, var(--sky-88-transitioned), var(--sky-88-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-94-base: color-mix(in srgb, var(--sky-94-day), var(--sky-94-night) calc(var(--night) * 100%));
-  --sky-94-transitioned: color-mix(in srgb, var(--sky-94-base), var(--sky-94-transition) calc(var(--sky-transition) * 100%));
-  --sky-94-goldenmix: color-mix(in srgb, var(--sky-94-early), var(--sky-94-late) calc(var(--golden-progress) * 100%));
-  --sky-94-final: color-mix(in srgb, var(--sky-94-transitioned), var(--sky-94-goldenmix) calc(var(--golden) * 100%));
+  --sky-94-tmix: color-mix(in srgb, var(--sky-94-transition-dawn), var(--sky-94-transition) calc(var(--sky-evening) * 100%));
+  --sky-94-transitioned: color-mix(in srgb, var(--sky-94-base), var(--sky-94-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-94-evmix: color-mix(in srgb, var(--sky-94-early), var(--sky-94-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-94-dawnmix: color-mix(in srgb, var(--sky-94-dawn-a), var(--sky-94-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-94-goldenmix: color-mix(in srgb, var(--sky-94-evmix), var(--sky-94-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-94-final: color-mix(in srgb, var(--sky-94-transitioned), var(--sky-94-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   --sky-100-base: color-mix(in srgb, var(--sky-100-day), var(--sky-100-night) calc(var(--night) * 100%));
-  --sky-100-transitioned: color-mix(in srgb, var(--sky-100-base), var(--sky-100-transition) calc(var(--sky-transition) * 100%));
-  --sky-100-goldenmix: color-mix(in srgb, var(--sky-100-early), var(--sky-100-late) calc(var(--golden-progress) * 100%));
-  --sky-100-final: color-mix(in srgb, var(--sky-100-transitioned), var(--sky-100-goldenmix) calc(var(--golden) * 100%));
+  --sky-100-tmix: color-mix(in srgb, var(--sky-100-transition-dawn), var(--sky-100-transition) calc(var(--sky-evening) * 100%));
+  --sky-100-transitioned: color-mix(in srgb, var(--sky-100-base), var(--sky-100-tmix) calc(var(--sky-tint-weight) * 100%));
+  --sky-100-evmix: color-mix(in srgb, var(--sky-100-early), var(--sky-100-late) calc(var(--golden-progress) * var(--golden-progress) * 100%));
+  --sky-100-dawnmix: color-mix(in srgb, var(--sky-100-dawn-a), var(--sky-100-dawn-b) calc(var(--golden-progress) * 100%));
+  --sky-100-goldenmix: color-mix(in srgb, var(--sky-100-evmix), var(--sky-100-dawnmix) calc((1 - var(--sky-evening)) * 100%));
+  --sky-100-final: color-mix(in srgb, var(--sky-100-transitioned), var(--sky-100-goldenmix) calc(min(1, var(--golden) * 1.5) * 100%));
 
   /* ✦ Cloud layers (DESIGN.md §14, refined for a more cinematic/editorial
      read) — a cloud is simply a paler version of the light around it, not
@@ -839,10 +946,10 @@ html.atmosphere-ready {
 .ddeongbyeol-sighting-figure {
   position: absolute;
   inset: 0;
-  /* Slightly deeper/crisper than .photo-plane's contact shadow — he's
+  /* Slightly deeper/crisper than .photo-plane's contact shadow — it's
      genuinely the foreground (fixed to the viewport, z-index above the
-     header), so his shadow should read as nearer than anything on the
-     content plane below him, by contrast rather than by a new effect. */
+     header), so its shadow should read as nearer than anything on the
+     content plane below it, by contrast rather than by a new effect. */
   filter: drop-shadow(0 5px 12px rgba(21, 19, 15, 0.24));
   animation: ddeongbyeol-sighting 4000ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -886,6 +993,40 @@ html.atmosphere-ready {
     opacity: 0;
     transform: translateY(-30px) scale(0.75);
   }
+}
+
+/* 2.5D finish (see Ddeongbyeol `dimensional`): one slow turn on
+   the y-axis across the sighting's own 4000ms, not a loop, with the three
+   depth layers drifting a fraction of a unit against each other so the
+   ears/head/body read as separate planes. Same duration as
+   ddeongbyeol-sighting above; hidden under reduced motion by the rule
+   below along with the rest of the sighting. */
+.ddeongbyeol-turn {
+  position: absolute;
+  inset: 0;
+  animation: ddeongbyeol-turn 4000ms ease-in-out both;
+}
+.ddeongbyeol-turn .dd-layer--ears {
+  animation: dd-layer-ears 4000ms ease-in-out both;
+}
+.ddeongbyeol-turn .dd-layer--head {
+  animation: dd-layer-head 4000ms ease-in-out both;
+}
+@keyframes ddeongbyeol-turn {
+  0%, 18% { transform: perspective(260px) rotateY(0deg); }
+  42% { transform: perspective(260px) rotateY(9deg); }
+  66% { transform: perspective(260px) rotateY(-6deg); }
+  88%, 100% { transform: perspective(260px) rotateY(0deg); }
+}
+@keyframes dd-layer-ears {
+  0%, 18%, 88%, 100% { transform: translateX(0); }
+  42% { transform: translateX(-0.7px); }
+  66% { transform: translateX(0.5px); }
+}
+@keyframes dd-layer-head {
+  0%, 18%, 88%, 100% { transform: translateX(0); }
+  42% { transform: translateX(0.5px); }
+  66% { transform: translateX(-0.35px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -983,32 +1124,32 @@ html.atmosphere-ready {
   }
 }
 
-/* Ddeongbyeol, the tiny witness — starts and ends near her usual bottom-
-   left habitat (per DdeongbyeolSighting.tsx), but for this one scene she
+/* Ddeongbyeol, the tiny witness — starts and ends near its usual bottom-
+   left habitat (per DdeongbyeolSighting.tsx), but for this one scene it
    doesn't stay pinned there: a small, hand-placed wander path (top/left,
    the same coordinate system BORN_STAR_POSITION/STAR_POSITIONS already
-   use — not a new technique) carries her through a loose loop in the
+   use — not a new technique) carries it through a loose loop in the
    lower-left of the frame, never into the headline's own space (roughly
-   top 15–45%) and never all the way up to the star cluster itself — she
+   top 15–45%) and never all the way up to the star cluster itself — it
    stays small and secondary, only ever drifting *toward* that glow, not
    into it. Every leg has its own animation-timing-function (set per
    keyframe stop below, a plain CSS feature — the function named on a
    stop governs the segment leading into it), alternating ease-out
    (settling into a pause) and ease-in (leaving one) so the path reads as
    organic drifting-then-resting, never a constant-speed slide and never
-   a bounce. A gentle rotate travels with her (banking a couple of
+   a bounce. A gentle rotate travels with it (banking a couple of
    degrees into each turn, on this outer element) independent of
    .birthday-witness__mascot's own small tilt/glow reaction below (a
    separate element, so the two compose rather than fight over the same
    transform) — no wave, no spin, nothing past a couple of degrees
-   either way. Her longest pause (34–50%) lands right as the star
+   either way. Its longest pause (34–50%) lands right as the star
    cluster below reaches its own held peak (birthday-star-reveal's
-   30–82% hold, above): she drifts up to look, lingers through the start
+   30–82% hold, above): it drifts up to look, lingers through the start
    of that hold, then wanders off to another small spot while the
    cluster is still glowing, and heads home right as it begins to fade —
    coordinated with the sparkle without needing to touch its own timing.
-   Her own SVG palette (Ddeongbyeol.tsx) is untouched throughout — this
-   is motion and an external light glow cast on her, not a repaint. */
+   Its own SVG palette (Ddeongbyeol.tsx) is untouched throughout — this
+   is motion and an external light glow cast on it, not a repaint. */
 .birthday-witness {
   position: fixed;
   width: 56px;
@@ -1035,7 +1176,7 @@ html.atmosphere-ready {
     transform: rotate(0deg);
     animation-timing-function: ease-out;
   }
-  /* Arrives, settles at her habitat corner. */
+  /* Arrives, settles at its habitat corner. */
   6% {
     opacity: 1;
     top: 85%;
@@ -1132,7 +1273,7 @@ html.atmosphere-ready {
   43% {
     filter: drop-shadow(0 3px 8px rgba(21, 19, 15, 0.18)) drop-shadow(0 0 4px rgba(255, 201, 140, 0.16));
   }
-  /* The petals arrive during her longest pause (birthday-witness-wander,
+  /* The petals arrive during its longest pause (birthday-witness-wander,
      34–50%): a very small turn toward the first one, a held beat, then a
      small settle back — understated, no bounce, no spin. */
   44% {
@@ -1427,9 +1568,9 @@ html.atmosphere-ready {
   }
 }
 
-/* The two petals that belong to Ddeongbyeol: positioned inside her own
+/* The two petals that belong to Ddeongbyeol: positioned inside its own
    box (px, relative to it), so they travel with her. They drift in,
-   rest on her briefly (--xr/--yr), then lift off again. */
+   rest on it briefly (--xr/--yr), then lift off again. */
 .birthday-petal--catch {
   position: absolute;
   animation-name: birthday-petal-catch;
@@ -3325,5 +3466,44 @@ html.atmosphere-ready {
 
   .official-sky-card:hover {
     background-color: color-mix(in srgb, var(--official-fill-final), var(--official-hover-target) 9%);
+  }
+}
+
+/* ── The Crew's Secret entrance (CrewHourglass.tsx) ──
+   A small studio render of the Cromer light stick (public/brand/
+   crews-secret-lightstick.webp) beside a label. Idle: a faint turquoise
+   glow. Hover/focus: the glow warms to turquoise + gold (200ms, filter only),
+   and the shared 별빛팡팡 glint pops once. Reduced motion: no transition. */
+.crew-link {
+  --lightstick-turquoise: rgba(63, 216, 196, 0.7);
+  --lightstick-gold: rgba(232, 185, 94, 0.4);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 60px;
+  transition: color 150ms ease;
+}
+
+.crew-lightstick {
+  width: 40px;
+  height: 60px;
+  filter: drop-shadow(0 0 4px rgba(63, 216, 196, 0.22));
+  transition: filter 200ms ease;
+}
+
+a.crew-link:hover .crew-lightstick,
+a.crew-link:focus-visible .crew-lightstick {
+  filter: drop-shadow(0 0 6px var(--lightstick-turquoise))
+    drop-shadow(0 0 10px var(--lightstick-gold));
+}
+
+.crew-link--idle .crew-lightstick {
+  opacity: 0.5;
+  filter: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crew-lightstick {
+    transition: none;
   }
 }

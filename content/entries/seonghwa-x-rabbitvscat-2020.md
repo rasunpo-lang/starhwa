@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A selfie of Seonghwa posted via ATEEZ's official X account, captioned "Now let's settle this: Seonghwa is a rabbit🐰 VS no, Seonghwa is a cat🐱 — oh, and Toothless or Angry Birds don't count."
+"Now let's settle this: Seonghwa is a rabbit🐰 VS no, Seonghwa is a cat🐱 — oh, and Toothless or Angry Birds don't count." A selfie of Seonghwa, posted on ATEEZ's official X account.

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A behind-the-scenes photo of Seonghwa posted via ATEEZ's official X account for "The Story Never Ends."
+"The Story Never Ends 비하인드" ("The Story Never Ends behind-the-scenes"). A behind-the-scenes photo of Seonghwa, posted on ATEEZ's official X account for "The Story Never Ends."

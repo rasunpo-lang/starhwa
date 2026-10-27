@@ -13,4 +13,4 @@ related:
   - seonghwa-x-madrid-tour-2022
 ---
 
-A tour/travel photo of Seonghwa posted via ATEEZ's official X account during a London tour stop.
+"London BOY🫰🏻" A tour photo of Seonghwa, posted on ATEEZ's official X account during a London tour stop.

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "999+🤍"
+"999+🤍" A photo of Seonghwa, via ATEEZ's X.

@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-Seonghwa's individual concept photo for ATEEZ's "THE BLACK CAT NERO" Halloween performance video, posted ahead of the video's October 31, 2020 release.
+Seonghwa's individual concept photo for ATEEZ's "THE BLACK CAT NERO" Halloween performance video, posted on ATEEZ's official X account ahead of the video's October 31, 2020 release.

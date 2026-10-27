@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo/video post from Seonghwa via ATEEZ's official X account, wishing fans a good Monday.
+A photo or video post from Seonghwa on ATEEZ's official X account, captioned "월요일도 화이팅❤" ("Fighting on Monday too❤"), wishing fans a good Monday.

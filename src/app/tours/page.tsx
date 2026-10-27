@@ -32,11 +32,9 @@ export default function ToursPage() {
       <p className="eyebrow text-plum">World Tour Dates</p>
       <h1 className="mt-3 font-display text-5xl sm:text-6xl">Tours</h1>
       <p className="mt-5 max-w-xl text-sm leading-relaxed text-charcoal/85">
-        Every catalogued World Tour concert date, from Park Seonghwa&apos;s
-        first world tour to the present, in one uniform record. Each show
-        links out to a qualifying official source — an official
-        #TODAY_ATEEZ post or venue photo from @ATEEZofficial or
-        @ATEEZofficialjp — only when one exists.
+        Every World Tour concert date since Park Seonghwa&apos;s first world
+        tour. Where an official #TODAY_ATEEZ post or venue photo exists, the
+        tour name links to it.
       </p>
 
       <ul className="mt-12 divide-y divide-line border-t border-line">
@@ -47,26 +45,23 @@ export default function ToursPage() {
                 <time dateTime={entry.date} className="text-ink">
                   {formatEntryDate(entry.date)}
                 </time>{" "}
-                — {tourEvent}
+                —{" "}
+                {sourceUrl ? (
+                  <a
+                    href={sourceUrl}
+                    {...externalLinkProps}
+                    className="underline decoration-line underline-offset-4 transition-colors hover:text-plum hover:decoration-plum"
+                  >
+                    {tourEvent}
+                    <span className="sr-only"> (opens official source in a new tab)</span>
+                  </a>
+                ) : (
+                  tourEvent
+                )}
               </p>
               <p className="meta text-charcoal/70">
                 <span aria-hidden="true">—</span> {location}
               </p>
-              {sourceUrl && (
-                <p className="text-sm">
-                  <span aria-hidden="true" className="text-charcoal/70">
-                    —
-                  </span>{" "}
-                  <a
-                    href={sourceUrl}
-                    {...externalLinkProps}
-                    className="text-plum underline decoration-line underline-offset-4 hover:decoration-plum"
-                  >
-                    View source <span aria-hidden="true">→</span>
-                    <span className="sr-only"> (opens original source in a new tab)</span>
-                  </a>
-                </p>
-              )}
             </div>
           </li>
         ))}

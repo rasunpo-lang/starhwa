@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A caring message from Seonghwa posted via ATEEZ's official X account, captioned "Make sure to eat your meals well~"
+"Make sure to eat your meals well~" A caring message from Seonghwa, posted on ATEEZ's official X account.

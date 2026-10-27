@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Tinitini" — a playful nod to ATINY.
+"Tinitini" A photo of Seonghwa, posted on ATEEZ's official X account — a playful nod to ATINY.

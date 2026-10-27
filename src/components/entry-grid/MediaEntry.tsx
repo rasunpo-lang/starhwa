@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { PlannedEntry } from "@/lib/layout";
-import { entryHref, externalLinkProps, formatEntryDate, singleSourceUrl } from "./entryLink";
+import { entryHref, formatEntryDate } from "./entryLink";
 import Glint from "@/components/Glint";
 
 export default function MediaEntry({ item }: { item: PlannedEntry }) {
   const { entry, thumbnailUrl, thumbnailType } = item;
-  const sourceUrl = singleSourceUrl(entry);
   const isProduct = thumbnailType === "product";
 
   return (
@@ -47,20 +46,6 @@ export default function MediaEntry({ item }: { item: PlannedEntry }) {
         <p className="pointer-events-none mt-2 line-clamp-2 flex-1 text-sm leading-relaxed text-charcoal/75">
           {entry.summary}
         </p>
-        <div className="mt-4 flex items-center justify-between gap-2 border-t border-line pt-3">
-          <span className="meta pointer-events-none text-charcoal/75">
-            {sourceUrl ? "1 source" : `${entry.sources.length} sources`} →
-          </span>
-          {sourceUrl && (
-            <a
-              href={sourceUrl}
-              {...externalLinkProps}
-              className="meta relative z-10 text-charcoal/75 underline decoration-line underline-offset-4 hover:text-plum"
-            >
-              View source ↗<span className="sr-only"> (opens original source in a new tab)</span>
-            </a>
-          )}
-        </div>
       </div>
     </article>
   );

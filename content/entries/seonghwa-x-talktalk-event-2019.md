@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-Seonghwa announcing the start of a "Talk Talk" fan interaction event via ATEEZ's official X account, directing fans to the official homepage.
+Seonghwa announces the start of a "Talk Talk" fan event on ATEEZ's official X account, directing fans to the official homepage.

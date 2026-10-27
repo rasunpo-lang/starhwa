@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A message from Seonghwa posted via ATEEZ's official X account: "Today too, ATINY who is cooler and prettier than anyone! You worked hard today too."
+A message from Seonghwa on ATEEZ's official X account: "Today too, ATINY who is cooler and prettier than anyone! You worked hard today too."

@@ -45,4 +45,4 @@ On what he wants to build up physically: "Lately I've been worrying a lot about 
 
 On his ever-shifting music taste: "Lately I really love the rock genre, both musically and fashion-wise. This is a purely personal thought, but if the chance ever comes, I'd like to put together a stage like that sometime. Each of our own music tastes keeps changing, so it's hard to pin down, and it makes it even harder to predict what our next music will be like. (laughs)"
 
-Translated directly from the original Korean text of the two Vogue Korea articles linked below.
+Translated directly from the original Korean text of the two Vogue Korea articles.

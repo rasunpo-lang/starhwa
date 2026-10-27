@@ -15,6 +15,8 @@ sources:
     url: "https://www.youtube.com/watch?v=hTmn7av8ajU"
   - label: "서울가요대상 Seoul Music Awards Official YouTube — '에이티니 바라기 에이티즈(ATEEZ)'"
     url: "https://www.youtube.com/watch?v=D_DhScRTNE0"
+  - label: "Seoul Music Awards Official X (@SMA_korea) — GRAND PRIZE (DAESANG): ATEEZ at the 35th Seoul Music Awards (2026.06.20)"
+    url: "https://x.com/SMA_korea/status/2068366044989947945"
 related:
 ---
 

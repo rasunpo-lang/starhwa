@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A photo of Seonghwa in hanbok posted via ATEEZ's official X account on Korea's Liberation Day, captioned "Hanbok-TEEZ."
+A photo of Seonghwa in hanbok on ATEEZ's official X account on Korea's Liberation Day, captioned "Hanbok-TEEZ."

@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A good-night photo of Seonghwa posted via ATEEZ's official X account.
+"Good night🖤🖤🖤" A good-night photo of Seonghwa, posted on ATEEZ's official X account.

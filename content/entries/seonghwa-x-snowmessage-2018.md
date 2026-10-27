@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A message from Seonghwa posted via ATEEZ's official X account: "Everyone~ where I live, it snowed, and it makes me miss you more. Stay warm and be careful on icy roads~"
+A message from Seonghwa on ATEEZ's official X account: "Everyone~ where I live, it snowed, and it makes me miss you more. Stay warm and be careful on icy roads~"

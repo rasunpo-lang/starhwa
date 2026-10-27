@@ -13,4 +13,4 @@ related:
   - work-mv-2024
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned "WORK🙌," marking the release day of "WORK," the title track from GOLDEN HOUR: Part.1.
+A 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram, captioned "WORK🙌," marking the release day of "WORK," the title track from GOLDEN HOUR: Part.1.

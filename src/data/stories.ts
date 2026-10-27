@@ -673,7 +673,7 @@ export const stories: Story[] = [
     id: "64e9747869c88b39e477239e",
     date: "2023-08-26",
     title: "Please, No Rain",
-    snippet: "A small hopeful wish for good weather, likely ahead of an outdoor event.",
+    snippet: "A hopeful wish for dry weather, posted with a photo.",
     themes: ["Everyday Moments"],
     hasImage: true,
     imageUrl:
@@ -686,7 +686,7 @@ export const stories: Story[] = [
     id: "64ec646ba8b0b06144ef11c5",
     date: "2023-08-28",
     title: "Wheels Up",
-    snippet: "A quick travel update with no words needed.",
+    snippet: "A travel post: a photo, no caption.",
     themes: ["Travel"],
     hasImage: true,
     imageUrl:
@@ -840,7 +840,7 @@ export const stories: Story[] = [
     id: "65257380ad9065338fa82764",
     date: "2023-10-10",
     title: "Goodnight",
-    snippet: "A simple goodnight.",
+    snippet: "A goodnight, posted with a photo.",
     themes: ["Everyday Moments"],
     hasImage: true,
     imageUrl:
@@ -1062,7 +1062,7 @@ export const stories: Story[] = [
     id: "659acdea80ac044349fd2690",
     date: "2024-01-07",
     title: "Ddeong-Night, Again",
-    snippet: "Another warm goodnight.",
+    snippet: "Another goodnight, posted with a photo.",
     themes: ["Everyday Moments"],
     hasImage: true,
     imageUrl:
@@ -1088,7 +1088,7 @@ export const stories: Story[] = [
     id: "65fafc24e329b911c219f131",
     date: "2024-03-20",
     title: "Goodnight",
-    snippet: "A simple goodnight.",
+    snippet: "A goodnight photo.",
     themes: ["Everyday Moments"],
     hasImage: true,
     imageUrl:

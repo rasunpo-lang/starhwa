@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual selfie of Seonghwa posted via ATEEZ's official X account, captioned "My phone screen protector is cracked but my face came out well!"
+"My phone screen protector is cracked but my face came out well!" A selfie of Seonghwa, posted on ATEEZ's official X account.

@@ -13,4 +13,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned "Together with DDeongbyeoli," his ANITEEZ mascot.
+"떵별이와 함께💕💞💓💗💖💘💝" ("Together with DDeongbyeoli," his ANITEEZ mascot). A 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

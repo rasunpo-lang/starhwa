@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "ATINY~ do you like it? That's all I need, hahaha."
+"ATINY~ do you like it? That's all I need, hahaha." A photo of Seonghwa, posted on ATEEZ's official X account.

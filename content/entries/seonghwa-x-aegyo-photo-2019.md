@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual "aegyo" photo of Seonghwa posted via ATEEZ's official X account, featuring Hongjoong.
+"Seonghwa's aegyo(?) photo 😂 feat. Hong" — a photo with Hongjoong, posted on ATEEZ's official X account.

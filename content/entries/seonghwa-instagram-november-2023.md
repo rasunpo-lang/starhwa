@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, greeting fans for the new month.
+"11월도 잘 부탁해요😌" ("Please take care of me in November too😌"), greeting fans for the new month, in a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

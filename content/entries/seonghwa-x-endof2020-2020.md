@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "The last day of 2020, with ATINY too — tried taking this with the basic camera."
+"The last day of 2020, with ATINY too — tried taking this with the basic camera." A photo of Seonghwa, posted on ATEEZ's official X account.

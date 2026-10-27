@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned only with a clover emoji.
+Just a clover, 🍀, as the caption of this 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

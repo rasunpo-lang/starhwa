@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual message from Seonghwa posted via ATEEZ's official X account, captioned "Don't want to get up on Sundays~ Oh right — and thanks to our ATINY today too."
+"Don't want to get up on Sundays~ Oh right — and thanks to our ATINY today too." A message from Seonghwa, posted on ATEEZ's official X account.

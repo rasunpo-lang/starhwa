@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-ATEEZ's official birthday announcement for Seonghwa, posted via the group's official X account inviting fans to send celebratory messages.
+ATEEZ's birthday post for Seonghwa on its official X account, inviting fans to send their wishes.

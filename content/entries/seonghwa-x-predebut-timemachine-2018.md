@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A pre-debut message from Seonghwa posted via ATEEZ's official X account, captioned "I wish I could take a time machine to the 24th" — referring to ATEEZ's October 24, 2018 debut date.
+"I wish I could take a time machine to the 24th" A pre-debut message from Seonghwa, posted on ATEEZ's official X account — referring to ATEEZ's October 24, 2018 debut date.

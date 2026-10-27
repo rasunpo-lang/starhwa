@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-Seonghwa posting a casual "balance game" via ATEEZ's official X account, asking fans to choose between him wearing glasses or not.
+Seonghwa's "balance game" of the day: glasses or no glasses? He asks fans to choose, on ATEEZ's official X account.

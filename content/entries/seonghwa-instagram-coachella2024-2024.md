@@ -13,4 +13,4 @@ related:
   - seonghwa-instagram-letsgocoachella-2024
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned "ATEEZ & Coachella 2024."
+"ATEEZ & Coachella 2024." A photo from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram.

@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series.
+On ATEEZ's official Instagram, a 인星화그램 (Inseonghwagram) photo captioned "지금 올리면 좋을 것 같아서💝" ("Thought it'd be good to post this now💝").

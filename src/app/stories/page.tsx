@@ -33,19 +33,12 @@ export default function StoriesPage() {
         <Glint className="glint-burst -right-2 -top-3" />
         Seonghwa&apos;s Stories <span aria-hidden="true">✦</span>
       </h1>
-      <div className="mt-5 max-w-xl space-y-3 text-sm leading-relaxed text-charcoal/85">
-        <p>
-          Not a feed, and not a mirror of one. This is a curated window into
-          the small, everyday moments Seonghwa has chosen to share publicly
-          on the official platform since April 2023 — a meal, a quiet photo,
-          a late-night thought, a note to ATINY — kept alongside the career
-          record, but belonging to a gentler rhythm of its own.
-        </p>
-        <p>
-          The stories are translated into English, with a little context
-          where needed, and linked back to the original posts.
-        </p>
-      </div>
+      <p className="mt-5 max-w-xl text-sm leading-relaxed text-charcoal/85">
+        The everyday moments Seonghwa has shared publicly on the official
+        platform since April 2023 — a meal, a quiet photo, a late-night
+        thought, a note to ATINY. Translated into English, with context where
+        needed.
+      </p>
 
       <div className="mt-12">
         <Suspense fallback={null}>

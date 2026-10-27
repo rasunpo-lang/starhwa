@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A poetic message from Seonghwa posted via ATEEZ's official X account: "I'm still walking, no matter what difficulty blocks me."
+A poetic message from Seonghwa on ATEEZ's official X account: "I'm still walking, no matter what difficulty blocks me."

@@ -31,4 +31,4 @@ When asked about the latest Korean culture spots, true to Seonghwa — known for
 
 "I've never used it myself, but Korean amusement parks have a service that rents out school uniforms. Apparently Korean couples wear rented uniforms on amusement-park dates to make memories that feel like their school days."
 
-Translated directly from the original Japanese text of the CREA WEB (Bunshun) article linked below.
+Translated directly from the original Japanese text of the CREA WEB (Bunshun) article.

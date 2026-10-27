@@ -16,4 +16,4 @@ related:
   - seonghwa-x-jp-bad-showcase-behind-2026
 ---
 
-A behind-the-scenes video of Seonghwa posted via the official ATEEZ Japan X account for the "BAD (Japanese Ver.)" single.
+A behind-the-scenes video of Seonghwa for the "BAD (Japanese Ver.)" single, posted on ATEEZ Japan's official X account.

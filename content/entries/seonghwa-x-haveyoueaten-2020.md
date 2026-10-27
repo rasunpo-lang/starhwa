@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A caring message from Seonghwa posted via ATEEZ's official X account, captioned "Missing ATINY~ have you eaten? Make sure to eat well~"
+"Missing ATINY~ have you eaten? Make sure to eat well~" A caring message from Seonghwa, posted on ATEEZ's official X account.

@@ -40,7 +40,7 @@ const plexMono = IBM_Plex_Mono({
 
 const SITE_NAME = "The Starhwa Encyclopedia";
 const SITE_DESCRIPTION =
-  "An unofficial fan-maintained archive documenting Park Seonghwa of ATEEZ, from the 2018 debut onward. Chronology, categorized entries, and links to official sources.";
+  "An unofficial fan archive of Park Seonghwa of ATEEZ, from the 2018 debut onward: chronology, entries, and the stories he shares.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://starhwa.com"),
@@ -94,11 +94,15 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"971463b36c9fabaeb462f895d8cf79aa"})});`,
-          }}
-        />
+        {/* Metricool tracking — same loader and hash as before, but run
+            through next/script's afterInteractive strategy. The old raw
+            <script> appended the tracker node into React-managed <head>
+            while the page was still parsing, so hydration found an
+            element it hadn't rendered and logged a mismatch error;
+            afterInteractive runs it after hydration instead. */}
+        <Script id="metricool-tracker" strategy="afterInteractive">
+          {`function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"971463b36c9fabaeb462f895d8cf79aa"})});`}
+        </Script>
         {/* ✦ The Moonlit Archive — sets --night/--night-text/--golden/
             --golden-progress/--sun-elevation/--sun-x/--moon-illum/
             --moon-dir before first paint so a page load starts at the

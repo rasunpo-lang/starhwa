@@ -46,7 +46,7 @@ function validate(values: FormValues): FormErrors {
   }
 
   if (!values.suggestion.trim()) {
-    errors.suggestion = "Tell us a little about what you found — this can't be empty.";
+    errors.suggestion = "Tell us what you found — this can't be empty.";
   }
 
   const sourceUrl = values.sourceUrl.trim();
@@ -67,7 +67,10 @@ function validate(values: FormValues): FormErrors {
 }
 
 const fieldClasses =
-  "mt-2 w-full border border-line bg-ivory px-3 py-2.5 text-sm text-ink transition-colors placeholder:text-charcoal/50 focus:border-plum focus:outline-none";
+  "mt-2 w-full border border-line bg-ivory px-3 py-2.5 text-base text-ink shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)] transition-colors placeholder:text-charcoal/65 hover:border-charcoal/40 focus:border-plum aria-[invalid=true]:border-plum sm:text-sm";
+
+const cardClasses =
+  "border border-line bg-ivory/60 p-6 shadow-[0_1px_0_rgba(255,255,255,0.5)_inset,0_22px_44px_-30px_color-mix(in_srgb,var(--plum)_50%,transparent)] backdrop-blur-[2px] sm:p-8";
 
 export default function HelpForm() {
   const [values, setValues] = useState<FormValues>(EMPTY_VALUES);
@@ -107,14 +110,14 @@ export default function HelpForm() {
     } catch {
       setStatus("error");
       setSubmitError(
-        "Oh no — the little envelope got lost. 🥲 Something went wrong while sending your note. Please try again."
+        "Oh no — the envelope got lost. 🥲 Your note didn't send. Please try again."
       );
     }
   }
 
   if (status === "success") {
     return (
-      <div className="border border-line p-6 sm:p-8">
+      <div className={cardClasses}>
         <h2
           ref={headingRef}
           tabIndex={-1}
@@ -126,11 +129,10 @@ export default function HelpForm() {
         <p className="mt-4 text-sm leading-relaxed text-charcoal/85">
           Thank you for leaving a note. <span aria-hidden="true">♡</span>
           <br />
-          We&apos;ll have a look and see where your discovery belongs —
-          nothing changes in the archive until then.
+          We&apos;ll look into it and see where it belongs.
         </p>
-        <div className="mt-8 flex flex-wrap gap-4">
-          <Link href="/" className="btn btn-primary">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
+          <Link href="/" className="btn btn-filled py-3.5 hover:border-plum hover:bg-plum">
             Back to the Encyclopedia
           </Link>
           <button
@@ -139,7 +141,7 @@ export default function HelpForm() {
               setValues(EMPTY_VALUES);
               setStatus("idle");
             }}
-            className="btn btn-secondary"
+            className="btn btn-secondary py-3.5"
           >
             Leave another note
           </button>
@@ -152,7 +154,7 @@ export default function HelpForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="border border-line p-6 sm:p-8"
+      className={cardClasses}
     >
       <div>
         <label htmlFor={`${formId}-category`} className="eyebrow text-charcoal/85">
@@ -161,23 +163,35 @@ export default function HelpForm() {
             *
           </span>
         </label>
-        <select
-          id={`${formId}-category`}
-          value={values.category}
-          onChange={(e) => updateField("category", e.target.value as Category)}
-          aria-invalid={errors.category ? true : undefined}
-          aria-describedby={errors.category ? `${formId}-category-error` : undefined}
-          className={fieldClasses}
-        >
-          <option value="" disabled>
-            Choose one…
-          </option>
-          {CATEGORY_OPTIONS.map((opt) => (
-            <option key={opt.value} value={opt.value}>
-              {opt.label}
+        <div className="relative">
+          <select
+            id={`${formId}-category`}
+            value={values.category}
+            onChange={(e) => updateField("category", e.target.value as Category)}
+            aria-invalid={errors.category ? true : undefined}
+            aria-describedby={errors.category ? `${formId}-category-error` : undefined}
+            className={`${fieldClasses} appearance-none pr-10 ${values.category ? "" : "text-charcoal/65!"}`}
+          >
+            <option value="" disabled>
+              Choose one…
             </option>
-          ))}
-        </select>
+            {CATEGORY_OPTIONS.map((opt) => (
+              <option key={opt.value} value={opt.value}>
+                {opt.label}
+              </option>
+            ))}
+          </select>
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 12 8"
+            className="pointer-events-none absolute right-3.5 top-1/2 mt-1 h-2 w-3 -translate-y-1/2 text-plum"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+          >
+            <path d="M1 1.5 6 6.5 11 1.5" />
+          </svg>
+        </div>
         {errors.category && (
           <p id={`${formId}-category-error`} role="alert" className="mt-1.5 text-xs text-plum">
             {errors.category}
@@ -195,8 +209,12 @@ export default function HelpForm() {
           value={values.relatedPage}
           onChange={(e) => updateField("relatedPage", e.target.value)}
           placeholder="Is there a page this belongs with?"
+          aria-describedby={`${formId}-relatedPage-hint`}
           className={fieldClasses}
         />
+        <p id={`${formId}-relatedPage-hint`} className="mt-1.5 text-xs text-charcoal/70">
+          Optional — the entry or page title this belongs with, if you know it.
+        </p>
       </div>
 
       <div className="mt-6">
@@ -210,7 +228,7 @@ export default function HelpForm() {
           id={`${formId}-suggestion`}
           value={values.suggestion}
           onChange={(e) => updateField("suggestion", e.target.value)}
-          placeholder="A little detail, a missing piece, a clue worth following…"
+          placeholder="A detail, a missing piece, a clue worth following…"
           rows={6}
           aria-invalid={errors.suggestion ? true : undefined}
           aria-describedby={errors.suggestion ? `${formId}-suggestion-error` : undefined}
@@ -286,21 +304,16 @@ export default function HelpForm() {
             </p>
           ) : (
             <p id={`${formId}-email-hint`} className="mt-1.5 text-xs text-charcoal/70">
-              Only needed if you&apos;d like a little reply.
+              Only needed if you&apos;d like a reply.
             </p>
           )}
         </div>
       </div>
 
-      <div className="mt-8 border-t border-line pt-6">
-        <p className="eyebrow text-charcoal/75">A Little Archive Note</p>
-        <p className="mt-3 text-xs leading-relaxed text-charcoal/75">
-          Every note gets a little visit from the archive keeper before
-          anything changes. Sending something here doesn&apos;t guarantee
-          it&apos;ll be added — we&apos;ll check it against the clues first.{" "}
-          <span aria-hidden="true">♡</span>
-        </p>
-      </div>
+      <p className="mt-8 border-t border-line pt-6 text-xs leading-relaxed text-charcoal/75">
+        Suggestions are checked against sources before anything is added.{" "}
+        <span aria-hidden="true">♡</span>
+      </p>
 
       {status === "error" && submitError && (
         <p role="alert" className="mt-6 text-sm text-plum">
@@ -312,7 +325,7 @@ export default function HelpForm() {
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="btn btn-primary disabled:cursor-not-allowed disabled:opacity-50"
+          className="btn btn-filled w-full py-3.5 hover:border-plum hover:bg-plum disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
         >
           {status === "submitting" ? "Sending your note…" : "Send it to the Archive ✦"}
         </button>

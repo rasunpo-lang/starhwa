@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Calling, calling~ Calling ATINY~."
+"Calling, calling~ Calling ATINY~." A photo of Seonghwa from ATEEZ's X.

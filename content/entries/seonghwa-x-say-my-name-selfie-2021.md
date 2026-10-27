@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual selfie from Seonghwa via ATEEZ's official X account, captioned "say my name~!! seonghwa."
+"say my name~!! seonghwa." A selfie of Seonghwa, posted on ATEEZ's official X account.

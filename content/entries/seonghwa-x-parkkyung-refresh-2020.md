@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A message from Seonghwa posted via ATEEZ's official X account, recommending fellow artist Park Kyung's song "새로고침" (Refresh) before bed.
+A message from Seonghwa on ATEEZ's official X account, recommending fellow artist Park Kyung's song "새로고침" (Refresh) before bed.

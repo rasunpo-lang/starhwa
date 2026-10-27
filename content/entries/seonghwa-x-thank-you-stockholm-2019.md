@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-Seonghwa thanking fans in Stockholm via ATEEZ's official X account, posted with three photos during the group's first world tour stop in Sweden.
+"Thank you Stockholm❤️" Seonghwa thanks fans in Stockholm on ATEEZ's official X account, with three photos from the group's first world tour stop in Sweden.

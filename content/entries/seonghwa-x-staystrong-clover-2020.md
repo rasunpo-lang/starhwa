@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-An encouraging message from Seonghwa posted via ATEEZ's official X account: "Hope you stay strong today too."
+An encouraging message from Seonghwa on ATEEZ's official X account: "Hope you stay strong today too."

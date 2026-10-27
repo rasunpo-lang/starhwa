@@ -13,4 +13,4 @@ related:
   - seonghwa-x-reply-profilepic-2021
 ---
 
-A brief text-only reply from Seonghwa via ATEEZ's official X account, tagged #성화, responding to a fan (parent post now unavailable).
+A brief text-only reply to a fan on ATEEZ's official X account: "왘ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 시 ㅁ 자 ㅇㅇ ㅣ.. 떨어져떠" — a garbled, laughing reply. The post it answers is no longer available.

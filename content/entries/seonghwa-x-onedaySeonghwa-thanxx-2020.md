@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "1 day 1 Seonghwa, 1 day 1 THANXX."
+"1 day 1 Seonghwa, 1 day 1 THANXX." A photo of Seonghwa, posted on ATEEZ's official X account.

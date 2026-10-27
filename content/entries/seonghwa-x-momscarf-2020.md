@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual message from Seonghwa posted via ATEEZ's official X account: "My mom wraps a scarf on me when I say it's cold. Miss ATINY."
+A message from Seonghwa on ATEEZ's official X account: "My mom wraps a scarf on me when I say it's cold. Miss ATINY."

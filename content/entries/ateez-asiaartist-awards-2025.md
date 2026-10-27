@@ -25,6 +25,8 @@ sources:
     url: "https://www.youtube.com/watch?v=-3bo_Xt_gpI"
   - label: "ASIA ARTIST AWARDS 스타뉴스 Official YouTube — [#AAA2025] ATEEZ Red Carpet"
     url: "https://www.youtube.com/watch?v=Y8oRXufooWY"
+  - label: "ATEEZ Official X — [📷] TODAY ATEEZ, #AAA2025 수상 (2025.12.06)"
+    url: "https://x.com/ATEEZofficial/status/1997309828490989714"
 related:
 ---
 

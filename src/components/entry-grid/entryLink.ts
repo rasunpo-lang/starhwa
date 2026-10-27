@@ -21,16 +21,6 @@ export function entryHref(entry: Entry): string {
   return `/archive/${entry.slug}`;
 }
 
-/** When an entry cites exactly one source, cards offer it as a direct,
- * clearly-external shortcut alongside the (always-internal) card link —
- * skipping straight to the entry page just to click through again would
- * be an unnecessary intermediary hop. With multiple sources there's no
- * single unambiguous shortcut, so none is offered here; all of them are
- * listed on the entry page itself. */
-export function singleSourceUrl(entry: Entry): string | undefined {
-  return entry.sources.length === 1 ? entry.sources[0].url : undefined;
-}
-
 /** Shared attributes for any link that leaves the site — new tab, no
  * opener leakage, and a screen-reader note alongside the visual ↗ used
  * throughout (never rely on the arrow alone to convey it). */

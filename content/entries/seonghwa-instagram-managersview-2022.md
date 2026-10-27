@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A candid photo of Seonghwa taken from his manager's point of view, posted via ATEEZ's official Instagram.
+A candid photo of Seonghwa from his manager's point of view, on ATEEZ's official Instagram: "성화 매니저님의 시선에 담긴 가만히 서 있기만 해도 모델 포스 성화" (roughly, "Seonghwa, who has model presence just by standing still, as caught through his manager's eyes").

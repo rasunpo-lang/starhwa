@@ -14,4 +14,4 @@ related:
   - hala-hala-mv-2019
 ---
 
-Seonghwa's individual concept photo for ATEEZ's second EP, "TREASURE EP.2: Zero To One," posted by the official account ahead of the album's January 15, 2019 release.
+Seonghwa's individual concept photo for ATEEZ's second EP, "TREASURE EP.2: Zero To One," posted on ATEEZ's official X account ahead of the album's January 15, 2019 release.

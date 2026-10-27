@@ -11,6 +11,7 @@ sources:
   - label: "ATEEZ Official X — [📷] TODAY ATEEZ ATEEZ 2026 WORLD TOUR [IN YOUR FANTASY] IN MELBOURNE DAY2 ❤️ #TODAY_ATEEZ #ATEEZ #에이티즈 #In_Your_Fantasy"
     url: "https://x.com/ATEEZofficial/status/2028807390376976863"
 related:
+  - tour-inyourfantasy-melbourne-1-20260302
 ---
 
 ATEEZ performed in Melbourne as part of the "IN YOUR FANTASY" world tour.

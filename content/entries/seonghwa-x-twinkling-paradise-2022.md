@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Twinkling Of Paradise."
+"Twinkling Of Paradise." A photo of Seonghwa, posted on ATEEZ's official X account.

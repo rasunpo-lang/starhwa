@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned only with rainbow heart emoji for ATINY.
+A photo of Seonghwa on ATEEZ's official X account, captioned only with rainbow hearts for ATINY: ❤🧡💛💚💙💜

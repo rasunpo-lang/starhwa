@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Let's go for a drive."
+"Let's go for a drive." A photo of Seonghwa, posted on ATEEZ's official X account.

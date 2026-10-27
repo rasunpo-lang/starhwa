@@ -27,12 +27,8 @@ export default function OfficialPage() {
     <div className="mx-auto max-w-[1400px] px-5 py-14 sm:px-8 sm:py-20">
       <p className="eyebrow text-plum">Direct From The Source</p>
       <h1 className="mt-3 font-display text-5xl sm:text-6xl">Official Links</h1>
-      <p className="mt-5 max-w-xl text-sm leading-relaxed text-charcoal/85">
-        The sources below lead directly to official platforms and content
-        from Seonghwa, ATEEZ, and KQ Entertainment.
-      </p>
 
-      <div className="mt-14 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
         {officialLinks.map((link) => (
           <a
             key={link.platform}
@@ -62,13 +58,6 @@ export default function OfficialPage() {
         ))}
       </div>
 
-      <div className="mt-14 border-t border-line pt-8">
-        <p className="max-w-2xl text-xs leading-relaxed text-charcoal/85">
-          Handles and links are maintained on a best-effort basis and may
-          change without notice. If you notice an outdated or incorrect
-          link, it will be corrected as this archive is updated.
-        </p>
-      </div>
     </div>
   );
 }

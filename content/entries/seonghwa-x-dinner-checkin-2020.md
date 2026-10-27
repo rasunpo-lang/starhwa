@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A video of Seonghwa posted via ATEEZ's official X account, captioned "Make sure to eat dinner~~ ATINY! Fighting for the rest of the day."
+"Make sure to eat dinner~~ ATINY! Fighting for the rest of the day." A video of Seonghwa, posted on ATEEZ's official X account.

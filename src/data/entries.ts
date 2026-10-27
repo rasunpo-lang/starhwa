@@ -3,7 +3,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { frontmatterSchema, formatZodError } from "@/lib/schema";
 import { eras } from "@/data/eras";
-import { Entry } from "@/lib/types";
+import { Entry, NextMemory, OnThisDayItem } from "@/lib/types";
 
 /**
  * Loads and validates every *.md file in content/entries/ into typed,
@@ -175,32 +175,137 @@ export function getAvailableYears(): number[] {
   return [...years].sort((a, b) => a - b);
 }
 
-export function getOnThisDayEntry(referenceDate: Date): Entry | null {
+/** "MM-DD" key for a month (0-11) and day (1-31). */
+export function monthDayKey(month: number, day: number): string {
+  return `${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+}
+
+// A year can have several entries on the same calendar day (e.g. April 3);
+// the panel shows one per year, preferring a verified entry, then slug
+// order, so the pick is stable between builds and requests.
+function pickForYear(list: Entry[]): Entry {
+  return [...list].sort((a, b) => {
+    if (a.verification !== b.verification) return a.verification === "verified" ? -1 : 1;
+    return a.slug.localeCompare(b.slug);
+  })[0];
+}
+
+/**
+ * For each "MM-DD" key, one entry per year that has an entry on that exact
+ * month/day, newest year first. Keys with no entries map to an empty list.
+ * Exact matches only — never a "nearest date" substitute — so an
+ * "On This Day" panel built from this is either truthful or empty.
+ */
+export function getOnThisDayByKey(keys: string[]): Record<string, OnThisDayItem[]> {
+  const byKey = new Map<string, Map<number, Entry[]>>();
+  for (const e of getEntries()) {
+    const key = e.date.slice(5);
+    if (!keys.includes(key)) continue;
+    const years = byKey.get(key) ?? new Map<number, Entry[]>();
+    years.set(e.year, [...(years.get(e.year) ?? []), e]);
+    byKey.set(key, years);
+  }
+  const result: Record<string, OnThisDayItem[]> = {};
+  for (const key of keys) {
+    const years = byKey.get(key);
+    result[key] = years
+      ? [...years.entries()]
+          .sort((a, b) => b[0] - a[0])
+          .map(([year, list]) => {
+            const e = pickForYear(list);
+            return {
+              slug: e.slug,
+              year,
+              date: e.date,
+              category: e.category,
+              title: e.title,
+              // The panel clamps to four lines; no need to ship more.
+              summary: e.summary.slice(0, 600),
+            };
+          })
+      : [];
+  }
+  return result;
+}
+
+/**
+ * The one onward link at the end of an entry page. The author's own
+ * `related` list wins (first valid entry that isn't this one). Otherwise a
+ * deterministic pick from existing metadata only: entries sharing tags
+ * score by how rare each shared tag is (so "aniteez mascot" counts far more
+ * than "individual content"), plus a small bonus for the same category and
+ * era and a small penalty for distance in time; ties break by slug. No
+ * randomness, so a page always points to the same entry.
+ */
+export function getNextMemory(entry: Entry): NextMemory | null {
   const entries = getEntries();
-  const month = referenceDate.getMonth();
-  const day = referenceDate.getDate();
 
-  const exact = entries.filter((e) => {
-    const d = new Date(e.date + "T00:00:00");
-    return d.getMonth() === month && d.getDate() === day;
-  });
-
-  if (exact.length > 0) {
-    return exact.sort((a, b) => (a.date < b.date ? 1 : -1))[0];
+  for (const slug of entry.related) {
+    if (slug === entry.slug) continue;
+    const found = entries.find((e) => e.slug === slug);
+    if (found) return { entry: found, source: "related", reason: null };
   }
 
-  let closest: Entry | null = null;
-  let closestDistance = Infinity;
+  const tagCounts = new Map<string, number>();
+  for (const e of entries) for (const t of e.tags) tagCounts.set(t, (tagCounts.get(t) ?? 0) + 1);
+  const weight = (tag: string) => Math.log(entries.length / (tagCounts.get(tag) ?? entries.length));
 
+  const own = new Set(entry.tags);
+  // A shared tag that merely restates either entry's category or era says nothing new.
+  // Plural-insensitive, so "magazine" restates the "Magazines" category.
+  const norm = (v: string) =>
+    v.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().replace(/s$/, "");
+  const restates = (tag: string, ...subjects: Entry[]) => {
+    const t = norm(tag);
+    return subjects.some((x) =>
+      [x.category, x.eraId, eras.find((r) => r.id === x.eraId)?.name ?? ""].some(
+        (v) => {
+          const n = norm(v);
+          const bare = norm(v.replace(/\s+era$/i, ""));
+          // "fever era" restates "ZERO: FEVER Era"; a lone word must match whole.
+          return t === n || t === bare || (/ era$/.test(t) && n.endsWith(t));
+        },
+      ),
+    );
+  };
+  const ownTime = new Date(entry.date + "T00:00:00Z").getTime();
+  const DAY_MS = 86_400_000;
+
+  let best: { e: Entry; score: number; rarestShared: string | null } | null = null;
   for (const e of entries) {
-    const d = new Date(e.date + "T00:00:00");
-    const thisYear = new Date(referenceDate.getFullYear(), d.getMonth(), d.getDate());
-    const distance = Math.abs(thisYear.getTime() - referenceDate.getTime());
-    if (distance < closestDistance) {
-      closestDistance = distance;
-      closest = e;
+    if (e.slug === entry.slug) continue;
+    let score = 0;
+    let rarestShared: string | null = null;
+    let rarestWeight = -1;
+    for (const t of e.tags) {
+      if (!own.has(t)) continue;
+      const w = weight(t);
+      score += w;
+      if (restates(t, entry, e)) continue;
+      if (w > rarestWeight) {
+        rarestWeight = w;
+        rarestShared = t;
+      }
+    }
+    if (e.category === entry.category) score += 0.5;
+    if (e.eraId === entry.eraId) score += 0.5;
+    const days = Math.abs(new Date(e.date + "T00:00:00Z").getTime() - ownTime) / DAY_MS;
+    score -= days / 3650;
+    if (!best || score > best.score || (score === best.score && e.slug < best.e.slug)) {
+      best = { e, score, rarestShared };
     }
   }
+  if (!best) return null;
 
-  return closest;
+  // Only name a shared tag when it's actually distinctive (appears on under
+  // 5% of entries); otherwise the era is the honest common ground.
+  const distinctive =
+    best.rarestShared && (tagCounts.get(best.rarestShared) ?? 0) < entries.length * 0.05;
+  const era = eras.find((x) => x.id === best.e.eraId);
+  const reason = distinctive
+    ? `Shares the tag “${best.rarestShared}”`
+    : best.e.eraId === entry.eraId && era
+      ? `Also from ${era.name}`
+      : null;
+  return { entry: best.e, source: "derived", reason };
 }

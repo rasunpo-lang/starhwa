@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A good-night message from Seonghwa posted via ATEEZ's official X account.
+"잘자요 에이티니" ("Good night, ATINY"). A good-night message from Seonghwa, posted on ATEEZ's official X account.

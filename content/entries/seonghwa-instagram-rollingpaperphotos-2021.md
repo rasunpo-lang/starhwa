@@ -14,4 +14,4 @@ related:
   - seonghwa-voice-rolling-paper-2021
 ---
 
-A set of photos of Seonghwa posted via ATEEZ's official Instagram alongside the "Voice Rolling Paper" birthday video, gifted by members who sent him birthday messages.
+A set of photos of Seonghwa on ATEEZ's official Instagram, posted alongside the "Voice Rolling Paper" birthday video — a gift from the members, who sent him birthday messages.

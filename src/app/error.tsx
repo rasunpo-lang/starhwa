@@ -30,8 +30,7 @@ export default function Error({
         Something Went Wrong
       </h1>
       <p className="mt-5 max-w-md text-sm leading-relaxed text-charcoal/85">
-        This page hit an unexpected error while loading. It&apos;s been
-        logged — try again, or return home in the meantime.
+        This page didn&apos;t load. Try again, or head back home.
       </p>
       <div className="mt-8 flex flex-wrap items-center gap-4">
         <button type="button" onClick={reset} className="btn btn-primary">

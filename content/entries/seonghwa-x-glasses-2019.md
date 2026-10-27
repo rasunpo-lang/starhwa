@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa wearing glasses, posted via ATEEZ's official X account.
+A photo of Seonghwa wearing glasses on ATEEZ's official X account, captioned "안경 성화🤓👓" ("Glasses Seonghwa🤓👓").

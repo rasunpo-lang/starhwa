@@ -13,8 +13,10 @@ sources:
     url: "https://x.com/thefact_TMA/status/2105103440213119102"
   - label: "The Fact Music Awards Official X (@thefact_TMA) — 📸 2026 TMA | #에이티즈 #ATEEZ (photo post, 2)"
     url: "https://x.com/thefact_TMA/status/2105103437272957042"
-  - label: "Dispatch (MIIM) YouTube Shorts — [EXCLUSIVE] 떵요미 출몰 주의보 🚨 (Seonghwa)"
-    url: "https://www.youtube.com/shorts/xzVeLuQ7jQY"
+  - label: "THE FACT Official YouTube — 에이티즈 재입덕 영상 DRIP니다😎ㅣ2026 TMA 인터뷰 (1:17)"
+    url: "https://www.youtube.com/watch?v=uAHAhdGK33s&t=77s"
+  - label: "THE FACT Official YouTube — [2026 TMA] 에이티즈(ATEEZ) 레드카펫｜260919 (Short)"
+    url: "https://www.youtube.com/shorts/EwKouoD30Wc"
 related:
 ---
 

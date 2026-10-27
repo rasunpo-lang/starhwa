@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned in Chinese ahead of a Hong Kong appearance.
+"明天見 香港🥰" ("See you tomorrow, Hong Kong🥰") — a Chinese caption ahead of a Hong Kong appearance, in a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

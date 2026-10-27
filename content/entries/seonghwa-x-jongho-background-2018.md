@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "The photo is from yesterday, but see you in a bit~~ It's no secret that's Jongho in the background."
+"The photo is from yesterday, but see you in a bit~~ It's no secret that's Jongho in the background." A photo of Seonghwa, posted on ATEEZ's official X account.

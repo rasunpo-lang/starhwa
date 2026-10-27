@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A message from Seonghwa posted via ATEEZ's official X account: "Always thankful for ATINY~ Happy days thanks to ATINY."
+"Always thankful for ATINY~ Happy days thanks to ATINY." Seonghwa's message on ATEEZ's official X account.

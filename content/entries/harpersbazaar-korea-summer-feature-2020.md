@@ -30,4 +30,4 @@ A: "I got injured a little while ago. Changing the choreography formation becaus
 Q: Let's try defining ATEEZ using your own lyrics. Which line fits?
 A: "From the song 'Say My Name' — 'My name is A to the Z.'"
 
-Translated directly from the original Korean text of the Harper's Bazaar Korea article linked below.
+Translated directly from the original Korean text of the Harper's Bazaar Korea article.

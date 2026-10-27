@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "The Starhwa Encyclopedia — A Living Portrait of Seonghwa, 2018—";
+  "The Starhwa Encyclopedia — Park Seonghwa · ATEEZ · 2018—";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -58,7 +58,7 @@ export default function Image() {
             color: "#5c1f30",
           }}
         >
-          A Living Portrait of Seonghwa, 2018—
+          Park Seonghwa · ATEEZ · 2018—
         </div>
         <div
           style={{

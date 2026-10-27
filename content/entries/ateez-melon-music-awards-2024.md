@@ -17,6 +17,8 @@ sources:
     url: "https://www.youtube.com/watch?v=FR7F8VqNdmU"
   - label: "Melon Official YouTube — A Greeting from ATEEZ for MMA2024"
     url: "https://www.youtube.com/watch?v=eFozJ0XRTXw"
+  - label: "ATEEZ Official X — [📷] TODAY ATEEZ, 멜론뮤직어워드 글로벌 아티스트 상 수상 (2024.11.30)"
+    url: "https://x.com/ATEEZofficial/status/1862875552232948113"
 related:
 ---
 

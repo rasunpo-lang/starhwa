@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account after a broadcast shoot, captioned "After the broadcast... Tropical Boy Seonghwa gone bad..."
+A photo of Seonghwa on ATEEZ's official X account after a broadcast shoot, captioned "After the broadcast... Tropical Boy Seonghwa gone bad..."

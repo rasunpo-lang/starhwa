@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, taken during a Chicago stop.
+"시카고에서" ("In Chicago"), a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram, from a Chicago stop.

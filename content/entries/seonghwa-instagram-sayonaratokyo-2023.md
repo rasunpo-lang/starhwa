@@ -13,4 +13,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned in Japanese following a Tokyo stop.
+"さようなら Tokyo" ("Goodbye, Tokyo") — a Japanese caption after a Tokyo stop, in a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

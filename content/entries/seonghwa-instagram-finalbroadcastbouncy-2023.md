@@ -10,7 +10,7 @@ sources:
   - label: "ATEEZ Official Instagram — [#인星화그램] 막방까지 너무 고마워😎"
     url: "https://www.instagram.com/ateez_official_/p/CuMqV-ArqaL/"
 related:
-  - seonghwa-x-bouncy-finalbroadcast-2023
+  - ateez-yt-2023-07-02-rab3ynblos4
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, thanking fans through "Bouncy"'s final music-show broadcast.
+"막방까지 너무 고마워😎" ("Thank you so much, all the way to the final broadcast😎"), thanking fans through "Bouncy"'s last music-show broadcast. A 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

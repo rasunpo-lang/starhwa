@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "Since it's Tuesday, a heart(?)"
+"Since it's Tuesday, a heart(?)" A photo of Seonghwa, posted on ATEEZ's official X account.

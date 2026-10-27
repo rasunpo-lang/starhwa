@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A group photo post from ATEEZ's official X account identifying all eight members by name, tagged #성화. This is group content rather than Seonghwa-specific, but he is directly named and pictured, so it is included here.
+A group photo on ATEEZ's official X account with Seonghwa tagged (#성화), naming all eight members from left to right: Yeosang, Yunho, San (sitting), Jongho, Hongjoong, Seonghwa, Wooyoung, Mingi.

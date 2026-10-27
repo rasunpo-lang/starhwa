@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned with a Star Wars Day reference.
+"May the 4th be with you" — a Star Wars Day reference, in a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

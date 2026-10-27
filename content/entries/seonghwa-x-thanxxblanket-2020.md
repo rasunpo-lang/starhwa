@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa wrapped in a THANXX-branded blanket, posted via ATEEZ's official X account.
+"땡스 덮성화" (roughly, "THANXX-covered Seonghwa") — a photo of Seonghwa wrapped in a THANXX-branded blanket, on ATEEZ's official X account.

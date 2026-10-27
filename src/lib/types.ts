@@ -54,6 +54,12 @@ export interface Source {
    * qualifyingSourceUrl() in src/lib/tours.ts.
    */
   qualifiesForTourSource?: true;
+  /**
+   * Author-set. Embeds this specific X post on the entry's own page,
+   * regardless of category or account, when the entry has no video
+   * player. Ignored for non-X sources. Never inferred.
+   */
+  embed?: true;
 }
 
 export type ImageType = "photo" | "product";
@@ -229,4 +235,26 @@ export interface Story {
       note?: string;
     };
   };
+}
+
+/** One year's entry for a given month/day, as shown in the homepage's
+ * "On This Day" panel (see getOnThisDayByKey in data/entries.ts). A
+ * trimmed copy of Entry — enough to render the panel without shipping
+ * full entry bodies to the client. */
+export interface OnThisDayItem {
+  slug: string;
+  year: number;
+  date: string;
+  category: Category;
+  title: string;
+  summary: string;
+}
+
+/** The single onward link shown at the end of an entry page. `reason`
+ * is a factual, metadata-derived line (shared tag / era) for a derived
+ * pick, and null when the author's own `related` list chose it. */
+export interface NextMemory {
+  entry: Entry;
+  source: "related" | "derived";
+  reason: string | null;
 }

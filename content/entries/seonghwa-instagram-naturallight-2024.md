@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, captioned "Borrowing the power of natural light☀."
+"자연광의 힘을 빌려☀" ("Borrowing the power of natural light☀.") A photo from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram.

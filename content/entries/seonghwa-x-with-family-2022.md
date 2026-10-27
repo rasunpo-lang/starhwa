@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A personal photo from Seonghwa posted via ATEEZ's official X account, captioned "With family."
+"With family." A personal photo from Seonghwa, posted on ATEEZ's official X account.

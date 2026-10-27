@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series.
+A photo from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram, captioned "잡아 먹힌다!???!!!" (roughly, "I'm getting eaten!???!!!").

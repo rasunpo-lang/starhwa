@@ -46,4 +46,4 @@ A: "Eating less isn't good for your health, so rather than that, it's about eati
 Q: Finally, what does ATEEZ mean to the two of you?
 A: "For me, it's 'family.' We've spent so much time together, and shared memories through both hard times and happy ones, so I think of them as important to me, like family."
 
-Translated directly from the original Japanese text of the Numéro TOKYO article linked below.
+Translated directly from the original Japanese text of the Numéro TOKYO article.

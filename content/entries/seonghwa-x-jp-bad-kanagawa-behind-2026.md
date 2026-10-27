@@ -16,4 +16,4 @@ related:
   - seonghwa-x-jp-bad-showcase-behind-2026
 ---
 
-A behind-the-scenes photo of Seonghwa from a "BAD (Japanese Ver.)" release event in Kanagawa, posted via the official ATEEZ Japan X account.
+A behind-the-scenes photo of Seonghwa from a "BAD (Japanese Ver.)" release event in Kanagawa, posted on ATEEZ Japan's official X account.

@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, referencing the "Bouncy" title track.
+"우린 만들지 BOUNCY❤‍🔥" ("We make it BOUNCY❤‍🔥") — a nod to the "Bouncy" title track, in a 인星화그램 (Inseonghwagram) photo on ATEEZ's official Instagram.

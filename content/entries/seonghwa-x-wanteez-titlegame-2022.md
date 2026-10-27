@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo posted via ATEEZ's official X account as part of the "WANTEEZ Title Academy" (제목학원) game, captioned "the weight of ATEEZ's life."
+A photo on ATEEZ's official X account as part of the "WANTEEZ Title Academy" (제목학원) game, captioned "the weight of ATEEZ's life."

@@ -32,4 +32,4 @@ On what sets "ZERO : FEVER Part.3" apart from the rest of the series: "The core 
 
 On what's driven ATEEZ through such a packed 2021: "When I'm exhausted, seeing ATINY's loving messages gives me strength without my even realizing it. I think we prepare hard for the stage for the sake of the fans, who are always our support."
 
-Translated directly from the original Korean text of the MyDaily article linked below.
+Translated directly from the original Korean text of the MyDaily article.

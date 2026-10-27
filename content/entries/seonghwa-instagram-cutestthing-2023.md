@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series.
+"오늘 뭐 귀여운게 최고임." (roughly, "Whatever's cute is the best today.") A photo from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram.

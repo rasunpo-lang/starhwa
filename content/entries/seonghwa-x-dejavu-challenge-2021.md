@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A "Deja Vu" dance challenge video featuring Seonghwa, Yunho, and Yeosang, posted via ATEEZ's official X account and cross-posted from TikTok and YouTube.
+A "Deja Vu" dance challenge video featuring Seonghwa, Yunho, and Yeosang, on ATEEZ's official X account and cross-posted from TikTok and YouTube.

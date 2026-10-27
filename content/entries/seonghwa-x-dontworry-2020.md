@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-An encouraging message from Seonghwa posted via ATEEZ's official X account: "Don't worry, you're doing well — just keep doing what you're doing."
+An encouraging message from Seonghwa on ATEEZ's official X account: "Don't worry, you're doing well — just keep doing what you're doing."

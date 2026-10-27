@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual message from Seonghwa posted via ATEEZ's official X account, captioned "Miss you ATINY, let's meet tomorrow."
+"Miss you ATINY, let's meet tomorrow." A message from Seonghwa, posted on ATEEZ's official X account.

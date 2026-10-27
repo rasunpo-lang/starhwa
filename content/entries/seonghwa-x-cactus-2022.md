@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo posted by Seonghwa via ATEEZ's official X account, captioned "pretty cactus that resembles Tiny."
+"pretty cactus that resembles Tiny." A photo posted by Seonghwa on ATEEZ's official X account.

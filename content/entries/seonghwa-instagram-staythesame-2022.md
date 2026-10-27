@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series.
+"우린 여기서 지금 모습으로 그대로여도 괜찮아" ("It's okay for us to stay just as we are, right here"). A photo from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram.

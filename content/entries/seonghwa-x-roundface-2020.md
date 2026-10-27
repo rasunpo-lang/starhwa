@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual selfie of Seonghwa posted via ATEEZ's official X account, captioned "Today I'm totally round-round."
+"Today I'm totally round-round." A selfie of Seonghwa, posted on ATEEZ's official X account.

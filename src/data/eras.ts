@@ -8,7 +8,7 @@ export const eras: Era[] = [
     startDate: "2018-01-01",
     endDate: "2019-12-31",
     summary:
-      "The debut chapter. Seonghwa steps forward as a founding member of ATEEZ, establishing his stage presence and vocal identity across the group's earliest title tracks, showcases, and early international promotions.",
+      "The debut showcase at Yes24 Live Hall on October 24, 2018 was Seonghwa's first stage as a member of ATEEZ, on the night TREASURE EP.1 came out. The TREASURE series ran through EP.2 and EP.3 in 2019 and closed with \"WONDERLAND\" in October.",
   },
   {
     id: "zero-fever",
@@ -17,7 +17,7 @@ export const eras: Era[] = [
     startDate: "2020-01-01",
     endDate: "2022-06-30",
     summary:
-      "A period of rapid international growth. Seonghwa's role expands across broadcast stages, variety appearances, and the group's first large-scale tours, alongside a growing presence in fashion and magazine editorials.",
+      "TREASURE EPILOGUE and \"Answer\" open 2020, and the three-part ZERO: FEVER series follows: Part.1 in July 2020, Part.2 and \"Fireworks (I'm The One)\" in March 2021, Part.3 and \"Deja Vu\" that September. THE FELLOWSHIP: BEGINNING OF THE END opens in Seoul in January 2022.",
   },
   {
     id: "the-world",
@@ -26,7 +26,7 @@ export const eras: Era[] = [
     startDate: "2022-07-01",
     endDate: "2024-05-30",
     summary:
-      "A more deliberate, cinematic phase of the group's discography. Seonghwa takes on a more visible presence across performances, interviews, and the group's expanding content, reflecting ATEEZ's growing international profile.",
+      "Three releases frame the era: \"Guerrilla\" in July 2022, \"BOUNCY\" in June 2023, and \"Crazy Form\" that December. On tour, THE FELLOWSHIP: BREAK THE WALL begins in Seoul in October 2022 and TOWARDS THE LIGHT: WILL TO POWER in late January 2024. In January 2024, Seonghwa and Hongjoong release \"MATZ,\" the group's first unit music video.",
   },
   {
     id: "golden-hour",
@@ -35,7 +35,7 @@ export const eras: Era[] = [
     startDate: "2024-05-31",
     endDate: null,
     summary:
-      "The current chapter. Continued global touring, expanded solo visibility in fashion and media, and an evolving artistic voice — documented here as it unfolds.",
+      "GOLDEN HOUR: Part.1 and \"WORK\" open the era on May 31, 2024, and Parts 2 through 5 follow through June 2026. TOWARDS THE LIGHT reaches Europe in January 2025, IN YOUR FANTASY begins that July, and in January 2026 Seonghwa's \"Skin\" arrives as part of ATEEZ Present.",
   },
 ];
 

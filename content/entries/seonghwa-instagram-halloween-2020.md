@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-A solo Halloween photo of Seonghwa posted via ATEEZ's official Instagram account as part of the #DAILY_ATEEZ series.
+A Halloween photo of Seonghwa from the #DAILY_ATEEZ series on ATEEZ's official Instagram account, captioned "Happy Halloween🎃🎃."

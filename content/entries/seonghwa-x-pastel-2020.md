@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A casual photo of Seonghwa posted via ATEEZ's official X account, captioned "ATINY~ today's pastel Seonghwa."
+"ATINY~ today's pastel Seonghwa." A photo of Seonghwa, posted on ATEEZ's official X account.

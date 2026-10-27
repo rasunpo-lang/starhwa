@@ -52,4 +52,4 @@ A9: "Speaking honestly and acting honestly, no matter the era. I think people wh
 Q10: Tell us your treasure.
 A10: "My LEGO® collection. I'm looking forward to the 'The Legend of Zelda™' set arriving soon!"
 
-Translated directly from the original Japanese text of the Numéro TOKYO article linked below.
+Translated directly from the original Japanese text of the Numéro TOKYO article.

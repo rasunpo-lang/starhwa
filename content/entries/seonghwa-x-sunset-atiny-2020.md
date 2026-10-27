@@ -12,4 +12,4 @@ sources:
 related:
 ---
 
-A message from Seonghwa posted via ATEEZ's official X account: "Every time I see the setting sun~ I think of ATINY every night."
+A message from Seonghwa on ATEEZ's official X account: "Every time I see the setting sun~ I think of ATINY every night."

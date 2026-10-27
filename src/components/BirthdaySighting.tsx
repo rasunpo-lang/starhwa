@@ -68,7 +68,7 @@ const BIRTHDAY_STAR_CLUSTER: { top: string; left: string; tier: "hero" | "near" 
  * simpler way to write them). Half sit loosely around the message/cluster
  * zone near the top of the frame; the other half sit near — deliberately
  * never on top of — Ddeongbyeol's own wander path (globals.css,
- * birthday-witness-wander), so the sky around her journey reads as a
+ * birthday-witness-wander), so the sky around the journey reads as a
  * little richer too. All "far" tier and nothing else: more tiny points of
  * light, not brighter ones. Delays are spread wider (300–1800ms) than the
  * cluster's own so this reads as one broad, gentle awakening across the
@@ -88,12 +88,12 @@ const BIRTHDAY_SKY_ENRICHMENT: { top: string; left: string; delayMs: number }[] 
  * cherry-blossom season in Korea), kept deliberately sparse so the
  * celestial atmosphere stays intact: six small petals drifting down and
  * across the frame on their own slow, staggered paths, plus two that
- * belong to Ddeongbyeol herself (BIRTHDAY_CATCH_PETALS below). Positions
+ * belong to Ddeongbyeol itself (BIRTHDAY_CATCH_PETALS below). Positions
  * are vw/vh from the frame's top-left: a start, a mid-point (where the
  * sway happens) and an end, each petal fading in and out along the way.
- * Petal 3 is routed to drift past Ddeongbyeol during her longest pause
+ * Petal 3 is routed to drift past Ddeongbyeol during its longest pause
  * (roughly 4.2–5.2s, near left 29% / top 52%, see birthday-witness-wander
- * in globals.css) — a breeze carrying one past her, nothing more. Every
+ * in globals.css) — a breeze carrying one past,  nothing more. Every
  * delay+duration lands inside SEQUENCE_DURATION_MS so nothing outlives
  * the scene. There is intentionally no "HAPPY BIRTHDAY" element here.
  */
@@ -111,9 +111,9 @@ const BIRTHDAY_PETALS: {
 
 /**
  * Two petals that follow Ddeongbyeol (children of .birthday-witness, so
- * they move with her): each drifts in from above, catches lightly on her
- * head/shoulder while she's paused, then lifts away on the breeze.
- * Offsets are px relative to her 56px box. Timed to her pause
+ * they move with it): each drifts in from above, catches lightly on its
+ * head/shoulder while it's paused, then lifts away on the breeze.
+ * Offsets are px relative to its 56px box. Timed to its pause
  * (birthday-witness-wander's 34–50%, ≈3.5–5.2s).
  */
 const BIRTHDAY_CATCH_PETALS: {
@@ -152,7 +152,7 @@ function Petal({ className = "", style }: { className?: string; style?: CSSPrope
  * — every star but the one at BORN_STAR_POSITION itself fades away
  * completely, and that one hands off invisibly to the real star already
  * sitting there, so the sky simply has one true star again, exactly like
- * any other day. Ddeongbyeol — fixed in her usual bottom-left habitat, no
+ * any other day. Ddeongbyeol — fixed in its usual bottom-left habitat, no
  * travel, no bounce — gives one small reaction (a slight turn toward the
  * cluster with a faint catch-light) timed to its peak, and only once that
  * peak has visibly landed does the "BIRTH OF A STAR / APRIL 3" inscription
@@ -234,7 +234,7 @@ export default function BirthdaySighting() {
           birthday-witness-wander, globals.css), no bounce, no spin. */}
       <div className="birthday-witness" style={{ animationDuration: `${WITNESS_DURATION_MS}ms` }}>
         <Ddeongbyeol className="birthday-witness__mascot" />
-        {/* Two petals that drift in, catch on her briefly while she
+        {/* Two petals that drift in, catch on it briefly while it
             pauses, then float off (see BIRTHDAY_CATCH_PETALS). */}
         {BIRTHDAY_CATCH_PETALS.map((p, i) => (
           <Petal

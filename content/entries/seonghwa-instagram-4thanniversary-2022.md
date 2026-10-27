@@ -12,4 +12,4 @@ sources:
 related: []
 ---
 
-A solo photo of Seonghwa posted via ATEEZ's official Instagram as part of the "인星화그램" (Inseonghwagram) series, marking ATEEZ's 4th debut anniversary.
+"4주년🥲 다시 한번 축하해❤" ("4th anniversary🥲 congratulations once again❤"). A photo for ATEEZ's 4th debut anniversary, from the 인星화그램 (Inseonghwagram) series on ATEEZ's official Instagram.

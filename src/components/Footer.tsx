@@ -50,8 +50,19 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/help" className="hover:text-plum">
-                  Help the Encyclopedia <span aria-hidden="true">✦</span>
+                  Contribute to the Archive <span aria-hidden="true">✦</span>
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="https://ko-fi.com/thestarhwa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-kofi"
+                >
+                  <span aria-hidden="true">♡</span> Support the Archive
+                  <span className="sr-only"> (opens Ko-fi in a new tab)</span>
+                </a>
               </li>
             </ul>
             <CrewHourglass />

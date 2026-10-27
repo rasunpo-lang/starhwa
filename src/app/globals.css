@@ -3507,3 +3507,28 @@ a.crew-link:focus-visible .crew-lightstick {
     transition: none;
   }
 }
+
+/* ── Footer support link (Footer.tsx) ──
+   A quiet text link in the Project list. Idle it reads like its neighbours;
+   hover/focus shifts it toward the aurora turquoise (the same hue as the
+   Crew's Secret glow) and draws a faint turquoise underline. Colour and
+   underline only, 150ms; no motion, so reduced motion just drops the fade. */
+.footer-kofi {
+  --kofi-turquoise: #2fb8a6;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  transition: color 150ms ease, text-decoration-color 150ms ease;
+}
+
+.footer-kofi:hover,
+.footer-kofi:focus-visible {
+  color: color-mix(in srgb, var(--charcoal), var(--kofi-turquoise) 62%);
+  text-decoration-color: rgba(63, 216, 196, 0.7);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-kofi {
+    transition: none;
+  }
+}

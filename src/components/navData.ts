@@ -17,5 +17,5 @@ export const navItems: NavItem[] = [
   { label: "Official", href: "/official" },
   { label: "About", href: "/about" },
   { label: "Search", href: "/search" },
-  { label: "Help the Encyclopedia", href: "/help" },
+  { label: "Contribute to the Archive", href: "/help" },
 ];

@@ -314,11 +314,9 @@ export default function Atmosphere() {
           behind the clouds, which are far lower and drift in front. */}
       <Aurora />
       <div className="atmosphere-moon">
-        {/* The disc wrapper clips lit + shadow to the moon's circle with
-            clip-path (see .atmosphere-moon-disc in globals.css). */}
-        <div className="atmosphere-moon-disc">
-          <div className="atmosphere-moon-lit" />
-        </div>
+        {/* The lit disc is its own circle (border-radius); the parent
+            carries the glow filter and no clip — see globals.css. */}
+        <div className="atmosphere-moon-lit" />
       </div>
       <div className="atmosphere-stars">
         {STAR_POSITIONS.map((star, i) => (

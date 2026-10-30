@@ -2273,8 +2273,6 @@ html.atmosphere-ready {
   --moon-size: clamp(40px, 6vw, 68px);
   width: var(--moon-size);
   height: var(--moon-size);
-  border-radius: 9999px;
-  overflow: hidden;
   /* Celestial dimensionality (DESIGN.md §12) — a very small, capped
      scroll-linked drift, same --scroll-y the midground layer already
      uses (rAF-throttled, never attached under reduced motion), at its
@@ -2379,26 +2377,14 @@ html.atmosphere-ready {
    keyframe below read as the surface creeping very slightly, rather than
    a full rotation (that would need real lunar-rotation math this pass
    doesn't add). */
-/* Moon compositing fix. The lit disc's shading is a set of radial
-   gradients that paint the whole square box (the outer gradient stop is a
-   grayish mix of --moon-color and --moon-shadow-color), and the shadow
-   disc is a full square-boxed disc that slides mostly *outside* the moon
-   for a full moon. Both relied only on border-radius + overflow:hidden
-   (on .atmosphere-moon, which also carries the glow filter) to become a
-   circle. Where that rounded clip isn't honored on the composited/
-   filtered layers, the boxes show through as gray square corners around
-   the moon. clip-path on this filter-free wrapper is applied to its
-   children reliably everywhere, so the disc is a hard circle regardless;
-   the parent keeps its own overflow/radius and its glow filter, which
-   still reads the (now guaranteed-circular) result. Same size, position,
-   shading, phase mechanism and terminator softness as before. */
-.atmosphere-moon-disc {
-  position: absolute;
-  inset: 0;
-  border-radius: 9999px;
-  overflow: hidden;
-  clip-path: circle(50% at 50% 50%);
-}
+/* Moon compositing (Safari). The glow/rim/blur filter lives on
+   .atmosphere-moon, so that element must carry no rounded overflow clip:
+   overflow:hidden + border-radius + clip-path on or inside a filtered,
+   transform-promoted layer is the combination WebKit rendered as a
+   square-boxed halo. The circle now comes from .atmosphere-moon-lit's own
+   border-radius (a background is clipped to its rounded border box natively,
+   no overflow or clip-path involved), and the filter just reads that
+   element's alpha. Same size, shading, phase mask, glow and rim as before. */
 
 /* Dark side = transparent, not painted. The shadow used to be an opaque
    disc (--moon-shadow-color) sliding over the lit disc, so the unlit part

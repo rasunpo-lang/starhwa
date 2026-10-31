@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'FEVER' (Show Champion)"
 date: "2020-07-29"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'BAD' (Music Bank)"
 date: "2026-07-03"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

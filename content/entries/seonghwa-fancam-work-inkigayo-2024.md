@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'WORK' (Inkigayo)"
 date: "2024-06-09"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

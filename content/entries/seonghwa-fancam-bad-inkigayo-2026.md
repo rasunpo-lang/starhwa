@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'BAD' (Inkigayo)"
 date: "2026-06-28"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

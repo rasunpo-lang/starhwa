@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'Eternal Sunshine' (Inkigayo, Oct 10)"
 date: "2021-10-10"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

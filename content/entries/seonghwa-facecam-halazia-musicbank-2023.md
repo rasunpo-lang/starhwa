@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'HALAZIA' (Music Bank)"
 date: "2023-01-06"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

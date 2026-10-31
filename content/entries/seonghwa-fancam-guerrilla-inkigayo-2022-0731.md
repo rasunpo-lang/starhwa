@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Guerrilla' (Inkigayo)"
 date: "2022-07-31"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

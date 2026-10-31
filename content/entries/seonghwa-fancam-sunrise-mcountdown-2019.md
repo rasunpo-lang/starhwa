@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Sunrise' (M Countdown)"
 date: "2019-10-10"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

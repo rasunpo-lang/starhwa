@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'Drip' (Music Bank)"
 date: "2026-10-30"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

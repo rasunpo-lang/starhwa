@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'Deja Vu' (Inkigayo)"
 date: "2021-09-19"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

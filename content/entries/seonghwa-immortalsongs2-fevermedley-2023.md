@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa — 'Fever Medley' (Immortal Songs 2)"
 date: "2023-11-18"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

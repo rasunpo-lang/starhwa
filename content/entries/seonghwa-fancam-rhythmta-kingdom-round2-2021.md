@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — '리듬 타 (The Awakening of Summer)' (Kingdom: Legendary War, Round 2)"
 date: "2021-04-29"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

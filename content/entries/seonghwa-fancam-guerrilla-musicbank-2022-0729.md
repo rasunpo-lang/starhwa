@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Guerrilla' (Music Bank, K-Fancam)"
 date: "2022-07-29"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

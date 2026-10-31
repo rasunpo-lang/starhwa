@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Guerrilla' (Weekly Idol)"
 date: "2022-08-03"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

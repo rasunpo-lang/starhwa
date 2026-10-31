@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Fireworks (I'm The One)' (Inkigayo, Mar 21)"
 date: "2021-03-21"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

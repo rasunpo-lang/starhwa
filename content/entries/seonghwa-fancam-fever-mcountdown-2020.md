@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'FEVER' (M Countdown)"
 date: "2020-07-30"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

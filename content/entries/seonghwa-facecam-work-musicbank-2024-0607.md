@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'WORK' (Music Bank, Jun 7)"
 date: "2024-06-07"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

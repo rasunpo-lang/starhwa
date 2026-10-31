@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'HALAZIA' (Music Bank, Jan 13)"
 date: "2023-01-13"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

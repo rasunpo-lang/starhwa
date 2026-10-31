@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa — '질풍가도' (Immortal Songs 2)"
 date: "2023-06-17"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

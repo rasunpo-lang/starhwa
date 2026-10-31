@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Answer' (Inkigayo, 1/19)"
 date: "2020-01-19"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

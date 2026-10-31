@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Deja Vu' (Show Champion)"
 date: "2021-09-22"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

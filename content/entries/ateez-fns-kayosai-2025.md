@@ -1,7 +1,7 @@
 ---
 title: "2025 FNS Kayosai"
 date: "2025-12-03"
-category: "TV"
+category: "Performances"
 verification: "verified"
 tags:
   - "special broadcast"

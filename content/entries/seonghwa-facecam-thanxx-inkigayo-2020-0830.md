@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'THANXX' (Inkigayo, 8/30)"
 date: "2020-08-30"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

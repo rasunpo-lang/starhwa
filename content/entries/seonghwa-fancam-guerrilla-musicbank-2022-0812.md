@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Guerrilla' (Music Bank, Aug 12)"
 date: "2022-08-12"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

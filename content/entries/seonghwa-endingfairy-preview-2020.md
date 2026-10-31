@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa — 'ATEEZ's Ending Fairy' Preview Clip"
 date: "2020-08-11"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "individual content"

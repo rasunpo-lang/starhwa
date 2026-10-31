@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Answer' (Show! Music Core)"
 date: "2020-01-11"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

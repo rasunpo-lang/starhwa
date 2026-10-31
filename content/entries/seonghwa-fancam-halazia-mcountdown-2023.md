@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'HALAZIA' (M Countdown)"
 date: "2023-01-12"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

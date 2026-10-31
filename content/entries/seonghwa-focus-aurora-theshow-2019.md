@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Focus — 'AURORA' Relay Dance Cover (THE SHOW)"
 date: "2019-07-16"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

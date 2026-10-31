@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Focus — 'BOUNCY (K-HOT CHILLI PEPPERS)' (THE SHOW, Jun 27)"
 date: "2023-06-27"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

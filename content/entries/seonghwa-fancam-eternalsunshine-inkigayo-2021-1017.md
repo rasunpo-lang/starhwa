@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Eternal Sunshine' (Inkigayo, Oct 17)"
 date: "2021-10-17"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

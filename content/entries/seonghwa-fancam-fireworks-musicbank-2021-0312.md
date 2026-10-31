@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Fireworks (I'm The One)' (Music Bank, 3/12)"
 date: "2021-03-12"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

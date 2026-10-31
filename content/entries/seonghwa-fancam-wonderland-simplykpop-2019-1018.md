@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'WONDERLAND' (Simply K-Pop, Ep.384)"
 date: "2019-10-18"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

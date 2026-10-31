@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'INCEPTION' (Inkigayo, 8/16)"
 date: "2020-08-16"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

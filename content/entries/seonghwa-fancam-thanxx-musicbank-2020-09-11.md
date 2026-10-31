@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'THANXX' (Music Bank, 9/11)"
 date: "2020-09-11"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Focus Cam — 'BOUNCY' (JTBC K-909)"
 date: "2023-06-17"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "focus cam"

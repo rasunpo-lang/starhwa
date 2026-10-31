@@ -1,7 +1,7 @@
 ---
 title: "2023 SBS Gayo Daejeon"
 date: "2023-12-25"
-category: "TV"
+category: "Performances"
 verification: "verified"
 tags:
   - "special broadcast"

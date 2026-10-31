@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Fireworks (I'm The One)' (Weekly Idol, Unaired Cut)"
 date: "2021-03-31"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

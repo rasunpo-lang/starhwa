@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'HALA HALA' (Music Bank)"
 date: "2019-02-08"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

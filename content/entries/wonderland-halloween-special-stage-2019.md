@@ -1,7 +1,7 @@
 ---
 title: "'WONDERLAND' Halloween Special Stage — M Countdown"
 date: "2019-10-31"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "treasure era"

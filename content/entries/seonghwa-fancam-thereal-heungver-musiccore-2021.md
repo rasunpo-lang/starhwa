@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'The Real (Heung Ver.)' (Show! Music Core)"
 date: "2021-12-18"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

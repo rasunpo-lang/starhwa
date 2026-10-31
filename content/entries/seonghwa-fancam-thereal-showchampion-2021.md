@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'The Real (Heung Ver.)' (Show Champion)"
 date: "2021-12-15"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

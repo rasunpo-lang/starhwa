@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'Fireworks (I'm The One)' (Inkigayo)"
 date: "2021-03-14"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

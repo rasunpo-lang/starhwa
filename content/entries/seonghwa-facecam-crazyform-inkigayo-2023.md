@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'Crazy Form' (Inkigayo)"
 date: "2023-12-10"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

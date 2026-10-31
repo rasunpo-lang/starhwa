@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — Mayfly Unit, 'Wolf and Beauty' (Kingdom: Legendary War, Round 3)"
 date: "2021-05-13"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

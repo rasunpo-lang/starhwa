@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Deja Vu' (Inkigayo, FanCam)"
 date: "2021-09-19"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

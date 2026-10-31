@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Lemon Drop' (Show! Music Core)"
 date: "2025-06-14"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

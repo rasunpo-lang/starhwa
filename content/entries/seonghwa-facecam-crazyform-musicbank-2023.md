@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'Crazy Form' (Music Bank)"
 date: "2023-12-01"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

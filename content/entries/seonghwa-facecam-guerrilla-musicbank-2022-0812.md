@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'Guerrilla' (Music Bank, 8/12)"
 date: "2022-08-12"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

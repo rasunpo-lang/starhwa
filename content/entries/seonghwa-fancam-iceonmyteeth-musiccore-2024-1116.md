@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FanCam — 'Ice On My Teeth' (Music Core, MBC241116)"
 date: "2024-11-16"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

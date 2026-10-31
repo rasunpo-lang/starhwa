@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Adrenaline' (Inkigayo, 2/15)"
 date: "2026-02-15"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

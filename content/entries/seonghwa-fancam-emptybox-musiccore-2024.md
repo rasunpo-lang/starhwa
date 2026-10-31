@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Empty Box' (Show! Music Core)"
 date: "2024-06-01"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'WONDERLAND' (Weekly Idol, Unaired Cut)"
 date: "2019-10-16"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

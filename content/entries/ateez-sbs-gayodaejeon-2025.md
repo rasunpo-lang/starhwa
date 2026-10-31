@@ -1,7 +1,7 @@
 ---
 title: "2025 SBS Gayo Daejeon"
 date: "2025-12-25"
-category: "TV"
+category: "Performances"
 verification: "verified"
 tags:
   - "special broadcast"

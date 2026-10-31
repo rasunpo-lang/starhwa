@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Fireworks (I'm The One)' (M Countdown, 3/11)"
 date: "2021-03-11"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

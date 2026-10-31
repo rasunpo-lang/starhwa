@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'ILLUSION' (M Countdown)"
 date: "2019-06-10"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

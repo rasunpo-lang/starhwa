@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FanCam — 'Ice On My Teeth' (Inkigayo, 241117)"
 date: "2024-11-17"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

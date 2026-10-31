@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Adrenaline' (Show! Music Core, 2/7)"
 date: "2026-02-07"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

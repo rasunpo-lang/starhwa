@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'INCEPTION' (Music Bank, 7/31)"
 date: "2020-07-31"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

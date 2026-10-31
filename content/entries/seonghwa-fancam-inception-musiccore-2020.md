@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'INCEPTION' (Show! Music Core)"
 date: "2020-08-01"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

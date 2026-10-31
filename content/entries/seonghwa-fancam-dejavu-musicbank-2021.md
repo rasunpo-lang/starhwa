@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Deja Vu' (Music Bank)"
 date: "2021-09-17"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

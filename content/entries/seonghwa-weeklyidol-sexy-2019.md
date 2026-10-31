@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa — 'Sexy Prospect' Segment (Weekly Idol)"
 date: "2019-10-16"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "individual content"

@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FanCam — 'THANXX' (Inkigayo, Sep 6)"
 date: "2020-09-06"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa — 'Turbulence (야간비행)' (Immortal Songs 2)"
 date: "2023-11-25"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

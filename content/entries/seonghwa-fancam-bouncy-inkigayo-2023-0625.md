@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'BOUNCY' (Inkigayo, 6/25)"
 date: "2023-06-25"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

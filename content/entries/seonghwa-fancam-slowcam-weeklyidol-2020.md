@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Slow Cam' (Weekly Idol, Unaired Cut)"
 date: "2020-08-12"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

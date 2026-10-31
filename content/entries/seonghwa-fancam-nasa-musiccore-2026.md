@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'NASA' (Show! Music Core)"
 date: "2026-02-07"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

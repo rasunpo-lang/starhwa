@@ -1,7 +1,7 @@
 ---
 title: "KBS Music Bank Global Festival — Japan (2024)"
 date: "2024-12-19"
-category: "TV"
+category: "Performances"
 verification: "verified"
 tags:
   - "special broadcast"

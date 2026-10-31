@@ -1,7 +1,7 @@
 ---
 title: "2024 MBC Gayo Daejejeon WANNABE"
 date: "2024-12-31"
-category: "TV"
+category: "Performances"
 verification: "verified"
 tags:
   - "special broadcast"

@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Focus — 'WAVE' (THE SHOW)"
 date: "2019-06-25"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

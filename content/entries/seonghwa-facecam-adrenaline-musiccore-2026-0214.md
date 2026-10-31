@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Close-up Cam — 'Adrenaline' (Show! Music Core, 2/14)"
 date: "2026-02-14"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

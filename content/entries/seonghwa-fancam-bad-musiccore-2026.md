@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'BAD' (Show! Music Core)"
 date: "2026-07-04"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

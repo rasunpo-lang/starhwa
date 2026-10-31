@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'BOUNCY' (Show Champion)"
 date: "2023-06-21"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

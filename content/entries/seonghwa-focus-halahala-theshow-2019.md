@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Focus — 'HALA HALA' (THE SHOW)"
 date: "2019-02-12"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

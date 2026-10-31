@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Deja Vu' (Weekly Idol, EP.529)"
 date: "2021-09-15"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

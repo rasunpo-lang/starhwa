@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Crazy Form' (Show! Music Core, Dec 16)"
 date: "2023-12-16"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

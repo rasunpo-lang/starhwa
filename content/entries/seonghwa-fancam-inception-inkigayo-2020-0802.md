@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'INCEPTION' (Inkigayo, 8/2)"
 date: "2020-08-02"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

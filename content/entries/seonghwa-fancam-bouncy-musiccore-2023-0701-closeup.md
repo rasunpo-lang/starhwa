@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Close-up Cam — 'BOUNCY' (Show! Music Core, 7/1)"
 date: "2023-07-01"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

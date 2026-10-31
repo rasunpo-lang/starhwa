@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Focus — 'ILLUSION' (THE SHOW)"
 date: "2019-06-18"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

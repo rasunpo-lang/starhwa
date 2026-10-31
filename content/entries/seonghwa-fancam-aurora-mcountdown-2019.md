@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'AURORA' Relay Dance Cover (M Countdown)"
 date: "2019-07-04"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

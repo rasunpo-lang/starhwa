@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Focus Cam — 'WONDERLAND' (THE SHOW, 191022)"
 date: "2019-10-22"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "focus cam"

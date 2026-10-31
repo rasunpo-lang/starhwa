@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'NASA' (Music Bank)"
 date: "2026-02-06"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

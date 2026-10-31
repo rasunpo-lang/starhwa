@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'HALAZIA' (Inkigayo)"
 date: "2023-01-08"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

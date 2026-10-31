@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'INCEPTION' (Weekly Idol, Unaired Cut)"
 date: "2020-08-12"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

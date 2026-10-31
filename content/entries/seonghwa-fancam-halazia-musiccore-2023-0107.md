@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'HALAZIA' (Show! Music Core, Jan 7)"
 date: "2023-01-07"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

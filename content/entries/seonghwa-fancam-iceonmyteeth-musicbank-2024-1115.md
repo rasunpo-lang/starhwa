@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Ice On My Teeth' (Music Bank, 11/15)"
 date: "2024-11-15"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

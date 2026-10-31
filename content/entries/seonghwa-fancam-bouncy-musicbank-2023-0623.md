@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'BOUNCY' (Music Bank, 6/23)"
 date: "2023-06-23"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

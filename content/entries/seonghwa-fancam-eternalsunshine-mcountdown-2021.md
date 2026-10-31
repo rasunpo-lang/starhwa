@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Eternal Sunshine' (M Countdown)"
 date: "2021-10-07"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

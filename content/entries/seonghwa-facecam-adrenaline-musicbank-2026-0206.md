@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'Adrenaline' (Music Bank, 2/6)"
 date: "2026-02-06"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

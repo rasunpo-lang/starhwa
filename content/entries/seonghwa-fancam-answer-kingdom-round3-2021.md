@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Answer : Ode to Joy' (Kingdom: Legendary War, Round 3)"
 date: "2021-05-27"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

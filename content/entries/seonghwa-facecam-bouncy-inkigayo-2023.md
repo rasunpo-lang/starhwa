@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'BOUNCY' (Inkigayo)"
 date: "2023-06-18"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

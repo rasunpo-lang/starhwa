@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'WORK' (Show! Music Core, Jun 1)"
 date: "2024-06-01"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

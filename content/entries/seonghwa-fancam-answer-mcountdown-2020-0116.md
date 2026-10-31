@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Answer' (M Countdown, 1/16)"
 date: "2020-01-16"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

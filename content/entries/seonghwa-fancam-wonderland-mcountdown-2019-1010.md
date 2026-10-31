@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'WONDERLAND' (M Countdown, 10/10)"
 date: "2019-10-10"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

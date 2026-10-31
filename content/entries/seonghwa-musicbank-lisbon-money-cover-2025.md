@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa, Yeosang & Wooyoung — 'MONEY' Cover (Music Bank in Lisbon)"
 date: "2025-10-10"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "cover"

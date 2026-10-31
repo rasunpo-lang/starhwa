@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'BOUNCY' (M Countdown, 6/22)"
 date: "2023-06-22"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

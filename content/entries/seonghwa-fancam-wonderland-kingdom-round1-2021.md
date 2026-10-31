@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Symphony No.9 \"From The Wonderland\"' (Kingdom: Legendary War, Round 1)"
 date: "2021-04-15"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

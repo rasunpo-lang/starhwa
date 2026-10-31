@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'Lemon Drop' (Music Bank, 6/13)"
 date: "2025-06-13"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

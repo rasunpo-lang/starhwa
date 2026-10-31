@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'INCEPTION' (M Countdown, 입덕직캠)"
 date: "2020-07-30"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

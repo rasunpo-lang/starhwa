@@ -1,7 +1,7 @@
 ---
 title: "SBS 2026 Gayo Daejeon Summer"
 date: "2026-08-09"
-category: "TV"
+category: "Performances"
 verification: "verified"
 tags:
   - "special broadcast"

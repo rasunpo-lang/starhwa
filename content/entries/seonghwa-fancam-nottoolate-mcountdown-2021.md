@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — '밤하늘 (Not Too Late)' (M Countdown)"
 date: "2021-09-16"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

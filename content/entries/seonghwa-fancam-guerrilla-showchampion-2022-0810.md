@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Guerrilla' (Show Champion, EP.445)"
 date: "2022-08-10"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

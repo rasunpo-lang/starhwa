@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'WAVE' (Weekly Idol, Unaired Cut)"
 date: "2019-07-01"
-category: "Performances"
+category: "TV"
 verification: "unverified"
 tags:
   - "fancam"

@@ -1,7 +1,7 @@
 ---
 title: "2023 MBC Gayo Daejejeon"
 date: "2023-12-31"
-category: "TV"
+category: "Performances"
 verification: "verified"
 tags:
   - "special broadcast"

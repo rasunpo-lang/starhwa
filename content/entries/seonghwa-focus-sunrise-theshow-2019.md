@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Focus — 'Sunrise' (THE SHOW)"
 date: "2019-10-15"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

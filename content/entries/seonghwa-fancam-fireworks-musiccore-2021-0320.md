@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Fireworks (I'm The One)' (Show! Music Core, 3/20)"
 date: "2021-03-20"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

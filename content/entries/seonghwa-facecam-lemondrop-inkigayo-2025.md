@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'Lemon Drop' (Inkigayo)"
 date: "2025-06-15"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

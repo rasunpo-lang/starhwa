@@ -1,7 +1,7 @@
 ---
 title: "KBS Music Bank — Barcelona Special"
 date: "2026-09-12"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "special broadcast"

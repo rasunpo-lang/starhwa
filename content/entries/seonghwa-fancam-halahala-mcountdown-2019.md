@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'HALA HALA' (M Countdown)"
 date: "2019-01-31"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

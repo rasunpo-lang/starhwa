@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual FaceCam — 'Guerrilla' (Inkigayo)"
 date: "2022-08-14"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "facecam"

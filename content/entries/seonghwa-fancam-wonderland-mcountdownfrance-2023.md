@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'WONDERLAND' (M Countdown in France)"
 date: "2023-10-30"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'THANXX' (Inkigayo, 안방1열, 8/30)"
 date: "2020-08-30"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

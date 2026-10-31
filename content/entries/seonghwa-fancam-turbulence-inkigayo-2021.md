@@ -1,7 +1,7 @@
 ---
 title: "Seonghwa Individual Fancam — 'Turbulence (야간비행)' (Inkigayo)"
 date: "2021-12-12"
-category: "Performances"
+category: "TV"
 verification: "verified"
 tags:
   - "fancam"

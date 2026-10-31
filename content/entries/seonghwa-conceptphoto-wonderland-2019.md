@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official X — ATEEZ TREASURE EP.FIN : All To Action Concept Photo '성화(SEONGHWA)'"
     url: "https://x.com/ATEEZofficial/status/1176783514773028865"
+    embed: true
 related:
   - seonghwa-teaser-treasureep1-2018
 ---

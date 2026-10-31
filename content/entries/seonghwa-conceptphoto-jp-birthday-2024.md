@@ -11,6 +11,7 @@ tags:
 sources:
   - label: "ATEEZ Official Japan X — ATEEZ JAPAN 4TH SINGLE「Birthday」Concept Photo A 'SEONGHWA'"
     url: "https://x.com/ATEEZofficialjp/status/1815673237994705279"
+    embed: true
   - label: "ATEEZ Official Japan X — ATEEZ JAPAN 4TH SINGLE「Birthday」Concept Photo B 'SEONGHWA'"
     url: "https://x.com/ATEEZofficialjp/status/1825820068514791602"
 related:

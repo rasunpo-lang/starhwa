@@ -123,10 +123,12 @@ what's wrong — bad data can't silently reach the site.
 
 ## Embedding an X post
 
-Social Media and Music entries automatically embed their first official
-ATEEZ X post. Any other entry (e.g. an Awards entry whose key source is an
-organizer's or ATEEZ's X post) can opt in by adding `embed: true` to that
-one source:
+Social Media entries automatically embed their first official ATEEZ X post.
+Every other category — Music, Awards, and the rest — is opt-in: add
+`embed: true` to the one source you want shown. Adding an X link to a Music
+entry's `sources` does **not** embed it on its own, so an entry in a series
+(e.g. a GOLDEN HOUR concept photo) stays consistent with its neighbours
+unless an embed is chosen deliberately:
 
 ```yaml
 sources:

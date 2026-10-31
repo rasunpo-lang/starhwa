@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official X — ATEEZ ZERO : FEVER Part.3 'Deja Vu' Concept Photo '성화(SEONGHWA)'"
     url: "https://x.com/ATEEZofficial/status/1430817335397388291"
+    embed: true
 related:
   - seonghwa-conceptphoto-turbulence-2021
 ---

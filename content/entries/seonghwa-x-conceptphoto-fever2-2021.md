@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official X — ATEEZ ZERO : FEVER Part.2 Concept Photo '성화(SEONGHWA)'"
     url: "https://x.com/ATEEZofficial/status/1359426890251997185"
+    embed: true
 related:
   - fireworks-mv-2021
 ---

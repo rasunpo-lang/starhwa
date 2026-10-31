@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official Japan X — [🎬] JAPAN 5TH SINGLE「BAD (Japanese Ver.)」- BEHIND MOVIE - #SEONGHWA"
     url: "https://x.com/ATEEZofficialjp/status/2092537751443042776"
+    embed: true
 related:
   - seonghwa-conceptphoto-jp-bad-2026
   - seonghwa-x-jp-bad-message-2026

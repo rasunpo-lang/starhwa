@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official Japan X — [📷] 2026.09.05 RELEASE EVENT in OSAKA - BEHIND PHOTO - #SEONGHWA"
     url: "https://x.com/ATEEZofficialjp/status/2098335897758699978"
+    embed: true
 related:
   - seonghwa-conceptphoto-jp-bad-2026
   - seonghwa-x-jp-bad-message-2026

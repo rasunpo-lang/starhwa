@@ -11,6 +11,7 @@ tags:
 sources:
   - label: "ATEEZ Official Japan X — [📷] ATEEZ JAPAN 2ND SINGLE「Limitless」Concept Photo 'SEONGHWA'"
     url: "https://x.com/ATEEZofficialjp/status/1632622204478427136"
+    embed: true
 related:
   - limitless-mv-2023
 ---

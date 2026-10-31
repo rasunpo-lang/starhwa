@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official X — ATEEZ TREASURE EP.3 : One To All Concept Photo '성화(SEONGHWA)', #WAVE"
     url: "https://x.com/ATEEZofficial/status/1134384299057090565"
+    embed: true
 related:
 ---
 

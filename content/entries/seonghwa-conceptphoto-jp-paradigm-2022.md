@@ -11,6 +11,7 @@ tags:
 sources:
   - label: "ATEEZ Official Japan X — [📷] ATEEZ JAPAN 3RD MINI ALBUM [THE WORLD EP.PARADIGM] Concept Photo 'SEONG HWA'"
     url: "https://x.com/ATEEZofficialjp/status/1593121919414718466"
+    embed: true
 related:
   - paradigm-mv-2022
 ---

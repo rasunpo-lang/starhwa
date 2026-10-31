@@ -13,6 +13,7 @@ sources:
     url: "https://ateez-official.jp/contents/292558"
   - label: "ATEEZ Official Japan X — ATEEZ 1st mini Album 'TREASURE EP.Map To Answer' Concept Photo 'SEONG HWA'"
     url: "https://x.com/ATEEZofficialjp/status/1220994905901649920"
+    embed: true
 related:
   - seonghwa-conceptphoto-jp-shiftthemap-2019
 ---

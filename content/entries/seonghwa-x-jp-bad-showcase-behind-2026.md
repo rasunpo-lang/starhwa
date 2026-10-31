@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official Japan X — [📷] 2026.07.28 BAD (Japanese Ver.) SHOWCASE - BEHIND PHOTO - #SEONGHWA"
     url: "https://x.com/ATEEZofficialjp/status/2093262373239074918"
+    embed: true
 related:
   - seonghwa-conceptphoto-jp-bad-2026
   - seonghwa-x-jp-bad-message-2026

@@ -137,14 +137,15 @@ export default async function EntryPage({
   const embeddableVideo = findEmbeddableVideo(entry.sources);
   // An X post is embedded only when the entry has no video player already —
   // never two players, and the original source link is always still listed.
-  // Social Media and Music entries embed their first official ATEEZ X post (one per entry);
-  // any other entry embeds a source an author explicitly marked `embed: true`.
+  // Social Media entries embed their first official ATEEZ X post (one per entry);
+  // every other category (Music included) embeds only a source an author
+  // explicitly marked `embed: true`.
   const flaggedXPost = embeddableVideo
     ? null
     : findEmbeddableXPost(entry.sources.filter((s) => s.embed));
   const embeddableXPost =
     flaggedXPost ??
-    (embeddableVideo || (entry.category !== "Social Media" && entry.category !== "Music")
+    (embeddableVideo || entry.category !== "Social Media"
       ? null
       : findEmbeddableXPost(
           entry.sources.filter((s) => /^https?:\/\/(www\.)?(x|twitter)\.com\/ateezofficial(jp)?\//i.test(s.url))

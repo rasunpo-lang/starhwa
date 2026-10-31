@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official X — ATEEZ THE WORLD EP.1 : MOVEMENT Guerrilla Concept Photo '성화(SEONGHWA)'"
     url: "https://x.com/ATEEZofficial/status/1550329841802948608"
+    embed: true
 related:
   - seonghwa-conceptphoto-outlaw-1-2023
 ---

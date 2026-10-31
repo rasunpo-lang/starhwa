@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official Japan X — [📷] 2026.09.05 RELEASE EVENT in OSAKA - BEHIND PHOTO UNIT Ver. (Seonghwa & Jongho)"
     url: "https://x.com/ATEEZofficialjp/status/2097256128614985903"
+    embed: true
 related:
   - seonghwa-x-jp-bad-osaka-behind-2026
 ---

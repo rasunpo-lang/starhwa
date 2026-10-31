@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official X — [🎃] ATEEZ - 'THE BLACK CAT NERO' Halloween Performance Concept Photo '성화(SEONGHWA)'"
     url: "https://x.com/ATEEZofficial/status/1322116120153710593"
+    embed: true
 related:
 ---
 

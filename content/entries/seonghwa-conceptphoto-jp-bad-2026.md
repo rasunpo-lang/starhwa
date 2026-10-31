@@ -11,6 +11,7 @@ tags:
 sources:
   - label: "ATEEZ Official Japan X — ATEEZ JAPAN 5TH SINGLE「BAD (Japanese Ver.)」Concept Photo A #SEONGHWA"
     url: "https://x.com/ATEEZofficialjp/status/2074418239430652293"
+    embed: true
 related:
   - seonghwa-conceptphoto-jp-birthday-2024
 ---

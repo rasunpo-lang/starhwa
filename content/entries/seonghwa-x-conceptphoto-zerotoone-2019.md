@@ -10,6 +10,7 @@ tags:
 sources:
   - label: "ATEEZ Official X — ATEEZ TREASURE EP.2 : Zero To One Concept Photo '성화(SEONGHWA)'"
     url: "https://x.com/ATEEZofficial/status/1083559222149697537"
+    embed: true
 related:
   - hala-hala-mv-2019
 ---

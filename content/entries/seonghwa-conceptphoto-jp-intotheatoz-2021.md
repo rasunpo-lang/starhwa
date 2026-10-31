@@ -11,6 +11,7 @@ tags:
 sources:
   - label: "ATEEZ Official Japan X — [📷] ATEEZ 1st ORIGINAL ALBUM 'Into the A to Z' Concept Photo 'SEONG HWA'"
     url: "https://x.com/ATEEZofficialjp/status/1369166186538176512"
+    embed: true
 related:
 ---
 

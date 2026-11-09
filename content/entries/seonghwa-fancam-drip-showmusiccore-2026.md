@@ -2,7 +2,7 @@
 title: "Seonghwa Individual Fancam — 'Drip' (Show! Music Core)"
 date: "2026-10-31"
 category: "TV"
-verification: "verified"
+verification: "unverified"
 tags:
   - "fancam"
   - "individual content"
@@ -12,7 +12,6 @@ sources:
     url: "https://www.youtube.com/watch?v=wRQ06KoOgtw"
 related:
   - seonghwa-fancam-drip-musicbank-2026
-  - seonghwa-fancam-drip-inkigayo-2026
 ---
 
-An individual fancam of Seonghwa performing "Drip" on MBC's Show! Music Core, uploaded by the MBCkpop channel and self-dated 261031.
+An individual fancam of Seonghwa performing "Drip" on MBC's Show! Music Core, uploaded by the MBCkpop channel (Broadcast date: 2026-10-31).

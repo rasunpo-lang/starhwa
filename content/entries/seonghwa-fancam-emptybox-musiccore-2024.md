@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-work-musiccore-2024-0601
 ---
 
-An official individual fancam of Seonghwa performing "Empty Box," a track from GOLDEN HOUR: Part.1, on MBC's Show! Music Core, self-dated MBC240601.
+An official individual fancam of Seonghwa performing "Empty Box," a track from GOLDEN HOUR: Part.1, on MBC's Show! Music Core (Broadcast date: 2024-06-01).

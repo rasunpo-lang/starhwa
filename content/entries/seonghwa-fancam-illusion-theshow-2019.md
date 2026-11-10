@@ -14,4 +14,4 @@ related:
   - illusion-mv-2019
 ---
 
-An official individual "focus" camera segment of Seonghwa performing "ILLUSION" on SBS MTV's THE SHOW, self-dated 190618.
+An official individual "focus" camera segment of Seonghwa performing "ILLUSION" on SBS MTV's THE SHOW (Episode date: 2019-06-18).

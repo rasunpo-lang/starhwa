@@ -14,4 +14,4 @@ related:
   - seonghwa-facecam-thereal-inkigayo-2021
 ---
 
-An official individual fancam of Seonghwa performing "The Real (Heung Ver.)" on SBS's Inkigayo, self-dated 2021.12.12 — the same broadcast as the already-archived facecam, in the "안방1열" camera series.
+An official individual fancam of Seonghwa performing "The Real (Heung Ver.)" on SBS's Inkigayo (Episode date: 2021-12-12) — the same broadcast as the already-archived facecam, in the "안방1열" camera series.

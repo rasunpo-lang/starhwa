@@ -16,4 +16,4 @@ related:
   - seonghwa-fancam-lemondrop-inkigayo-2025
 ---
 
-An official individual fancam of Seonghwa performing "Lemon Drop" on MBC's Show! Music Core, self-dated MBC250614.
+An official individual fancam of Seonghwa performing "Lemon Drop" on MBC's Show! Music Core (Broadcast date: 2025-06-14).

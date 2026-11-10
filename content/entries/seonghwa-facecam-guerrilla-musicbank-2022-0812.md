@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual FaceCam — 'Guerrilla' (Music Bank, 8/12)"
+title: "Seonghwa Individual FaceCam — 'Guerrilla' (Music Bank, 2022-08-12)"
 date: "2022-08-12"
 category: "TV"
 verification: "verified"
@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-guerrilla-musicbank-2022-0812
 ---
 
-An official individual facecam of Seonghwa performing "Guerrilla" on KBS's Music Bank, self-dated 220812, the same broadcast as the already-archived fancam.
+An official individual facecam of Seonghwa performing "Guerrilla" on KBS's Music Bank (Episode date: 2022-08-12), the same broadcast as the already-archived fancam.

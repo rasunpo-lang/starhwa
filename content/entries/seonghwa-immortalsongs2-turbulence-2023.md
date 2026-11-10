@@ -18,4 +18,4 @@ related:
   - seonghwa-fancam-turbulence-inkigayo-2021
 ---
 
-An official vertical fancam of Seonghwa performing "야간비행," ATEEZ's Korean title for "Turbulence," as part of a solo appearance on KBS's Immortal Songs 2, self-dated 231125.
+An official vertical fancam of Seonghwa performing "야간비행," ATEEZ's Korean title for "Turbulence," as part of a solo appearance on KBS's Immortal Songs 2 (Broadcast date: 2023-11-25).

@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Close-up Cam — 'Crazy Form' (Show! Music Core, Dec 16)"
+title: "Seonghwa Individual Close-up Cam — 'Crazy Form' (Show! Music Core, 2023-12-16)"
 date: "2023-12-16"
 category: "TV"
 verification: "verified"
@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-crazyform-musiccore-2023-1216
 ---
 
-An official individual close-up cam of Seonghwa performing "Crazy Form" on MBC's Show! Music Core, self-dated MBC231216 — the same broadcast as the already-archived "예능연구소" fancam, in the "최애직캠" close-up camera series.
+An official individual close-up cam of Seonghwa performing "Crazy Form" on MBC's Show! Music Core (Broadcast date: 2023-12-16) — the same broadcast as the already-archived "예능연구소" fancam, in the "최애직캠" close-up camera series.

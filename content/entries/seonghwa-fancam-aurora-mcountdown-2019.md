@@ -14,4 +14,4 @@ related:
   - seonghwa-focus-aurora-theshow-2019
 ---
 
-An official individual fancam of Seonghwa performing ATEEZ's relay-dance cover of "AURORA" on Mnet's M Countdown, self-dated 190704 — a separate broadcast from the already-archived THE SHOW focus segment.
+An official individual fancam of Seonghwa performing ATEEZ's relay-dance cover of "AURORA" on Mnet's M Countdown (Episode date: 2019-07-04) — a separate broadcast from the already-archived THE SHOW focus segment.

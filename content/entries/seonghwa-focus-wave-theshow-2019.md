@@ -16,4 +16,4 @@ related:
   - seonghwa-fancam-wave-weeklyidol-2019
 ---
 
-An official individual "focus" camera segment of Seonghwa performing "WAVE" on SBS MTV's THE SHOW, self-dated 190625.
+An official individual "focus" camera segment of Seonghwa performing "WAVE" on SBS MTV's THE SHOW (Episode date: 2019-06-25).

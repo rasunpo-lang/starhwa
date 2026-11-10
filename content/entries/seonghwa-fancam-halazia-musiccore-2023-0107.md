@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'HALAZIA' (Show! Music Core, Jan 7)"
+title: "Seonghwa Individual Fancam — 'HALAZIA' (Show! Music Core, 2023-01-07)"
 date: "2023-01-07"
 category: "TV"
 verification: "verified"
@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-halazia-musiccore-2023-0114
 ---
 
-An official individual fancam of Seonghwa performing "HALAZIA" on MBC's Show! Music Core, self-dated MBC230107.
+An official individual fancam of Seonghwa performing "HALAZIA" on MBC's Show! Music Core (Broadcast date: 2023-01-07).

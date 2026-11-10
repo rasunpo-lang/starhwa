@@ -14,4 +14,4 @@ related:
   - seonghwa-facecam-drip-musicbank-2026
 ---
 
-An official individual fancam of Seonghwa performing "Drip" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series, self-dated 261030.
+An official individual fancam of Seonghwa performing "Drip" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series (Episode date: 2026-10-30).

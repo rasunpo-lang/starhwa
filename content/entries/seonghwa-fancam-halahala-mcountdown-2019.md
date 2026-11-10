@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-halahala-musicbank-2019
 ---
 
-An official individual fancam of Seonghwa performing "HALA HALA" on M Countdown, self-dated 2019.1.31.
+An official individual fancam of Seonghwa performing "HALA HALA" on M Countdown (Episode date: 2019-01-31).

@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'BOUNCY' (M Countdown, 6/22)"
+title: "Seonghwa Individual Fancam — 'BOUNCY' (M Countdown, 2023-06-22)"
 date: "2023-06-22"
 category: "TV"
 verification: "verified"
@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-bouncy-mcountdown-2023-0629
 ---
 
-An official individual fancam of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on M Countdown, self-dated 2023.6.22.
+An official individual fancam of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on M Countdown (Episode date: 2023-06-22).

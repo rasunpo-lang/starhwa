@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-crazyform-inkigayo-2023
 ---
 
-An official individual facecam of Seonghwa performing "Crazy Form" on SBS's Inkigayo, self-dated 231210 — the facecam from the same performance as the fancam already in the archive.
+An official individual facecam of Seonghwa performing "Crazy Form" on SBS's Inkigayo (Episode date: 2023-12-10) — the facecam from the same performance as the fancam already in the archive.

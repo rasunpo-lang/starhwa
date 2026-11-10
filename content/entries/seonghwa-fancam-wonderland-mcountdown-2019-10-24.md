@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'WONDERLAND' (M Countdown, Oct 24)"
+title: "Seonghwa Individual Fancam — 'WONDERLAND' (M Countdown, 2019-10-24)"
 date: "2019-10-24"
 category: "TV"
 verification: "verified"

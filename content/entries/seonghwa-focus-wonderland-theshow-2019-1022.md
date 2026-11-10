@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Focus Cam — 'WONDERLAND' (THE SHOW, 191022)"
+title: "Seonghwa Individual Focus Cam — 'WONDERLAND' (THE SHOW, 2019-10-22)"
 date: "2019-10-22"
 category: "TV"
 verification: "verified"
@@ -15,4 +15,4 @@ related:
   - wonderland-mv-2019
 ---
 
-An official individual focus cam of Seonghwa performing "WONDERLAND" on SBS MTV's THE SHOW, self-dated 191022 — a later broadcast week than the group's existing October 15, 2019 focus cam of the same song.
+An official individual focus cam of Seonghwa performing "WONDERLAND" on SBS MTV's THE SHOW (Episode date: 2019-10-22) — a later broadcast week than the group's existing October 15, 2019 focus cam of the same song.

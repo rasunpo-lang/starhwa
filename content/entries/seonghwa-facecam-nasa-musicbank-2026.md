@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-nasa-musicbank-2026
 ---
 
-An official individual close-up facecam of Seonghwa performing "NASA" on KBS's Music Bank, self-dated 260206 — the same broadcast as the already-archived fancam, in the "얼빡직캠" close-up camera series.
+An official individual close-up facecam of Seonghwa performing "NASA" on KBS's Music Bank (Episode date: 2026-02-06) — the same broadcast as the already-archived fancam, in the "얼빡직캠" close-up camera series.

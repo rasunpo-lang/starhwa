@@ -13,4 +13,4 @@ sources:
 related:
 ---
 
-An official individual fancam of Seonghwa performing "Eternal Sunshine" on MBC's Show! Music Core, uploaded by MBC's own official "예능연구소" channel, self-dated 211009.
+An official individual fancam of Seonghwa performing "Eternal Sunshine" on MBC's Show! Music Core, uploaded by MBC's own official "예능연구소" channel (Episode date: 2021-10-09).

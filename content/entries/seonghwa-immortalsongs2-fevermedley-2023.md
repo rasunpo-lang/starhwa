@@ -15,4 +15,4 @@ related:
   - seonghwa-immortalsongs2-thereal-2023
 ---
 
-An official vertical fancam of Seonghwa performing a "Fever Medley" as part of a solo appearance on KBS's Immortal Songs 2, self-dated 231118.
+An official vertical fancam of Seonghwa performing a "Fever Medley" as part of a solo appearance on KBS's Immortal Songs 2 (Broadcast date: 2023-11-18).

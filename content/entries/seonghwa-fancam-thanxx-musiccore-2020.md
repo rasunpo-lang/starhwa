@@ -16,4 +16,4 @@ related:
   - seonghwa-fancam-thanxx-mcountdown-2020
 ---
 
-An official individual fancam of Seonghwa performing "THANXX" on MBC's Show! Music Core, uploaded by MBC's own official "예능연구소" channel, self-dated 200829.
+An official individual fancam of Seonghwa performing "THANXX" on MBC's Show! Music Core, uploaded by MBC's own official "예능연구소" channel (Episode date: 2020-08-29).

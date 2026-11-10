@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Focus — 'BOUNCY (K-HOT CHILLI PEPPERS)' (THE SHOW, Jun 20)"
+title: "Seonghwa Focus — 'BOUNCY (K-HOT CHILLI PEPPERS)' (THE SHOW, 2023-06-20)"
 date: "2023-06-20"
 category: "TV"
 verification: "verified"
@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-bouncy-musiccore-2023
 ---
 
-An official individual "focus" camera segment of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on SBS MTV's THE SHOW, self-dated 230620.
+An official individual "focus" camera segment of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on SBS MTV's THE SHOW (Episode date: 2023-06-20).

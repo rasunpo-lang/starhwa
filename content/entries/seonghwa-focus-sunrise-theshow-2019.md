@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-illusion-theshow-2019
 ---
 
-An official individual "focus" camera segment of Seonghwa performing "Sunrise" on SBS MTV's THE SHOW, self-dated 191015.
+An official individual "focus" camera segment of Seonghwa performing "Sunrise" on SBS MTV's THE SHOW (Episode date: 2019-10-15).

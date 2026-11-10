@@ -15,4 +15,4 @@ related:
   - seonghwa-immortalsongs2-thereal-2023
 ---
 
-An official vertical fancam of Seonghwa performing "BOUNCY" as part of a solo appearance on KBS's tribute show Immortal Songs 2 (불후의 명곡2), self-dated 231118.
+An official vertical fancam of Seonghwa performing "BOUNCY" as part of a solo appearance on KBS's tribute show Immortal Songs 2 (불후의 명곡2) (Broadcast date: 2023-11-18).

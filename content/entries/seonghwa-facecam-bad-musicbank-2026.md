@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-bad-musicbank-2026
 ---
 
-An official individual close-up facecam of Seonghwa performing "BAD" on KBS's Music Bank, self-dated 07/03/26 — the same broadcast as the already-archived fancam.
+An official individual close-up facecam of Seonghwa performing "BAD" on KBS's Music Bank (Episode date: 2026-07-03) — the same broadcast as the already-archived fancam.

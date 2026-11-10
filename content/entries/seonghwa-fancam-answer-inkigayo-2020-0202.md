@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'Answer' (Inkigayo, 2/2)"
+title: "Seonghwa Individual Fancam — 'Answer' (Inkigayo, 2020-02-02)"
 date: "2020-02-02"
 category: "TV"
 verification: "verified"
@@ -16,4 +16,4 @@ related:
   - seonghwa-facecam-answer-inkigayo-2020
 ---
 
-An official individual fancam of Seonghwa performing "Answer" on SBS's Inkigayo, self-dated 2020.02.02 — a later broadcast in the same promotion cycle.
+An official individual fancam of Seonghwa performing "Answer" on SBS's Inkigayo (Episode date: 2020-02-02) — a later broadcast in the same promotion cycle.

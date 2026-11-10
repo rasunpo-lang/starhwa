@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'INCEPTION' (Inkigayo, 8/2)"
+title: "Seonghwa Individual Fancam — 'INCEPTION' (Inkigayo, 2020-08-02)"
 date: "2020-08-02"
 category: "TV"
 verification: "verified"
@@ -15,4 +15,4 @@ related:
   - seonghwa-facecam-inception-inkigayo-2020-0816
 ---
 
-An official individual fancam of Seonghwa performing "INCEPTION" on SBS's Inkigayo, self-dated 2020.08.02 — the same broadcast as the already-archived facecam, in the "안방1열" camera series.
+An official individual fancam of Seonghwa performing "INCEPTION" on SBS's Inkigayo (Episode date: 2020-08-02) — the same broadcast as the already-archived facecam, in the "안방1열" camera series.

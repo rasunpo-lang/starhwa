@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-eternalsunshine-musiccore-2021
 ---
 
-An official individual fancam of Seonghwa performing "Eternal Sunshine" on M Countdown, self-dated 2021.10.7.
+An official individual fancam of Seonghwa performing "Eternal Sunshine" on M Countdown (Episode date: 2021-10-07).

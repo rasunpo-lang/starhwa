@@ -16,4 +16,4 @@ related:
   - seonghwa-facecam-thereal-inkigayo-2021
 ---
 
-An official individual fancam of Seonghwa performing "The Real (Heung Ver.)" on MBC's Show! Music Core, self-dated 211218.
+An official individual fancam of Seonghwa performing "The Real (Heung Ver.)" on MBC's Show! Music Core (Episode date: 2021-12-18).

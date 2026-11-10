@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-dejavu-inkigayo-2021-0919
 ---
 
-An official individual facecam of Seonghwa performing "Deja Vu" on SBS's Inkigayo, self-dated 2021.09.19 — the corresponding facecam from the same performance.
+An official individual facecam of Seonghwa performing "Deja Vu" on SBS's Inkigayo (Episode date: 2021-09-19) — the corresponding facecam from the same performance.

@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-deja-vu-mcountdown-2021
 ---
 
-An official individual fancam of Seonghwa performing "Deja Vu" on MBC's Show! Music Core, uploaded by MBC's own official "예능연구소" channel, self-dated 210925.
+An official individual fancam of Seonghwa performing "Deja Vu" on MBC's Show! Music Core, uploaded by MBC's own official "예능연구소" channel (Episode date: 2021-09-25).

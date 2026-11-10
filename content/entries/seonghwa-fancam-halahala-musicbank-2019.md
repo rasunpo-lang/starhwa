@@ -14,4 +14,4 @@ related:
   - hala-hala-mv-2019
 ---
 
-An official individual fancam of Seonghwa performing "HALA HALA" on KBS's Music Bank, self-dated 190208.
+An official individual fancam of Seonghwa performing "HALA HALA" on KBS's Music Bank (Episode date: 2019-02-08).

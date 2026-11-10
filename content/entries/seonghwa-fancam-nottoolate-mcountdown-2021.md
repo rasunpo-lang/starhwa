@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-deja-vu-mcountdown-2021
 ---
 
-An official individual fancam of Seonghwa performing "밤하늘 (Not Too Late)" on M Countdown, self-dated 2021.9.16.
+An official individual fancam of Seonghwa performing "밤하늘 (Not Too Late)" on M Countdown (Episode date: 2021-09-16).

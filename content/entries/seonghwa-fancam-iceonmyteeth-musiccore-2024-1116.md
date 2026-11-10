@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual FanCam — 'Ice On My Teeth' (Music Core, MBC241116)"
+title: "Seonghwa Individual Fancam — 'Ice On My Teeth' (Show! Music Core, 2024-11-16)"
 date: "2024-11-16"
 category: "TV"
 verification: "verified"
@@ -18,4 +18,4 @@ related:
   - seonghwa-fancam-iceonmyteeth-sbsgayodaejeon-2024
 ---
 
-An official individual fancam of Seonghwa performing "Ice On My Teeth" on MBC's "Show! Music Core," self-dated MBC241116, posted to MBCkpop's official YouTube channel.
+An official individual fancam of Seonghwa performing "Ice On My Teeth" on MBC's "Show! Music Core," (Broadcast date: 2024-11-16), posted to MBCkpop's official YouTube channel.

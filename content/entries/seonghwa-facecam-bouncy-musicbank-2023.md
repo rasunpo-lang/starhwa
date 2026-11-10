@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-bouncy-musicbank-2023
 ---
 
-An official individual facecam of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on KBS's Music Bank, self-dated 230616.
+An official individual facecam of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on KBS's Music Bank (Episode date: 2023-06-16).

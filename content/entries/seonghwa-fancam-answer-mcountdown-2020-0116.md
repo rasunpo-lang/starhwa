@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'Answer' (M Countdown, 1/16)"
+title: "Seonghwa Individual Fancam — 'Answer' (M Countdown, 2020-01-16)"
 date: "2020-01-16"
 category: "TV"
 verification: "verified"
@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-answer-mcountdown-2020-0109
 ---
 
-An official individual fancam of Seonghwa performing "Answer" on M Countdown, self-dated 2020.1.16 — a later broadcast in the same promotion cycle as the January 9 fancam.
+An official individual fancam of Seonghwa performing "Answer" on M Countdown (Episode date: 2020-01-16) — a later broadcast in the same promotion cycle as the January 9 fancam.

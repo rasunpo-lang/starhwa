@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'BOUNCY' (Music Bank, 6/23)"
+title: "Seonghwa Individual Fancam — 'BOUNCY' (Music Bank, 2023-06-23)"
 date: "2023-06-23"
 category: "TV"
 verification: "verified"
@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-bouncy-musicbank-2023
 ---
 
-An official individual fancam of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on KBS's Music Bank, self-dated 230623 — a later broadcast in the same promotion cycle as the June 16 fancam.
+An official individual fancam of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on KBS's Music Bank (Episode date: 2023-06-23) — a later broadcast in the same promotion cycle as the June 16 fancam.

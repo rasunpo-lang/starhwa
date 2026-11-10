@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'Fireworks (I'm The One)' (Music Bank, 3/12)"
+title: "Seonghwa Individual Fancam — 'Fireworks (I'm The One)' (Music Bank, 2021-03-12)"
 date: "2021-03-12"
 category: "TV"
 verification: "verified"
@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-fireworks-musicbank-2021
 ---
 
-An official individual fancam of Seonghwa performing "Fireworks (I'm The One)" on KBS's Music Bank, self-dated 210312 — a later broadcast than the already-archived March 5 Music Bank fancam.
+An official individual fancam of Seonghwa performing "Fireworks (I'm The One)" on KBS's Music Bank (Episode date: 2021-03-12) — a later broadcast than the already-archived March 5 Music Bank fancam.

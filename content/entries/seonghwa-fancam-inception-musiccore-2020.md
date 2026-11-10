@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-inception-musicbank-2020
 ---
 
-An official individual fancam of Seonghwa performing "INCEPTION" on MBC's Show! Music Core, self-dated 200801.
+An official individual fancam of Seonghwa performing "INCEPTION" on MBC's Show! Music Core (Episode date: 2020-08-01).

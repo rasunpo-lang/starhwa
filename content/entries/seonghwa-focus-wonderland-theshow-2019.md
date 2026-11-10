@@ -16,4 +16,4 @@ related:
   - seonghwa-focus-wonderland-theshow-2019-1022
 ---
 
-An official individual focus cam of Seonghwa performing "WONDERLAND" on SBS MTV's THE SHOW, self-dated 191015.
+An official individual focus cam of Seonghwa performing "WONDERLAND" on SBS MTV's THE SHOW (Episode date: 2019-10-15).

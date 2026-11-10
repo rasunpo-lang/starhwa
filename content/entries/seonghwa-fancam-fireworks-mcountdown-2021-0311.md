@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'Fireworks (I'm The One)' (M Countdown, 3/11)"
+title: "Seonghwa Individual Fancam — 'Fireworks (I'm The One)' (M Countdown, 2021-03-11)"
 date: "2021-03-11"
 category: "TV"
 verification: "verified"
@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-fireworks-mcountdown-2021
 ---
 
-An official individual fancam of Seonghwa performing "Fireworks (I'm The One)" on M Countdown, self-dated 2021.3.11 — a later broadcast in the same promotion cycle as the group's comeback stage.
+An official individual fancam of Seonghwa performing "Fireworks (I'm The One)" on M Countdown (Episode date: 2021-03-11) — a later broadcast in the same promotion cycle as the group's comeback stage.

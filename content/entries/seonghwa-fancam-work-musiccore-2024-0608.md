@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'WORK' (Show! Music Core, Jun 8)"
+title: "Seonghwa Individual Fancam — 'WORK' (Show! Music Core, 2024-06-08)"
 date: "2024-06-08"
 category: "TV"
 verification: "verified"
@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-work-musiccore-2024-0601
 ---
 
-An official individual fancam of Seonghwa performing "WORK" on MBC's Show! Music Core, self-dated MBC240608 — a second, separate broadcast one week after the June 1 fancam.
+An official individual fancam of Seonghwa performing "WORK" on MBC's Show! Music Core (Broadcast date: 2024-06-08) — a second, separate broadcast one week after the June 1 fancam.

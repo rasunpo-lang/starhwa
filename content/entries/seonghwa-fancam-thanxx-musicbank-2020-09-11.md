@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'THANXX' (Music Bank, 9/11)"
+title: "Seonghwa Individual Fancam — 'THANXX' (Music Bank, 2020-09-11)"
 date: "2020-09-11"
 category: "TV"
 verification: "verified"
@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-thanxx-musicbank-2020-09-04
 ---
 
-An official individual fancam of Seonghwa performing "THANXX" on KBS's Music Bank, self-dated 200911 — a later broadcast in the same promotion cycle.
+An official individual fancam of Seonghwa performing "THANXX" on KBS's Music Bank (Episode date: 2020-09-11) — a later broadcast in the same promotion cycle.

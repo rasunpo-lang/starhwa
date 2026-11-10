@@ -15,4 +15,4 @@ related:
   - seonghwa-facecam-thereal-inkigayo-2021
 ---
 
-An official individual fancam of Seonghwa performing "Turbulence" (Korean title "야간비행") on SBS's Inkigayo, self-dated 2021.12.12.
+An official individual fancam of Seonghwa performing "Turbulence" (Korean title "야간비행") on SBS's Inkigayo (Episode date: 2021-12-12).

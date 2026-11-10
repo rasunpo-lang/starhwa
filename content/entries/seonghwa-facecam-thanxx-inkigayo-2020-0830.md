@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual FaceCam — 'THANXX' (Inkigayo, 8/30)"
+title: "Seonghwa Individual FaceCam — 'THANXX' (Inkigayo, 2020-08-30)"
 date: "2020-08-30"
 category: "TV"
 verification: "verified"
@@ -15,4 +15,4 @@ related:
   - seonghwa-facecam-thanxx-inkigayo-2020-0913
 ---
 
-An official individual facecam of Seonghwa performing "THANXX" on SBS's Inkigayo, self-dated 2020.08.30 — an earlier broadcast than the already-archived September 6 and September 13 Inkigayo facecams.
+An official individual facecam of Seonghwa performing "THANXX" on SBS's Inkigayo (Episode date: 2020-08-30) — an earlier broadcast than the already-archived September 6 and September 13 Inkigayo facecams.

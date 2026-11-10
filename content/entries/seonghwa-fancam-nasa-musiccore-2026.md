@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-nasa-inkigayo-2026
 ---
 
-An official individual fancam of Seonghwa performing "NASA" on MBC's Show! Music Core, self-dated MBC260207.
+An official individual fancam of Seonghwa performing "NASA" on MBC's Show! Music Core (Broadcast date: 2026-02-07).

@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-wonderland-mcountdown-2019-1010
 ---
 
-An official individual fancam of Seonghwa performing "Sunrise" on M Countdown, self-dated 2019.10.10, the same broadcast as the "WONDERLAND" comeback-stage fancam.
+An official individual fancam of Seonghwa performing "Sunrise" on M Countdown (Episode date: 2019-10-10), the same broadcast as the "WONDERLAND" comeback-stage fancam.

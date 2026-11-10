@@ -21,4 +21,4 @@ related:
   - seonghwa-fancam-halazia-inkigayo-2023-0115
 ---
 
-An official individual fancam of Seonghwa performing "HALAZIA" on Mnet's M Countdown, self-dated 2023.1.12.
+An official individual fancam of Seonghwa performing "HALAZIA" on Mnet's M Countdown (Episode date: 2023-01-12).

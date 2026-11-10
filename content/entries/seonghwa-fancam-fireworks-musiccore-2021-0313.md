@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'Fireworks (I'm The One)' (Show! Music Core, 3/13)"
+title: "Seonghwa Individual Fancam — 'Fireworks (I'm The One)' (Show! Music Core, 2021-03-13)"
 date: "2021-03-13"
 category: "TV"
 verification: "verified"
@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-fireworks-musiccore-2021-0320
 ---
 
-An official individual fancam of Seonghwa performing "Fireworks (I'm The One)" on MBC's Show! Music Core, self-dated MBC210313.
+An official individual fancam of Seonghwa performing "Fireworks (I'm The One)" on MBC's Show! Music Core (Broadcast date: 2021-03-13).

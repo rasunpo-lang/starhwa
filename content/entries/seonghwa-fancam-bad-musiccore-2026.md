@@ -16,4 +16,4 @@ related:
   - seonghwa-fancam-bad-musicbank-2026
 ---
 
-An official individual fancam of Seonghwa performing "BAD" on MBC's Show! Music Core, self-dated MBC260704.
+An official individual fancam of Seonghwa performing "BAD" on MBC's Show! Music Core (Broadcast date: 2026-07-04).

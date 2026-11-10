@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-crazyform-musiccore-2023-1202
 ---
 
-An official individual fancam of Seonghwa performing "Crazy Form" on MBC's Show! Music Core, self-dated MBC231202 — the same broadcast as the already-archived "최애직캠" close-up cam, in the "예능연구소" camera series.
+An official individual fancam of Seonghwa performing "Crazy Form" on MBC's Show! Music Core (Broadcast date: 2023-12-02) — the same broadcast as the already-archived "최애직캠" close-up cam, in the "예능연구소" camera series.

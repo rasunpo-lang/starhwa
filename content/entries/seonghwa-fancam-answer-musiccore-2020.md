@@ -15,4 +15,4 @@ related:
   - answer-mv-2020
 ---
 
-An official individual fancam of Seonghwa performing "Answer" on MBC's Show! Music Core, self-dated 20200111.
+An official individual fancam of Seonghwa performing "Answer" on MBC's Show! Music Core (Episode date: 2020-01-11).

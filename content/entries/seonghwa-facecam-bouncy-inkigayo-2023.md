@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-bouncy-inkigayo-2023-0618
 ---
 
-An official individual facecam of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on SBS's Inkigayo, self-dated 230618, the same broadcast as the fancam.
+An official individual facecam of Seonghwa performing "BOUNCY (K-HOT CHILLI PEPPERS)" on SBS's Inkigayo (Episode date: 2023-06-18), the same broadcast as the fancam.

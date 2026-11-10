@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'WONDERLAND' (M Countdown, 10/10)"
+title: "Seonghwa Individual Fancam — 'WONDERLAND' (M Countdown, 2019-10-10)"
 date: "2019-10-10"
 category: "TV"
 verification: "verified"
@@ -15,4 +15,4 @@ related:
   - wonderland-mv-2019
 ---
 
-An official individual fancam of Seonghwa performing "WONDERLAND" on M Countdown, self-dated 2019.10.10 — an earlier broadcast than the already-archived October 24 M Countdown fancam.
+An official individual fancam of Seonghwa performing "WONDERLAND" on M Countdown (Episode date: 2019-10-10) — an earlier broadcast than the already-archived October 24 M Countdown fancam.

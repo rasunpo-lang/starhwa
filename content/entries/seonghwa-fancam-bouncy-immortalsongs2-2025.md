@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual FanCam — 'BOUNCY' (Immortal Songs 2, APEC Special)"
+title: "Seonghwa Individual Fancam — 'BOUNCY' (Immortal Songs 2, APEC Special)"
 date: "2025-06-21"
 category: "TV"
 verification: "verified"

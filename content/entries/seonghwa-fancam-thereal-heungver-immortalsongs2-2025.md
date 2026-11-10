@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual FanCam — '멋 (Heung ver.)' (Immortal Songs 2, APEC Special)"
+title: "Seonghwa Individual Fancam — '멋 (Heung ver.)' (Immortal Songs 2, APEC Special)"
 date: "2025-06-21"
 category: "TV"
 verification: "verified"

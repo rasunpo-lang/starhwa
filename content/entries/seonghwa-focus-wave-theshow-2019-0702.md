@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Focus — 'WAVE' (THE SHOW, 7/2)"
+title: "Seonghwa Focus — 'WAVE' (THE SHOW, 2019-07-02)"
 date: "2019-07-02"
 category: "TV"
 verification: "verified"
@@ -15,4 +15,4 @@ related:
   - wave-mv-2019
 ---
 
-An official individual "focus" camera segment of Seonghwa performing "WAVE" on SBS MTV's THE SHOW, self-dated 190702 — a later broadcast than the already-archived June 25 focus segment.
+An official individual "focus" camera segment of Seonghwa performing "WAVE" on SBS MTV's THE SHOW (Episode date: 2019-07-02) — a later broadcast than the already-archived June 25 focus segment.

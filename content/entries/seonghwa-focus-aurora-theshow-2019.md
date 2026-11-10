@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-illusion-theshow-2019
 ---
 
-An official individual "focus" camera segment of Seonghwa performing ATEEZ's relay-dance cover of "AURORA" on SBS MTV's THE SHOW, self-dated 190716.
+An official individual "focus" camera segment of Seonghwa performing ATEEZ's relay-dance cover of "AURORA" on SBS MTV's THE SHOW (Episode date: 2019-07-16).

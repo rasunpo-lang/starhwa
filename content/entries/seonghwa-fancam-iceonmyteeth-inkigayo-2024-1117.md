@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual FanCam — 'Ice On My Teeth' (Inkigayo, 241117)"
+title: "Seonghwa Individual Fancam — 'Ice On My Teeth' (Inkigayo, 2024-11-17)"
 date: "2024-11-17"
 category: "TV"
 verification: "verified"
@@ -18,4 +18,4 @@ related:
   - seonghwa-fancam-iceonmyteeth-sbsgayodaejeon-2024
 ---
 
-An official individual fancam of Seonghwa performing "Ice On My Teeth" on SBS Inkigayo, self-dated 241117, posted to SBSKPOP ZOOM's official YouTube channel.
+An official individual fancam of Seonghwa performing "Ice On My Teeth" on SBS Inkigayo (Episode date: 2024-11-17), posted to SBSKPOP ZOOM's official YouTube channel.

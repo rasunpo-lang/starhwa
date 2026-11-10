@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-work-musiccore-2024-0601
 ---
 
-An official individual fancam of Seonghwa performing "WORK" on MBC's Show! Music Core, self-dated MBC240601 — the same broadcast as the already-archived "최애직캠" fancam, in the "예능연구소" camera series.
+An official individual fancam of Seonghwa performing "WORK" on MBC's Show! Music Core (Broadcast date: 2024-06-01) — the same broadcast as the already-archived "최애직캠" fancam, in the "예능연구소" camera series.

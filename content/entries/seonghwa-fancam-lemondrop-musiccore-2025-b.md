@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-lemondrop-musiccore-2025
 ---
 
-An official individual fancam of Seonghwa performing "Lemon Drop" on MBC's Show! Music Core, self-dated MBC250614 — the same broadcast as the already-archived "최애직캠" fancam, in the "음중직캠" camera series.
+An official individual fancam of Seonghwa performing "Lemon Drop" on MBC's Show! Music Core (Broadcast date: 2025-06-14) — the same broadcast as the already-archived "최애직캠" fancam, in the "음중직캠" camera series.

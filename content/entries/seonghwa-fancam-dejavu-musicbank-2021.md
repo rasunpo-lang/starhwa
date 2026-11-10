@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-dejavu-musiccore-2021
 ---
 
-An official individual fancam of Seonghwa performing "Deja Vu" on KBS's Music Bank, self-dated 210917.
+An official individual fancam of Seonghwa performing "Deja Vu" on KBS's Music Bank (Episode date: 2021-09-17).

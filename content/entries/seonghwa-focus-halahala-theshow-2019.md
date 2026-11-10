@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-halahala-musicbank-2019
 ---
 
-An official individual "focus" camera segment of Seonghwa performing "HALA HALA" on SBS MTV's THE SHOW, self-dated 190212.
+An official individual "focus" camera segment of Seonghwa performing "HALA HALA" on SBS MTV's THE SHOW (Episode date: 2019-02-12).

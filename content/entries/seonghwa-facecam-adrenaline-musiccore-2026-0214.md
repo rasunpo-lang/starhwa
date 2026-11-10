@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Close-up Cam — 'Adrenaline' (Show! Music Core, 2/14)"
+title: "Seonghwa Individual Close-up Cam — 'Adrenaline' (Show! Music Core, 2026-02-14)"
 date: "2026-02-14"
 category: "TV"
 verification: "verified"
@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-adrenaline-musiccore-2026
 ---
 
-An official individual close-up cam of Seonghwa performing "Adrenaline" on MBC's Show! Music Core, self-dated MBC260214 — the same broadcast as the already-archived fancam, in the "최애직캠" close-up camera series.
+An official individual close-up cam of Seonghwa performing "Adrenaline" on MBC's Show! Music Core (Broadcast date: 2026-02-14) — the same broadcast as the already-archived fancam, in the "최애직캠" close-up camera series.

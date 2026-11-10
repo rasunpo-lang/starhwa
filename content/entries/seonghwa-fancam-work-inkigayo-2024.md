@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-work-musiccore-2024-0601
 ---
 
-An official individual fancam of Seonghwa performing "WORK" on SBS's Inkigayo, self-dated 240609.
+An official individual fancam of Seonghwa performing "WORK" on SBS's Inkigayo (Episode date: 2024-06-09).

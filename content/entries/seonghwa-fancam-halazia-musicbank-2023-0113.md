@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'HALAZIA' (Music Bank, Jan 13)"
+title: "Seonghwa Individual Fancam — 'HALAZIA' (Music Bank, 2023-01-13)"
 date: "2023-01-13"
 category: "TV"
 verification: "verified"
@@ -15,4 +15,4 @@ related:
   - seonghwa-facecam-halazia-musicbank-2023
 ---
 
-An official individual fancam of Seonghwa performing "HALAZIA" on KBS's Music Bank, self-dated 230113 — a second, separate Music Bank broadcast one week after the January 6 fancam/facecam pair.
+An official individual fancam of Seonghwa performing "HALAZIA" on KBS's Music Bank (Episode date: 2023-01-13) — a second, separate Music Bank broadcast one week after the January 6 fancam/facecam pair.

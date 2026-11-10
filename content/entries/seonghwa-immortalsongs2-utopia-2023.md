@@ -17,4 +17,4 @@ related:
   - seonghwa-immortalsongs2-guerrilla-2023
 ---
 
-An official vertical fancam of Seonghwa performing "UTOPIA" as part of a solo appearance on KBS's Immortal Songs 2, self-dated 231125.
+An official vertical fancam of Seonghwa performing "UTOPIA" as part of a solo appearance on KBS's Immortal Songs 2 (Broadcast date: 2023-11-25).

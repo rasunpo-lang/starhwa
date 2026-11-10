@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'THANXX' (Music Bank, Aug 28)"
+title: "Seonghwa Individual Fancam — 'THANXX' (Music Bank, 2020-08-28)"
 date: "2020-08-28"
 category: "TV"
 verification: "verified"

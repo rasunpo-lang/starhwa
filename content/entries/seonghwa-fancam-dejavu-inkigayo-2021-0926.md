@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'Deja Vu' (Inkigayo, Sep 26)"
+title: "Seonghwa Individual Fancam — 'Deja Vu' (Inkigayo, 2021-09-26)"
 date: "2021-09-26"
 category: "TV"
 verification: "verified"
@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-dejavu-inkigayo-2021-0919
 ---
 
-An official individual fancam of Seonghwa performing "Deja Vu" on SBS's Inkigayo, self-dated 2021.09.26 — a second, separate Inkigayo broadcast one week after the September 19 fancam.
+An official individual fancam of Seonghwa performing "Deja Vu" on SBS's Inkigayo (Episode date: 2021-09-26) — a second, separate Inkigayo broadcast one week after the September 19 fancam.

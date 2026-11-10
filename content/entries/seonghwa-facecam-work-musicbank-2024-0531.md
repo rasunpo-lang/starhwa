@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual FaceCam — 'WORK' (Music Bank, May 31)"
+title: "Seonghwa Individual FaceCam — 'WORK' (Music Bank, 2024-05-31)"
 date: "2024-05-31"
 category: "TV"
 verification: "verified"
@@ -15,4 +15,4 @@ related:
   - seonghwa-facecam-work-musicbank-2024-0607
 ---
 
-An official individual close-up facecam of Seonghwa performing "WORK" on KBS's Music Bank, self-dated 240531 — the same broadcast as the already-archived fancam, in the "얼빡직캠" close-up camera series.
+An official individual close-up facecam of Seonghwa performing "WORK" on KBS's Music Bank (Episode date: 2024-05-31) — the same broadcast as the already-archived fancam, in the "얼빡직캠" close-up camera series.

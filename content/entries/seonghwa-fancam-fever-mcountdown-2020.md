@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-inception-mcountdown-2020
 ---
 
-An official individual fancam of Seonghwa performing "FEVER" (the ZERO: FEVER Part.1 comeback-stage medley) on Mnet's M Countdown, self-dated 2020.7.30, the same broadcast as the "INCEPTION" comeback stage.
+An official individual fancam of Seonghwa performing "FEVER" (the ZERO: FEVER Part.1 comeback-stage medley) on Mnet's M Countdown (Episode date: 2020-07-30), the same broadcast as the "INCEPTION" comeback stage.

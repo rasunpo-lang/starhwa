@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual FaceCam — 'Adrenaline' (Music Bank, 2/6)"
+title: "Seonghwa Individual FaceCam — 'Adrenaline' (Music Bank, 2026-02-06)"
 date: "2026-02-06"
 category: "TV"
 verification: "verified"
@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-adrenaline-musicbank-2026-0206
 ---
 
-An official individual close-up facecam of Seonghwa performing "Adrenaline" on KBS's Music Bank, self-dated 260206 — the same broadcast as the already-archived fancam, in the "얼빡직캠" close-up camera series.
+An official individual close-up facecam of Seonghwa performing "Adrenaline" on KBS's Music Bank (Episode date: 2026-02-06) — the same broadcast as the already-archived fancam, in the "얼빡직캠" close-up camera series.

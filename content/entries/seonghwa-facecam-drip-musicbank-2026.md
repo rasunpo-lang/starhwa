@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-drip-musicbank-2026
 ---
 
-An official individual close-up facecam of Seonghwa performing "Drip" on KBS's Music Bank, self-dated 261030 — the same broadcast as the already-archived fancam, in the "얼빡직캠" close-up camera series.
+An official individual close-up facecam of Seonghwa performing "Drip" on KBS's Music Bank (Episode date: 2026-10-30) — the same broadcast as the already-archived fancam, in the "얼빡직캠" close-up camera series.

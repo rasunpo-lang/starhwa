@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'Adrenaline' (Show! Music Core, 2/7)"
+title: "Seonghwa Individual Fancam — 'Adrenaline' (Show! Music Core, 2026-02-07)"
 date: "2026-02-07"
 category: "TV"
 verification: "verified"
@@ -14,4 +14,4 @@ related:
   - seonghwa-fancam-adrenaline-musiccore-2026
 ---
 
-An official individual fancam of Seonghwa performing "Adrenaline" on MBC's Show! Music Core, self-dated MBC260207 — an earlier broadcast than the already-archived February 14 fancam.
+An official individual fancam of Seonghwa performing "Adrenaline" on MBC's Show! Music Core (Broadcast date: 2026-02-07) — an earlier broadcast than the already-archived February 14 fancam.

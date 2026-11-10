@@ -3518,3 +3518,57 @@ a.crew-link:focus-visible .crew-lightstick {
     transition: none;
   }
 }
+
+/* ✦ Hero legibility (home page hero + On This Day only).
+   The shared text tokens (--ink/--charcoal/--plum) swap from dark to light
+   along --night-text, which flips around night 0.48–0.62 — earlier than the
+   sky actually darkens, so at dusk/dawn the text turned mid-grey over a
+   mid-tone sky (measured contrast ≈1:1–2.5:1). Inside .hero-legible the swap
+   instead happens once the sky is genuinely dark (late-d = --night minus half
+   of --golden, which keeps the warm golden sky "light" a little longer), over
+   a narrow 0.04 band. The header, footer, Mark logo and every other section
+   keep the global --night-text and are untouched.
+   The same stretch of sky is mid-tone for both polarities, so .hero-veil adds
+   a soft blurred wash behind the copy that follows the text polarity (ivory
+   under dark text, ivory-night under light text). It is a faint 10% floor all
+   day, rising to ≈42% only around that crossover. Small hero text is also at
+   full-ink colour (charcoal → ink; plum → plum-deep by day) for the same
+   reason. All colours are existing tokens. */
+:root {
+  --late-d: calc(var(--night) - 0.5 * var(--golden));
+  --night-text-late: clamp(0, calc((var(--late-d) - 0.7) / 0.04), 1);
+  --veil-a: calc(0.1 + 0.32 * max(0, 1 - abs(var(--late-d) - 0.55) / 0.2));
+}
+
+.hero-legible {
+  --night-text: var(--night-text-late);
+  --ink: color-mix(in srgb, var(--ink-day), var(--ink-night) calc(var(--night-text) * 100%));
+  --charcoal: var(--ink);
+  --plum: color-mix(in srgb, var(--plum-deep), var(--plum-night) calc(var(--night-text) * 100%));
+  --color-ink: var(--ink);
+  --color-charcoal: var(--ink);
+  --color-plum: var(--plum);
+  --veil: color-mix(in srgb, var(--ivory-day), var(--ivory-night) calc(var(--night-text) * 100%));
+  color: var(--ink);
+}
+
+.hero-veil {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-veil::before {
+  content: "";
+  position: absolute;
+  inset: -1rem -1.5rem;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 2rem;
+  background: color-mix(in srgb, var(--veil) calc(var(--veil-a) * 100%), transparent);
+  filter: blur(16px);
+}
+
+.hero-veil--copy::before {
+  inset: -2.5rem -1.5rem -1.5rem -1.75rem;
+  max-width: 36rem;
+}

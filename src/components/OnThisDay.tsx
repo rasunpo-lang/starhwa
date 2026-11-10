@@ -74,7 +74,7 @@ export default function OnThisDay({
   });
 
   return (
-    <div className="glint-hover group relative border-l-2 border-plum/50 pl-6 sm:pl-8">
+    <div className="hero-veil glint-hover group relative border-l-2 border-plum/50 pl-6 sm:pl-8">
       <Glint className="-left-2 top-0" />
       <Glint className="left-12 top-10" style={{ animationDelay: "160ms" }} />
       <p className="meta text-charcoal/85">On This Day</p>

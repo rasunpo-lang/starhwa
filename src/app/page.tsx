@@ -105,9 +105,9 @@ export default function Home() {
         }}
       />
       {/* Hero — the opening statement */}
-      <section className="border-b border-line">
+      <section className="hero-legible border-b border-line">
         <div className="mx-auto grid max-w-[1400px] gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[1.3fr_1fr] lg:items-end lg:py-32">
-          <div>
+          <div className="hero-veil hero-veil--copy">
             <p className="eyebrow text-plum">
               Park Seonghwa · ATEEZ · 2018—
             </p>
@@ -127,7 +127,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/archive"
-                className="eyebrow text-charcoal/70 underline decoration-line underline-offset-4 hover:text-plum"
+                className="eyebrow text-charcoal/85 underline decoration-line underline-offset-4 hover:text-plum"
               >
                 Browse the Archive →
               </Link>

@@ -12,6 +12,7 @@ sources:
     url: "https://www.youtube.com/watch?v=2TV2We8EvqA"
 related:
   - seonghwa-fancam-nasa-inkigayo-2026
+  - seonghwa-facecam-nasa-musicbank-2026
 ---
 
-An official individual fancam of Seonghwa performing "NASA" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series, self-dated 260206.
+An official individual fancam of Seonghwa performing "NASA" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series (Episode date: 2026-02-06).

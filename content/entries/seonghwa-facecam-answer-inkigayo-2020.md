@@ -13,6 +13,7 @@ sources:
 related:
   - seonghwa-fancam-answer-musicbank-2020
   - answer-mv-2020
+  - seonghwa-fancam-answer-inkigayo-2020-0112
 ---
 
-An official individual facecam of Seonghwa performing "Answer" on SBS's Inkigayo, self-dated 2020.1.12.
+An official individual facecam of Seonghwa performing "Answer" on SBS's Inkigayo (Episode date: 2020-01-12).

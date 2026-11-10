@@ -11,6 +11,7 @@ sources:
   - label: "MBC 예능연구소 Official — Seonghwa 'BOUNCY' FanCam @Show!MusicCore, MBC230617"
     url: "https://www.youtube.com/watch?v=73VPfThR_TY"
 related:
+  - seonghwa-fancam-bouncy-musiccore-2023-0617-closeup
 ---
 
-An official individual fancam of Seonghwa performing "BOUNCY" on MBC's Show! Music Core, uploaded by MBC's own official "예능연구소" channel, self-dated MBC230617.
+An official individual fancam of Seonghwa performing "BOUNCY" on MBC's Show! Music Core, uploaded by MBC's own official "예능연구소" channel (Broadcast date: 2023-06-17).

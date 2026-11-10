@@ -14,6 +14,7 @@ related:
   - seonghwa-fancam-adrenaline-musicbank-2026-0206
   - seonghwa-fancam-adrenaline-musicbank-2026-0213
   - seonghwa-fancam-adrenaline-inkigayo-2026
+  - seonghwa-facecam-adrenaline-musiccore-2026-0214
 ---
 
-An official individual fancam of Seonghwa performing "Adrenaline" on MBC's Show! Music Core, self-dated MBC260214.
+An official individual fancam of Seonghwa performing "Adrenaline" on MBC's Show! Music Core (Broadcast date: 2026-02-14).

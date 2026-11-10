@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'Ice On My Teeth' (Music Bank, 11/15)"
+title: "Seonghwa Individual Fancam — 'Ice On My Teeth' (Music Bank, 2024-11-15)"
 date: "2024-11-15"
 category: "TV"
 verification: "verified"
@@ -12,6 +12,7 @@ sources:
     url: "https://www.youtube.com/watch?v=-gdJjXJi-mw"
 related:
   - seonghwa-fancam-iceonmyteeth-musicbank-2024-1122
+  - seonghwa-facecam-iceonmyteeth-musicbank-2024-1115
 ---
 
-An official individual fancam of Seonghwa performing "Ice On My Teeth" on KBS's Music Bank, self-dated 241115 — an earlier broadcast in the same promotion cycle as the already-archived November 22 fancam.
+An official individual fancam of Seonghwa performing "Ice On My Teeth" on KBS's Music Bank (Episode date: 2024-11-15) — an earlier broadcast in the same promotion cycle as the already-archived November 22 fancam.

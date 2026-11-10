@@ -12,6 +12,7 @@ sources:
     url: "https://www.youtube.com/watch?v=40TLNR28nP4"
 related:
   - seonghwa-facecam-thereal-gayodaejeon-2021
+  - seonghwa-fancam-thereal-heungver-inkigayo-2021
 ---
 
-An official individual facecam of Seonghwa performing "멋 (흥 : 興 Ver.)" ("The Real," Heung Version) on SBS's Inkigayo, self-dated 2021.12.12.
+An official individual facecam of Seonghwa performing "멋 (흥 : 興 Ver.)" ("The Real," Heung Version) on SBS's Inkigayo (Episode date: 2021-12-12).

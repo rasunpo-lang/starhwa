@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'Lemon Drop' (Music Bank, Jun 13)"
+title: "Seonghwa Individual Fancam — 'Lemon Drop' (Music Bank, 2025-06-13)"
 date: "2025-06-13"
 category: "TV"
 verification: "verified"
@@ -13,6 +13,7 @@ sources:
 related:
   - seonghwa-fancam-lemondrop-musicbank-2025-0620
   - seonghwa-fancam-lemondrop-inkigayo-2025
+  - seonghwa-facecam-lemondrop-musicbank-2025-0613
 ---
 
-An official individual fancam of Seonghwa performing "Lemon Drop" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series, self-dated 250613.
+An official individual fancam of Seonghwa performing "Lemon Drop" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series (Episode date: 2025-06-13).

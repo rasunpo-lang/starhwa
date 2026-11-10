@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'THANXX' (Inkigayo, 안방1열, 8/30)"
+title: "Seonghwa Individual Fancam — 'THANXX' (Inkigayo, 안방1열, 2020-08-30)"
 date: "2020-08-30"
 category: "TV"
 verification: "verified"
@@ -18,4 +18,4 @@ Seonghwa's "안방1열" fancam for "THANXX" (Inkigayo, Aug 30).
 
 <!-- full-text -->
 
-An official individual fancam of Seonghwa performing "THANXX" on SBS's Inkigayo, uploaded under SBS's "안방1열" ("Front Row") fancam series, self-dated 2020.08.30 — a separate camera angle from the already-archived facecam of the same broadcast.
+An official individual fancam of Seonghwa performing "THANXX" on SBS's Inkigayo, uploaded under SBS's "안방1열" ("Front Row") fancam series (Episode date: 2020-08-30) — a separate camera angle from the already-archived facecam of the same broadcast.

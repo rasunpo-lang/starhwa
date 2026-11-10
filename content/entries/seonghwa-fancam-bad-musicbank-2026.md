@@ -13,6 +13,7 @@ sources:
   - label: "ATEEZ Official X — [📷] TODAY ATEEZ, No.1 win thanking ATINY"
     url: "https://x.com/ATEEZofficial/status/2073051637011415318"
 related:
+  - seonghwa-facecam-bad-musicbank-2026
 ---
 
-An official individual fancam of Seonghwa performing "BAD" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series, self-dated 260703.
+An official individual fancam of Seonghwa performing "BAD" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series (Episode date: 2026-07-03).

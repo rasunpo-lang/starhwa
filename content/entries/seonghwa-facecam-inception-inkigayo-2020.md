@@ -13,6 +13,7 @@ sources:
 related:
   - seonghwa-fancam-inception-mcountdown-2020
   - seonghwa-fancam-inception-musicbank-2020
+  - seonghwa-fancam-inception-inkigayo-2020-0802
 ---
 
-An official individual facecam of Seonghwa performing "INCEPTION" on SBS's Inkigayo, self-dated 2020.08.02.
+An official individual facecam of Seonghwa performing "INCEPTION" on SBS's Inkigayo (Episode date: 2020-08-02).

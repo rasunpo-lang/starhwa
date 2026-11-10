@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'Answer' (M Countdown, 입덕직캠, 1/9)"
+title: "Seonghwa Individual Fancam — 'Answer' (M Countdown, 입덕직캠, 2020-01-09)"
 date: "2020-01-09"
 category: "TV"
 verification: "verified"
@@ -18,4 +18,4 @@ Seonghwa's "입덕직캠" fancam for "Answer" (M Countdown).
 
 <!-- full-text -->
 
-An official individual fancam of Seonghwa performing "Answer" on M Countdown, uploaded under Mnet's "입덕직캠" ("fan-conversion fancam") series, self-dated 2020.1.9 — a separate camera angle from the already-archived fancam of the same broadcast.
+An official individual fancam of Seonghwa performing "Answer" on M Countdown, uploaded under Mnet's "입덕직캠" ("fan-conversion fancam") series (Episode date: 2020-01-09) — a separate camera angle from the already-archived fancam of the same broadcast.

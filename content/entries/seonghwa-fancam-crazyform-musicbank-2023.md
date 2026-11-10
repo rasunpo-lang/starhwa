@@ -12,6 +12,7 @@ sources:
     url: "https://www.youtube.com/watch?v=IbWTYFUc7rw"
 related:
   - seonghwa-fancam-crazyform-inkigayo-2023
+  - seonghwa-facecam-crazyform-musicbank-2023
 ---
 
-An official individual fancam of Seonghwa performing "Crazy Form" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series, self-dated 231201.
+An official individual fancam of Seonghwa performing "Crazy Form" on KBS's Music Bank, uploaded by the KBS Kpop channel under its K-Fancam series (Episode date: 2023-12-01).

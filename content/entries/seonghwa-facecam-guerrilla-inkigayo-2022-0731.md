@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual FaceCam — 'Guerrilla' (Inkigayo, 7/31)"
+title: "Seonghwa Individual FaceCam — 'Guerrilla' (Inkigayo, 2022-07-31)"
 date: "2022-07-31"
 category: "TV"
 verification: "verified"
@@ -12,6 +12,7 @@ sources:
     url: "https://www.youtube.com/watch?v=0YeYr7zXvmw"
 related:
   - seonghwa-facecam-guerrilla-inkigayo-2022
+  - seonghwa-fancam-guerrilla-inkigayo-2022-0731
 ---
 
-An official individual facecam of Seonghwa performing "Guerrilla" on SBS's Inkigayo, self-dated 220731 — an earlier broadcast than the already-archived August 14 Inkigayo facecam.
+An official individual facecam of Seonghwa performing "Guerrilla" on SBS's Inkigayo (Episode date: 2022-07-31) — an earlier broadcast than the already-archived August 14 Inkigayo facecam.

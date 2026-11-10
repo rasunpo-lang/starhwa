@@ -1687,3 +1687,28 @@ is not a banner, section or page of its own.
 - **Footprint:** 60px minimum height keeps a comfortable tap target without
   adding a new layout step; no new colour token (the glow is a scoped custom
   property in `globals.css`).
+
+## 22. Private Maintenance Page (renewal countdowns)
+
+`/maintenance` shows the hosting and domain expiry countdowns. It is for
+the owner only and is not part
+of the archive: not in nav, footer, sitemap or search, and `noindex`.
+
+- **Gate:** `src/proxy.ts`, HTTP Basic Auth against `MAINTENANCE_PASSWORD`
+  (any username). A wrong or missing password gets a 401 challenge (so the
+  browser can prompt); an unset variable gets a 404, i.e. the page doesn't
+  exist. The proxy matches only `/maintenance`. No sessions, cookies or
+  auth library were added.
+- **Data:** deadlines come from the server-only env vars
+  `RENEWAL_HOSTING_DATE` / `RENEWAL_DOMAIN_DATE` (YYYY-MM-DD; optional
+  `RENEWAL_HOSTING_NAME` / `RENEWAL_DOMAIN_NAME` labels), read by
+  `getRenewals()` in `src/lib/renewals.ts` at request time. The repository
+  is public, so no real dates are committed; they exist only in the host's
+  environment and in the gated response. A missing or invalid date leaves
+  that row out. Each counts to 00:00 of the listed day in
+  `America/Vancouver`. To change a date, change the env var.
+- **Display:** `RenewalCountdown.tsx` — eyebrow label, display-font
+  service name, `.meta` expiry date, and days/hours/minutes in display
+  numerals, ticking every 15s. The two rows differ only by top-rule weight
+  (`border-t-2 border-plum/50` vs `border-t border-line`); no new colors,
+  badges or glints. Expired dates read "Expired" with the elapsed time.

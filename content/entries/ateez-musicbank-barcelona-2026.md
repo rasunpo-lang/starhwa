@@ -1,6 +1,6 @@
 ---
 title: "KBS Music Bank — Barcelona Special"
-date: "2026-09-12"
+date: "2026-10-07"
 category: "TV"
 verification: "verified"
 tags:
@@ -24,4 +24,4 @@ ATEEZ's appearance on "KBS Music Bank — Barcelona Special."
 
 <!-- full-text -->
 
-ATEEZ performed "BAD," "Guerrilla," and "WORK" at KBS's Music Bank in Barcelona special, held September 12, 2026. KBS Kpop's official YouTube channel uploaded the three stages after the October 7, 2026 broadcast.
+ATEEZ performed "BAD," "Guerrilla," and "WORK" at KBS's Music Bank in Barcelona special, held on September 12, 2026 (concert date). The stages aired on October 7, 2026 (broadcast date), and KBS Kpop's official YouTube channel uploaded the three stages after the broadcast.

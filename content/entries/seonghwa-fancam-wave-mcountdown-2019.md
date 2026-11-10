@@ -1,5 +1,5 @@
 ---
-title: "Seonghwa Individual Fancam — 'WAVE' (M Countdown)"
+title: "Seonghwa Individual Fancam — 'WAVE' (ATEEZ: TREASURE MAP)"
 date: "2019-06-10"
 category: "TV"
 verification: "verified"
@@ -15,4 +15,4 @@ related:
   - seonghwa-fancam-wave-weeklyidol-2019
 ---
 
-An official individual fancam of Seonghwa performing "WAVE" on Mnet's MPD Fancam (M2), self-dated 190610.
+An official individual fancam of Seonghwa performing "WAVE" in the Mnet/M2 special "ATEEZ: TREASURE MAP" (Broadcast date: 2019-06-10), uploaded by the M2 channel as part of its MPD Fancam series.
